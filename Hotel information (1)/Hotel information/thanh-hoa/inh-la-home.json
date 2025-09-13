@@ -1,0 +1,2721 @@
+{
+    "name": "Inh La Home Pu Luong",
+    "address": "ĐƯỜNG ĐÔN BẢN ĐÔN, Pu Luong, Việt Nam",
+    "description": "Tọa lạc ở Pu Luong, Inh La Home Pu Luong có hồ bơi ngoài trời theo mùa, khu vườn, nhà hàng, cùng Wi-Fi miễn phí. Chỗ nghỉ này cung cấp dịch vụ phòng và quầy lễ tân 24 giờ cho khách.\n\nTại khách sạn, mỗi phòng đều được thiết kế có ban công. Ngoài phòng tắm riêng với vòi sen và máy sấy tóc, một số căn tại Inh La Home Pu Luong cũng có view núi. Phòng khách tại chỗ nghỉ có điều hòa và tủ quần áo.\n\nSân bay gần nhất là Sân bay Thọ Xuân, cách Inh La Home Pu Luong 87 km.",
+    "rating": "9.2",
+    "total_rating": "159",
+    "evaluation_categories": {
+        "service_staff": 9.8,
+        "amenities": 8.9,
+        "cleanliness": 9.2,
+        "comfort": 9.2,
+        "value_for_money": 8.9,
+        "location": 9.7,
+        "free_wifi": 8.8
+    },
+    "reviews": [
+        {
+            "reviewer": {
+                "name": "Thomas",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "13/011/2023",
+                "rating": "Bel hôtel avec jolie vue, personnel adorable",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Laura",
+                "avatar": "https://lh5.googleusercontent.com/-ogurwhapCVQ/AAAAAAAAAAI/AAAAAAAAeFQ/dTUc6NJYmx4/photo.jpg?sz=50",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "11/08/2023",
+                "rating": "Hotel idílico en medio de la naturaleza",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "La ubicación, las vistas, el entorno, es espectacular y la habitación era muy cómoda. \nEstá en plena naturaleza, así que hay insectos que se pueden colar en la habitación. Se coló una araña y vinieron rápidamente a ayudarme. Nos organizaron el transporte desde Tam Coc y el autobús de vuelta a Hanoi y las excursiones.",
+                "comment_negative": "Todo perfecto!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Combrichon",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/143907299.jpg?k=b3651befd8a622dd809ea69668f81108db19aab42802627a505276f15d4ecfdc&o=",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "29/03/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Les atouts incontestables de cet hôtel,son emplacement,la chambre que nous avions,203A, donne directement sur les rizières en terrasses et sur la belle piscine,et son propriétaire Tom, qui organise de belles randonnées dans cette magnifique région authentique, sereine et encore pas trop touristique. C'est un vrai coup de coeur pour notre fin de séjour de 3 semaines au Vietnam. Même avec de la brume c'est beau, alors avec le soleil ça doit être fantastique.\nBons petits déjeuners. Les autres repas étaient corrects,sans plus . On est obligé de manger à l'hôtel car rien autour.",
+                "comment_negative": "La salle de douche de cette chambre, mauvais écoulement de l'eau, donc après la douche ça devenait une pataugeoire et il y avait toujours un peu d'eau qui restait."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Francoise",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJzsms2WHDvlbAfov-jJt42KP5kis0UOB7PIkGEt=s96-c",
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "5/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoà",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/02/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · Tháng 2/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Paul",
+                "avatar": "https://lh3.googleusercontent.com/a-/AFdZuco7RWixhjMvSaLsI_XVqfXgV42qTAqqboy149Pr=s96-c",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "1/012/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "M",
+                "avatar": "https://lh3.googleusercontent.com/a-/AN66SAyUG1HMTSYDf6QwjpaIYRWykRbw5sYRvO2IbVxiiw?sz=50",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "8/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Todo perfecto. Nos ha encantado el buen trato de todo el personal así como la disposición para realizar excursiones, encontrar vehículos, etc. El lugar es ideal y con unas magníficas vistas.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mokashi",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJx4wxgLe2oaUWysyncG7nR2PUMFQ3C08hre5TPE=s96-c",
+                "country": "Canada"
+            },
+            "review": {
+                "date": "28/012/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 12/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maya",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Canada"
+            },
+            "review": {
+                "date": "26/01/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Xabier",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJwn2T0YfShVdCkIxJbw0Hhx7geclVFzfydUlztR=s96-c",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "8/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "La zona es muy bonita, los paisajes increíbles \n\nEl hotel muy bien, buenas instalaciones",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Judy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "3/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Tom was a wonderful host who took us out on a lovely tour of the surrounding area. Room was spacious with comfy beds and a modern bathroom. Food was delicious with a big menu. Pool was gorgeous with stunning views of mountains. Dogs Cookie and Jerry were extremely cute!",
+                "comment_negative": "Our room was on the side of the building so balcony view less spectacular than those at front. Food pricier than in other places."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sebastien",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/15575479.jpg?k=37a954ad3476b8a40b3e35859744124178b4cc0f14dc666262764d8187ee7166&o=",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/05/2024",
+                "rating": "excellent séjour",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "l'accueil top, la possibilité de prendre une douche après la rando et avant les 3h de voiture et les 11h de train de nuit\nla vue des chambres\nla piscine d'eau naturelle\nle personnel avec qui on a fait une superbe excursion dans les rizières",
+                "comment_negative": "ce n'est pas le meilleur restaurant que nous avons fait"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Michel",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Canada"
+            },
+            "review": {
+                "date": "3/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "La vue de l'établissement.est splendide",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Rachael",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJydDS77p3ubseVFcDaumLlCiWRMOPDL3D5KWVcO=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/06/2023",
+                "rating": "Stunning views and friendly staff.",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "The rooms were very comfortable and the staff were lovely.",
+                "comment_negative": "The road to the hotel was under construction so I had difficulty getting there."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Laettitia",
+                "avatar": "https://lh3.googleusercontent.com/-ZpyaCySGnCo/AAAAAAAAAAI/AAAAAAAAAAA/ACnBePaYJe1kIIrm2irkeJriiiAzqBGRcQ/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tiburce",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/03/2024",
+                "rating": "Agréable escapade",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "La chambre est propre, grande et fonctionnelle.\nLa vue est superbe.\nVous pourrez louer un scooter sur place et vous restaurer.",
+                "comment_negative": "Quelques nuisances sonores la nuit causées par les chiens de l'hébergement \nIl n'y a pas d'isolation ni d'insonorisation."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mel",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "3/06/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 6/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The views are stunning really good food very friendly staff ha and Tony lovely",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Andyfarrier",
+                "avatar": "https://lh3.googleusercontent.com/a-/AFdZucpnlKkMB3jLVPRtc2wxRpqH5PZneMF0fMvBSZRcaQ=s96-c",
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "23/08/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jacobo",
+                "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mAYqDX6_IK6iakYyjzRGudZA6lhD5Tr9O4jwdJIFQ?sz=50",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "19/09/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "The room itself was incredible, and the views are out of this world. The food from the restaurant is superb. Everything regarding our stay was 10/10.\n\nTom is an amazing person and guide. We had a great time doing the trekking tour with him and he helped us a lot with understanding a bit more about Vietnamese culture and history. We will forever be grateful for his kindness and patience to answer all of our questions.\n\nDo yourself a favor and stay here!",
+                "comment_negative": "Nothing really. This is not negative, but just a piece of advice to everyone: the trekking tour is super nice, but make sure you are sporty/adventurous enough to do it!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Janet",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "25/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "Tom was a fantastic host helping out and giving lots of information. He has a great voice and belts out a song on Karaoke. A great tour guide.",
+                "comment_negative": "Needed a little more comfortable sitting"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Christophe",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "6/04/2024",
+                "rating": "Homestay chaleureux idéalement situé",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Établissement très beau, bien arboré, les chambres sont spacieuses. L’emplacement est top pour sillonner à pieds le long des rizières \nLe personnel est au petits soins pour nous. Petit déjeuner excellent et copieux",
+                "comment_negative": "Rien, juste le prix un peu élevé au regards des autres homestay où nous avons séjourné"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Melanie",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Canada"
+            },
+            "review": {
+                "date": "9/04/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The rooms are lovely and well appointed! \nThe cook does a nice job with serving a variety of foods. We are vegetarian and I recommend the fried tofu and papaya salad with peanuts which I think I had with every meal, along with some rice. Thom is an awesome host and if he is available to take you on a tour it is worth every penny! Our time in Pu Luong was magical, even though the weather wasn’t fantastic.",
+                "comment_negative": "It was very cold when we were there and I think that the addition of some blankets in the common area would be a nice addition so that people can be comfortable while having a drink and enjoying the view while socializing."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maxime",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "28/01/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Béatrice",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "17/03/2024",
+                "rating": "Séjour au milieu des rizières",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Le Inh La Home Pu Luong est situé en hauteur, au milieu des rizières en terrasse. Un magnifique endroit et une vue à couper le souffle ! L’accueil est très chaleureux grâce à Tom et son équipe qui se plient en 4 pour notre bien être. Tom nous a fait découvrir son petit coin de paradis à partagé avec nous des anecdotes sur le Vietnam. Merci 🙏",
+                "comment_negative": "Rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Albert",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GgXlVJWKiBwn8H8XkSbmKCox4Dyfbgyfv2eTseoAg=s96-c",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "3/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jihad",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "30/012/2022",
+                "rating": "Superb and lovely stay!",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "3 đêm · tháng 12/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Beautiful views and great location.\n\nThe food was AMAZING! We’re vegetarians and we got something different to eat for all meals everyday. Fried tofu in tomato sauce, kale salad, broccoli with garlic, fresh and fried spring rolls, fried mushrooms and so on… the chef deserves at least one Michelin star! \n\nThe owner and the staff — plus the two dogs at Inh La Home, were incredibly kind and engaged in their guests. They all made us feel welcome, despite of the cold and the rain (we visited end of December). \n\nThe owner, Tom, speaks English and is more than happy to share his knowledge about the surroundings and the culture. He offers different tours and can provide transportation.\n\nLast but not least, don’t miss out on trying the Happy Water, very tasty. \n\nThanks Inh La Home for a beautiful stay!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Waltmann",
+                "avatar": "https://lh3.googleusercontent.com/a/AGNmyxZPZ6c5-ytw9KttVw_9u7lSDNs-VjnyJ-3dfhkf=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/04/2024",
+                "rating": "親切なオーナーがいる眺望の良いホテル",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "5 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "オーナーがとても親切で、色々な情報を教えてくれて助かりました。ロケーションも部屋からの眺望も良かった。パンケーキも美味しかったです。",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stephane",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "25/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "L’accueil et la bienveillance de Tom, le patron de l’établissement.\nUne personnalité charmante\nCe qui ne fait que de compléter l’effet Wahou de l’hôtel",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Richard",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-r.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "22/02/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "3 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Lovely communal area with great views. Helpful staff",
+                "comment_negative": "Our room was quite basic, with ill-fitting doors and windows. We stayed 3 nights and did not expect karaoke on 2 of these, but it was the end of the Tet holiday and maybe an exception. A little expensive for what we got I think, but an enjoyable stay."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Luisa",
+                "avatar": "https://lh4.googleusercontent.com/-_td9Zxyx9c8/AAAAAAAAAAI/AAAAAAAAA64/2U6-wBzt1CI/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "18/04/2024",
+                "rating": "Incroyable!!!",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anton",
+                "avatar": "https://graph.facebook.com/v2.9/1001629929856559/picture?type=square&height=64&width=64",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "14/07/2023",
+                "rating": "Fantastische locatie tussen de rijstvelden!",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Tom gaf ons bij aankomst meteen het gevoel dat we 'home' waren. Hij en zijn staf waren geweldig toen er een probleem ontstond. en Tom gaf ons ook een prachtige tour in  de omgeving. De locatie is fantastisch,  heerlijk zwembad,  goed eten, prachtige kamer met balkon en  fantastisch uitzicht!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Zbigniew",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-z.png",
+                "country": "Ba Lan"
+            },
+            "review": {
+                "date": "9/010/2022",
+                "rating": "great place with amazing view",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 10/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "they have just started on booking so we were scared to be first, but when we arrived and see this place 😍 love it! Amazing view, very very big bed and great service of all team.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thorsten",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "30/03/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tamar",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "2/06/2024",
+                "rating": "Un hotelito precioso con vistas increíbles",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Me gustó muchísimo  el entorno en el que está ubicado y las vistas desde el dormitorio, el comedor y la piscina. El desayuno es abundante y variado. El chef es muy bueno y todas las comidas que prepara están deliciosas. Ofrecen excursiones súper bonitas y entretenidas para ver la zona y las costumbres locales a un precio buenísimo.",
+                "comment_negative": "La limpieza puede mejorar un poco así como el servicio del personal, que a veces estaban un poco despistados con el móvil. Aunque he de decir que son súper amables."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chbru",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLDryVpvfhMYPu5TGxTzS0_l7NeSsAwybzf3WAsC6nq=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "19/04/2024",
+                "rating": "Belle vue sur la vallée avec rizières étagées. Mini SAPA !",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Petit dej correct\nmanager-guide très au point pour matinée visite\ntrès beau cadre paysager, particulièrement de la salle principale\nchance: ce jour là, animation musicale le soir. Sympa !\npiscine sympathique",
+                "comment_negative": "la vue de la chambre très moyenne comparée à la salle principale qui plonge sur la vallée.\nNourriture juste correcte par rapport à nos autres hotels"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Patricia",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "24/09/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Sitio perfecto para desconectar, repetiriamos sin dudarlo, habitacion amplia y la única que hemos encontrado con bañera de todo Vietnam(de bamboo por cierto), terraza grande, wifi perfecto. El personal (Tom) muy amable, nos ayudó con todo (excursiones, alquiler de moto, traslado a ninh binh). Teniamos reserva para dos dias y nos quedamos 4!!!!! Vistas a las terrazas de arroz, piscina limpia y comoda y con agua fresquita directa de la montaña. Sitio para desconectar del bullicio y relajarse. Cenamos todas las noches ahí y la comida muy buena!!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anthony",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "30/03/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Neomi",
+                "avatar": null,
+                "country": "Israel"
+            },
+            "review": {
+                "date": "5/03/2024",
+                "rating": "Perfect view and amazing host",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Beautiful hotel with the perfect view, room was huge and had it’s own balcony. Tom the owner was the best part! Taught us about the area and culture and recommended on trails and activities we can do around the area",
+                "comment_negative": "The bathroom was a disappointment, shower was in the middle of the room without a curtain, so every time you take a shower it will wet the entire room and toilet. \nNot sure that any other place in the area has a better bathroom facilities, reminded us of hotels in India"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pierre",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gh8YYzsyVPFvdUlOaPgpdlLaYxOrRck6o_Z9Eh-kg=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "7/03/2024",
+                "rating": "Très bonne expérience",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nous avions une vue absolument magnifique sur les rizières. La chambre était très confortable.\nLes hôtes sont aux petits soins et très disponibles, et la cuisine est très bonne.",
+                "comment_negative": "Le prix est relativement élevé comparé aux autres nous avons eu."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jerome",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "10/03/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Arnaud",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "8/08/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Elena",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "3/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "S",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Đan Mạch"
+            },
+            "review": {
+                "date": "11/011/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kai-wei",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "4/012/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "3 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Tom, our host was extremely helpful and was a really good tour guide for us. Our room has exquisite view and was very clean. The pool looks amazing.",
+                "comment_negative": "The rooms wasn’t really soundproof. So all the activities outside could be heard. During our three night stay, we had three families with screaming kids as our neighbours and it was extremely loud in our room. This is in addition to the loud karaoke musics for the performance the hotel hosted on two seperate nights. This makes the stay a bit less peaceful."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/09/2023",
+                "rating": "Magnifique et reposant",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "3 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nous sommes restés 3 nuits et n’avons pas regretté. La vue de l’hôtel est incroyable et idéal pour se reposer avec piscine. La chambre est spacieuse, avec une belle vue. Le personnel est d’une grande gentillesse, attentionné. Nous avons adoré notre excursion avec Tom d’une demi-journée, dont le prix nous a semblé correct. Petit bonus, les chiots adorables.",
+                "comment_negative": "Il n’y a pas beaucoup de possibilité de manger ailleurs à Puluong, donc obligé de manger tous les jours au restaurant. A savoir, que la nourriture est bien plus cher à Puluong qu’ailleurs au Vietnam."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tania",
+                "avatar": null,
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "30/03/2024",
+                "rating": "Super séjour",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "L'emplacement au milieu des rizières, les chambres et la vue , la piscine, le petit déjeuner, les vélos à disposition, \nle personnel serviable et qui vous aide à planifier votre séjour sur place",
+                "comment_negative": "La literie était un peu dure mais confortable dans l'ensemble"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Elena",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "18/05/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maša",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Slovenia"
+            },
+            "review": {
+                "date": "15/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "The hotel organized private car for us for a very good price. Breakfast at the hotel was really good. We enyojed a fun night with karaoke and traditional dancers that hotel organized. Manager Tom took us on a very interesting tour around Pu Luong, showed us a local village nearby and we also enyojed pristine nature of Pu Luong.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Piotr",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/231799093.jpg?k=c503ab8e08c09fd84645e00fcf6027beaa92aab4f167bbadeb6ad6798d13709b&o=",
+                "country": "Ba Lan"
+            },
+            "review": {
+                "date": "15/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "3 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Zgodnie z moja dziewczyna oceniliśmy ten jako absolutnie najlepszy w całej naszej 2 miesięcznej podróży po Azji. Nie jest to tylko nocleg to dużo więcej ! Wszystkie osoby pracujące tam dbają o każdy detal by spędzony czas w Inh La Home był wyjątkowy na czele całej ekipy stoi Tom osoba która wspaniałe włada językiem angielskim oraz jest najlepszym przewinieniem który zabierze Cię po miejscach mało turystycznych 100% autentycznych ! Jedzenie wspaniałe ! Wszystko idealne bardzo się cieszę ze wybrałem Pu Luong a nie popularna Sapa !",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Orna",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJyrKfondyReRc2WOje33r-eNXRHiZtKiYXIwjj3=s96-c",
+                "country": "Israel"
+            },
+            "review": {
+                "date": "26/09/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Tom the host is outstanding in everything and made our stay in Pu Luong unforgetable. With information about the people and reserve, sights to see and trekking options, Tom is the perfect mediator for Pu Luong. The hotel is lovely, the view exceptional and the pool refreshing. The food is extremely tasty and portions are generous, we had the fish in soy sauce 2 nights in a row. The hotel was full the 2nd night, so Tom organized a homestay with a swèet family down the road and we enjoyed the hotel facilities, including a vietnamese culture evening with music and dancing. Thanks Tom for an exceptional time.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/09/2023",
+                "rating": "Vị trí tuyệt vời, giá cả hợp lý",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí trung tâm, phong cảnh đẹp.\nNhân viên nhiệt tình, ăn sáng tương đối tốt so với chỗ khác trong khu vực.",
+                "comment_negative": "Bể bơi là nước suối tự nhiên nên có rêu ở đáy"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trịnh",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIQl9cwY9qB3tEDnxEYhpWIsDFDEzTgrp-mx2R_xKVT=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/05/2024",
+                "rating": "Good",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "View ổn nẳm ở trung tâm bản Đôn, từ ban công có thể ngắm được bình minh và ruộng lúa. Từ Home đi các địa điểm như thác Hiêu, suối Chàm rất thuận tiện. Anh chủ cũng dễ tính và nhiệt tình hướng dẫn đi chơi.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jepidom",
+                "avatar": "https://lh4.googleusercontent.com/-p_etJ3tj2v0/AAAAAAAAAAI/AAAAAAAAAAA/ACnBePZd4uAk-j0WZnK8NSRWp01hnlndYQ/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/011/2023",
+                "rating": "Un homestay très agréable, prestation de qualité et attentionné",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Qualité de la chambre et de l'accueil.\nPetit déjeuner excellent et varié. Superbe coupe de fruit.\nBelle situation des chambres avec superbe vue sur les rizières.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Yang-foi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-y.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "24/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "La vue... Amazing !!!\nLe personnel super gentil \nEt l' emplacement pour la petite marche dans les rizières \nVraiment super moment",
+                "comment_negative": "Rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nadine",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gh2R5iLcDp4-BpQ1SOb08vEJ38p7a9SNwL7NAdmsw=s96-c",
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "13/05/2024",
+                "rating": "Très bon séjour dans un cadre idyllique",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "4 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "La localisation était exceptionnelle et la chambre simple,  mais confortable. Tom parle bien anglais et nous a beaucoup aidé pour organiser diverses activités. Nous avons beaucoup apprécié notre séjour !",
+                "comment_negative": "La climatisation ne fonctionnait pas très bien et nous avons eu très chaud."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Christine",
+                "avatar": "https://lh3.googleusercontent.com/a/AEdFTp7ohoYx3Lu2Kr0nOl8C92NXKpHsUERnaCaJId9e=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "28/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Très bel hôtel,chambre très confortable et personnel au top !",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anaïs",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "21/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Très chouette hôtel dans les rizières de\nPu Luong. \nOn  aimé : \n- la vue à couper le souffle et la balade autour des rizières encore préservées du tourisme \n- le spectacle traditionnel qui a évolué en karaoké et qui nous a fait passer une soirée mémorable \n- l’accueil du personnel\n- l’organisation d’un petit tour de découverte par le gérant grâce à ses contacts. (Village, bateau, rizières etc…)",
+                "comment_negative": "Pensez à prendre un pull et un coupe vent. Nous avons eu froid dans cette région montagneuse et le restaurant n’est que semi abrité. \nL’air étant humide, nous avons trouvé que la chambre l’était également."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Philippe",
+                "avatar": "https://lh5.googleusercontent.com/-nfb3ZQVMZV0/AAAAAAAAAAI/AAAAAAAAAAA/AIcfdXA9hBByuDsOcrok2-5aLBnJRKanKA/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "21/07/2023",
+                "rating": "Fantastique à tout point de vue...",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Sublime, comme nous étions si bien, nous avons prolongé notre séjour mais il a fallu changer de chambre, la seconde très différente de la première était tout aussi bien. La vue est magnifique, la piscine en eau de source formidable, les repas délicieux et copieux... En plus ils vous organisent des ballades dans le parc qui sont vraiment tranquilles et uniques. \nBref une de mes meilleures expériences hôtelière au monde (carrément)",
+                "comment_negative": "Absolument rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maria",
+                "avatar": null,
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "8/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Todo",
+                "comment_negative": "Nada todo genial"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cintia",
+                "avatar": "https://graph.facebook.com/v2.9/2920284941565960/picture?type=square&height=64&width=64",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "25/05/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Es un sitio fantástico, cómodo, práctico y agradable. Tom hizo todo lo posible por facilitarnos los días, las visitas y el traslado al siguiente Homestay, fue genial.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huyền",
+                "avatar": "https://lh3.googleusercontent.com/a/AItbvmnOz5Mb_Yke4LaQZqzf9QpErdQiH70SS2d2qWME=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Nhân viên nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cecile",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtdqi5vxKIGDI6cynBIf4q_5-ez8Z5j0cvWeMqkkeH2p=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "15/02/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "3 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "bon accueil de Tom, belle vue, piscine agréable.",
+                "comment_negative": "salle de bain un peu humide mais en partie lié à la météo:-)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sayha",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "18/010/2023",
+                "rating": "Staff was super friendly. Fantastic view. Good food.",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Staff was super friendly. Fantastic view. Good food. Had tours you can book. Can arrange transportation. Motorbike rental.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jade",
+                "avatar": "https://lh3.googleusercontent.com/a/AGNmyxZkzhTGrZbmQcuX15kB5586ehyQX9xeWx0X-70h=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "29/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Le petit déjeuner et les repas étaient super bons 👌🏽\nLa piscine avec la vue",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Indira",
+                "avatar": "https://lh3.googleusercontent.com/a-/AFdZucpsff48Hc0lbfb_tmrjHXSCnDuY-3DdJ7CzWVeOyMo=s96-c",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "10/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "4 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Matthieu",
+                "avatar": "https://graph.facebook.com/v2.9/1784869771591113/picture?type=square&height=64&width=64",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "27/04/2024",
+                "rating": "Avril 2024",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Très bon emplacement, vue sur les rizières depuis la chambre et le piscine, le top !\nHôte à l écoute ( et qui parle tres bien anglais !), excellent petit déjeuner. \nLocation de scooter possible.\nChambre propre et spacieuse, sdb également. \nJe recommande vivement  ce lieu !\nJ étais tellement bien que je suis resté un jour de plus.\nPossibilité de faire des balades depuis l hôtel et au retour, petit bain dans la piscine...",
+                "comment_negative": "Dommage que ce soit si loin de la France sinon je reviendrais bien y passer un we ;-)\n\nPlus sérieusement,  RAS."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lena",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "21/08/2023",
+                "rating": "Paradise",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Inh La Home is exceptionally beautiful. Beautiful view onto the rice paddys, great food, really nice rooms and incredible staff. We would definitely recommend going and wished we could have stayed longer!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Marie",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/03/2023",
+                "rating": "Agréable.",
+                "score": 6.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "le cadre, la gentillesse du personnel, le petit déjeuner très complet et la terrasse de la chambre.\nNous n'avons pas pu tester la piscine (il ne faisait pas assez chaud).",
+                "comment_negative": "Notre chambre n'était pas très propre et l'eau de la douche a tendance à stagner dans la salle de bain ce qui est désagréable. On devait donc faire attention à ne pas glisser."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/02/2023",
+                "rating": "một kỳ nghỉ thú vị êm đềm",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 1/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí tuyệt đẹp. nhân viên thân thiện. khí hậu và cảnh sắc đẹp",
+                "comment_negative": "nên gọn gàng hơn và nâng cấp 1 số thiết bị vệ sinh"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Catherine",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "20/03/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "La vue magnifique sur les rizières en terrasse depuis la chambre et la terrasse du restaurant et de la piscine, la surprise d'avoir une démonstration de danse traditionnelle un soir",
+                "comment_negative": "L'atmosphère humide dans la chambre, liée au temps très humide lors de notre séjour"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Marco",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "28/012/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 12/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nagore",
+                "avatar": "https://lh3.googleusercontent.com/-29AkJ2xzu8I/AAAAAAAAAAI/AAAAAAAAFzU/YcwkBKWFSlI/photo.jpg",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "26/09/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Tom es maravilloso. Hay muy buen ambiente con todos los trabajadores.\nEl servicio de cocina es genial (a tener en cuenta sabiendo que no hay una gran oferta en Pu Luong).\nAlquiler de motos disponible.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Marianne",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "22/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Diese Unterkunft ist nur zu empfehlen.  Sie liegt wunderschön und Tom ist ein sehr netter Gastgeber. Vom Hotel und vom Pool aus hat man einen traumhaften Blick auf die Umgebung. \nDas Frühstück war auch sehr lecker und sehr umfangreich. Abends haben wir dort auch sehr gut gegessen.",
+                "comment_negative": "M"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stephen",
+                "avatar": "https://lh6.googleusercontent.com/-mwL0FVXW-lw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckngkZVq-XUeP12bxQfFW14QurK0g/s96-c/photo.jpg",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "24/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 11/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anthony",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/125879882.jpg?k=bcc04962ede1e059ed7942d33d7dd61bd239b7f356b26c90bf943934820991a9&o=",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "11/04/2024",
+                "rating": "Parfait !",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Homestay au top en pleine nature",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jaime",
+                "avatar": "https://graph.facebook.com/v2.9/10153388523026388/picture?type=square&height=64&width=64",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "23/011/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Las vistas son increíbles y la amabilidad de Tom en todo momento que te ayuda en lo que necesitas y te da una calidad acogida \nLa comida del hotel es buena y abundante\nLa habitación muy bonita con vistas a los arrozales y a la piscina del hotel \nRecomendable 100% por las vistas y la paz que se respira",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Franck",
+                "avatar": "https://lh3.googleusercontent.com/a/ALm5wu3ho97JELkVAYzOqpc4wVncRpJ8K-UxZx10QpFikw=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "10/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "La localisation est époustouflante\n\nPersonnel au top\n\nChambre spacieuse et hyper confortable\n\nTom le propriétaire est génial et connait parfaitement la région. Il parle couramment l'anglais = super guide aussi pour les randos !!!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "J",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "18/010/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ihn La Home ligt een prachtige omgeving met uitzicht op de vallei! Tom de eigenaar is naast een voortreffelijk host ook een reisleider en kan je meenemen op mooie tochten in het gebied van Pu Luong. Wat een mooie ongerepte natuur, rijstvelden en zo rustig. We hebben genoten! Ook het eten bij Inh La Home is super!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Marien",
+                "avatar": "https://graph.facebook.com/v2.9/10155564902990085/picture?type=square&height=64&width=64",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "23/06/2023",
+                "rating": "los mejores días de nuestro viaje a VietNam",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Los mejores días de nuestro viaje por VietNam fueron en este paraje, lejos del bullicio de la ciudad y de los sitios masificados por el turismo. Este sitio es paz. Y el hotel es perfecto, tanto la ubicación , la atención del personal, las habitaciones, la comida, y sobre todo el dueño Tom, que nos ha tratado como familia y nos ha llevado a sitios preciosos y auténticos. Recomendable 100%.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Soniaj39",
+                "avatar": null,
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtcvsMozqx9zBeVNEigP0SIiRHCQYMRT9Nzai3dv=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "đồ ăn ngon, trừ các món về thịt đôi lúc bị cứng, dai. \nview tuyệt vời.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Philippe",
+                "avatar": "https://lh3.googleusercontent.com/a/AItbvmkBKtcjBtL56bcZh4kobdzkwqnbpn1aVS4eVB8=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "26/02/2023",
+                "rating": "Un bel endroit pour séjourner entre rizières en terrasse et la montagne.",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · Tháng 2/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "la vue sur une magnifique vallée de rizières et bordée de montagnes, le calme, les nems, le service et la sympathie du gérant.",
+                "comment_negative": "il n’y a pas de cloison de séparation entre la douche et les WC, une fois que vous avez pris la douche, les WC sont complètement inondés et la salle d’eau se transforme en pataugeoire…"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Julianne",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtc7zYI0kUgwy2VQLuG60NaldOkBlhZie-50WWI5KPxjsgI=s96-c",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "24/04/2024",
+                "rating": "Would highly recommend.",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Perfect location, incredible staff, delicious restaurant, great pool, and beautiful views! The owner Tom was beyond helpful in getting us acquainted with the area and helped facilitate hikes, cultural tours, and even transportation.",
+                "comment_negative": "Nothing, it was fantastic."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pascal7475",
+                "avatar": "https://lh3.googleusercontent.com/-1MAAAkv034U/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmoxCwlpqyLR-m3vK3QzH98iT-kVQ/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "16/02/2024",
+                "rating": "Top",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · Tháng 2/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Really excellent place to stay.\nTom is a great owner.\nVrry good view in front of the rice terraces, confortable room, nice walks around.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ros",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-r.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "16/03/2023",
+                "rating": "Wonderful tranquil setting after the madness of Hà Nội!",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Glorious peaceful setting. Fabulous food. Tom and his team were exceptional. Tom took us on a great tour and was very informative. Loved our stay.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stephane",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI2JnwwJdeSdvb43Jr6lpigtNb1mmEsnh8hx9-pa42H=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "22/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Très bel hotel au cœur des rizières de Pu Luong, \nSuper accueil de Tom le propriétaire,  qui  est en plus est un super guide.  A conseiller.",
+                "comment_negative": "Ras"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Selina",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "13/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "3 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Everything was absolutely great. The owner helped us with everything, gave us many helpful information, made a trekking tour with us,  managed to rent a motorbike and organised the transfer to Ninh Bình. The area is perfect for relaxing because there were only a few tourists.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ludovic",
+                "avatar": "https://graph.facebook.com/v2.9/10217197345944631/picture?type=square&height=64&width=64",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "9/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Emplacement magnifique même si la brume était malheureusement trop présente. Personnel très à l'écoute même si le niveau d'anglais est à améliorer, mais il y a Google traduction 😉. Petit déjeuner très copieux.",
+                "comment_negative": "La brume!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Noelia",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gg0EgJmZb6XrsMnKG-rOWjGME_nPUZnF5reiqD_JOc=s96-c",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "2/010/2023",
+                "rating": "Estancia perfecta en Pu Luong",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "El entorno es espectacular. Tiene unas vistas privilegiadas a todo el valle. También nos encantó el recibimiento y amabilidad del propietario, siempre muy atento con nosotros. La habitación, simplemente, era perfecta. Super amplia, limpia y con una gran cristalera con vistas a todo el valle. El desayuno está muy bueno. También cenamos una noche y estaba todo muy rico. Aprovechamos mucho la piscina al estar prácticamente solos en el hotel. El valle de Pu Luong ha sido un gran descubrimiento para nosotros.",
+                "comment_negative": "Nada."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Juliette",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJZDBD4ydtOhz7yBz_rrGC8ZzVdW4RGvbrWhRGHG18siWvcnwVTpA=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "2/06/2024",
+                "rating": "Un séjour ressourçant, ou l’on en prend plein les yeux",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "San et Jenny sont des hôtes discrets, bienveillants, serviables et très réactifs ! Le cadre est idyllique, le lieu est calme et apaisant. La cuisine sur place est délicieuse. Tout le personnel est souriant et accueillant.",
+                "comment_negative": "Rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Johannes",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "5/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "4 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tung",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJyy-fy_Ol5pZiddbpU3e8hW-egqactGIKBXNN8o=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Bạn Thu phục vụ rất tận tình, anh Liêm đầu bếp nấu ngon và chiều khách\nView khá là ổn\nQuản lý vui vẻ nhiệt tình\nPhòng tạm ổn\nChất lượng phục vụ và đồ ăn gánh mọi thứ còn lại.",
+                "comment_negative": "Bể bơi chưa được xử lý."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Noa",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Israel"
+            },
+            "review": {
+                "date": "15/02/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "1 đêm · Tháng 2/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "המארח אדם מקסים. המון ידע ורצון להנגיש ולהנעים את האזור לאורחים.\nהכינו לנו ארוחת ערב נהדרת.\nחבל שלא היה לנו יותר זמן לשהות שם\nמקום שהוא חוויה!",
+                "comment_negative": "את הערפל שהפריע להנות מהנוף בבוקר"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Benjamin",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Rooms were spacious and with stunning views over the rice terraces, really romantic. Tom was so lovely and helpful giving us advice and directions on where to go. Because its in a remote spot (great for some peace away from a city), there's not much choice for food but the hotel resturant provided great variety! Breakfast spread was also really good.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mengyu",
+                "avatar": "https://lh6.googleusercontent.com/-yyzHdl6ZQi0/AAAAAAAAAAI/AAAAAAAAACs/QjWZVfDPLyg/photo.jpg",
+                "country": "Trung Quốc"
+            },
+            "review": {
+                "date": "5/04/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jolanda",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "25/02/2024",
+                "rating": "We hebben het ondanks het wat mindere weer prima naar onze zin gehad!",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Heerlijke kamer met een prima bed en een balkon met een prachtig uitzicht. Heel vriendelijke medewerkers en erg lekker eten. De omgeving is in een woord prachtig.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Philippe",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "26/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Très bien situé avec une vue magnifique depuis le restaurant et la chambre ainsi que sa terrasse(Nous avons pu bénéficier d'un surclassement très agreable). Piscine agréable avec vue sur les rizières.\nChambre confortable. Personnel agréable, à l'écoute et apportant son aide pour rendre le séjour le plus agréable possible.\nBon petit déjeuner avec du choix (servi à table ou en buffet suivant les jours).",
+                "comment_negative": "Restaurant un peu en dessous de ce que nous avons pu manger auparavant."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "21/02/2023",
+                "rating": "phòng ốc sạch sẽ, nhân viên phục vụ tốt, nhiệt tình giúp đỡ đáp ứng nhu cầu khi khách cần. đặc biệt nhà nghỉ có view nhì",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · Tháng 2/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "phòng ốc sạch sẽ, chủ nhà thân thiện, nhân viên phục vụ khách chu đáo và thức ăn ngon.\nRiêng chủ nhà Tôm (Lâm) rất chuyên nghiệp trong việc hướng dẫn khách trải nghiệm đi Trekking ở Pu Luong!",
+                "comment_negative": "không"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Laurene",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJy9HV6nBfVCTbAoNuuZjHzDCB525I-ifRi9q1MP=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "5/04/2024",
+                "rating": "Bon séjour mais quelques points à améliorer",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Lieu incroyable au milieu des rizières. Calme et reposant. \nPersonnel très prévenant, sympathique et attentif. \nChiens adorables ! \nChambre spacieuse. Clim qui fonctionne bien. Lit très confortable.",
+                "comment_negative": "Au vu des commentaires, nous nous attendions à mieux, surtout pour le prix. La nourriture n’est pas extraordinaire, petit déjeuner correct sans plus, la piscine n’est pas propre. Les chambres sont belles, mais manquent de finitions (comme souvent en Asie) et le ménage est approximatif. \nNous avons peu dormi la 2ème nuit car beaucoup d’insectes dans le toit (qui mangent le bois et qui font beaucoup de bruit)."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Audrey",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "19/04/2024",
+                "rating": "Bel hôtel pour un séjour reposant",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "La localisation, la piscine, le petit déjeuner, l’accueil, le personnel",
+                "comment_negative": "Le manque d’insonorisation de la chambre"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Diana",
+                "avatar": "https://lh3.googleusercontent.com/a/AGNmyxYY5_2MrmYyK6ir3v_77JQgjefwtvUKMvHcrzyplw=s96-c",
+                "country": "Brazil"
+            },
+            "review": {
+                "date": "4/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "I loved the location with a beautiful view from the terrace and a peaceful atmosphere. The room is super comfortable with a lovely balcony. The staff are kind and helpful! Simple and nice breakfast! I highly recommend it!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Angela",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "10/011/2023",
+                "rating": "Großes Zimmer mit wunderbarem Blick und tollen grossen Zimmern",
+                "score": 9.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Die Anlage liegt wunderschön mit Blick auf Berge und Felder.\nDas Zimmer war viel größer als alle, die wir in Vietnam hatten. Bequemes Bett, schön gestaltet, großes Bad. Tolle Terrasse. Guter Pool. Besitzer spricht gut Englisch und kennt sich gut aus. \nSehr gutes Frühstück mit großem Obstteller.",
+                "comment_negative": "An manchen Stellen liegt ein bisschen Müll herum."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Fons",
+                "avatar": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "12/04/2024",
+                "rating": "De eigenaar gaf ons zeer goede tips voor wandelingen in de buurt",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Omgeving",
+                "comment_negative": "/"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jasmijn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "1/01/2023",
+                "rating": "Best stay in Pu Luong",
+                "score": 10.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 12/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Everything! Tom and his team are amazing and made our stay truely unforgettable. Apart from the fact that our room was great with a really big, super comfy bed also the food we got served was really really amazing and tasteful. Tom also took us on many tours in Pu Luong and turned out to not only be a great host but also a great guide. Honestly we can not recommend Inh La Home enough!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Deborah",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gj8npGkt-rZlQGwRk-S2O3tKlY4AOJQMevigkYR=s96-c",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "2/08/2023",
+                "rating": "A Pu Luong must stay!",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Such a beautiful place to stay! The room and hotel were lovely, talk about a pool with a view! We had a bit of difficulty while getting there but the hotel were incredibly helpful and sorted it quickly. Tom organized different tours for us and took us himself to lots of the must see spots of the surrounding area. He was a great host and made us feel so welcome.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Caroline",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJzq-wsfR1xEpxMrSqimWynMFXELu6dLHyjFVTNv=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "26/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "4 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Hotel dans un cadre magnifique. Tout le monde est très souriant et serviable. Notre balcon donnait sur les rizières. La chambre était spatieuse, les lits confortables avec moustiquaire.\nMerci à Tom pour sa disponibilité et son excursion que nous avons beaucoup aimée. \nPetit bemol pour la cuisine, on a honnêtement mieux mangé ailleurs dans les environs. Ça ne nous a pas gâché notre séjour!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mireia",
+                "avatar": "https://graph.facebook.com/v2.9/10156372048076526/picture?type=square&height=64&width=64",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "13/03/2024",
+                "rating": "Hotel cool dans un cadre idyllique",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Le personnel était extrêmement aimable et accessible à toute demande\nLe petit déjeuner était bon et très très copieux: des œufs, des pancakes frites, un grand plateau de fruits, jus frais, nouilles, pain, etc Impossible de terminer... Le deuxième jour c'était type buffet et donc, on pouvait se servir à volonté.\nLe cadre est idyllique, les vues incroyables.\nMagnifique piscine même si on a pas pu se baigner car il faisait pas assez chaud.\nLa chambre était spatieuse et propre.\nOn pouvait tout demander à Tom : lessive, tours, conducteur pour aller à Ninh Binh, location scooter, etc.",
+                "comment_negative": "Notre chambre familial était extrêmement humide. \nLe restaurant de l'hôtel était plus cher et moins bon que les restos de l'environnement, mais OK pour dépanner selon mon point de vue. \nL'eau ne marchait pas les matins que nous avons passé à l'hôtel. Après ce n'est pas bien grave car on pouvait prendre la douche plus tard."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Laurent",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "18/03/2024",
+                "rating": "Le petit coin de paradis",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "- Nous avons tout aimé : le cadre ( quelle vue magnifique depuis l'hôtel), la taille des chambres, la parfaite organisation, la gentillesse et la disponibilité de l'équipe\n- le \" chef d'orchestre\" de cet établissement, Tom : grâce à lui, tout s'est déroulé à la perfection, et il est vraiment à l'origine de la parfaite tenue de cet établissement que je recommande chaudement pour son emplacement et la qualité des prestations. Tom organise aussi des randos et visites dans la région, n'hésitez pas à lui demander des conseils à ce sujet, et ses tarifs.",
+                "comment_negative": "- juste pour prévenir ceux qui n'y sont pas familiers,la salle de bains et le WC  sont dans le même espace, sans séparation. Il faut penser à mettre des tongs -fournis- pour aller aux WC, après une douche 😁\nOn s'y habitue vite, j'ai connu ça dans d'autres pays (Inde ...)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Andreoni",
+                "avatar": "https://lh3.googleusercontent.com/a/AEdFTp7t3Ag3M66CDwU11Y6K3wit_02lvLscf8YO1yCS=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "6/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anniek",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "30/03/2024",
+                "rating": "Top accommodatie in Pu Luong",
+                "score": 9.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Onwijs genoten van ons verblijf hier! De host Tom is een super vriendelijke man en je kan verschillende activiteiten boeken bij de accommodatie. Wij hebben een dagje een scooter gehuurd, o.a. naar Chom Lan village gereden en een 8KM wandeling samen met Tom gemaakt. Beide echte aanraders om te doen!\nHet verblijf is prima, heel fijn dat er een goede klamboe hangt! Ontbijt smaakt goed, vooral lekker vers fruit. Mooi uitzicht en ook voldoende wandel mogelijkheden in de omgeving om zelf te doen. En er zijn echt twee geweldig leuke hondjes!",
+                "comment_negative": "De kamers zijn wel gehorig en het eten is niet speciaal, maar desondanks zou ik deze plek zeker aanraden aan andere!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maik",
+                "avatar": "https://lh3.googleusercontent.com/-8cZa5YwxGxM/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnI-q4OkyX3z7jI9SpwgW6OgYYeYQ/s96-c/photo.jpg",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "4/02/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "3 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Der Ausblick war super.Der Pool war auch schön und sauber.schöner Garten.Der Gastgeber war sehr nett und bietet Touren an bzw. Sagt was unternehmen kann.Unbedingt auf den Einheimischen Markt fahren lassen,sehr interessant.!",
+                "comment_negative": "Das Essen war leider kalt ,Frühstück ging so."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Soyeong",
+                "avatar": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/09/2023",
+                "rating": "뷰가",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "뷰 최고!",
+                "comment_negative": "음식 값이 너무 비싸고 침대 위 모기장에 먼지랑 화장실 하수구에 머리카락이 안 치워져있음."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Danielle",
+                "avatar": "https://lh4.googleusercontent.com/-LswE8aMvnlU/AAAAAAAAAAI/AAAAAAAAAK8/m_2XDjJNpA8/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/03/2023",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Petit déjeuner à peu près OK, emplacement très bien",
+                "comment_negative": "chambres et équipements manquant d'entretien, ménage très aléatoire, ensemble décevant pour chambre soi-disant VIP"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Patrick",
+                "avatar": "https://graph.facebook.com/v2.9/5001453246536503/picture?type=square&height=64&width=64",
+                "country": "Đan Mạch"
+            },
+            "review": {
+                "date": "20/011/2022",
+                "rating": "Wonderful stay",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · tháng 11/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": "We had a wonderful stay at Tom’s resort. We were excellent taken care of from the start, We were guided by Tom through the hills on a trek, and a beautiful trip to a gorgeous cave. The horel is clean, the pool is nice, and the area is just brilliant! Nearby people are super friendly and fond of foreigners. I would recommond this place to everyone!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Olivier",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKO6n0DLspq-Dw1namFPTTDeiOnkAus4_QhwzHCdN7X4S8=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "12/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Esther",
+                "avatar": "https://graph.facebook.com/v2.9/10202013468774754/picture?type=square&height=64&width=64",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "22/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Je komt naar deze accomodatie voor de ligging en het uitzicht die beide fantastisch zijn. Daarnaast kan Tom alles voor je regelen. Wandeling, prive chauffeur, motor. Hij geeft goede tips waar je allemaal zelfstandig heen kan gaan. Wij hebben ook nog een ochtend wandeling gedaan met hem wat ook erg leuk was.",
+                "comment_negative": "De tegels in het zwembad waren erg glad. Dit komt waarschijnlijk door het zo minimaal mogelijk gebruiken van chemicaliën en gebruik van water uit natuurlijke bron. Nadat wij dit gemeld hadden stond wel iemand de volgende dag de tegels schoon te maken, dus fijn dat er wat mee gedaan is."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jean",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJwbidccToQHrz2mH2l3FWkAGVULg7XFqpO4Rrrs=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "8/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 3/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "La situation de Inh La Home sur les rizières en terrasse avec vue extraordinaire. L'accueil du propriétaire et son équipe.  Tous gentils disponibles et aux petits soins",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Claire",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "7/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "L'hôte est très accueillant : à notre arrivée, il nous a expliqué la région (le parc naturel, la population...) , une jolie promenade à faire autour de l'hôtel, les activités...\nLe cadre est idyllique, l'hôtel s'intègre parfaitement dans le paysage.\nLa cuisine proposée est savoureuse, les portions généreuses et le petit déjeuner très agréable. À recommander !",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jessica",
+                "avatar": "https://lh6.googleusercontent.com/-EYhHfJWHL9M/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl0SNw4bM80qX3fIoyo_r1CZEWFKQ/photo.jpg",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "9/010/2023",
+                "rating": "Beautiful scenery. Great location. Friendly staff.",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Stunning views. Great location.\nTom (manager) was great - really helpful, knowledgeable and friendly.\nAll the other staff were extremely friendly too.\nGreat value for the price.\nAlso nice mojitos.",
+                "comment_negative": "Our room was lower down in a separate bit to the main hotel which meant the room felt quite dark. Other than that, no complaints."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Colin",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GiL5PVsiikR6M1ttbPW3tQkLoThCetgutES9Mns=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "22/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Tom est un hôte formidable. Plein de bons conseils, toujours à l'écoute et vraiment présent pour vous aider au mieux dans votre séjour. L'emplacement est parfait pour se déployer dans les environs à scooter. Bien penser à vérifier les freins et l'état général. Les routes peuvent être pentues et non éclairées. Pour ce qui est du bien être ici, on a prolongé de 24h notre séjour et vraiment considéré 24h de plus.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Băng",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gi9ygyyfpqZhNXiwgsMa15dqrIer_aNiZ0ybLs4hQ=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Phòng đẹp, không gian thoải mái. Nhân viên nhiệt tình",
+                "comment_negative": "Giường bị kêu tiếng khi di chuyển trên giường"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jessica",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "27/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Renaud",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtfllHxjF7J3SEq8qFY842kkK3ny5RLnxJtPozT6C1xl=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "14/01/2024",
+                "rating": "unforgettable stay .we will come back",
+                "score": 9.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "kindness of every body , dishes, magnificent site .",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sandrine",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "19/09/2023",
+                "rating": "Excellent séjour",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "3 đêm · tháng 9/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "L’accueil, la disponibilité du personnel et la situation géographique avec une superbe vue sur les rizières.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mahdi",
+                "avatar": "https://graph.facebook.com/v2.9/10156502876265937/picture?type=square&height=64&width=64",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "6/03/2024",
+                "rating": "Super endroit, bien situé, accueil de qualité",
+                "score": 7.0,
+                "room_type": "Suite Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Emplacement \nBeauté du lieu\nAccueil du personnel",
+                "comment_negative": "Le chauffage ne fonctionnait pas malgré que le technicien soit venu\nIl n’y a pas d’insonorisation, ce sont des planches avec des espaces vides pù l’on aperçoit le voisin, on entend tout."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Philippe",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "23/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "The view from the swimming pool was turbo nice, the owner was very kind and they spoke very well english. They wanted to include us in the celebration of uncle Hô's birthday (19 may). Many advice for activities to do.",
+                "comment_negative": "A bit pricey to take bus to other cities, very low water pressure for showering. Breakfast was closing a bit early (hard to wake up after Hô Chi Minh's party)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Iva",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-i.png",
+                "country": "Cộng hoà Séc"
+            },
+            "review": {
+                "date": "19/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "We had a great stay, the owner Tom is really friendly and helpful, he arranged a transport for us from Hanoi and back and took us to  beautiful places in the area. He speaks perfectly english and we learnt many interesting things about local people, their life and traditions. The whole place is beautifully decorated, breakfast and all other food was great. It was one of the most authentic places we visited in Vietnam with very kind people and stunning nature :)",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Marjolein",
+                "avatar": "https://graph.facebook.com/v2.9/953261474735356/picture?type=square&height=64&width=64",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "8/012/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "3 đêm · tháng 12/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Mooie locatie met uitzicht op de rijstvelden. De eigenaar Tom is een super vriendelijk en een fantastische gids die\nvoor ons leuke tours in de omgeving organiseerde. Hierbij hield hij rekening met onze jonge kinderen. Echt een aanrader.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thierry",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "24/07/2023",
+                "rating": "Hotel dans un cadre magnifique et superbes excursions",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Núi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "L’hôtel se trouve dans un cadre magnifique avec vue sur les rizières en terrasse. Excellent accueil. L’hote nous a proposé deux demi-journées d’excursions et nous a accompagné lors de ces visites. Nous avons adoré les endroits visités et l’ensemble des explications. Un des meilleurs souvenirs de notre séjour au Vietnam",
+                "comment_negative": "Rien à signaler"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Guasimara",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-g.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "21/09/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Aurore",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "18/01/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "2 đêm · tháng 12/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Les repas du restaurant de l'établissement sont vraiment très très bons, variés et copieux.\nPossibilité de prendre une excursion avec un guide pour la journée afin de visiter une grotte, les grandes roues à eau, faire une balade en radeau, visiter des villages.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Gabriele",
+                "avatar": "https://graph.facebook.com/v2.9/1531417373584204/picture?type=square&height=64&width=64",
+                "country": "Ý"
+            },
+            "review": {
+                "date": "19/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "We stayed here 3 nights and had a great time. With a balcony overlooking the rice terraces the view from the room was wonderful. The mattress was also very comfortable. We had the best food here after a month in Vietnam. All the staff are always ready to meet your every request. We also organised a tour with the owner of the place and it was very interesting",
+                "comment_negative": "Nothing"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phuong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/01/2023",
+                "rating": "nhất định sẽ quay lại vào mùa hè này",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 1/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí đẹp, bài trí và không gian ấm cúng. phòng và tiện ích đều sạch sẽ. Chủ homestay, anh Lâm và các nhân viên đều thân thiện, chu đáo. Nhà mình tới vào thứ Bảy nên được thưởng thức ca múa nhạc dân tộc và nhảy sạp rất vui. dịp năm mới còn được mời rượu vang miễn phí",
+                "comment_negative": "vị món ăn chưa thực sự ngon như kì vọng, tuy nhiên giá hợp lý"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Patrice",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Canada"
+            },
+            "review": {
+                "date": "2/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "3 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lea",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTteAJMnhxgT53O9L1yAIkdPrWBHvdeY9JFAnKjoiI20=s96-c",
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "28/012/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 12/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Very relaxing place with beautiful views und very nice hosts. Highly recommended.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Erin",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "19/02/2024",
+                "rating": "Absolute gem",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "We loved our stay so much, especially thanks to Tom who went above and beyond as our host and guide. The location and views are incredible, the rooms large and comfortable. Food also excellent. We would stay here again in a heartbeat.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stefanie",
+                "avatar": "https://graph.facebook.com/v2.9/1390784840957575/picture?type=square&height=64&width=64",
+                "country": "Áo"
+            },
+            "review": {
+                "date": "28/02/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · Tháng 2/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Tolle Lage mit Blick auf die Reisfelder! Schöne Anlage mit gepflegtem Garten. Den Pool konnten wir leider noch nicht nutzen, da es jahreszeitbedingt noch etwas zu kalt war. \nDer Host spricht perfektes Englisch und hat mit uns Wanderungen durch die Reisfelder und eine Mopedtour zum lokalen Wochenmarkt unternommen. Sehr empfehlenswert!",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Gonzalo",
+                "avatar": "https://lh5.googleusercontent.com/-zQ7yx7emuJA/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucm8EJY3A0KzzIl6egw5EjB9_Zz3Ig/s96-c/photo.jpg",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "15/03/2024",
+                "rating": "Fantástico",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "La hospitalidad, la recepción con un zumo natural fresco cuándo llegas, la comida, el tamaño de la habitación. Tom es una persona extraordinaria que nos organizó un día fantástico. Su equipo, que te ayudan con todo",
+                "comment_negative": "Hay que tener en cuenta que la construcción es de madera y se notan y escuchan todas las pisadas de la gente que hay en la habitación de arriba. Sólo es cómo comentario, cuándo uno elige un hotel hecho gran parte de madera, esto ya lo sabe."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Truc",
+                "avatar": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/05/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "The view is stunning. Should choose room 202 for the best view. Staffs are very helpful.",
+                "comment_negative": "AC sometimes automatically off."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Erwan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "23/05/2023",
+                "rating": "Magnifique",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Emplacement idéal au milieu des rizieres. Le propriétaire fait tout pour vous faire découvrir sa belle région. Les chambres et le complexe correspondent parfaitement aux photos.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Le",
+                "avatar": "https://lh4.googleusercontent.com/-8Ry2EobPZGM/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3renYMeq7_hlzG4UQODaEs56Y2dAKg/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/011/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 11/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nichola",
+                "avatar": "https://lh3.googleusercontent.com/a/AEdFTp6HItD__ZT1k0bTi-kFlbVjRUTXnqTpcXFk1Mll=s96-c",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "8/010/2023",
+                "rating": "Our favourite place",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Our favourite place in Vietnam. Inh La Home is a dream. Stunning views and beautiful atmosphere. Best pool. Best food made with love by the happiest chef I’ve met. Tom is a wonderful host and staff (esp. Thu) are utterly delightful. I wish we’d skipped Mai Chau and headed straight here.",
+                "comment_negative": "Everything was perfect."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jerome",
+                "avatar": "https://lh6.googleusercontent.com/-CIOxZEtg1IE/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rd3X3cCOO_Tqdbn4gvB42aCPYIOiQ/s96-c/photo.jpg",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "27/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Emplacement top, homestay donnant sur les rizières. Vous pouvez faire des balades à pied.\nLes mini bus vous déposeront devant l'hôtel très familial. Grande chambre vue magnifique. Salle d'eau simple mais c'est propre. Repas et petit dej sur place.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lucas",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "7/04/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Rossana",
+                "avatar": "https://graph.facebook.com/v2.9/10156164704163108/picture?type=square&height=64&width=64",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "25/05/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "La ubicación y las vistas son increíbles. El personal es amable, hace lo posible por cubrir las necesidades. La habitación es espaciosa, limpia.",
+                "comment_negative": "La nevera en la habitación no funcionaba. El lavabo la parte de la ducha está muy mal pensado, se moja todo el lavabo. El precio de la lavandería caro en relación a los precios de Vietnam igual que el restaurante, pero claro tampoco tienes otras opciones. \nPara llegar hasta este hotel no hay muchas opciones, el hotel ofrece traslados pero no es económico y una vez allí no tienes alternativas porque es una zona rural. Si realizas traslados no lo hagas por la noche, la carretera es peligrosa y con niebla."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stephane",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/04/2024",
+                "rating": "Lieu super peronnel au top entretien à améliorer",
+                "score": 6.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Le personnel est accueillant et à votre écoute",
+                "comment_negative": "La climatisation dans notre chambre et la piscine pas entretenue"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ruth_lannoo",
+                "avatar": null,
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "17/03/2024",
+                "rating": "Nice views and friendly staff",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Good location, beautiful views, nice and spacious room. Largest bed I have ever had :).  Breakfast and food are good too (a lot of choice). Very friendly staff! They help you out to plan your day (eg rent motorcycle).",
+                "comment_negative": "Maybe a bit expensive?"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": "https://graph.facebook.com/v2.9/970371849744495/picture?type=square&height=64&width=64",
+                "country": "Ba Lan"
+            },
+            "review": {
+                "date": "16/01/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Gia đình",
+                "stay_duration": "1 đêm · tháng 1/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Cảnh đẹp, thức ăn ngon, nhân viên thân thiện.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Alexandre",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "21/03/2023",
+                "rating": "Cadre exceptionnel",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "L'hôte était très accueillant et propose plusieurs excursions (payantes) où ils vous accompagne pour faire lui-même le guide : bat cave, bambou rafting, ... \nLe lieu est incroyable pour les balades dans les villages au milieu des montagnes. La piscine est appréciable après une bonne journée de marche ou de scooter que vous pouvez louer à deux pas.",
+                "comment_negative": "Une souris dans notre chambre qui nous a empêcher de dormir. Prix un peu élevé pour la chambre et la cuisine."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Aliocha",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Reunion"
+            },
+            "review": {
+                "date": "8/011/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · tháng 11/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Très bien situé, accompagnement de tom le patron qui permet de visiter les beaux alentours et qui propose les spécialités culinaires de la région... À vous de découvrir !",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Richard",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-r.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "19/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Fabulous location, comfy rooms.\nOur host was very welcoming with good knowledge of the local area and sorted out scooter hire as well. Food was good and plentiful.  We had a very relaxing time with some spectacular scenery from our room window.  Visiting here is a must.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Frank",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-f.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "7/04/2024",
+                "rating": "Een echt stukje Vietnam en niet al te toeristisch.",
+                "score": 9.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Een fantastisch uitzicht over rijstvelden in de bergen. Vanuit de kamers, restaurant en het zwembad. Dat gecombineerd met de vriendelijkheid van Tom en zijn personeel maakte het plaatje compleet. Aanrader om zeker niet over te slaan.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Emmanuel",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/09/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "La vue",
+                "comment_negative": "Le besoin de faire de l’argent trop présent"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Glen",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJHglMxO9HAYr7hr5SFSm9uIiyUsEyjnL_snL_XB_Cz=s96-c",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "19/04/2024",
+                "rating": "You pay for the pool and the view, only that",
+                "score": 7.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "- nice pool\n- nice view\n- dinner ok\n- good buffet for breakfast",
+                "comment_negative": "- material used to build the pool can be very hot under the sun\n- the overall state of the hotel is not so good, some maintenance should be done\n- the AC in the room (at the corner) didn't work properly and was fixed with duc tape\n- the material used to build the bathroom can be very slippery when wet hence be very dangerous \n- when taking a shower the evac hole is on the other side so a major part of the floor is wet\n- large spaces around doors and windows\n- very close to the road, you can easily hear scooters, buses and trucks."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bertille",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "2/03/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite có giường cỡ King với ban công",
+                "stay_duration": "2 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Logement bien situé. \nTrès bons repas. \nNous avons apprécié la visite avec Tom qui nous a fait découvrir la vie locale et de très beaux paysages, nous recommandons !",
+                "comment_negative": "Chambres mal insonorisées \nL'endroit où prendre ses repas n'est pas couvert (embêtant en hiver)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vered",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJyWbjlswp1s5H5nuvSWp8BM_KrernMKLYqEtWgw=s96-c",
+                "country": "Israel"
+            },
+            "review": {
+                "date": "6/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "נוף מדהים.צוות מאד ידידותי אשר מגיב באופן מיידי לבקשות. אוירה כיפית. הופעת ריקוד מסורתית משמחת. ארוחת בוקר מגוונת וטעימה בסגנון וייטנאמי וגם בסגנון מערבי",
+                "comment_negative": "קירות המקלחת לא היו נקיים. המאפרה במרפסת נשארה מלאה בסיגריות מאורחים קודמים.  חסרה מגבת לרגליים לספוג את המים ביציאה לחדר. אין הפרדה בין המקלחת לשירותים כך שכל חדר המקלחת מוצף. אין מגב לגרוף את המים."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sakshi",
+                "avatar": null,
+                "country": "Ấn Độ"
+            },
+            "review": {
+                "date": "26/04/2024",
+                "rating": "Great views, great host and a serene and peaceful atmosphere in this village",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The views from the room were one of the best in Pu Luong with big windows and balcony. The host was super friendly and guided us well so that we could explore the best of this place. Pu Luong is a little hidden gem in Vietnam.",
+                "comment_negative": "The pool was not functional while we were here and was getting cleaned. The generator also could have more power backup, we did struggle one afternoon when there was a power cut"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anaïs",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "22/010/2023",
+                "rating": "Good",
+                "score": 8.0,
+                "room_type": "Phòng 2 giường đơn có ban công",
+                "stay_duration": "3 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Très bien situé au milieu des rizières. La vue est magnifique. Le personnel est très professionnel.",
+                "comment_negative": "Nous sommes restés 3 nuits et la piscine a été vidée dès notre arrivée et à ensuite mis 2 jours à se remplir donc nous n’avons pas pu l’utiliser ce qui n’est pas juste pour le prix qu’on paye.\nLa douche fuit donc la salle de bain est constamment trempée."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ana",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "3/04/2024",
+                "rating": "Alojamiento totalmente recomendable",
+                "score": 10.0,
+                "room_type": "Phòng 2 Giường Đơn Nhìn Ra Khu Vườn",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Excelente atención excelente de todo el personal y en especial de Tom, que nos asesoró y ayudó en todo lo necesario y más, buena oferta gastronómica y entretenimiento en la sobremesa de la cena",
+                "comment_negative": "Ausencia de mini bar en la habitación, hacía mucho calor y al menos agua fresca se habría agradecido"
+            }
+        }
+    ]
+}

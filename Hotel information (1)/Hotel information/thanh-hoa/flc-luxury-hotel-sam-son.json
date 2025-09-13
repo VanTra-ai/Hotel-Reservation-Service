@@ -1,0 +1,3571 @@
+{
+    "name": "FLC Luxury Hotel Samson",
+    "address": "Thanh Nien Road, Quang Cu Commune, Sam Son Hamlet, 41000 Sầm Sơn, Việt Nam",
+    "description": "Với Wi-Fi miễn phí, hồ bơi ngoài trời và tiện nghi tiệc nướng, FLC Luxury Hotel Samson cung cấp chỗ nghỉ tại thành phố Thanh Hóa. Resort có trung tâm spa và phòng xông hơi khô đồng thời du khách có thể thưởng thức bữa ăn tại nhà hàng.\n\nMột số phòng đi kèm ban công hoặc sân.\n\nDu khách sẽ tìm thấy lễ tân 24 giờ.\n\nResort có khu vực bãi biển riêng cũng như tiện nghi thể thao dưới nước và cung cấp dịch vụ cho thuê xe đạp. Du khách có thể tham gia vô số hoạt động, ví dụ như chơi gôn, đi xe đạp và bơi xuồng.",
+    "rating": "7.1",
+    "total_rating": "209",
+    "evaluation_categories": {
+        "service_staff": 7.5,
+        "amenities": 7.0,
+        "cleanliness": 7.4,
+        "comfort": 7.5,
+        "value_for_money": 6.8,
+        "location": 8.0,
+        "free_wifi": 7.8
+    },
+    "reviews": [
+        {
+            "reviewer": {
+                "name": "Hong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/07/2023",
+                "rating": "Một kỳ nghỉ chưa được như mong muốn.",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí đẹp sát biển \nBể bơi rộng\nNhân viên quán ăn nhiệt tình\nNhân viên lễ Tân hỗ trợ khách hàng khi bị quên đồ tại khách sạn.",
+                "comment_negative": "Thang máy hỏng, phục vụ phòng chưa tốt, chưa thuận tiện cho người ngồi xe lăn.\nTiện nghi xuống cấp\nDịch vụ xe điện quá tải phục vụ khách hàng."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tiệp",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtexyCDpJie5rRpaeYFPraPRntErnFBdGX3exdYUUySfTa8=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần biển",
+                "comment_negative": "nội thất hoàn thiện kém. ga giường bẩn"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jackshim9",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/04/2023",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/07/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cuong",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/02/2022",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · Tháng 2/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Helen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/07/2023",
+                "rating": "Tương đối hài lòng",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng ngon, địa điểm đẹp",
+                "comment_negative": "Phòng hơi ẩm, và vẫn còn mùi thuốc lá."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/07/2023",
+                "rating": "Tệ",
+                "score": 1.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng nghèo nàn món, ngũ cốc chỉ có duy nhất một loại.",
+                "comment_negative": "Phòng ở rất hôi mùi mốc, toilet khu vực hồ bơi quá bẩn."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Detlef",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/04/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "3 đêm · tháng 4/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Die Bungalow waren direkt am Meer. Sehr schön , aber der Privat Pool war sehr clorhaltig und der Pool selbst in den Jahren gekommen . Dei Umwälzungen war nicht in Ordnung.  Ich fühlte mich sehr wohl .Die 5 Sterne sind nicht mit Deutschland zu vergleichen aber der Preis war sehr gut. Ich würde dort immer wieder Urlaub machen .",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/012/2021",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 11/2021",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/05/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": "Đồ ăn phục vụ quá đắt nhân viên tư vấn không rõ ràng không chuyên nghiệp"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/06/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Hồ bơi nước mặn đẳng cấp, ăn sáng ngon, vila view biển tuyệt đẹp",
+                "comment_negative": "Đèn phòng khách không đủ sáng, đèn trần và đèn đọc ở phòng ngủ chung 1 công tắc, cửa ra vào phòng ngủ, phòng tắm khá xuống cấp, rất khó đóng cửa, đệm hơi mềm, ở vila nhưng không có đồ bếp cơ bản"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Beata",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Hungary"
+            },
+            "review": {
+                "date": "28/09/2022",
+                "rating": "resolving the problem of 2 different bookings merging into one was an issue for the reception, casurprised to see that t",
+                "score": 5.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 9/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "extremely clean pool and smiling and polite staff.  nice buffet breakfast",
+                "comment_negative": "lack of customer centricity, problem solving capability, flexibility."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Binh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/07/2022",
+                "rating": "Hài lòng",
+                "score": 10.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng ổn, chỗ nghỉ cây cối xanh tốt, bể bơi rộng, đẹp, chia nhiều độ sâu thik hợp với nhiều lứa tuổi.",
+                "comment_negative": "Cửa đẩy bị kẹt hơi khó mở."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lương",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKZPXt7KVxv5mrueve4WU2beYEXVVBCs9y93f49qhAIRI1GjNue=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/06/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nhật",
+                "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/AzcqEtJSicKJ5F7kLNmRKN5ONQk5S7ib601wk1NDN4ibXYSRLbqibQQc3jcj4sXNyRwIbWf5BZATROCLWRjc0IDjUA/132",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Phở ngon",
+                "comment_negative": "Bữa sáng hơi ít món, Checkin hơi lâu, mặc dù khách ít"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cự",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/04/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoang",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Do",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Việt",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "31/012/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 12/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/07/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/55123106.jpg?k=0468e3353d8e4442d025f62cecf59dfcdcc8e6414e457810c0f7767cfe61385e&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/07/2022",
+                "rating": "Tạm được so với các khu nghỉ dưỡng cùng hạng tạiVN",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí số với các khu nghỉ dưỡng khác ở miền Bắc",
+                "comment_negative": "Tinh thần phục vụ của đội ngũ nhân viên nhận đặt phòng và bộ phận an ninh"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/011/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 11/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hải",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2023",
+                "rating": "Ổn",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Gần biển! Nhà riêng yên tĩnh",
+                "comment_negative": "Đường tối! Hạ tầng ko nâng cấp sửa chữa"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/06/2023",
+                "rating": "10 điểm",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "thoáng mát cảnh đẹp dịch vụ tốt không chê được",
+                "comment_negative": "ổ điện cắm bị lỏng không ăn điện"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/05/2023",
+                "rating": "ok",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "nhiều bể bơi, gần biển",
+                "comment_negative": "phòng chật, xuống cấp, khăn hôi"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trang",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/04/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/08/2023",
+                "rating": "Tạm ổn",
+                "score": 3.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "phòng rất ẩm và bẩn, khăn và ga giường bẩn, nhà vệ sinh có mùi, phòng tắm tắc không thoát nước, đồ uống miễn phí không có, điều hòa ồn.",
+                "comment_negative": "Ga giường và khăn tắm rất bẩn, nhà vs có mùi hôi"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hiền",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/09/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Sạch sẽ, tiện nghi",
+                "comment_negative": "Đồ ăn sáng không phong phú như trước, ko biết có phải do hôm mình đi vắng khách ko"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/011/2021",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 11/2021",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sia",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJxpzr_mEBvErLls3qsLph0h1AQ36ZFIZj6vB-5t=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/05/2023",
+                "rating": "Tạm được. Cần nâng cấp thường xuyên hoặc vệ sinh phòng sạch sẽ trước khi đón khách. Thủ tục nhận phòng lâu, lễ tân nguyê",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Nội thất cũ, vắng khách nên không được nâng cấp, không được vệ sinh.",
+                "comment_negative": "Nội thất bẩn, cũ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anna",
+                "avatar": "https://graph.facebook.com/v2.9/10152758092798558/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mehmet",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/09/2022",
+                "rating": "3-Star slices in a 5-Star peel",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "The staff is very keen on helping and solving problems. The hotel management pushes the limits to satisfy the customers. It was my wife's birthday during my stay and they offer the cake free of charge (the cake was better than I expect. For the dinners, the hotel restaurant's cost-benefit rate was 5/5 for me.",
+                "comment_negative": "First of all, the hotel's local guest profile is not familiar and polite to ex-pat guests. So, although it's a 5-star hotel, be well prepared to be faced with weird interactions with the other guests. During my 2 days of stay there with my family, I had moments in which I didn't feel safe. I think this is a very important security issue that needs to be improved.\n\nLastly, the hotel staff is not really speaking English. Even for the standard issues, they may not understand you. On the phone or face2face conversations, you may suffer telling your problem or asking for anything."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Elizabeth",
+                "avatar": "https://graph.facebook.com/v2.9/10208957186940792/picture?type=square&height=64&width=64",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "17/05/2024",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Nice big studio room.good value when on special price",
+                "comment_negative": "It's too far out of the way and you have to get a taxi to get to the shops and restaurant. The breakfast wasn't that special. I've had better at a 3 star  hotel.. hot water was only \nluke warm"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bể bơi to rộng, nhân viên nhiệt tình",
+                "comment_negative": "Nội thất hơi cũ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Samantha",
+                "avatar": null,
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "28/012/2023",
+                "rating": "Amazing hotel, off peak in December",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "7 đêm · tháng 12/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "The hotel staff were fantastic. Went over and above to help us. The resort is pristine. December is definitely off peak as Sam Son itself was deserted. There were hardly any places open to eat. The hotel however was great. The cakes in our room for Christmas were definitely appreciated.",
+                "comment_negative": "Most places were shut (even within the resort). Not having a car would have made getting meals very difficult."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kiên",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/08/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "View đẹp",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huyền",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/05/2022",
+                "rating": "tốt",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "phòng sạch sẽ",
+                "comment_negative": "nhân viên chưa biết thông tin chính xác"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cương",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/05/2024",
+                "rating": "tạm ổn",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "khách sạn 5 sao nhưng đã cũ, tiện nghi tệ so với tiêu chuẩn 5 sao,phong tắm tệ, k có bồn tắm. thang máy không hoạt động. giống ks ma. điều tuyệt vời duy nhất ban công toàn cảnh.",
+                "comment_negative": "tiện nghi tệ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/010/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phạm",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/07/2022",
+                "rating": "thú vị",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí",
+                "comment_negative": "bị nước nhà tắm ngập bẩn ra sàn"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nada",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Ai Cập"
+            },
+            "review": {
+                "date": "24/07/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phương",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/010/2021",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "3 đêm · tháng 10/2021",
+                "group_type": "Nhóm",
+                "comment_positive": "Staff rất thân thiện",
+                "comment_negative": "Mình đi khi vừa mở cửa sau covid nên thấy cảnh quan ko chăm sóc,"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Nhật Bản"
+            },
+            "review": {
+                "date": "10/08/2023",
+                "rating": "Dễ chịu",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "nhân viên dễ chịu\nĐồ ăn sáng ngon \nVị trí sát biển tuyệt vời\nBể bơi nước mặn rất thích \nKhông gian và quang cảnh đẹp",
+                "comment_negative": "Dịch vụ matxa rất tốt nhưng giá hơi mắc so với xảm nhận của mình. Nếu giảm thêm 20-30% thì mình thấy ổn."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Giang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-g.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/08/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/08/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/06/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": null
+            },
+            "review": {
+                "date": "1/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/05/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "khuôn viên rộng, đẹp. nhân viên thân thiện, bể bơi đẹp và cực sạch",
+                "comment_negative": "điều hoà hành lang không mát, đi ngoài hành lang nóng hầm hập. Biển trong FLC không tắm được"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Robert",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-r.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "14/011/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "3 đêm · tháng 11/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuy",
+                "avatar": "https://graph.facebook.com/v2.9/116000358406663318250/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tôm",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/164748534.jpg?k=6befcb71a1a01c7a1896fc2da76bc731c38a7a622e00d281151c87c8733257ec&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/06/2022",
+                "rating": "Không",
+                "score": 5.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Hơi thất vọng",
+                "comment_negative": "Vệ sinh"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/08/2023",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tường",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hường",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/010/2023",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dac",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/04/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/06/2022",
+                "rating": "tốt.",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "view",
+                "comment_negative": "phục vụ và ăn uống"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuy",
+                "avatar": "https://lh3.googleusercontent.com/a/AEdFTp5jqbhe7uENdit7zzHpZm7atMpuERapje8flB8rXnc=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/02/2022",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · Tháng 2/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bể bơi chung ngoài trời đẹp trong, không khí dễ chịu",
+                "comment_negative": "Trong phòng các tủ mùi mốc, mùi gián, nhân viên không nhiệt tình tư vấn, bạn làm reception cáu gắt, bể bơi nước nóng bé và toàn mùi hoá chất, buồn nhất là rất nhiều dịch vụ ngừng hoạt động nhưng không hề thông báo trên các trang đặt phòng...( Trên các trang đặt phòng và thậm chí gọi hỏi reception thì vẫn QC có nhưng đến nơi hỏi cái gì cũng không có: bi_ a tâm dừng, quán bar tạm dừng, xe đạp cũng tạm dừng)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hien",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKE3eoc_QXz0wyqJdhBW-YaOPSs6nPwoHoGNRPUGra3=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/09/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Mọi thứ đều tốt, phòng ốc sạch sẽ, thái độ phục vụ của nhân viên cũng rất tốt",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lưu",
+                "avatar": "https://graph.facebook.com/v2.9/976509872501985/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/08/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vũ",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/06/2023",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": "Thái độ lê tân kém, thiếu khăn và áo choàng"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GhUxE-wUlgH7s5hx_ZmdKUh05UA4ks9-9NW0_5d8A=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/08/2022",
+                "rating": "đạt được",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần biển",
+                "comment_negative": "tiện nghi phòng ở hơi kém"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thom",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2023",
+                "rating": "Nói chung là tuyệt",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "bể bơi to đẹp",
+                "comment_negative": "phòng ngủ 2 hơi bí"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/09/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "김",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Bỉ"
+            },
+            "review": {
+                "date": "2/012/2022",
+                "rating": "will be back",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 12/2022",
+                "group_type": "Nhóm",
+                "comment_positive": "very quiet",
+                "comment_negative": "nothing"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hải",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/06/2021",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2021",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "정",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gj5Th5fnzfCPZpHmoh-l-Qtd3aDkdCJLSLtTx9Ggg=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/08/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "전망",
+                "comment_negative": "노후한시설"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/08/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/06/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Michael",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "13/08/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Spacious room, quiet, located on the beach, great pools and activities.",
+                "comment_negative": "Unsecured WiFi, no A/C in the hallways, towels not accessible at the pools."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/05/2024",
+                "rating": "Lần thứ 2 quay lại đây nhưng không quá hài lòng như lần đầu. Nói chung là tạm được.",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Như",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quân",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/09/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Địa điểm tốt",
+                "comment_negative": "Phòng  rất mùi. Trên trang Book king khi đặt có tính phí giường phụ nhưng thực tế ko có."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nga",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/06/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần biển gần hồ bơi",
+                "comment_negative": "phòng cũ, vật dụng hỏng. phòng family phòng ngủ rất bé"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/06/2023",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/08/2022",
+                "rating": "khách sạn cũ, nhân viên kk thân thiện. mọi thứ ko xứng đáng với chi phí bỏ ra ở khách sạn 4-5 sao",
+                "score": 1.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bughati",
+                "avatar": "https://graph.facebook.com/v2.9/10217410106467933/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/04/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 4/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngọc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/07/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tram",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/06/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "4 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Food and drinks are nice, good service, staffs are helpful",
+                "comment_negative": "My sheets/blanket smelled off even after changing"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "승일",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/08/2023",
+                "rating": "비올때 짐 내리고  실을때 안좋다!",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "수영장, 바다 전망은 좋았어요!",
+                "comment_negative": "엘레베이터가 너무 조금인듯,\n체크아웃할때 벨보이가 케리어 안챙겨줌\n차에 짐 실을때도 안챙겨줌\n주차후 도보로 리솁션 이동해야하는\n불편함\n비가오면 짐 내리고 실을때 다졌음"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chứng",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "30/04/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://lh3.googleusercontent.com/-Ta_OKAlKsfI/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclvtGfd5e2mFnVsUBTCeBvB6pcEiw/s96-c/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/05/2024",
+                "rating": "Bình thường",
+                "score": 5.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Bể bơi rộng, sạch",
+                "comment_negative": "Không có thang máy xuống tầng 1. Bầu 8 tháng mà cứ đi lên đi xuống thang bộ. Nhờ nhân viên đổi phòng nhưng bị báo đã kín phòng. \nKhách sạn 5 sao mà bảo vệ và nhân viên thấy khách đến không xuống đón tiếp, xách đồ,chào hỏi khách. Cứ đứng ở trên sảnh nhìn xuống. \nKhách sạn đông nên dọn phòng không cẩn thận, đồ đạc không đủ, thấy thiếu cái gì thì gọi lên tổng đài họ lại mang xuống cho thôi, thấy các phòng khác cũng phản ánh như vậy. \nVới phong cách phục vụ và khách sạn như này thì chỉ xứng tầm 4 sao đổ lại chứ không phải 5 sao."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bich",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/09/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "cung tam dc",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/07/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": "https://graph.facebook.com/v2.9/1268740946571469/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/07/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/07/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phương",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "30/06/2022",
+                "rating": "Nó là một khách sạn tốt nhất ở Sầm Sơn mà gia đình tôi từng nghỉ .",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bể bơi ngoài trời và view tuyệt đẹp",
+                "comment_negative": "Nội thất gỗ hơi cũ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuan",
+                "avatar": null,
+                "country": "Đức"
+            },
+            "review": {
+                "date": "17/09/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Tiện nghi sạch sẽ yên tĩnh",
+                "comment_negative": "Khách đông không có xe đii thăm quan khu flc. Cái gối nó bị không phù hợp"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hương",
+                "avatar": "https://graph.facebook.com/v2.9/1951108651750369/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/06/2022",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": "Nhân viên lễ tân, phục vụ chậm, ko chuyên nghiệp"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": "https://graph.facebook.com/v2.9/1268740946571469/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/07/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/04/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng ok, món ăn đa dạng. \nKhông gian sạch sẽ.",
+                "comment_negative": "Khu vui chơi trong khách sạn sơ sài, xuống cấp (Bi-a, bóng bàn) .... Mất tiền nhưng không thấy ghi trong cuốn sổ cẩm nang đặt trong phòng khách sạn.\nDo chưa vào mùa du lịch nên phải di chuyển ra ngoài ăn trưa, ăn tối, nhà hàng tại khách sạn vẫn chưa hoạt động.\nVách kích bên ngoài có nhiều vết bẩn."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hồng",
+                "avatar": "https://graph.facebook.com/v2.9/2049078052106331/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/06/2023",
+                "rating": "Tạm được",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí thuận lợi. Quần thể đẹp.",
+                "comment_negative": "Không sạch sẽ: ga giường hôi, nhà vs hôi. Không sáng: thiếu ánh sáng khu vực công cộng. Ít hoạt động giải trí, có thể thêm hoạt động: nhạc sống, bar ngoài trời, bbq ngoài trời ... và ks không set mini bar cũng là yếu điểm."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Le",
+                "avatar": "https://graph.facebook.com/v2.9/10224226013904231/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Le",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/08/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Việt",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/06/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/07/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pham",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/06/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/08/2022",
+                "rating": "Khá",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Nhóm",
+                "comment_positive": "Khung cảnh đẹp",
+                "comment_negative": "Phục vụ chưa tốt, chưa đủ chuẩn 5 sao"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoàng",
+                "avatar": "https://graph.facebook.com/v2.9/908651856869019/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Liên",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/07/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Viet",
+                "avatar": "https://graph.facebook.com/v2.9/4156537251073960/picture?type=square&height=64&width=64",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "4/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Nhân viên phục vụ nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/03/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · Tháng 2/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trọng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuan",
+                "avatar": "https://graph.facebook.com/v2.9/10229590774733649/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/02/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 1/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mai",
+                "avatar": "https://graph.facebook.com/v2.9/609999366527040/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/07/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "3 đêm · tháng 5/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cuong",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/02/2022",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · Tháng 2/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kun",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Đài Loan"
+            },
+            "review": {
+                "date": "4/05/2024",
+                "rating": "只适合躲在酒店放空或来打高尔夫球的人",
+                "score": 6.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "FLC集团占地很大，酒店也很漂亮。",
+                "comment_negative": "早餐样式不多，浴室容易积水，游泳池只到下午6点就结束。海滩海水比较脏。附近没有任何景点，外面餐厅都买海鲜但是价格不便宜。"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hường",
+                "avatar": "https://graph.facebook.com/v2.9/3274521819493284/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/07/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Đức",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/06/2022",
+                "rating": "tồi",
+                "score": 1.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "không gian",
+                "comment_negative": "thái độ nhân viên đi ngang qua khách ko chào hỏi,nhìn khách thái độ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Camelle",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Philippines"
+            },
+            "review": {
+                "date": "5/02/2022",
+                "rating": "It was a wonderful stay. We had fun at FLC and will definitely come back again. Thank you to the helpful staffs!",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · Tháng 2/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The place itself is very nice. The staffs are nice and helpful. The breakfast was excellent! A variety of food was served. Room is nice and clean.",
+                "comment_negative": "There were no people in charge in the heated pool near our building so we had to go to the other building and walk back to our room after, which is not near our room at all."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/08/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phuoc",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/39088280.jpg?k=89090137afa97d3f87926490add1abc2ff2da44270cb318a0c89ef86276bbd2a&o=",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "15/08/2023",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thị",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/08/2022",
+                "rating": "Lần đầu tiên nghỉ ở một resort 5* nhưng được phục vụ như 3* vậy. Nguyên khoản check in đã lằng nhằng+ nhân viên check in",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Phòng  cũng đẹp, sạch sẽ, bể bơi đẹp.",
+                "comment_negative": "Nhân viên không nhiệt tình, không đáng giá 5*"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Taleb",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "United Arab Emirates (Các Tiểu Vương Quốc Ả Rập Thống Nhất)"
+            },
+            "review": {
+                "date": "6/05/2022",
+                "rating": "Awesome!",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "I really liked the staff who presented me with my birthday cake.......\n I wished i knew his/her name....\nI",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoai",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/05/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2023",
+                "rating": "Một kì nghỉ hài lòng !",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng hợp khẩu vị của chúng tôi. Các món khá phong phú.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/05/2023",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 4/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/05/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/07/2023",
+                "rating": "Trải nghiệm không hề thú vị",
+                "score": 3.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": "Phòng nghỉ không được cải tạo, đồ đạc nội thất cũ kỹ, nhem nhuốc (sofa rách hở cả đống mút ra, lâu ngày không giặt nên rất bẩn). Nhà vệ sinh không có vách ngăn với phòng tắm nên nước chảy lênh láng, tràn cả vào phòng ngủ. Trần nhà, lối đi giữa 2 giường nhỏ ở phòng ngủ nhỏ bụi và mạng nhện giăng đầy. \nBữa sáng nghèo nàn, đồ ăn nhạt nhẽo. Bể bơi nước bẩn, nhiều cát và rác dưới đáy. Giá phòng thì quá đắt so với chất lượng."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bui",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/07/2022",
+                "rating": "It made me tired",
+                "score": 5.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Breakfast is OK, it is not too far from Hanoi",
+                "comment_negative": "The hotel was noisy. They put the loud speakers near rooms and they turn loud loud loud music until midnight which like music drum hit to my chest. I could not sleep."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phuongdung181088",
+                "avatar": null,
+                "country": null
+            },
+            "review": {
+                "date": "7/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Yoo",
+                "avatar": null,
+                "country": "Hàn Quốc"
+            },
+            "review": {
+                "date": "12/011/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hang",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/09/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quoc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/06/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 5/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": "https://lh4.googleusercontent.com/-O-0f4wiRXmo/AAAAAAAAAAI/AAAAAAAAANo/jtxFW2Vo2RY/s96-c/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/08/2023",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Không gian đẹp",
+                "comment_negative": "Nội thất cũ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tân",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/06/2022",
+                "rating": "Cũng được",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Hơi ít lựa chọn",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ha",
+                "avatar": "https://lh4.googleusercontent.com/-yZE5r2lG09M/AAAAAAAAAAI/AAAAAAAAANY/bsrB5oSxiQs/photo.jpg?sz=50",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/08/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Thái độ nhân viên tốt\nBuffet sáng ngon",
+                "comment_negative": "- Khăn, giường, gối, sofa rất bẩn\n- Lavabo tắc, nhà vệ sinh k thoát nước\n- 1 ngày đc 1 chai nước 350ml/người, mua thêm 40k\n- Đồ ăn nội khu rất đắt, bảng niêm yết giá nhưng k đề giá\n- Bể bơi riêng sặc mùi clo và ko có đèn ban đêm\n- Khu riêng biệt nên sáng sớm thuỷ triều rút mới ra biển được nhưng biển cũng k có bảo hộ hay người của FLC"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lenka",
+                "avatar": null,
+                "country": "Cộng hoà Séc"
+            },
+            "review": {
+                "date": "2/08/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quang",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJw5G--Xi9IoPBbH1PZ7N2MLpSj-xRNyo-02rPmd=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Bãi biển sạch và đẹp. Nhân viên rất văn minh, nhiệt tình và thân thiện. An ninh tương đối tốt. Phòng rộng  rãi, mặc dù ở khu vườn nhưng vẫn sạch và không có muỗi, côn trùng.",
+                "comment_negative": "Thời gian check in khá lâu. Một số biển chỉ dẫn chưa rõ ràng, nên có thêm bản đồ hoặc sơ đồ chỉ dẫn trong khu resort."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quốc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-q.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/07/2021",
+                "rating": "Tuyệt",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 6/2021",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bữa sáng không nhiều nhưng chất lượng, các loại bánh rất ngon.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Đinh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngân",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/06/2024",
+                "rating": "Nói chung tầm 9₫",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Khung cảnh đẹp, view bể bơi và biển. Bể bơi rất đẹp",
+                "comment_negative": "Do lượng khách đông nên xe điện ko phục vụ nhà mình đi tham quan quanh khu. Điều hoà còn bị chảy nc, tv chưa bật đc."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bún",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "31/07/2023",
+                "rating": "được",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "rộng bãi biển bể bơi",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vivian",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-v.png",
+                "country": "Ấn Độ"
+            },
+            "review": {
+                "date": "12/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thị",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2023",
+                "rating": "1 kỳ nghỉ tuyệt vời",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Có nhiều bể bơi cả nước mặn và ngọt sạch sẽ có cả\nbể sục, không gian đẹp",
+                "comment_negative": "Khăn tắm ga giường có vẻ cũ, màu ngả vàng"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hà",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vinh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/011/2021",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 11/2021",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mai",
+                "avatar": "https://graph.facebook.com/v2.9/609999366527040/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/07/2022",
+                "rating": "tuyệt vời",
+                "score": 10.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "3 đêm · tháng 5/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "bể bơi rất rộng, khung cảnh đẹp và sạch sẽ",
+                "comment_negative": "nền bể bơi hơi nhám nếu kg cẩn thận trẻ nhỏ sẽ bị xước sát khi chơi đùa"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Do",
+                "avatar": "https://lh4.googleusercontent.com/-bEIjXTBOSP0/AAAAAAAAAAI/AAAAAAAAAmc/Ljn7BUX4B1U/s96-c/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/06/2023",
+                "rating": "tạm hài lòng",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "hồ bơi rộng, view đẹp, thoáng đãng",
+                "comment_negative": "khu nghỉ bán vé bơi cho khách ở ngoài vào nên rất lộn xộn, gây ảnh hưởng đến trải nghiệm của khách trong resort"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Andreas",
+                "avatar": null,
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "21/04/2024",
+                "rating": "In view of the price it was ok.",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nice pool but the water was very warm. The room was quite big.",
+                "comment_negative": "It‘s not ok if they charge you more for the French fries at the pool than what is shown on the menu because their kitchen is closed and they have to get them from the hotel on the other side of the street."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lan",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gh03QiBBcKII0DDsVRGaJS6t9s1M7x2OY1Snfa5=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "30/07/2023",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": "Phòng ốc ẩm thấp bẩn thỉu, giá tiền 3,5tr mà phòng bí, sàn gỗ rộp hỏng không thay. Khuyên mọi người không nên book phòng ở đây"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phamthuhien",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtdXLP6FGOYN9fbIIQZ2lYNmaQmz5Z-9xKO13uCq=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/07/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/05/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 5/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quoc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/05/2024",
+                "rating": "Flc cần thay đổi trải nghiệm khách hàng",
+                "score": 7.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí/tiện ích",
+                "comment_negative": "Phục vụ kém"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mccoy93",
+                "avatar": null,
+                "country": "Hàn Quốc"
+            },
+            "review": {
+                "date": "30/010/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "4 đêm · tháng 10/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pham",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/08/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuấn",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GhWi6M0vxeKXYdf3OnrmKJ5wXtadA6hSIui7kYWeQ=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/06/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần biển",
+                "comment_negative": "thiết bị cũ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hong",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/010/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 10/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/08/2023",
+                "rating": "tuyệt vời",
+                "score": 10.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kien",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/04/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 4/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/04/2023",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phạm",
+                "avatar": "https://graph.facebook.com/v2.9/1633835246733939/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/08/2023",
+                "rating": "Hài lòng, sẽ quay lại, hi vọng tốt hơn",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Vị trí tốt",
+                "comment_negative": "Check in lâu"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huyền",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tran",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hải",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/05/2023",
+                "rating": "Tuyệt vời",
+                "score": 8.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Cảnh đẹp",
+                "comment_negative": "Nhà tắm chưa tốt lắm"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nam",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2021",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 6/2021",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trang",
+                "avatar": "https://graph.facebook.com/v2.9/104762530668128681782/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/05/2023",
+                "rating": "Tốt",
+                "score": 9.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Tôi thích bể bơi, nhiều và rộng. Tôi thích phòng hướng biển, view đẹp.",
+                "comment_negative": "Tôi không thích giá tiền hơi cao. Tôi không thích thực đơn có phần đơn điệu."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duyen",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/06/2022",
+                "rating": "rất thích",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "bể bơi rất rộng",
+                "comment_negative": "tiếp đón hơi chậm"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pham",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "4/09/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "3 đêm · tháng 9/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trương",
+                "avatar": "https://graph.facebook.com/v2.9/10223044828696270/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cuong",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/02/2022",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · Tháng 2/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/05/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoai",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJwzqkPvRjGQfZes3MJ3GhsjJSTez-ZdzJLmekaJ=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/08/2023",
+                "rating": "Tot nhat o Sam Son",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Be boi rong",
+                "comment_negative": "Bai bien nhieu da"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lưn",
+                "avatar": "https://graph.facebook.com/v2.9/1825717534114734/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/08/2023",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "bình thường",
+                "comment_negative": "nhân viên không kiểm tra được booking của KH. việc checkin rất mất thời gian"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phuong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/06/2023",
+                "rating": "trải nghiệm tệ",
+                "score": 1.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": "Nhân viên không thể chấp nhận được:\n\nCheck in và các phải mất rất lâu mới nhận được phòng, nhân viên check in quá chậm chạp, thiếu kinh nghiệm, không biết xử lý tình huống, khách đến lấy phòng bảo khách 1 tiếng sau quay lại nhận phòng.\n\nsau khi check in thì lên phòng khoá phòng hỏng không vào được phòng, nhân viên bảo do ổ khoá hết điện.\n\nSẽ không bao giờ quay lại!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Scarlett",
+                "avatar": "https://graph.facebook.com/v2.9/537624924693113/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/05/2023",
+                "rating": "Bình thường",
+                "score": 5.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí phòng đẹp",
+                "comment_negative": "Nhân viên phục vụ, đặc biệt lễ tân phục vụ kém, phản ứng kém. không nhiệt tình"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2022",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Bữa sáng ổn, nhiều hồ bơi, có bãi biển riêng",
+                "comment_negative": "Phòng cũ, ko tiện nghi, có mùi ẩm mốc, đèn cháy, sàn nhà"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trung",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/06/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 5/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-v.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/011/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 9/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Valery",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Xuyen",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-x.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/05/2022",
+                "rating": "Trải nghiệm tồi tệ",
+                "score": 4.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 5/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Cạnh bãi biển đẹp",
+                "comment_negative": "Dịch vụ quá tồi , phòng không sạch , nước không thoát"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hùng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": "Còn nhiều tiếng ồn từ hoạt động xung quanh như tiếng kéo đồ đạc ở phòng khác, tiếng nhạc từ quán gần bể bơi."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ha",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/08/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "View phòng đẹp.",
+                "comment_negative": "Nước nóng khó điều chỉnh. Lúc thì nóng quá, lúc thì lạnh quá."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vu",
+                "avatar": "https://lh3.googleusercontent.com/a-/AFdZucrqBSF8uQHEZimUXkKK5_c-sUY23qUAszWIgzb8jg=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/07/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Tiện nghĩ tốt",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Loi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2022",
+                "rating": "service and room are not worth the money.",
+                "score": 4.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "ocean view is good. swimming pool is huge.",
+                "comment_negative": "breakfast is terrible, bedroom is very small compared to the suite size. \nThey only prepare 2 small bottles of water (like 250ml each) in the room, which we consume very fast during this hot weather in Sam Son. Heavy noise from upstair early in the morning (probably renovation).\nVery hot & stuffy corridor too (which is long, like 300m walk). Apparently they installed all the ACs but never turn them on."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Van",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-v.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/06/2021",
+                "rating": "Rất tệ",
+                "score": 2.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 6/2021",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": "1. cleanliness: pool (private & common), bathroom (sometimes there was the smell of sewage in our bathroom), beach (there were unattended litters), etc.  \n2. staffs (we asked for an extra blanket, the registration desk told us they would get back to us but they didn't = so this among other stuffs)  \n3. phone (we couldn't contact the registration desk, and we did not receive assistance from the staff with this) \n4. food at breakfast was mediocre"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuỷ",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/07/2022",
+                "rating": "Rất tệ",
+                "score": 2.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hà",
+                "avatar": "https://graph.facebook.com/v2.9/5051978454909441/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/08/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "1 đêm · tháng 6/2022",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Linh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Ăn sáng đa dạng. Khuôn viên rộng rãi, bể bơi tốt",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/04/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 4/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dang",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GgcjjSKe0UnUJ19bfewtCejycoB38LK3R-RMdex=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Không gian và quang cảnh tuyệt vời",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": "https://graph.facebook.com/v2.9/10223247829005784/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/06/2023",
+                "rating": "tuyệt vời",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "thích tất cả",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quoc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-q.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": "Ổ cắm điện trong phòng tệ."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Biên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/08/2023",
+                "rating": "Chuẩn bị phòng trước 14h để khách tới nhận phòng ngay",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Không gian OK",
+                "comment_negative": "Nhân viên buồng phòng kém\nNhận phòng muộn 3hpm"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pham",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Ireland (Ai Len)"
+            },
+            "review": {
+                "date": "3/05/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng kèm Phòng khách và Khu vườn",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Phòng rộng rãi.",
+                "comment_negative": "Sàn nhà nhiều bụi, không sạch sẽ.\nBàn ghế tương đối cũ.\nVườn quá đơn giản.\n1 đèn trần bị nhấp nháy.\nKhó khăn khi gọi vào tổng đài."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/010/2022",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "1 đêm · tháng 9/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Linh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/08/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Studio kèm Phòng khách",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Giang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-g.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Studio",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hường",
+                "avatar": "https://lh3.googleusercontent.com/-ZaILHeIbo5Y/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdjx--lczWnPOP0bUU19owriyuzow/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Không gian đẹp, sạch sẽ, mát mẻ. Đội ngũ nhân viên nhiệt tình, thân thiện. Được sử dụng cả 2 hồ bơi: hồ bơi nước ngọt và hồ bơi nước mặn. Tôi đã review khá nhiều trên kênh YouTube có tên  Chồng già vợ trẻ Hàn Việt rồi nên không viết dài dòng ở đây nữa.",
+                "comment_negative": "Khu vui chơi trẻ em ngoài trời cũ kĩ và bụi bẩn"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mr",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/07/2023",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Sử dụng nhân sự già, k được đào tạo\nSử dụng quá nhiều nhân viên thực tập\nRất nhiều nhân viên đi lại khu vực sảnh, hành lang nói chuyện thoải mái\nBad",
+                "comment_negative": "K quay lai"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thach",
+                "avatar": "https://lh4.googleusercontent.com/-vpyuHCrd5k8/AAAAAAAAAAI/AAAAAAAAAAA/sv0yp_3PGuE/photo.jpg",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "25/06/2022",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Suite Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Yên tĩnh",
+                "comment_negative": "Không đáng khách sạn 5 sao"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2023",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Suite cho Cặp đôi",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": "Thái độ của lễ tân toà Luxury FLC không tốt, thiếu tôn trọng khách, không chuyên nghiệp, nghiệp vụ kém."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jawad",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "15/08/2022",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Living Nhìn Ra Biển",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        }
+    ]
+}

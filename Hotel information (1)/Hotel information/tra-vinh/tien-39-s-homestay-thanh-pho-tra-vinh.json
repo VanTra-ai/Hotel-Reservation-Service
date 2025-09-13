@@ -1,0 +1,715 @@
+{
+    "name": "Bich Ngoan HOTEL",
+    "address": "22 Mười Chín Tháng Năm, Trà Vinh, Việt Nam",
+    "description": "Nằm ở Trà Vinh, Bich Ngoan HOTEL cung cấp chỗ nghỉ có ban công hoặc sân trong, Wi-Fi miễn phí và TV màn hình phẳng, cũng như khu vườn và sân hiên.\n\nNơi đây còn có phòng tắm riêng với vòi sen ở tất cả các căn, cùng đồ vệ sinh cá nhân miễn phí và máy sấy tóc.\n\nSân bay gần nhất là Sân bay Quốc tế Cần Thơ, cách homestay 88 km.",
+    "rating": "8",
+    "total_rating": "41",
+    "evaluation_categories": {
+        "service_staff": 9.1,
+        "amenities": 8.1,
+        "cleanliness": 8.6,
+        "comfort": 8.4,
+        "value_for_money": 7.8,
+        "location": 8.7,
+        "free_wifi": null
+    },
+    "reviews": [
+        {
+            "reviewer": {
+                "name": "Charlyne",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "10/03/2024",
+                "rating": "Sympa",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Équipe accueillante et professionnelle. Possibilité de se balader en vélo. Chambre propre et confortable.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Gerard",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-g.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "27/011/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Barry",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "25/01/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The room was very light.  The view was good through the very large windows. \nThe staff were very helpful.\nAlthough the room was on the fourth floor and there was no lift, we could have had a room on a lower floor by paying a little more. This seems reasonable.",
+                "comment_negative": "Outside the hotel,  in the park, was a large public TV  screen. It made a lot of noise."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trinh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/09/2023",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Suite Executive",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Coffee is good,  breakfast is delicious",
+                "comment_negative": "The door to the executive room on the first floor requires immediate fixing, had to use heavy force to open or close it."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thị",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/08/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dina",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Bồ Đào Nha"
+            },
+            "review": {
+                "date": "6/01/2023",
+                "rating": "Basic quiet and clean hotel.",
+                "score": 6.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 1/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Breakfast was in a nice setting. Food was ok.",
+                "comment_negative": "No hot water in the room. Towels were clean but stained."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Jonathan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "20/010/2022",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "It seemed a little expensive for what it was compared to other places I stayed in VN, but I think because Tra Vinh does not get a lot of tourists, there is not as much business for hotels here.  I was very happy with the room and staff here.  I would stay again and recommend.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Laurence",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "8/02/2023",
+                "rating": "Bonne situation",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · Tháng 2/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "La situation de l’hôtel près d’un joli parc. L’aide et la disponibilité du réceptionniste qui parle bien anglais. Le prêt de vélo. Le petit-déjeuner.",
+                "comment_negative": "L’animation musicale du soir qui est bruyante. L’attente assez longue pour le petit-déjeuner. La montée des bagages par l’escalier. Je n’ai pas demandé d’aide mais on ne me l’a pas proposé."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Peter",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "26/011/2023",
+                "rating": "i was happy i will stay again",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "area great room very good breakfast very good",
+                "comment_negative": "access to room"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ryan",
+                "avatar": null,
+                "country": "Úc"
+            },
+            "review": {
+                "date": "24/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Freerk",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/17248236.jpg?k=a1e859375703d4f7a01aed208d153d7aa5c97a00e3a32b1d6d85fbcae2cc8811&o=",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "25/011/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 11/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Fanny",
+                "avatar": null,
+                "country": "Thụy Sỹ"
+            },
+            "review": {
+                "date": "12/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Every one was very kind and helpful",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Matthias",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "18/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vic",
+                "avatar": null,
+                "country": "Canada"
+            },
+            "review": {
+                "date": "20/03/2023",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "4 đêm · Tháng 2/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The owner who I met what is a nice person and the maid was nice and location was quite convenient close to downtown Core",
+                "comment_negative": "The room they put us in which was at the Front of the building every night was noisy from karaoke and the band that played for the coffee shop good night sleep until they quit.\nIt was nice to have breakfast included but with only one coffee and we unknowingly asked for a 2nd cup which got charged to our bill not a good policy I told the owner to raise the price of little if you need more money for the coffee."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tiên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/01/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Suite Executive",
+                "stay_duration": "1 đêm · tháng 1/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Alexis",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "4/05/2024",
+                "rating": "plaisant",
+                "score": 6.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Hôtel assez jolie près d'un parc, bien situé. Personne de l'accueil très efficace. L'endroit pour le petit déjeuner est très agréable. Très bonne clim !",
+                "comment_negative": "Chambre petite, au denier étage sans ascenseur, salle de bain minuscule et douche qui ne fonctionnait pas (eau brulante et très peu de pression quasi impossible de prendre une douche le premier soir, puis réparée le deuxième jour mais ne fonctionnait  cependant pas très bien. Assez bruyant  tôt le matin, dû à des hauts parleur venant du parc."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Natallia",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/16728940.jpg?k=c5b14e8325281062e669bef11e0818e6a997c77bdb543b873c7d63de981c5368&o=",
+                "country": "Belarus"
+            },
+            "review": {
+                "date": "17/04/2024",
+                "rating": "Very good hotel",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Wonderful hotel!\nMy room was spacious and clean. WiFi worked well and there were no strange smells or anything (I saw in other reviews that people mentioned that). \nThe location is pretty good. It's close to the city centre, market area and some pagodas. There are stores and restaurants nearby plus they have a cafe on the first floor of the hotel which is very convenient and the coffee they sell there is quite good (famous Vietnamese brand) and the staff is super nice.\nThe hotel staff is very nice and welcoming as well! They speak good English and the receptionist that i communicated with was  very helpful - he helped to find a bus to Can Tho and also organised a taxi for me to get to one of the temples. The taxi driver was the best, btw, and spoke English very well! :)",
+                "comment_negative": "Everything was perfect!"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Peter",
+                "avatar": null,
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "10/03/2023",
+                "rating": "Nice clean hotel. Great coffee shop next door.",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · Tháng 2/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Nice clean hotel. Great coffee shop next door.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Diệu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/03/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The breakfast with only one choice, either bánh mì with beefsteak, or with 2 fried eggs, or with one egg & some can fishes in tomato sauce.\n\nNice view from our balcony.",
+                "comment_negative": "We are a senior couple in our late 70’s. It was good that we are still fit to climb 4 stories up to the studio that we had reserved. This hotel has no elevator. We also wish our studio room had a glass wall or shower curtain to prevent water flashing all over the toilet when we took a shower."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "20/03/2024",
+                "rating": "Kann man machen …",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Wir hatten zunächst das günstigste Zimmer gebucht, um bei der Ankunft festzustellen, dass es (teils über die Außentreppen) in den 4. Stock ohne Lift in ein sehr kleines Zimmer ging. Was hab ich geflucht! Ich hatte zuvor an keiner Stelle einen Hinweis auf diese Gegebenheiten gelesen. Wir haben dann gegen Aufpreis (100.000 pro Etage) in ein Zimmer zwei Etagen tiefer gewechselt: groß mit guter Ausstattung, geräumiges Duschbad. \nKleiner Tipp: Man sollte die Bewertungen lesen; nur aus denen geht hervor, dass kein Lift existiert. \n\nDas Personal war sehr freundlich und hilfsbereit.",
+                "comment_negative": "Die günstigen Zimmer im 4. Stock sind sehr klein und bei Hitze nur mit ständig laufender Klimaanlage bewohnbar; kann man eigentlich nicht empfehlen."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Smael",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "6/01/2024",
+                "rating": "Très bon séjour au côté d’un super staff serviable et très gentil",
+                "score": 10.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Super établissement très bien situé",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuomo",
+                "avatar": null,
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "Nice stay in a comfortable hotel with a good service.",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Lovely hotel with a great location close to Tra Vinh centre. My room had a nice balcony and hotel was also able to rent a motorcycle with a reasonable price.",
+                "comment_negative": "No real complaints"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Baptiste",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "9/03/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/04/2023",
+                "rating": "Nice hotel, meet my expectation",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 3/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Friendly staff, great location very near nice park",
+                "comment_negative": "No elevator"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Michael",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/012/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 12/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dina",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Bồ Đào Nha"
+            },
+            "review": {
+                "date": "5/01/2023",
+                "rating": "good location with clean basic rooms",
+                "score": 6.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 1/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "clean and quiet. nice garden and breakfast areas",
+                "comment_negative": "room was dark and no hot water"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/08/2023",
+                "rating": "the staff is not friendly, room dirty",
+                "score": 1.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "very bad",
+                "comment_negative": "dirty & no elavator"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Eszter",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-e.png",
+                "country": "Hungary"
+            },
+            "review": {
+                "date": "15/010/2022",
+                "rating": "a good choice in Tra Vinh compared to available options.",
+                "score": 9.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 10/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Friendly and helpful staff, stylish good sized room. breakfast OK, but no Western choice.  Location also good.",
+                "comment_negative": "there was only one towel provided for two people, and it seemed that bed linen has not been changed after the previous guest. In addition to not seeming fresh, it had permanent stains on it."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Guy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-g.png",
+                "country": "Luxembourg"
+            },
+            "review": {
+                "date": "4/01/2023",
+                "rating": "Top Adresse für einen Aufenthalt in Trà Vinh",
+                "score": 10.0,
+                "room_type": "Suite Executive",
+                "stay_duration": "2 đêm · tháng 1/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "- sehr freundliches, aufgeschlossenes und hilfsbereites Personal. \n- Der Besitzer entpuppt sich als interessanter Gesprächspartner in vielen Belangen, ist sehr belesen und weltoffen. Zudem hat er eine kreative Ader und hat einen guten Geschmack für (farbenfrohe) Dekoration. In seinem angrenzenden Café, in dem auch das Frühstück eingenommen wird, hat er die Wände mit allerlei stimmigen Wandmalereien verziert.\n- das meiste in der Stadt lässt sich zu Fuss erreichen. Für die Tempelbesuche organisiert der Besitzer gerne ein Taxi, das in unserem Fall jeweils binnen wenigen Minuten bereitstand bzw. uns am jeweiligen Ort abgeholt hat.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phạm",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/010/2022",
+                "rating": "tạm ổn",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 10/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": "view đẹp, gần trung tâm, nhân viên thân thiện",
+                "comment_negative": "phòng hơi không sạch nhưng nhân viên hỗ trợ nhiệt tình để xử lí dù mình nhận phòng rất tối, không có thang máy lên tới tầng thượng hơi mệt"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thomopoulou",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Hy Lạp"
+            },
+            "review": {
+                "date": "18/09/2022",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 8/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pascal",
+                "avatar": "https://graph.facebook.com/v2.9/1480136835353944/picture?type=square&height=64&width=64",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "21/01/2023",
+                "rating": "parfait",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 1/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "très pro très serviable",
+                "comment_negative": "rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nhiên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/08/2022",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 8/2022",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lucy",
+                "avatar": "https://graph.facebook.com/v2.9/10225586919112778/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/03/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Suite Executive",
+                "stay_duration": "1 đêm · Tháng 2/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần trung tâm thuận tiện",
+                "comment_negative": "do khách sạn trồng nhiều cây nên phòng hơi bị muỗi nên cần xịt muỗi trước khi cho khách check in"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tournade",
+                "avatar": null,
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "17/012/2023",
+                "rating": "Séjour agréable",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "1 đêm · tháng 12/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Séjour d'une nuit dans ce charmant hôtel situé dans le centre de Tra Vinh. Petit déjeuner inclus en partenariat avec le café d'à côté et possibilité de louer une moto (200k essence inclus). Le staff était efficace et à notre écoute. Ils nous ont aidés à booker un bus pour Can Tho et nous ont même conduit jusqu'à la station afin de s'assurer que l'on montait dans le bon bus.\n\nJe recommande totalement surtout que la région peu touristique est absolument magnifique avec beaucoup de temple kmer.",
+                "comment_negative": "La chambre ainsi que la salle de bain étaient un peu petites."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/06/2023",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": "chăn ga bốc mùi hôi"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Gwen",
+                "avatar": null,
+                "country": "Canada"
+            },
+            "review": {
+                "date": "3/012/2023",
+                "rating": "Beautiful hotel in great location!",
+                "score": 8.0,
+                "room_type": "Studio Tiêu Chuẩn",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Hotel was beautiful with lots of plants and greenery. It's in a very convenient location that was off the main road so it wasn't too noisy. Breakfast and coffee included was delicious.",
+                "comment_negative": "Our room was on the 4th floor that required we go up a narrow winding staircase. There is no elevator so going up/down in 30+ C heat was tiring."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ellie",
+                "avatar": null,
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "3/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The staff were very friendly and helpful with booking taxis and providing recommendations for places and restaurants to visit. The bed was lovely and comfortable, and the rooftop bar was a nice touch as a place for an evening drink. We didn't find the park below noisy at night (most of the noise died down before 'bed time') and it actually made for a nice place to visit in the evening, as it came alive with families enjoying the space at night. Located on a lovely street close to lots of restaurants and cafes",
+                "comment_negative": "As mentioned in other reviews, the water pressure was very hit and miss (although this may be out of their control). I also don't recall seeing anywhere to buy/refill water onsite. There is no lift, so if you struggle with stairs I would recommend asking for a room on a lower floor, but otherwise we didn't find this an issue. Overall, the hotel was a nice place to stay, and these things wouldn't have mattered at all if it was slightly less expensive"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Angelina",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "21/01/2024",
+                "rating": "Thất vọng",
+                "score": 4.0,
+                "room_type": "Phòng Deluxe Có Giường Cỡ Queen",
+                "stay_duration": "3 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "L'espace chambre était spacieux",
+                "comment_negative": "D'être au 2eme étage sans ascenseur,  \nD'avoir une salle de bains /toilettes petite et inconfortable\nd'avoir un petit déjeuner très en dessous de ce que l'on trouve par ailleurs autant sur la qualité que la quantité,  les employés étaient démesurément dans la culture de l'economie"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Pháp"
+            },
+            "review": {
+                "date": "12/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "4 đêm · tháng 3/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "le personnel est très avenant",
+                "comment_negative": "rien"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Maurizio",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Ý"
+            },
+            "review": {
+                "date": "29/07/2022",
+                "rating": "Tutto ok",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Có Giường Cỡ Queen",
+                "stay_duration": "2 đêm · tháng 7/2022",
+                "group_type": "Khách lẻ",
+                "comment_positive": "la pulizia e la gentilezza dello Staff",
+                "comment_negative": "manca l ascensore"
+            }
+        }
+    ]
+}
