@@ -1,0 +1,3027 @@
+{
+    "name": "Santini Hotel",
+    "address": "05 Nguyen Van Cu, Ward 7, Tuy Hoà, Việt Nam",
+    "description": "Nằm ở Tuy Hoà, cách Bãi biển Tuy Hòa 3 phút đi bộ, Santini Hotel cung cấp chỗ nghỉ có sân hiên và chỗ đậu xe riêng miễn phí. Ngoài phòng chờ chung, khách sạn 1 sao này còn có các phòng với điều hòa được trang bị Wi-Fi miễn phí, trong đó mỗi phòng đều có phòng tắm riêng. Chỗ nghỉ này cung cấp quầy lễ tân 24 giờ, dịch vụ tiền sảnh và tổ chức các tour du lịch cho khách.\n\nTại khách sạn, các phòng đều có tủ quần áo. Tất cả các phòng có ấm đun nước, trong đó một số phòng có bếp với tủ lạnh và bếp. Các căn ở Santini Hotel được trang bị TV màn hình phẳng và đồ vệ sinh cá nhân miễn phí.\n\nSân bay gần nhất là Sân bay Tuy Hòa, cách chỗ nghỉ 6 km.",
+    "rating": "8.7",
+    "total_rating": "177",
+    "evaluation_categories": {
+        "service_staff": 9.0,
+        "amenities": 8.7,
+        "cleanliness": 8.9,
+        "comfort": 8.9,
+        "value_for_money": 9.0,
+        "location": 9.1,
+        "free_wifi": 8.5
+    },
+    "reviews": [
+        {
+            "reviewer": {
+                "name": "Ân",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/09/2023",
+                "rating": "Có cơ hội quay lại Tuy Hoà chắc chắn sẽ ở lại đây",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Phòng rộng rãi, thoáng mát, tiện nghi đầy đủ y hệt hình giới thiệu. Phòng mới và rất sạch sẽ. Chú nhân viên rất nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Linh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Khách sạn siêu gần biển, trung tâm mà lại chất lượng, mới tinh. Được dọn dẹp phòng mỗi ngày, sạch sẽ. Khách sạn chuẩn bị cho khách rất chu đáo. Có thuê xe máy, cho mượn áo phao. Nói chung rất xứng đáng",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huy",
+                "avatar": "https://lh4.googleusercontent.com/-4Go_VnQUj_U/AAAAAAAAAAI/AAAAAAAADWE/hNkCSEGojfk/s96-c/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/012/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 12/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nhi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ks gần biển, phòng sạch và ấm áp, tiện nghi xứng đáng với số tiền mình bỏ ra. Nhân viên lễ tân dễ thương nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": "https://graph.facebook.com/v2.9/10227818878515780/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/010/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/09/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huỳnh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hiếu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/04/2023",
+                "rating": "Tốt",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Đã quay lại. Thấy trên sân thượng có cái Backdrop check in hay hay.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nhi",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vo",
+                "avatar": "https://lh4.googleusercontent.com/-e7JabE3fA9M/AAAAAAAAAAI/AAAAAAAAAAA/ACnBePaQUafTJ75cnkGC0sEN_wom_N5Fvg/s96-c/photo.jpg",
+                "country": "Malaysia"
+            },
+            "review": {
+                "date": "21/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Clean, and staffs were so friendly and supportive",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/06/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khắc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nhân viên thân thiện.\nVệ sinh hàng ngày sạch sẽ.\nCó ban công.",
+                "comment_negative": "Giấy vệ sinh chất lượng kém.\nKhông cung cấp đủ 2 chai nước suối mỗi ngày.\nCánh tủ không mở được.\nPhòng hơi chật."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hang",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/04/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Mọi thứ khá ổn , chỉ có Wc nước hơi trục trặc bất tiện .",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Văn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": "https://lh3.googleusercontent.com/a/AAcHTtfO-d1J54Fwe3aRjc2163hq3KO0438GsVJGAJxKdGrHFRqV=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/03/2024",
+                "rating": "Cũng được",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Vị trí trung tâm. Gần địa điểm ăn uống. Nhân viên thái độ oki",
+                "comment_negative": "Máy sấy tóc được 30s là ngắt. Nhiệt độ quá cao làm cháy luôn tóc🥺🥺. Phòng cách âm rất kém"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Albee",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/06/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Địa điểm, tiện nghi phòng",
+                "comment_negative": "Room availability should be checked frequently and announced to customer before arrival. If the booking room is not available, the host should arrange another one for customer without any fee."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lê",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuỷ",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/010/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khánh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/07/2023",
+                "rating": "Tốt",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Phòng gọn gàng sạch sẽ, nhân viên có chú bảo vệ dễ thương, nhân viên oke giúp đỡ nhiệt tình. địa điểm cũng trung tâm, gần các quán ăn ngon nên đi chơi thuận tiện.",
+                "comment_negative": "Phòng cách âm k tốt nên cứ nghe tiếng người ngoài hành lang @@ \nThiếu ổ điện, phòng có mỗi 2 lỗ đầu giường và 1 lỗ trong wc nên không đủ chỗ cắm. Hơi bất tiện"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lunar",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJzJwTURtoEzVsjR12Vv-eMmljdBqggHnx4_iDYq=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/09/2023",
+                "rating": "Lần sau sẽ ghé lại cho kỳ nghỉ tiếp theo",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Phòng mới, sạch sẽ, gần biển có thể đi biển ngắm bình minh và hoàng hôn",
+                "comment_negative": "Cần có máy sấy"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Alistair",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Úc"
+            },
+            "review": {
+                "date": "22/05/2024",
+                "rating": "Very quiet and not a lot to do, but if that’s what you are after then this is your place",
+                "score": 4.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "It was only 100m from the beach, the room had the coldest fridge in all of Vietnam, my beers were perfect! \nIt is in a very pretty and quaint street, Tuy Hoa has very little to offer during the day so I found myself just walking around looking at the city.\nIt is very quiet and tranquil but the beach doesn’t have any real infrastructure, so saying you will be the only person on the beach for miles around.\nAll I wanted was a hammock and some shade but hard to come by.",
+                "comment_negative": "There was very little around it, not much food, they were doing renovations so I had a jackhammer going all day that reverberates through the walls. \nThey didn’t have cars payment"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kim",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "ĐẶT 2 PHÒNG\n501 VÀ 502\nĐã đánh giá rồi nên ko viết lại nữa\nTóm lại:  Hài lòng\nSẽ quay lại.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thị",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "31/010/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Đức",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/01/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "vị trí tốt",
+                "comment_negative": "nước nóng để tắm không được nóng . chỉ ấm ấm .\nkhách sạn nên khắc phục vấn đề nước nóng tắm cho khách"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2023",
+                "rating": "we had a good time.",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The location is great, just walking distance to the beach.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anatoliia",
+                "avatar": null,
+                "country": "Nga"
+            },
+            "review": {
+                "date": "15/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "The room was comfy, the staff was friendly, could speak English",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Diệu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "7 đêm · tháng 11/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Sạch, thoáng, mọi người rất nhiệt tình và thân thiện",
+                "comment_negative": "Không có"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lê",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/06/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngọc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/06/2023",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kim",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "TỐT. PHÒNG 2 NGƯỜI CÓ BAN CÔNG.",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Giường rất êm\nĐủ tiện nghi, có trà, cà phê gói và nước miễn phí. \nPhòng khá tốt, có ban công ngồi uống trà chiều. \nPhòng vừa ko quá to cũng không quá nhỏ. \nRất gần biển và chợ đêm, phố đi bộ nhưng vẫn rất yên tĩnh, nằm trong con đường nhiều cây. \nNhân viên dễ thương. \nChú bảo vệ thân thiện. \nThường mình đi du lịch, lưu trú ở đâu mình luôn đáng giá cao thái độ của con người nơi đó. Mình khá hài lòng với nhân viên ở đây, rất dễ thương. \nGiá phòng t5.2023: 380k\nTầng 7 nghe chú bảo vệ nói ngắm biển đẹp, chưa kịp lên. \nSẽ ghé lại lần sau.",
+                "comment_negative": "Thang máy hơi nhỏ, mình mang hành lý vô được 2 người  - -> không đáng kể lắm, có thể bỏ qua. \nCách âm dc 6/10, đêm ngủ mà có nhóm trẻ đi thang máy ngòai hành lang nói chuyện hơi lớn tiếng (nói chuyện vừa nghe chắc ko đến nổi, chứ tại mấy bạn ấy gọi nhau giữa đêm khá lớn) . \nCửa tủ đồ mở ra giáp cái gương, lúc quên, mạnh tay sợ vỡ."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tấn",
+                "avatar": "https://graph.facebook.com/v2.9/1286792208885237/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/04/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mộc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Căn hộ kiểu Studio Nhìn ra Biển",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ng",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/147956839.jpg?k=6a65151019efd6f896fc0bf8244ba652ab2cb2006548739ba672337fed2df785&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/01/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Bé nhân viên dễ thương. Chủ ks vui vẻ nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Let's",
+                "avatar": null,
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "9/05/2024",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Nhân viên phục vụ phòng chu đáo\nKhách sạn cho mượn áo phao miễn phí",
+                "comment_negative": "Gối ngủ quá cao, ngủ nhức đầu. khách sạn nên trang bị thêm gối loại thấp.\nKhách sạn charge phí check in sớm dù có phòng sớm hay khách check out sớm cũng ko cho khách check in sớm free.\nKo phù hợp với người cao tuổi vì bậc thềm lên khách sạn cao."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cao",
+                "avatar": "https://graph.facebook.com/v2.9/2120928694859885/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Helen",
+                "avatar": "https://lh3.googleusercontent.com/a-/AOh14GibhXYre6dYNL2XbZWCD8LSCW01RUqhUW-Bu49fPg=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/07/2023",
+                "rating": "Hài lòng",
+                "score": 10.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Cơ sở vật chất tốt. Ks cách biển 5 phút đi bộ. Bạn lễ tân nhiệt tình. Giá rất phải chăng.",
+                "comment_negative": "Không có gì để chê so với tầm giá."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khánh",
+                "avatar": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/06/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "30/08/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "3 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hằng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/04/2024",
+                "rating": "Tốt",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "4 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "khách sạn sạch sẽ. vị trí gần biển rất thuận lợi",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Le",
+                "avatar": "https://lh3.googleusercontent.com/a/ALm5wu1aXNayW_SAXzu59YOKEvfMs0GIUzoIBN25ksVU=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/04/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Khách sạn mới đầy đủ tiện nghi",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duyên",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/300127076.jpg?k=4ce5ce0c11cc9a01511574e4aa698164993aa50d5682150b883c67b4ae57a5fe&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/01/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vy",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/04/2024",
+                "rating": "ổn",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "vị trí, mới",
+                "comment_negative": "bàn ngoài ban công bị sét."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Schemionek",
+                "avatar": null,
+                "country": "Đức"
+            },
+            "review": {
+                "date": "17/010/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 10/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Stephanie",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "27/04/2024",
+                "rating": "Fabulous stay!",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Fabulous room and lovely balcony, probably the nicest room I have stayed in Vietnam. \nStaff were really friendly and when my bus was late, the staff contacted the driver to make sure they were coming. \nGreat location, few minutes from a beach where no one was... So pretty much a private beach!",
+                "comment_negative": "Breakfast would be nice just as there's not many breakfast cafes around, but that's only very minor."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hường",
+                "avatar": "https://graph.facebook.com/v2.9/2112748519114727/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/04/2024",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cong",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/02/2024",
+                "rating": "Cực kỳ tệ",
+                "score": 1.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hằng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/09/2023",
+                "rating": "Nên chọn giá ok mới sạch gần biển lần sau quay lại",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Gần biển yên tỉnh",
+                "comment_negative": "Nhân viên tinh tế xíu nữa ok"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Oleksii",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/89540268.jpg?k=640f5b39027816d620a2bb83dacab67f33d0f0a9c0c31df9d6357e4d984eca3c&o=",
+                "country": "Ukraine"
+            },
+            "review": {
+                "date": "20/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Clean rooms. \nSea View 😀\nGood location 👍🏻",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Meo",
+                "avatar": "https://graph.facebook.com/v2.9/5558816474230329/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "29/04/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ko hiểu là trong chăn nệm có rận hay sao mà 2vc ngủ xong đêm dậy bị đốt lung tung ngứa 2-3 ngày",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Łukasz",
+                "avatar": "https://graph.facebook.com/v2.9/780552085473017/picture?type=square&height=64&width=64",
+                "country": "Ba Lan"
+            },
+            "review": {
+                "date": "6/08/2023",
+                "rating": "Strata czasu i pieniędzy",
+                "score": 1.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nic",
+                "comment_negative": "Obiekt w strasznym stanie, brudny, przy głośnej ulicy"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Van",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-v.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "29/01/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoàng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "31/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Łukasz",
+                "avatar": null,
+                "country": "Ba Lan"
+            },
+            "review": {
+                "date": "2/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trọng",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tâm",
+                "avatar": "https://graph.facebook.com/v2.9/949857428720679/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/07/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "phòng rộng rãi, sạch sẽ",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Oanh",
+                "avatar": "https://graph.facebook.com/v2.9/2491820177619017/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/07/2023",
+                "rating": "Tuyệt vời",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "GẦn biển",
+                "comment_negative": "Không"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bang",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sương",
+                "avatar": "https://graph.facebook.com/v2.9/1409598245842697/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": "cửa chính bị kẹt khó đóng mở, phải dồn người đẩy mạnh mới đóng được, phòng 102"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/05/2023",
+                "rating": "vui",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "sạch sẽ, yên tĩnh và gần biển nha. thuộc trung tâm thành phố nên rất tiền để di chuyển đi chơi ăn uống. 10điem",
+                "comment_negative": "không có"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quốc",
+                "avatar": "https://graph.facebook.com/v2.9/2106847076116663/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/05/2024",
+                "rating": "Khách sạn vị trí rất tốt. Sáng xung quanh có nhiều quán ăn sáng và cà phê. Phòng có chút mùi ẩm. Sau đó mình nhờ nhân vi",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "Vị trí đẹp.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Đậu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuyết",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Khách sạn gần biển, phòng mới.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lộc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khải",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/02/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vĩnh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/05/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ks sạch sẽ thân thiện dễ mến",
+                "comment_negative": "Phòng hơi nhỏ,cái giường đôi mà chỉ có 1m2, hai người lớn nằm chật"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Hà Lan"
+            },
+            "review": {
+                "date": "17/01/2024",
+                "rating": "Goed hotel Tuy Hoa",
+                "score": 10.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Gewoon goed hotel op een rustige locatie met alle faciliteiten in de buurt.",
+                "comment_negative": "Niets"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thức",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/03/2024",
+                "rating": "Đáng giá tiền",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "Vị trí đẹp, có internet tv.",
+                "comment_negative": "Nước nóng không đủ độ nóng."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Le",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/04/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://graph.facebook.com/v2.9/10206875168851475/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngoan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/03/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Loi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/06/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "9 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khưu",
+                "avatar": "https://graph.facebook.com/v2.9/1990007561010966/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "30/06/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Xuân",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-x.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/06/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "2 đêm · tháng 6/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Dễ chịu, tiếp tân dễ thương chiều khách",
+                "comment_negative": "Ồn, phòng cách âm quá kém, máy lạnh ko lạnh nếu bật đèn vì đèn đi chung với quạt hút nên mất độ lạnh"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thành",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/02/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "Vị trí",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Rainie",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/274418337.jpg?k=6243e8f6f7561cf784987ca123f5bb07f3491c367a10ca2bee6e6bc2ae53e138&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/09/2023",
+                "rating": "Tuyệt vời. Trong mức mong đợi.",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Khách sạn mới, sạch sẽ. Tuy không được yêu cầu nhưng cô dọn vệ sinh cũng chủ động dọn dẹp phòng mình nên lúc đi chơi về thấy phòng sạch rất thích. Tuy nhiên không có chuẩn bị trước là có người dọn (vì không yêu cầu) nên phòng cũng khá là bừa bãi. Khách sạn thêm mỗi ngày hai chai nước, châm trà, cà phê đầy đủ.",
+                "comment_negative": "Cái làm mình bất ngờ nhất: là cái size của phòng nó bé hết hồn. Và bàn ghế trong phòng cũng bé theo. Tuy nhiên, cái mình \"khó chịu\" nhất là vị trí để máy lạnh, mỗi lần mở cửa tủ quần áo ra là bị vướng. Rất bực mình.\nĐây không phải là một complain mà là một gợi ý: do ở khác tầng với thành viên gia đình nên mình lười mượn kem đánh răng, và dùng kem đánh răng mà khách sạn cung cấp. Vì cô dọn phòng chủ động dọn mà mình không yêu cầu nên mình không biết kể cất tuýp kem đánh răng lại, nên cô đã vứt tuýp kem xài dở và thay bàn chải và kem đánh răng mới. Mỗi ngày bị thay vậy mình thấy khá là phí và không bảo vệ môi trường lắm.\nNgoài ra có một điều vừa buồn vừa cười là, do mình ko nghĩ cô vào, nên mình để bông tẩy trang đầy ở ngoài, và cô vứt hết mấy cái bông mới, nhưng lại sót cái bông tẩy trang đã xài rồi (đau khổ)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Vinh",
+                "avatar": "https://graph.facebook.com/v2.9/1826331217442434/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/01/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tâm",
+                "avatar": "https://graph.facebook.com/v2.9/3345429372338899/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/011/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Newly onpen business, great cleaning services. They making up your room that quick and perfect. Room is decent, but modern lighting system that makes it sparkling.\n\nHelpful security guide talking to you and willing to show you everything about his hometown. He must be the tour guide :)",
+                "comment_negative": "It might be hot during summer time..."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tien",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/06/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 6/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ngay trung tâm, gần biển, sạch sẽ",
+                "comment_negative": "Máy nước nóng không ổn định, khó điều chỉnh nước ấm, 1 là lạnh, 2 là nóng, cống thoát nước rất chậm, hút mùi trong nhà vệ sinh còn kém"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Loc",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "19/04/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/07/2023",
+                "rating": "tuyệt",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Đình",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/02/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "2 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mrqd",
+                "avatar": "https://graph.facebook.com/v2.9/1924166071143517/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chau",
+                "avatar": "https://graph.facebook.com/v2.9/1568420960298385/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bảo",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ninh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/02/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "3 đêm · Tháng 2/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Mai",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/06/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "khách sạn quá sạch đẹp rộng rãi so với giá tiền, vô cùng hài lòng.",
+                "comment_negative": "phần sảnh có bậc đá khá trơn nếu ướt, ksan nên thay dép đi trong phòng vì đã hết ma sát. mẹ mình bị trượt ngã sưng vù chân, may mà chỉ bị ở 3 bậc cuối nên ko vấn đề gì. nhưng ksan nên có thêm các thiết bị y tế, bạn lễ tân có hỏi thăm nhưng ksan cũng không có động thái gì chăm sóc khi khách hàng ngã trong khuôn viên khách sạn"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/01/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Duy",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/010/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Một lựa chọn đúng đắn",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "My",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/04/2024",
+                "rating": "Tốt",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Bác bảo vệ rất dễ thương. Mình tới sớm cũng đc hỗ trợ nhận phòng. Thuê xe máy giá rẻ, ks gần biển",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trung",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kym",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/317934196.jpg?k=9a6061e84f52572a96b212027ede3000cac0f90b89bf90627cedcb124dda9f66&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Vị trí ở trung tâm, gần các chỗ ăn uống",
+                "comment_negative": "Phòng tắm dạng kính + rèm...nên nếu đi với bạn bè thì hơi ngại"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nghị",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/04/2024",
+                "rating": "Ổn",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": "Phòng sạch sẽ",
+                "comment_negative": "Phòng cách âm còn chưa tốt, có tiếng ù từ máy móc khá ồn"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thuý",
+                "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/78684503.jpg?k=18b5c435815873572a4c604793918e46268102696659840cb42715008465c871&o=",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/08/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lâm",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/02/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/011/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "10đ",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thái",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hạ",
+                "avatar": "https://graph.facebook.com/v2.9/3443131466016441/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/06/2024",
+                "rating": "Tàm tạm",
+                "score": 5.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dieu",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/05/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyen",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "gần biển và quảng trường, cơ sở vật chất mớii, nhân viên nhiệt tình.",
+                "comment_negative": "thang máy hơi nhỏ"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ritesh",
+                "avatar": null,
+                "country": "Ấn Độ"
+            },
+            "review": {
+                "date": "8/010/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bảo",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "3 đêm · tháng 4/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngo",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/07/2023",
+                "rating": "Hài lòng với giá tiền",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Gần biển, yên tĩnh",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuyết",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/04/2023",
+                "rating": "Sẽ quay lại",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Khách sạn mới, gần biển, xung quang nhiều địa điểm ăn uống. Nhân viên nhiệt tình, niềm nở.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Khánh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/05/2024",
+                "rating": "Kém",
+                "score": 3.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Alex_iris2309",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "10/05/2024",
+                "rating": "Trải nghiệm ổn. Sẽ suy xét quay lại lần sau.",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Vị trí đẹp, 3 phút đi bộ ra biển\nSạch sẽ, tiện nghi, có refill nước và dọn phòng mỗi ngày\nNhân viên lịch sự, hiếu khách. Nhất là nhân viên buồng phòng.\nGiường thoải mái, đệm cao cấp. Đèn đóm và tủ lạnh đều hoạt động tốt. TV có Netflix và Youtube",
+                "comment_negative": "Cách âm cực kỳ kém, ai làm gì bên ngoài hành lang là nghe hết, thậm chí là tiếng mở cửa. 3 ngày ở như bị tra tấn với sự to mồm của khách phòng bên, cái này không trách khách sạn được.\nVòi xịt toilet có tiếng kêu rất gây hiểu lầm. Nó kêu thấy ghê lắm, lại còn cứng nữa.\nThuê xe là từ sáng tới tối. Cái này đi du lịch nhiều nơi nhưng lần đầu tiên mình trải nghiệm, nhưng không sao."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nam",
+                "avatar": "https://lh3.googleusercontent.com/a/AEdFTp77sUhCv9WxYxLlpB_WCuL0Rcr2AFgbzt8A-eb_=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/02/2024",
+                "rating": "Chỗ nghỉ giá cả hợp lý, phòng sạch sẽ được dọn hằng ngày, thái độ nhận viên thân thiện, vui vẻ.",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Nhân viên thân thiện, chất lượng dịch vụ tốt ngoài mong đợi.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kien",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/012/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 12/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Xuan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-x.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "8/08/2023",
+                "rating": "Tuyệt",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 8/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "- Cơ sở vật chất tốt\n- Cách biển 5' đi bộ.\n- Helpful staffs.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lan",
+                "avatar": "https://graph.facebook.com/v2.9/615351578800847/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "James",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Mỹ"
+            },
+            "review": {
+                "date": "27/06/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kim",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/011/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Linh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "11/03/2024",
+                "rating": "Phòng đẹp, mới, nhân viên nhiệt tình. Dịch vụ tốt, khách sạn tự động dọn phòng mỗi ngày khi khách ra ngoài nên ai không",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tien",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/06/2023",
+                "rating": "Tôi sẽ quay lại khi có diệp",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Thân thiện, vui vẻ,phòng đẹp sạch",
+                "comment_negative": "Không có"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Lộc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/05/2024",
+                "rating": "Tuyệt vờiiii",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Phòng ban công sạch sẽ, rộng rãi, đáng để ở lại. 2 chị lễ tân siêu dễ thương nhiệt tình luôn. Lần sau sẽ quay lại. Cám ơn 2 chị nhiều",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "1/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Việt",
+                "avatar": "https://graph.facebook.com/v2.9/824134405275985/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/03/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Tiện",
+                "comment_negative": "Không có cửa sổ, hơi bí"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quốc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-q.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/08/2023",
+                "rating": "Tốt",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Đẹp",
+                "comment_negative": "Không"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Kien",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/011/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Josh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Vương Quốc Anh"
+            },
+            "review": {
+                "date": "11/06/2023",
+                "rating": "Great hotel, comfortable and good location",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Spacious room\ncomfortable beds\ngood location",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dầu",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/05/2023",
+                "rating": "Happy",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Pham",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://lh3.googleusercontent.com/a/AGNmyxYUNvazwxffAYm6HWKylbD_S1b_xYTsBkxcj5ICayI=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Phòng rất đẹp đầy đủ tiện nghi, rộng rãi quá xứng đáng so với giá tiền, được dọn dẹp phòng mỗi ngày đi chơi về lúc nào cũng có phòng ngăn nắp sạch sẽ hết. 100đ luôn",
+                "comment_negative": "Không có"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phan",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "5/09/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Ks sạch sẽ, mới, nhân viên thân thiện",
+                "comment_negative": "Phòng cách âm kém, máy lạnh ko mát"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/08/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 8/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Sp",
+                "avatar": "https://graph.facebook.com/v2.9/195002596350395/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/011/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 10/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Joachim",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "5/04/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Nettes Personal. Gutes Duschbad.",
+                "comment_negative": "Etwas zu hellhörig. Zimmer war neben dem Fahrstuhl."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "21/07/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuyết",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "17/05/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nhân viên thân thiện, nhiệt tình tư vấn.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Không tên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/06/2023",
+                "rating": "I will come back",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Clean room with balcony and comfy bed. Fantastic location!",
+                "comment_negative": "Nothing"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1462702864296748&height=256&width=256&ext=1703255643&hash=AeQf5zWQTzlXWUi6gGo",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "6/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "5 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Chau",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "28/011/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 11/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trùng",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": null
+            },
+            "review": {
+                "date": "5/01/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 1/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Rất  tốt",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngan",
+                "avatar": null,
+                "country": "Đài Loan"
+            },
+            "review": {
+                "date": "7/06/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 6/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Felix",
+                "avatar": null,
+                "country": "Tây Ban Nha"
+            },
+            "review": {
+                "date": "2/02/2024",
+                "rating": "Muy bien para una estancia corta.",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 1/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": "Hotel nuevo, habitación muy limpia, camas muy cómodas y buena ducha (sin mampara).",
+                "comment_negative": "Habitación de espacio justo."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bich",
+                "avatar": "https://lh4.googleusercontent.com/-Adkr6FnPAVs/AAAAAAAAAAI/AAAAAAAAACE/IDGPusqoncs/photo.jpg?sz=50",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "31/05/2023",
+                "rating": "Trên cả mong đợi.",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Địa điểm gần biển, không xa Chợ Tuy Hòa. Khách sạn sạch sẽ và ngăn nắp, nhân viên thân thiện. Lúc đặt thấy giá hời quá hời mình cũng hoài nghi về chất lượng, tuy nhiên khi check in thật bất ngờ vì khách sạn rất rất ok so với giá tiền.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hiền",
+                "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mBf-dFWod3unalb1Iggc7Or963-LBOTPzG8i_qb",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "18/04/2023",
+                "rating": "10 điểm cx gần biển tối đi dạo mát",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "anh ở lễ tân cực dễ tính và hiền luôn thái độ rất mến khách",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tiến",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/04/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Nhân viên nhiệt tình",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Linh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "3 đêm · tháng 5/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hanh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/07/2023",
+                "rating": "Rất tệ",
+                "score": 2.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 7/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Dia diem tot",
+                "comment_negative": "Phan con lai"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Tuấn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thúy",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/012/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "3 đêm · tháng 12/2023",
+                "group_type": "Nhóm",
+                "comment_positive": "Khách sạn gần biển, lễ tân và nhân viên dọn phòng nhiệt tình, đi lại thuận tiện",
+                "comment_negative": "Cửa phòng khó đóng, phòng không có cửa sổ nên hơi ngộp"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "24/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior 2 Giường Đơn",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phan",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/03/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ý",
+                "avatar": "https://graph.facebook.com/v2.9/2030295387362821/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "14/04/2024",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": "Khách ở 2 ngày nhưng không dọn rác trong phòng cho khách, làm phòng có mùi 😓"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Uyên",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hoài",
+                "avatar": "https://lh3.googleusercontent.com/-aljyIfraeoQ/AAAAAAAAAAI/AAAAAAAAAFA/xHJkg8jzFq4/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Very close to the 1-4 square area which has plenty of foods & drinks options \nCan walk to the beach \nFriendly staffs \nClean & new room",
+                "comment_negative": "Air condition is new but just good enough"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Dennis",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+                "country": "Đức"
+            },
+            "review": {
+                "date": "21/011/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hyeon",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+                "country": "Hàn Quốc"
+            },
+            "review": {
+                "date": "8/06/2023",
+                "rating": "가성비 좋고 위치 좋고",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": "방이 깔끔했다.\n너무 더워서 앉아보지도 못했지만 테라스가 있다.\n도보 거리에 식당과 카페가 있다.",
+                "comment_negative": "방이 작은편이라 나는 혼자여서 괜찮았지만 일행이 있으면  비좁을 듯.\n화장실. 화장실의 환풍기를 틀어놓지 않으면 냄새가 조금 난다.\n냉장고가 시원하지 않다. (이상하게도 다른 호텔의 냉장고도 상태가 같았다. 심지어 5성 호텔이었는데!!)"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Minh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "22/04/2024",
+                "rating": "Tốt",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thanh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "4/01/2024",
+                "rating": "rất tốt !",
+                "score": 8.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 12/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": "sạch sẽ, phòng không quá nhỏ, có ban công view biển, lễ tân thân thiện, hỗ trợ thuê xe máy và bàn ủi nhanh chóng 👍",
+                "comment_negative": "gối nằm hơi cứng và cao, nằm mỏi cổ 🥲"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hằng",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "7/09/2023",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Superior Gia Đình",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Nhóm",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Thi",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "9/05/2024",
+                "rating": "Tuyệt hảo",
+                "score": 9.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "15/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 11/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Hai",
+                "avatar": "https://lh3.googleusercontent.com/a/AATXAJyHZWVwyL1mufKFoR4Klb_nIxYpV6UN0whxO_3s=s96-c",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/06/2023",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 6/2023",
+                "group_type": "Phòng gia đình",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Huyền",
+                "avatar": "https://graph.facebook.com/v2.9/578245216288366/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "20/04/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Bắc",
+                "avatar": "https://graph.facebook.com/v2.9/1057346588664396/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "2/03/2024",
+                "rating": "Tuyệt vời",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Chỗ nghỉ sạch sẽ. Chị nhân viên vừa xinh gái vừa nhiệt tình.",
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nhung",
+                "avatar": "https://lh3.googleusercontent.com/-ngkCU0UAT1g/AAAAAAAAAAI/AAAAAAAABVk/Gb5lkrKhY6g/photo.jpg",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "13/05/2024",
+                "rating": "Tốt",
+                "score": 7.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "2 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": "Phòng tiêu chuẩn cho 2 người mà giường siêu bé chỉ 1 người nằm"
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Anh",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "27/02/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "1 đêm · Tháng 2/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Quang",
+                "avatar": "https://graph.facebook.com/v2.9/2232821796803931/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "12/05/2023",
+                "rating": "Rất tốt",
+                "score": 8.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 4/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Nguyễn",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "23/07/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 7/2023",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Trần",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "16/04/2024",
+                "rating": "Nếu có dịp quay lại tôi vẫn sẽ chọn nơi này",
+                "score": 7.0,
+                "room_type": "Phòng Superior Giường Đôi",
+                "stay_duration": "2 đêm · tháng 4/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": "Chỗ nghỉ sạch sẽ  thuận tiện ra quảng trường 1/4 và biển cũng như ăn uống xung quanh  thang mayu đi lại dễ dàng ,chú bảo vệ nói chuyện lịch sự và thân thiện..",
+                "comment_negative": "Dựa theo đánh giá của mọi người và thực tế trải nghiệm ở đây phòng Cách âm không tốt..."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Ngoc",
+                "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "25/03/2024",
+                "rating": "Dễ chịu",
+                "score": 6.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 3/2024",
+                "group_type": "Khách lẻ",
+                "comment_positive": "Gần bãi biển, khu vực có nhiều điểm ăn uống, bé nhân viên lễ tân dễ thương.",
+                "comment_negative": "Phòng có muỗi, tủ đựng quần áo quá cao muốn treo phải bắt ghế đứng lên mới tới chỗ móc quần áo, phòng dọn chưa sạch, máy lạnh cũ quá ồn."
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Phước",
+                "avatar": null,
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "3/010/2023",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 9/2023",
+                "group_type": "Khách lẻ",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        },
+        {
+            "reviewer": {
+                "name": "Cù",
+                "avatar": "https://graph.facebook.com/v2.9/5997855830237452/picture?type=square&height=64&width=64",
+                "country": "Việt Nam"
+            },
+            "review": {
+                "date": "26/05/2024",
+                "rating": "Xuất sắc",
+                "score": 10.0,
+                "room_type": "Phòng Tiêu Chuẩn Giường Đôi",
+                "stay_duration": "1 đêm · tháng 5/2024",
+                "group_type": "Cặp đôi",
+                "comment_positive": null,
+                "comment_negative": null
+            }
+        }
+    ]
+}

@@ -1,0 +1,1837 @@
+{
+  "name": "LA'S FARMSTAY",
+  "address": "Tổ 2 Ấp Lộc Trung Xã Hưng Thuận Thị Xã Trãng Bàng Tp. Tây Ninh, Tây Ninh, Việt Nam",
+  "description": "Với Địa đạo Củ Chi nằm cách đó 7.9 km, LA'S FARMSTAY cung cấp chỗ nghỉ, nhà hàng, xe đạp miễn phí, hồ bơi ngoài trời và khu vườn.\n\nNơi đây còn có phòng tắm riêng với vòi xịt/chậu rửa vệ sinh và đồ vệ sinh cá nhân miễn phí ở từng căn, cùng dép đi trong phòng.\n\nTrang trại nghỉ dưỡng có sân hiên phơi nắng.\n\nKhách nghỉ tại LA'S FARMSTAY có thể chơi bi-a trong khuôn viên, hoặc đi xe đạp ở khu vực xung quanh.\n\nSân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách chỗ nghỉ 46 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.",
+  "rating": "9",
+  "total_rating": "87",
+  "evaluation_categories": {
+    "service_staff": 9.6,
+    "amenities": 8.9,
+    "cleanliness": 8.7,
+    "comfort": 9.1,
+    "value_for_money": 9.3,
+    "location": 8.9,
+    "free_wifi": null
+  },
+  "reviews": [
+    {
+      "reviewer": {
+        "name": "Huyền",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "18/03/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Tới La Farm vào ngay đợt tết nhưng không phải chen lắn, hay chịu ồn ào náo nhiệt như mọi năm tới những điểm du lịch. Ở tại La là cảm giác yên bình ..",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Dương",
+        "avatar": "https://graph.facebook.com/v2.9/906133946786481/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "24/02/2024",
+        "rating": "Khuyến khích",
+        "score": 8.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "5 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Nhân viên phục vụ rất tốt! Các bạn nào muốn thưởng thức trà bên đống lửa ngay cánh đồng lúa của farm hãy đến trải nghiệm nhé!",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Huy",
+        "avatar": "https://graph.facebook.com/v2.9/3471746093137619/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "23/02/2024",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "2 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "NV thân thiện",
+        "comment_negative": "Muỗi"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hồ",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "5/02/2024",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · Tháng 2/2024",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Không gian rất rộng rãi thoáng mát. Gd tôi tìm về đây  để tìm lại cảm giác yên bình của đồng quê. Bên cạnh đó có nhiều trò chơi thú vị. Rất đáng để quay lại.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Duc",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "7/09/2023",
+        "rating": "Ổn, hợp với giá tiền",
+        "score": 8.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 9/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Khuôn viên rộng\nGiá khá rẻ, phòng đầy đủ tiện nghi\nTrang trí xung quanh đẹp\nHồ bơi nhỏ nhưng đẹp",
+        "comment_negative": "Rất xa trung tâm\nCơ sở vật chất đang xuống cấp\nÍt tiết mục giải trí"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Quyen",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "17/08/2023",
+        "rating": "Nói chung mọi thứ điều ok",
+        "score": 8.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Bữa sáng bánh mì trứng và mì gói",
+        "comment_negative": "Tốt hợp với vợ chồng mình"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Gia",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "7/07/2023",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Anh chủ và cô chú ở farm siêu đáng yêu. Thức ăn ở farm rất ngon",
+        "comment_negative": "Đi mùa mưa nên hơi ẩm mốc"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nhi",
+        "avatar": "https://lh6.googleusercontent.com/-vqpttb8YRU0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdedZ5zq21_ntcPbI1npN4iMb79-g/mo/photo.jpg",
+        "country": "Mỹ"
+      },
+      "review": {
+        "date": "23/06/2022",
+        "rating": "kỳ nghĩ rất tuyệt. rất vui, bình yên và không khí rất trong lành. thật sự mình bị dị ứng khói bụi nên đến đây rất tốt ch",
+        "score": 8.0,
+        "room_type": "Chalet 1 Phòng Ngủ",
+        "stay_duration": "1 đêm · tháng 6/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "yên tĩnh sach sẽ, chủ thân thiện\nmình đặt phòng trên cây nhưng anh chủ sẵn sàng đổi cho mình hạng phòng tốt hơn nếu mình không thích và phòng còn trống\nđược nhận phòng sớm và trả phòng muộn\nthật sự chủ ở đây rất tốt. kể cả việc phát triển mô hình. nhưng bị cái nhân viên vẫn là người nhà, chưa được trainning kĩ nên có nhiều cái khó tránh",
+        "comment_negative": "- mấy cái ghế chỗ ngồi nghỉ có cứt thằn lằn. cái này có thể chùi đi nhưng mình lại thuộc tuýp sợ mấy cái đó\n- tối đến thì đường ra chợ dù cách có 2km nhưng tối không dám đi. còn chỗ nghĩ thì không có sẵn thức ăn hay nước ngọt, chỉ có bia và bò húc\n- chỉ xin than và cơm nhưng nhân viên tự mang thêm bánh tráng và tự cộng vào tiền phòng, nó không đáng kể nhưng thật sự cái cần như nước ngọt thì không có làm mình phải order bên chỗ ngoài thì họ ép mua rất nhiều mới giao"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Phượng",
+        "avatar": "https://graph.facebook.com/v2.9/4799262963526460/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "5/05/2022",
+        "rating": "Đây là đáng trải nghiệm - yên bình, thân thuộc để nghỉ ngơi, thưởng thức món ăn ngon!",
+        "score": 8.0,
+        "room_type": "Lều",
+        "stay_duration": "2 đêm · tháng 5/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Thích nhất là vị trí cách biệt trung tâm, Yên Tĩnh, không gian rộng rãi, Cảnh vật gần gũi thiên nhiên, bình dị, thân thuộc.\nTuyệt vời nữa là sự nhiệt tình, chu đáo, nhã nhặn, nấu ăn ngon của đội ngũ La's Farmstay.",
+        "comment_negative": "Chỉ tiếc một chút về phòng ốc. Không được chăm chút kỹ lưỡng. Phòng chưa được sạch sẽ, bồn cầu bị kêu bất tiện do tắc nghẽn. Mình tới là gặp tiếng kêu liền. Nhưng ko còn phòng nên ko thay đổi nữa. vì nghĩ ở có 1 đêm. \nChốt lại Mình sẽ vẫn quay lại nếu có thời gian. Và sẽ thử book phòng khác để trả nghiệm... Nhà Gỗ hoặc Lều chẳng hạn."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hoan",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "2/05/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Lều",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Gần gũi thiên nhiên, yên tĩnh, đồ ăn ngon, ...",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nhân",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-n.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "27/04/2022",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Bữa sáng đơn giản. Địa điểm dễ tìm. Mong bữa sáng phong phú hơn. Chị Ngọc phục vụ bếp tuyệt vời . Đáng lẽ 8đ nhưng +1 respect cho chị vì thái độ phục vụ quá tuyệt vời, chị nấu ăn quá ngon. Sẽ quay lại để trải nghiệm nhiều hơn",
+        "comment_negative": "Muỗi và các loại côn trùng. Cách khu vực nên được quét dọn thường xuyên hơn. Phòng 2 người hơi nhỏ. Mong a Phong chỉnh sửa phòng Deluxe to hơn 1 chút, cách xa khu vực phục vụ thì càng tốt và phòng có thêm tủ lạnh thì ổn lắm luôn"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Lily",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "22/02/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · Tháng 2/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Moi người đều thân thiện",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Liên",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "7/06/2023",
+        "rating": "Ổn",
+        "score": 7.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 6/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Thoải mái, riêng tư, nhân viên vui vẻ",
+        "comment_negative": "Bố trí bếp cho riêng từng khu vực sẽ OK hơn"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Dương",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/108069268.jpg?k=508fff7a911bddb5a93b167737fb416648611ea4d917d10d70d46e61f21be624&o=",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "2/05/2022",
+        "rating": "Tốt",
+        "score": 7.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 5/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Gà nướng và bún riêu cua rất ngon.\nPhòng tạm ổn.\nTrước ks có dòng kinh sachk đẹp. Nước mât. Có thể tắm sông trèo thuyền ở đây rất ok. \nKhu này trốn dịch ở cả tháng ko chán.",
+        "comment_negative": "Có hồ bơi nhỏ cho trẻ ưm. Nhưng nước dơ. Hình như lâu rồi không sử dụng."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Không tên",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "24/09/2023",
+        "rating": "Rất tuyệt. Nhân viên rất nhiệt tình",
+        "score": 9.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 9/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Nhân viên nhiệt tình, phong cảnh đồng quê. Phòng sạch. Nhà sàn đặc trưng tiện để họp nhóm.",
+        "comment_negative": "Hơi xa trung tâm, đường đi hơi khó"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Santos",
+        "avatar": "https://lh3.googleusercontent.com/-1K1uqa4dzok/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclVbEjBAKWsSCwcyIvqVltNnVJLrA/s96-c/photo.jpg",
+        "country": "Nam Phi"
+      },
+      "review": {
+        "date": "7/05/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 5/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "This has to be the most peaceful yet quirky place I've stayed in.  It is remote but there are many things to do.  The owner is very friendly and will do anything to make your stay comfortable.  It may not be the easiest to get to but one of the staff members came to meet our taxi driver at a market in the closest town to lead him back to the farm.  If you are looking for peace and serenity then this is your place to stay.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Lexie",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+        "country": "Vương Quốc Anh"
+      },
+      "review": {
+        "date": "14/04/2024",
+        "rating": "The staff are all really friendly would definitely recommend.",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 4/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "The room was clean and in a lovely location. Perfect for backpackers.",
+        "comment_negative": "The food served is all traditional Vietnam’s meals."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nguyen",
+        "avatar": "https://graph.facebook.com/v2.9/1239307066965257/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "30/03/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 1/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "close too Cu Chi tunnel, a secret nature corner.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Sheldon",
+        "avatar": "https://lh3.googleusercontent.com/a/ALm5wu0_GB8lgDy8g9ovSEnZWHY7KBnLKmNmMGE6MVem=s96-c",
+        "country": "New Zealand"
+      },
+      "review": {
+        "date": "27/03/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "3 đêm · tháng 3/2024",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Friendly staff, lovely relaxing location.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Kelly",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+        "country": "Vương Quốc Anh"
+      },
+      "review": {
+        "date": "19/03/2024",
+        "rating": "I wouldn't change anything about this location. The people and the food and the area is simple amazi",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "2 đêm · tháng 3/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "Having spent 14 hours on a sleeper bus we got a grab from the city to Las Farmstay. Within an hour upon arrival we were upgraded to this beautiful hut by the lily lakes. The staff were so so friendly,allowed us to use the scooter to pop tot the shop and the push bikes to ride to the tunnels. They cooked our breakfast upon request as 1 day I was poorly and didn't eat till the evening. The food was amazing and i believe they grow alot themsleves. Very remote with only the sound of crickets,lizards and fish as our company in the evenings. The pool is clean and during the day was a fantastic place to rest. Cheap beers,peaceful evenings and wouldn't have changed ANYTHING about the place or the staff. 100% would go back. My only advice is take cash. I didn't and i regret this.",
+        "comment_negative": "I loved everything and I am so glad I found this place to stay. Especially as its so close to the tunnels which is a must for anyone visiting the area."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Joseph",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-j.png",
+        "country": "Tây Ban Nha"
+      },
+      "review": {
+        "date": "18/03/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "2 đêm · tháng 3/2024",
+        "group_type": "Khách lẻ",
+        "comment_positive": "The staff were very kind.  The location is serene.  The room was comfy and clean.  The AC worked great.  The food was delicious and plentiful.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Paul",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+        "country": "Vương Quốc Anh"
+      },
+      "review": {
+        "date": "10/03/2024",
+        "rating": "Youll love it!",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "A great place to stay. Quiet and 'out of the way' \nVery Friendly staff, some spoke good English. \nV good food. \nAccommodation was quirky and private. I really liked our bungalow. \nPool was clean. \nSelf service bar, based on trust. pool and bar football. \nPerfect for us as we were motorcycling and, were heading for a Cu Chi tunnels tour nearby, in the morning. \nGreat if you want a chilled stay in the countryside",
+        "comment_negative": "We liked it all!! \nMaybe shower a bit basic BUT very minor detail!"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Beth",
+        "avatar": "https://lh3.googleusercontent.com/a-/AOh14GhwA8ufd0yYyvKsk95RZxdNhFulye-jTAahyTN8=s96-c",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "2/03/2024",
+        "rating": "I highly recommend it to anyone seeking a relaxing and memorable vacation.",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "Its absolutely. The staff was incredibly welcoming and accommodating, the room was spacious and clean. I would highly recommend this hotel to anyone looking for a comfortable and convenient place to stay.",
+        "comment_negative": "nothing"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Adrienne",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+        "country": "Đức"
+      },
+      "review": {
+        "date": "5/02/2024",
+        "rating": "exzellent",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "very grünkohl people and very taste food",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Tom",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/294019548.jpg?k=319390b8b9a530d48b142a39493764f9cfb63a226a04114a930d4adb03390e6e&o=",
+        "country": "Vương Quốc Anh"
+      },
+      "review": {
+        "date": "15/01/2024",
+        "rating": "Perfect nature get away with the kindest hosts. We loved it",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 1/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Beautiful farm surrounded by nature , lovely hosts always willing to help and so kind",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Ton",
+        "avatar": null,
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "12/01/2024",
+        "rating": "Nice people, good stay",
+        "score": 10.0,
+        "room_type": "Phòng Đơn Nhìn Ra Hồ",
+        "stay_duration": "1 đêm · tháng 1/2024",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Warm staff. Everybody is very helpfull",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Daniel",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+        "country": "Vương Quốc Anh"
+      },
+      "review": {
+        "date": "9/01/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "3 đêm · tháng 12/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "We loved our stay here. Such a beautiful location with lots of space. The kids loved helping collect fruit from the farm and all the animals and wildlife. They also loved fishing. The pool is great. Get gorgeous views of sunset from rooftop..our room was spacious and really quirky building which we loved. All the staff were very friendly and the food was fantastic",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Niklas",
+        "avatar": "https://lh3.googleusercontent.com/a/ALm5wu2xFS3RDqtvo6NnRNzydg-CE-kMf19Uq02CR_e2=s96-c",
+        "country": "Thụy Điển"
+      },
+      "review": {
+        "date": "5/01/2024",
+        "rating": "Frindley stay in the middle of nowhere!",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "This farmstay is really totally out in the countryside. You can have a walk or borrow a bicycle to get around and experience the ricefields and farms. We had a fantastic dinner with vegetables from the farm. The poolarea is very nice. We had one of the deluxe cottages with AC. It was clean but basic. Come here to get some air when you have been to long in the busy HCM 😊 Not very good at Englisch, but very  helpful.",
+        "comment_negative": "That we only stayed one night."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Maha",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/315459133.jpg?k=ff7292b68ccbb66f8d853a6e3925c5a8342b87023f08db7e1cc17ebcc4fd177d&o=",
+        "country": "Úc"
+      },
+      "review": {
+        "date": "15/08/2023",
+        "rating": "I had a blast at LA'S FARMSTAY, where the environment is cute, and the hosts are cuter!",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 8/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Thanks for making my trip so fun and I had such a blast staying at your farm. The scenery was awesome and the food was yummy. You guys rock! Mr. Tâm, Mr. Tường, Mr. Sói and Ms. Trang have been super nice and helpful. Mr. Phong your place was cozy and clean. I can't wait to come back to more stay with you guys.\n\nExcellent hospitality.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Ching",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-c.png",
+        "country": "Đài Loan"
+      },
+      "review": {
+        "date": "2/07/2023",
+        "rating": "A great place for people who want to experience the beautiful scenery and warnings fretting of the country side in Vietn",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Good service, friendly people.",
+        "comment_negative": "No."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Tom",
+        "avatar": null,
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "29/06/2023",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 6/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Swimming pool \nPeople very nice",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Beattie017",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+        "country": "Đài Loan"
+      },
+      "review": {
+        "date": "6/02/2023",
+        "rating": "I think here is the best resort in Tay Ninh province if you want to experience the country side life",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 12/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Nice local breakfast.",
+        "comment_negative": "no."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Laura",
+        "avatar": null,
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "2/05/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 5/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Great hospitality of the whole staff and an absolutely lovely cottage with a beautiful view out on the green ricefields. The location is perfect for a short getaway from HCMC and it's not expensive at all. I can highly recommend this place to anyone longing to breathe in some fresh countryside air and to eat some very fresh fruit and vegetables straight from the land. The food will be brought to your cottage or you can enjoy it at the restaurant. I really feel re-energized after my stay here.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Anastasia",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/40909935.jpg?k=14b598a158e80b01211a9bbfc34aec62a2db9a3dd0aeda0f2783d2c93a120aa6&o=",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "12/04/2022",
+        "rating": "So great,came back for another stay!",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 4/2022",
+        "group_type": "Nhóm",
+        "comment_positive": "Great location close to the city to escape for a long weekend. Plenty of birds and greenery to enjoy.",
+        "comment_negative": "The kitchen does not have much equipment to eat with or cook. Very limited."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "My",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-m.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "14/03/2022",
+        "rating": "good place for short break on weekend.",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 3/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "owner n staff are friendly.",
+        "comment_negative": "nothing"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Alberto",
+        "avatar": null,
+        "country": "Ý"
+      },
+      "review": {
+        "date": "25/010/2023",
+        "rating": "Thất vọng",
+        "score": 4.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 8/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": null,
+        "comment_negative": "It was nothing special, quite boring actually. It is in the middle of nowhere. If you don't tell them in advance that you want to eat there, they can just cook some noodles for you."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Van",
+        "avatar": null,
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "22/04/2024",
+        "rating": "Oase van rust en mooie natuur, mét zwembad!",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 4/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Wat een prachtig mooie plek is dit! Lekker afgelegen, maar je hebt daar alles wat je nodig hebt. Heerlijk zwembad en allemaal leuke hutjes waar je in kan slapen! Ook zijn de mensen super vriendelijk en helpen ze je met van alles. Vanuit de goedheid van hun hart en vanuit vertrouwen, want we mochten bijvoorbeeld gratis een scooter lenen. Echt een hele fijne sfeer.",
+        "comment_negative": "Het bed in de bungalow was wat hard. Je sliep op pallets met een iets te dun matras erop. Maar voor een (paar) nachtjes kan het prima. De beleving die je daar hebt telt veel meer mee!"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Lucie",
+        "avatar": "https://graph.facebook.com/v2.9/1785606434839705/picture?type=square&height=64&width=64",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "11/04/2024",
+        "rating": "Séjour exceptionnel",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 4/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "La propriété est magnifique, très bien entretenue. Il y a beaucoup d'équipements,un vrai terrain de jeu. La piscine est propre est très agréable. Un vrai petit coin de paradis !\nLe propriétaire est bienveillant, gentil et très disponible. Il nous a aidé durant 1h à appeler plusieurs compagnies de bus pour nous etc... une très belle rencontre !\nMerci encore pour cette belle expérience ! ❤️",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Veronique",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-v.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "29/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Très bel endroit aménagé avec beaucoup de goût. Très calme et plein de charme. Piscine magnifique. Accueil incroyablement sympathique,  une équipe très serviable,  pleine d'attention  pour nous. Nous avons adoré cet endroit  et nous reviendrons c'est sûr. Que de gentillesse,  délicatesse et discrétion.  Bravo à toute l'équipe vraiment !    Je",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Pérignon",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "29/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Un havre de paix géré par des anges gardiens !",
+        "comment_negative": "Rien !"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Driek",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "27/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "Ondanks dat ze geen engels spraken waren ze heel gastvriendelijk, goed ontbijt, goeie faciliteiten in een prachtige omgeving!",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Tête",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "19/02/2024",
+        "rating": "Idéal on conseille",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Tout\nLe lieu est magnifique et calme.\nBelle piscine. La chambre est simple mais fonctionnelle.\nLe personnel est au petit soin.\nLe repas du soir est très bon et copieux.\nIls sont très arrangeants. On devait partir à 6h ils nous ont préparé le petit déjeuner pour.",
+        "comment_negative": "Rien"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Antoine",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-a.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "19/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 1/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "Tout est top, en plus on y mange très bien",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Katja",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+        "country": "Áo"
+      },
+      "review": {
+        "date": "1/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 1/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "das Abiente. die Freundlichkeit und entspannte Abende",
+        "comment_negative": "nichts"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Loula",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-l.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "13/01/2024",
+        "rating": "Fabuleux",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 1/2024",
+        "group_type": "Nhóm",
+        "comment_positive": "La famille est incroyable et d’une gentillesse sans nom ! \nLes repas étaient délicieux, la chambre, la place, la superbe piscine, tout était parfait ! Je recommande vivement",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Kristiaan",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-k.png",
+        "country": "Bỉ"
+      },
+      "review": {
+        "date": "4/01/2024",
+        "rating": "Landelijke spot met veel zwemgenot",
+        "score": 8.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "2 đêm · tháng 1/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Midden in de velden een oase met super leuk zwembad\nAlles gemoedelijk, geen stress",
+        "comment_negative": "Verwacht geen Westers eten of accommodatie. Het is wat het is maar voldoende om leuke dagen te hebben."
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Kristel",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/210489014.jpg?k=bafd0c12f263cf7b54ebcf63eb94f6789fe81d69271124f69409323f3fe768c3&o=",
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "27/012/2023",
+        "rating": "Fantastische boerderij ervaring",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "We hebben deze biologische boerderij uitgezocht door de ligging ten opzichte van de Cu Chi tunnels. De boerderij ligt in niemandsland maar is werkelijk van alle gemakken voorzien. Biljart, zwembad, heerlijk eten etc.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Sabrina",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-s.png",
+        "country": "Thụy Sỹ"
+      },
+      "review": {
+        "date": "21/012/2023",
+        "rating": "Top",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Ein wunderschöner Ort an einer ruhigen Lage, mit vielen Teichen und von viel Grün umgeben. Die Gastgeber sind sehr freundlich, das Essen war super lecker, der Pool war sauber und mit perfekter Aussicht auf den Sonnenuntergang. Wäre gerne länger geblieben.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Sinner",
+        "avatar": "https://lh3.googleusercontent.com/a/AATXAJwqlrPfvLzxMLeLCy4mq-yMltHwUnjwVKfu5Vvu=s96-c",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "30/011/2023",
+        "rating": "Dépaysement garanti",
+        "score": 8.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 11/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Le personnel est vraiment adorable, gentil et très serviable, se soucie du bien être des clients. \nSuper piscine, très beau cadre, bonne cuisine.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Marieke",
+        "avatar": "https://graph.facebook.com/v2.9/1003647276371055/picture?type=square&height=64&width=64",
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "16/011/2023",
+        "rating": "Amazing",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 11/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Het zwembad en de mensen",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Đặng Lê Nguyên Vũ",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "11/08/2022",
+        "rating": "Tuyệt vời!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 8/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Phòng có ban công nhìn ra vườn rất yên tĩnh và thư thái. Dịch vụ chuyên nghiệp, đáng khen.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Phan Thị Thanh Nhàn",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "29/04/2023",
+        "rating": "Xuất sắc!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "3 đêm · tháng 4/2023",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Một kỳ nghỉ lễ hoàn hảo. Phòng deluxe rộng rãi, sạch sẽ và có ban công lớn cho cả gia đình.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nguyễn Mạnh Trường",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "14/02/2024",
+        "rating": "Rất lãng mạn!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "1 đêm · tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Phòng được chuẩn bị rất chu đáo cho ngày lễ tình nhân. Ban công là điểm nhấn tuyệt vời.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Trần Thu Trang",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "20/10/2022",
+        "rating": "Rất tốt!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 10/2022",
+        "group_type": "Nhóm",
+        "comment_positive": "Nhóm bạn gái của tôi đã có những kỷ niệm đẹp. Phòng ốc sạch sẽ, ban công rộng rãi để trò chuyện.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Lưu Đức Hòa",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "05/06/2023",
+        "rating": "Hài lòng!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "4 đêm · tháng 6/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Vị trí tốt, dễ dàng đi lại. Nhân viên thân thiện và luôn sẵn lòng giúp đỡ.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Đặng Thu Thảo",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "30/11/2024",
+        "rating": "Dễ chịu!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "3 đêm · tháng 11/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Không gian yên tĩnh, riêng tư. Giường ngủ thoải mái. Thích hợp để nghỉ dưỡng.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Đỗ Mỹ Linh",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "18/07/2022",
+        "rating": "Tuyệt hảo!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 7/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Dịch vụ đẳng cấp 5 sao. Mọi thứ đều được chuẩn bị một cách hoàn hảo. Ban công view thành phố rất đẹp.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Bùi Tiến Dũng",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "24/12/2023",
+        "rating": "Trên cả tuyệt vời!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Trải nghiệm Giáng sinh ở đây thật ấm cúng. Phòng được trang trí đẹp, ban công nhìn xuống phố rất vui.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nguyễn Quang Hải",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "09/03/2024",
+        "rating": "Tốt!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "5 đêm · tháng 3/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Vị trí trung tâm, tiện lợi. Phòng sạch sẽ, ban công là một điểm cộng.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Đoàn Văn Hậu",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "01/01/2022",
+        "rating": "Rất hài lòng!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 1/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Đón năm mới tại đây rất tuyệt. Thủ tục nhanh gọn, nhân viên chuyên nghiệp.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Phan Văn Đức",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "15/05/2023",
+        "rating": "Kỳ nghỉ đáng tiền!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "3 đêm · tháng 5/2023",
+        "group_type": "Phòng gia đình",
+        "comment_positive": "Hồ bơi sạch, đẹp, các bé nhà tôi rất thích. Phòng có ban công nên rất thoáng mát.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hồ Ngọc Hà",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "22/08/2024",
+        "rating": "Tuyệt vời!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 8/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Thiết kế nội thất sang trọng, tinh tế. Ban công có view rất đẹp, lãng mạn.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Kim Lý",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "13/09/2022",
+        "rating": "Xuất sắc!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "1 đêm · tháng 9/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Một nơi lý tưởng để làm việc và nghỉ ngơi. Dịch vụ phòng hoàn hảo.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Mỹ Tâm",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "02/02/2023",
+        "rating": "Rất tốt!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "4 đêm · tháng 2/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Vị trí gần nhiều quán ăn ngon. Phòng ốc rộng rãi, sạch sẽ, có ban công rất tiện.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Đàm Vĩnh Hưng",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "19/10/2024",
+        "rating": "Hài lòng!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "3 đêm · tháng 10/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Phòng deluxe có ban công đúng như mong đợi. Sạch sẽ, tiện nghi và nhân viên chu đáo.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Lệ Quyên",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "27/03/2022",
+        "rating": "Tuyệt hảo!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 3/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Trải nghiệm sang trọng và đẳng cấp. Tôi rất thích cách bài trí và không gian của phòng.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Jack - J97",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "16/01/2023",
+        "rating": "Dễ chịu!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "1 đêm · tháng 1/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Phòng cách âm tốt, chúng tôi đã có một buổi tối vui vẻ mà không làm phiền ai. Ban công thoáng.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "K-ICM",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "31/07/2024",
+        "rating": "Tuyệt vời!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "3 đêm · tháng 7/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": "Nhân viên rất nhiệt tình, giới thiệu cho chúng tôi nhiều địa điểm hay ho. Phòng đẹp và sạch.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Chi Pu",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "08/09/2022",
+        "rating": "Rất tốt!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 9/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": "Giá cả hợp lý so với chất lượng. Phòng có ban công là một lựa chọn đúng đắn.",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Gil Lê",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "23/05/2023",
+        "rating": "Xuất sắc!",
+        "score": 9.0,
+        "room_type": "Phòng Deluxe Giường Đôi Có Ban Công",
+        "stay_duration": "2 đêm · tháng 5/2023",
+        "group_type": "Nhóm",
+        "comment_positive": "Bạn bè tôi ai cũng khen khách sạn. Phòng rộng, ban công to, view đẹp. Hoàn hảo!",
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Chinghung",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/217723854.jpg?k=b1bf1aa385b0e97ac2a3e83630179096ba720e6157706ab54bb9c4438f147a82&o=",
+        "country": "Đài Loan"
+      },
+      "review": {
+        "date": "2/05/2022",
+        "rating": "小木屋、平房都是傳統工法建造，所以不要和一般飯店比較。可以讓你貼近自然生態的美麗的地方，所以有些地方不是像想像中美好，但是我喜歡這個地方，因為可以讓人遠離塵囂、享用自己做的餐點，也可以知道度假村對於自然生態維護的理念。另外建議可以自己帶帳篷",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": "因為加班，所以比較晚登記入住，飯店還特別為我們準備夜宵，感覺很溫馨。",
+        "comment_negative": "有些地方還在規劃，所以需要大家支持！讓這個美麗自然的地方有更好的服務與品質！\n如果可以將污水處理更完善更好，所以更需要大家支持。"
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thanh",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "4/05/2024",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "3 đêm · tháng 4/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Tài",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "17/03/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Phuc",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "13/03/2024",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "05111982",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "25/012/2023",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Huy",
+        "avatar": "https://graph.facebook.com/v2.9/3471746093137619/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "15/012/2023",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 12/2023",
+        "group_type": "Khách lẻ",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Tran",
+        "avatar": null,
+        "country": null
+      },
+      "review": {
+        "date": "4/08/2023",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "3 đêm · tháng 8/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Giang",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "3/07/2023",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Nhóm",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Cuong",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "29/05/2023",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 5/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thi",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "17/012/2022",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 12/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hung",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "26/011/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 11/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thien",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "14/010/2022",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 10/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Cao",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "8/08/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · tháng 8/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Duyen",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-d.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "3/05/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "2 đêm · tháng 5/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "裴明玉",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "30/04/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Trúc",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "20/04/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hongden",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "18/04/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hoàng",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-h.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "10/04/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Lều",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Nhóm",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hoài",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "29/09/2022",
+        "rating": "Dễ chịu",
+        "score": 6.0,
+        "room_type": "Chalet 1 Phòng Ngủ",
+        "stay_duration": "1 đêm · tháng 9/2022",
+        "group_type": "Nhóm",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Huỳnh",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "22/02/2022",
+        "rating": "Tốt",
+        "score": 7.0,
+        "room_type": "Chalet 1 Phòng Ngủ",
+        "stay_duration": "1 đêm · Tháng 2/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Không tên",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "11/03/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · tháng 1/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Hung",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "9/06/2024",
+        "rating": "What a nice place",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 6/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Naomi",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "29/05/2024",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 5/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "R",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-r.png",
+        "country": "Hà Lan"
+      },
+      "review": {
+        "date": "8/03/2024",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Nhóm",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Anastasia",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/40909935.jpg?k=14b598a158e80b01211a9bbfc34aec62a2db9a3dd0aeda0f2783d2c93a120aa6&o=",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "10/09/2023",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 9/2023",
+        "group_type": "Nhóm",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Patrick",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-p.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "3/07/2023",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Nguyễn",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "30/06/2023",
+        "rating": "Tuyệt hảo",
+        "score": 9.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 6/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thuy",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "6/05/2022",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "2 đêm · tháng 5/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Anastasia",
+        "avatar": "https://xx.bstatic.com/xdata/images/xphoto/square64/40909935.jpg?k=14b598a158e80b01211a9bbfc34aec62a2db9a3dd0aeda0f2783d2c93a120aa6&o=",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "3/02/2022",
+        "rating": "Quick getaway to the countryside",
+        "score": 10.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "1 đêm · Tháng 2/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thu",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "29/012/2021",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "2 đêm · tháng 12/2021",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Isaac",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL0bAFgUyfRT7V0GwooJdCEK0t5Zhr6jgfiiV39RsbZ=s96-c",
+        "country": "New Zealand"
+      },
+      "review": {
+        "date": "6/02/2024",
+        "rating": "Tốt",
+        "score": 7.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Ái",
+        "avatar": "https://graph.facebook.com/v2.9/10209311626687660/picture?type=square&height=64&width=64",
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "30/04/2022",
+        "rating": "Tàm tạm",
+        "score": 5.0,
+        "room_type": "Bungalow Nhìn ra vườn",
+        "stay_duration": "1 đêm · tháng 4/2022",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Radhika",
+        "avatar": null,
+        "country": "Ấn Độ"
+      },
+      "review": {
+        "date": "9/02/2022",
+        "rating": "Tốt",
+        "score": 7.0,
+        "room_type": "Phòng Deluxe (2 Người lớn + 1 Trẻ em)",
+        "stay_duration": "2 đêm · Tháng 2/2022",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Černý",
+        "avatar": null,
+        "country": "Cộng hoà Séc"
+      },
+      "review": {
+        "date": "16/02/2024",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Bungalow - Nhìn Ra Mặt Nước",
+        "stay_duration": "1 đêm · Tháng 2/2024",
+        "group_type": "Phòng gia đình",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Thibault",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-t.png",
+        "country": "Pháp"
+      },
+      "review": {
+        "date": "4/02/2024",
+        "rating": "Rất tốt",
+        "score": 8.0,
+        "room_type": "Phòng Gia Đình",
+        "stay_duration": "1 đêm · tháng 1/2024",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Beattie017",
+        "avatar": "https://xx.bstatic.com/static/img/review/avatars/ava-b.png",
+        "country": "Đài Loan"
+      },
+      "review": {
+        "date": "31/012/2022",
+        "rating": "Xuất sắc",
+        "score": 10.0,
+        "room_type": "Chalet 1 Phòng Ngủ",
+        "stay_duration": "1 đêm · tháng 12/2022",
+        "group_type": "Khách lẻ",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    },
+    {
+      "reviewer": {
+        "name": "Oh",
+        "avatar": null,
+        "country": "Việt Nam"
+      },
+      "review": {
+        "date": "10/07/2023",
+        "rating": "Tốt",
+        "score": 7.0,
+        "room_type": "Chalet 1 Phòng Ngủ",
+        "stay_duration": "1 đêm · tháng 7/2023",
+        "group_type": "Cặp đôi",
+        "comment_positive": null,
+        "comment_negative": null
+      }
+    }
+  ]
+}
