@@ -1,0 +1,12 @@
+Gia phong cho khach san vinholiday-1-phu-quoc-phu-quoc - phu-quoc
+
+Phong Don - 456,000 VND
+Phong Doi - 814,000 VND
+Phong Gia Dinh - 1,099,000 VND
+Phong VIP - 1,986,000 VND
+Phong Suite - 2,986,000 VND
+Phong Deluxe - 1,946,000 VND
+Phong Thuong - 979,000 VND
+Phong Tap The - 488,000 VND
+Phong Nghi Ngan Gio - 163,000 VND
+Phong View Bien - 1,586,000 VND

@@ -1,0 +1,12 @@
+Gia phong cho khach san venue-nha-trang5 - nha-trang
+
+Phong Don - 636,000 VND
+Phong Doi - 904,000 VND
+Phong Gia Dinh - 1,235,000 VND
+Phong VIP - 2,026,000 VND
+Phong Suite - 2,161,000 VND
+Phong Deluxe - 1,694,000 VND
+Phong Thuong - 1,001,000 VND
+Phong Tap The - 440,000 VND
+Phong Nghi Ngan Gio - 216,000 VND
+Phong View Bien - 1,627,000 VND

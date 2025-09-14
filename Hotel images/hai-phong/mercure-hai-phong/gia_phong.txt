@@ -1,0 +1,12 @@
+Gia phong cho khach san mercure-hai-phong - hai-phong
+
+Phong Don - 415,000 VND
+Phong Doi - 725,000 VND
+Phong Gia Dinh - 1,277,000 VND
+Phong VIP - 2,257,000 VND
+Phong Suite - 2,542,000 VND
+Phong Deluxe - 1,443,000 VND
+Phong Thuong - 950,000 VND
+Phong Tap The - 367,000 VND
+Phong Nghi Ngan Gio - 302,000 VND
+Phong View Bien - 2,156,000 VND

@@ -1,0 +1,12 @@
+Gia phong cho khach san phu-cuong-ca-mau - ca-mau
+
+Phong Don - 643,000 VND
+Phong Doi - 880,000 VND
+Phong Gia Dinh - 1,173,000 VND
+Phong VIP - 2,139,000 VND
+Phong Suite - 2,648,000 VND
+Phong Deluxe - 1,611,000 VND
+Phong Thuong - 1,071,000 VND
+Phong Tap The - 460,000 VND
+Phong Nghi Ngan Gio - 198,000 VND
+Phong View Bien - 1,559,000 VND

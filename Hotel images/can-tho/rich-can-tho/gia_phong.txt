@@ -1,0 +1,12 @@
+Gia phong cho khach san rich-can-tho - can-tho
+
+Phong Don - 598,000 VND
+Phong Doi - 872,000 VND
+Phong Gia Dinh - 1,170,000 VND
+Phong VIP - 1,943,000 VND
+Phong Suite - 2,162,000 VND
+Phong Deluxe - 1,310,000 VND
+Phong Thuong - 1,081,000 VND
+Phong Tap The - 263,000 VND
+Phong Nghi Ngan Gio - 329,000 VND
+Phong View Bien - 1,879,000 VND
