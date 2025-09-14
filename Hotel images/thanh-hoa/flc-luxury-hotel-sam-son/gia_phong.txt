@@ -1,0 +1,12 @@
+Gia phong cho khach san flc-luxury-hotel-sam-son - thanh-hoa
+
+Phong Don - 457,000 VND
+Phong Doi - 795,000 VND
+Phong Gia Dinh - 1,361,000 VND
+Phong VIP - 1,925,000 VND
+Phong Suite - 2,402,000 VND
+Phong Deluxe - 1,572,000 VND
+Phong Thuong - 1,020,000 VND
+Phong Tap The - 429,000 VND
+Phong Nghi Ngan Gio - 339,000 VND
+Phong View Bien - 2,128,000 VND

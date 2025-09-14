@@ -1,0 +1,12 @@
+Gia phong cho khach san radisson-resort-phan-thiet - phan-thiet
+
+Phong Don - 604,000 VND
+Phong Doi - 619,000 VND
+Phong Gia Dinh - 1,193,000 VND
+Phong VIP - 2,357,000 VND
+Phong Suite - 2,015,000 VND
+Phong Deluxe - 1,925,000 VND
+Phong Thuong - 923,000 VND
+Phong Tap The - 500,000 VND
+Phong Nghi Ngan Gio - 218,000 VND
+Phong View Bien - 1,974,000 VND
