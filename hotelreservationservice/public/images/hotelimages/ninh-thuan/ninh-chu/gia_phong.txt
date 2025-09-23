@@ -1,0 +1,12 @@
+Gia phong cho khach san ninh-chu - ninh-thuan
+
+Phong Don - 740,000 VND
+Phong Doi - 825,000 VND
+Phong Gia Dinh - 1,415,000 VND
+Phong VIP - 1,852,000 VND
+Phong Suite - 2,118,000 VND
+Phong Deluxe - 1,545,000 VND
+Phong Thuong - 840,000 VND
+Phong Tap The - 375,000 VND
+Phong Nghi Ngan Gio - 268,000 VND
+Phong View Bien - 2,075,000 VND

@@ -1,0 +1,12 @@
+Gia phong cho khach san ruby-thanh-pho-vinh-long - vinh-long
+
+Phong Don - 440,000 VND
+Phong Doi - 999,000 VND
+Phong Gia Dinh - 1,027,000 VND
+Phong VIP - 1,974,000 VND
+Phong Suite - 2,364,000 VND
+Phong Deluxe - 1,786,000 VND
+Phong Thuong - 822,000 VND
+Phong Tap The - 394,000 VND
+Phong Nghi Ngan Gio - 243,000 VND
+Phong View Bien - 1,793,000 VND

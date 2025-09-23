@@ -1,0 +1,101 @@
+<?php
+class HotelModel
+{
+    private $conn;
+    private $table_name = "hotel";
+    public function __construct($db)
+    {
+        $this->conn = $db;
+    }
+    public function getHotels()
+    {
+        $query = "SELECT p.id, p.name, p.address, p.description, p.rating, p.total_rating, p.image, c.name as city_name
+                    FROM " . $this->table_name . " p
+                    LEFT JOIN city c ON p.city_id = c.id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+    // Lấy danh sách khách sạn theo city_id
+    public function getHotelsByCityId($cityId)
+    {
+        $query = "SELECT * FROM " . $this->table_name . " WHERE city_id = :city_id ORDER BY name ASC";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':city_id', $cityId);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Phương thức getHotelById đã có
+    public function getHotelById($id)
+    {
+        $query = "SELECT * FROM " . $this->table_name . " WHERE id = :id LIMIT 0,1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+    public function addHotel($name, $address, $description, $city_id, $image)
+    {
+        $errors = [];
+        if (empty($name)) {
+            $errors['name'] = 'Tên khách sạn không được để trống';
+        }
+        if (empty($address)) {
+            $errors['address'] = 'Địa chỉ khách sạn không được để trống';
+        }
+        if (empty($description)) {
+            $errors['description'] = 'Mô tả không được để trống';
+        }
+        if (count($errors) > 0) {
+            return $errors;
+        }
+        $query = "INSERT INTO " . $this->table_name . " (name, address, description, city_id, image) VALUES (:name, :address, :description, :city_id, :image)";
+        $stmt = $this->conn->prepare($query);
+        $name = htmlspecialchars(strip_tags($name));
+        $address = htmlspecialchars(strip_tags($address));
+        $description = htmlspecialchars(strip_tags($description));
+        $city_id = htmlspecialchars(strip_tags($city_id));
+        $image = htmlspecialchars(strip_tags($image));
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':city_id', $city_id);
+        $stmt->bindParam(':image', $image);
+        if ($stmt->execute()) {
+            return true;
+        }
+        return false;
+    }
+    public function updateHotel($id, $name, $address, $description, $city_id, $image)
+    {
+        $query = "UPDATE " . $this->table_name . " SET name=:name, address=:address, description=:description, city_id=:city_id, image=:image WHERE id=:id";
+        $stmt = $this->conn->prepare($query);
+        $name = htmlspecialchars(strip_tags($name));
+        $address = htmlspecialchars(strip_tags($address));
+        $description = htmlspecialchars(strip_tags($description));
+        $city_id = htmlspecialchars(strip_tags($city_id));
+        $image = htmlspecialchars(strip_tags($image));
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':city_id', $city_id);
+        $stmt->bindParam(':image', $image);
+        if ($stmt->execute()) {
+            return true;
+        }
+        return false;
+    }
+    public function deleteHotel($id)
+    {
+        $query = "DELETE FROM " . $this->table_name . " WHERE id=:id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        if ($stmt->execute()) {
+            return true;
+        }
+        return false;
+    }
+}

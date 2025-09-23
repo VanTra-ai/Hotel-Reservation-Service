@@ -1,0 +1,137 @@
+/* Kiểu dáng chung cho toàn bộ trang */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #f7fbff; /* xanh nhạt rất nhẹ */
+  color: #1f2d3d;
+}
+
+/* Tùy chỉnh cho phần khám phá (Explore Section) */
+.explore-section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.explore-section img:hover {
+  transform: scale(1.05);
+}
+
+.image-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.image-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Tùy chỉnh nút điều hướng của carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* Các kiểu dáng khác mà bạn muốn dùng chung */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-secondary {
+  background-color: #e9f2ff;
+  color: #0d6efd;
+  border-color: #cfe2ff;
+}
+.btn-secondary:hover {
+  background-color: #dbeaff;
+  color: #0a58ca;
+  border-color: #b6d4fe;
+}
+
+/* Card header đồng bộ xanh trắng */
+.card-header.bg-primary {
+  background-color: #0d6efd !important;
+}
+.card-header.bg-info {
+  background-color: #3da5ff !important;
+}
+.card-header.bg-warning {
+  background-color: #74c0fc !important;
+  color: #0b2e59 !important;
+}
+
+/* Navbar light xanh nhạt */
+.navbar.bg-primary-subtle {
+  background-color: #e9f2ff !important;
+}
+
+.search-section .input-group .form-control,
+.search-section .input-group .input-group-text,
+.search-section .input-group button {
+  background-color: #fff;
+  border-color: #dee2e6; /* Màu viền mặc định của Bootstrap */
+}
+
+/* Ẩn viền bên trong */
+.search-section .input-group .input-group-text {
+  border-right: none;
+}
+.search-section .input-group .form-control,
+.search-section .input-group button {
+  border-left: none;
+}
+
+/* Đảm bảo viền bo tròn ở hai đầu */
+.search-section .input-group-text.rounded-start-pill {
+  border-top-left-radius: 50rem !important;
+  border-bottom-left-radius: 50rem !important;
+  border-right: 1px solid #dee2e6; /* Khôi phục viền bên phải */
+}
+.search-section .form-control.rounded-end-pill,
+.search-section .input-group button.rounded-end-pill {
+  border-top-right-radius: 50rem !important;
+  border-bottom-right-radius: 50rem !important;
+  border-left: 1px solid #dee2e6; /* Khôi phục viền bên trái */
+}
+
+/* Tùy chỉnh màu chữ trong ô tìm kiếm */
+.search-section .form-control::placeholder,
+.search-section .input-group .text-muted {
+  color: #6c757d !important;
+}
+
+/* Đảm bảo nút "Tìm" có màu chữ trắng */
+.btn-warning {
+  color: #fff;
+}
+
+.main-carousel-img {
+  height: 400px; /* Đặt chiều cao mong muốn */
+  object-fit: cover; /* Đảm bảo hình ảnh được cắt để lấp đầy khung */
+}
+
+.explore-image {
+  height: 120px; /* Đặt chiều cao nhỏ hơn cho các hình ảnh này */
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Tùy chọn: Thêm aspect-ratio để giữ tỷ lệ khung hình */
+.explore-image {
+  aspect-ratio: 1.5 / 1; /* Ví dụ: tỷ lệ 3:2, phù hợp với ảnh phong cảnh */
+}

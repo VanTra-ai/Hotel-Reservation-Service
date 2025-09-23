@@ -1,0 +1,12 @@
+Gia phong cho khach san tam-homestay-hue - hue
+
+Phong Don - 765,000 VND
+Phong Doi - 966,000 VND
+Phong Gia Dinh - 1,239,000 VND
+Phong VIP - 2,034,000 VND
+Phong Suite - 2,222,000 VND
+Phong Deluxe - 1,862,000 VND
+Phong Thuong - 1,016,000 VND
+Phong Tap The - 322,000 VND
+Phong Nghi Ngan Gio - 393,000 VND
+Phong View Bien - 1,626,000 VND
