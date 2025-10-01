@@ -168,4 +168,34 @@ class RoomModel
         }
         return false;
     }
+    public function getAvailableRooms($checkInDate, $checkOutDate)
+{
+    $sql = "SELECT r.*, h.name AS hotel_name, c.name AS city_name
+            FROM rooms r
+            JOIN hotels h ON r.hotel_id = h.id
+            JOIN cities c ON h.city_id = c.id
+            WHERE r.id NOT IN (
+                SELECT room_id
+                FROM bookings
+                WHERE (check_in_date < :checkOutDate AND check_out_date > :checkInDate)
+            )";
+
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bindParam(':checkInDate', $checkInDate);
+    $stmt->bindParam(':checkOutDate', $checkOutDate);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
+public function getAllRooms()
+{
+    $sql = "SELECT r.*, h.name AS hotel_name, c.name AS city_name
+            FROM rooms r
+            JOIN hotels h ON r.hotel_id = h.id
+            JOIN cities c ON h.city_id = c.id";
+    
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
 }

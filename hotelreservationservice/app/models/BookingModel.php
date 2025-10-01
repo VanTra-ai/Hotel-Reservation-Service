@@ -1,7 +1,7 @@
 <?php
 class BookingModel
 {
-    private $conn;
+    private $conn;  // Kết nối database
     private $table_name = "booking";
 
     public function __construct($db)
@@ -12,11 +12,13 @@ class BookingModel
     // Tạo một đặt phòng mới
     public function createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice)
     {
-        // Chặn đặt nếu phòng đã có booking chồng chéo thời gian với trạng thái pending/confirmed
         if (!$this->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) {
             return false;
         }
-        $query = "INSERT INTO " . $this->table_name . " (account_id, room_id, check_in_date, check_out_date, total_price) VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price)";
+
+        $query = "INSERT INTO " . $this->table_name . " 
+                  (account_id, room_id, check_in_date, check_out_date, total_price) 
+                  VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price)";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(':account_id', $accountId);
@@ -29,7 +31,6 @@ class BookingModel
     }
 
     // Kiểm tra phòng có trống trong khoảng thời gian hay không
-    // Logic chồng chéo: (new_start < existing_end) AND (new_end > existing_start)
     public function isRoomAvailable($roomId, $checkInDate, $checkOutDate)
     {
         $query = "SELECT COUNT(*) FROM " . $this->table_name . " 
@@ -44,5 +45,31 @@ class BookingModel
         $stmt->execute();
         $count = (int)$stmt->fetchColumn();
         return $count === 0;
+    }
+
+    // Lấy danh sách booking theo account
+    public function getBookingsByAccountId($accountId)
+    {
+        $stmt = $this->conn->prepare("
+            SELECT b.*, r.room_number, r.room_type, h.name AS hotel_name
+            FROM booking b
+            JOIN room r ON b.room_id = r.id
+            JOIN hotel h ON r.hotel_id = h.id
+            WHERE b.account_id = ?
+            ORDER BY b.check_in_date DESC
+        ");
+        $stmt->execute([$accountId]);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Hủy booking
+    public function cancelBooking($bookingId, $accountId)
+    {
+        $stmt = $this->conn->prepare("
+            UPDATE " . $this->table_name . "
+            SET status = 'cancelled'
+            WHERE id = ? AND account_id = ? AND status != 'cancelled'
+        ");
+        return $stmt->execute([$bookingId, $accountId]);
     }
 }

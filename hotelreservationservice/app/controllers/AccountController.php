@@ -85,31 +85,31 @@ class AccountController
     }
 
     public function checkLogin(): void
-    {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $username = $_POST['username'] ?? '';
-            $password = $_POST['password'] ?? '';
+{
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'] ?? '';
+        $password = $_POST['password'] ?? '';
 
-            // Sửa lại dòng này để tránh cảnh báo
-            $account = $this->accountModel->getAccountByUsername($username);
-            $error = "";
+        $account = $this->accountModel->getAccountByUsername($username);
+        $error = "";
 
-            if ($account && password_verify($password, $account->password)) {
-                SessionHelper::startSession();
-                $_SESSION['account_id'] = $account->id;
-                $_SESSION['username'] = $account->username;
-                $_SESSION['fullname'] = $account->fullname;
-                $_SESSION['role'] = $account->role;
-                header('Location: /hotelreservationservice/home');
-                exit;
-            } else {
-                $error = $account ? "Mật khẩu không đúng!" : "Không tìm thấy tài khoản!";
-                include_once 'app/views/account/login.php';
-                exit;
-            }
+        if ($account && password_verify($password, $account->password)) {
+            // Dùng helper login
+            SessionHelper::startSession();
+            $_SESSION['account_id'] = $account->id;
+            $_SESSION['username'] = $account->username;
+            $_SESSION['fullname'] = $account->fullname;
+            $_SESSION['role'] = $account->role;
+
+            header('Location: /hotelreservationservice/home');
+            exit;
+        } else {
+            $error = $account ? "Mật khẩu không đúng!" : "Không tìm thấy tài khoản!";
+            include_once 'app/views/account/login.php';
+            exit;
         }
     }
-
+}
     public function changePassword(): void
     {
         SessionHelper::requireLogin();

@@ -3,17 +3,14 @@
 <div class="container my-5">
     <?php if ($hotel): ?>
         <div class="row">
-     
-            <div class="col-md-8">
-                <div class="card mb-4 shadow-sm">
-                    <?php if (!empty($hotel->image)): ?>
-                        <img src="/hotelreservationservice/<?= htmlspecialchars($hotel->image) ?>" 
-                             class="card-img-top hotel-detail-image" 
-                             alt="<?= htmlspecialchars($hotel->name) ?>">
-                    <?php else: ?>
-                        <img src="https://via.placeholder.com/800x400?text=No+Image+Available" 
-                             class="card-img-top hotel-detail-image" alt="No image available">
-                    <?php endif; ?>
+                            <?php if (!empty($hotel->image)): ?>
+                    <img src="/hotelreservationservice/<?= htmlspecialchars($hotel->image) ?>" 
+                        class="card-img-top hotel-detail-image" 
+                        alt="<?= htmlspecialchars($hotel->name) ?>">
+                <?php else: ?>
+                    <img src="https://via.placeholder.com/1080x720?text=No+Image+Available" 
+                        class="card-img-top hotel-detail-image" alt="No image available">
+                <?php endif; ?>
 
                     <div class="card-body">
                         <h2 class="card-title fw-bold"><?= htmlspecialchars($hotel->name) ?></h2>
