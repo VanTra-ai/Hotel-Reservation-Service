@@ -17,11 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       provinceList.appendChild(cityItem);
     });
-    if (items.length > 0) {
-      provinceList.classList.add('show');
-    } else {
-      provinceList.classList.remove('show');
-    }
+    provinceList.classList.toggle('show', items.length > 0);
   }
 
   function filterCities(query) {
@@ -30,10 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       provinceList.classList.remove('show');
       return;
     }
-    const filtered = citiesCache.filter(c => {
-      const cityName = (c.name || '').toLowerCase();
-      return cityName.startsWith(q);
-    });
+    const filtered = citiesCache.filter(c => (c.name || '').toLowerCase().startsWith(q));
     renderList(filtered);
   }
 
@@ -42,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cb && cb();
       return;
     }
-    fetch('/hotelreservationservice/city/getCitiesJson')
+    fetch('/Hotel-Reservation-Service/hotelreservationservice/city/getCitiesJson')
       .then(response => response.json())
       .then(cities => {
         citiesCache = Array.isArray(cities) ? cities : [];
@@ -53,11 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   provinceInput.addEventListener('focus', function () {
     ensureCitiesLoaded(() => {
-      // Khi focus, chỉ hiển thị nếu đã có text
       const currentValue = provinceInput.value.trim();
-      if (currentValue) {
-        filterCities(currentValue);
-      }
+      if (currentValue) filterCities(currentValue);
     });
   });
 
@@ -71,38 +61,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Khởi tạo Flatpickr cho trường ngày
+  // ✅ Flatpickr khởi tạo lịch chọn ngày
   flatpickr("#dateRangeInput", {
     mode: "range",
     minDate: "today",
     dateFormat: "d/m/Y",
   });
 
-  // Khởi tạo các biến để lưu số lượng, khớp với giá trị mặc định trong HTML
-  let adults = 1;
-  let children = 0;
-  let rooms = 1;
+  // ✅ Khởi tạo số lượng
+  let adults = 1, children = 0, rooms = 1;
 
-  // Hàm cập nhật số lượng và hiển thị
   window.updateGuests = function (type, change) {
-    if (type === "adults") {
-      adults = Math.max(1, adults + change);
-      document.getElementById("adultsCount").innerText = adults;
-    } else if (type === "children") {
-      children = Math.max(0, children + change);
-      document.getElementById("childrenCount").innerText = children;
-    } else if (type === "rooms") {
-      rooms = Math.max(1, rooms + change);
-      document.getElementById("roomsCount").innerText = rooms;
-    }
+    if (type === "adults") adults = Math.max(1, adults + change);
+    if (type === "children") children = Math.max(0, children + change);
+    if (type === "rooms") rooms = Math.max(1, rooms + change);
     updateSummary();
   };
 
   function updateSummary() {
-    const guestsSummary = document.getElementById("guestsSummary");
-    guestsSummary.innerText = `${adults} người lớn, ${children} trẻ em, ${rooms} phòng`;
+    document.getElementById("adultsCount").innerText = adults;
+    document.getElementById("childrenCount").innerText = children;
+    document.getElementById("roomsCount").innerText = rooms;
+    document.getElementById("guestsSummary").innerText = `${adults} người lớn, ${children} trẻ em, ${rooms} phòng`;
   }
 
-  // Cập nhật giá trị ban đầu khi trang tải
   updateSummary();
 });
