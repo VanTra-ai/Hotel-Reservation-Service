@@ -26,20 +26,20 @@
                         <td><?= htmlspecialchars($b->hotel_name) ?></td>
                         <td><?= htmlspecialchars($b->check_in_date) ?></td>
                         <td><?= htmlspecialchars($b->check_out_date) ?></td>
-                        <td><?= number_format($b->total_price,0,',','.') ?> VNĐ</td>
+                        <td><?= number_format($b->total_price, 0, ',', '.') ?> VNĐ</td>
                         <td><?= htmlspecialchars($b->status ?? 'pending') ?></td>
                         <td>
-                            <form method="POST" action="/hotelreservationservice/admin/booking/updateStatus/<?= $b->id ?>" class="d-flex gap-1">
+                            <form method="POST" action="/Hotel-Reservation-Service/hotelreservationservice/admin/booking/updateStatus/<?= $b->id ?>" class="d-flex gap-1">
                                 <select name="status" class="form-select form-select-sm">
-                                    <option value="pending" <?= ($b->status=='pending')?'selected':'' ?>>Pending</option>
-                                    <option value="confirmed" <?= ($b->status=='confirmed')?'selected':'' ?>>Confirmed</option>
-                                    <option value="checked_in" <?= ($b->status=='checked_in')?'selected':'' ?>>Checked In</option>
-                                    <option value="checked_out" <?= ($b->status=='checked_out')?'selected':'' ?>>Checked Out</option>
-                                    <option value="cancelled" <?= ($b->status=='cancelled')?'selected':'' ?>>Cancelled</option>
+                                    <option value="pending" <?= ($b->status == 'pending') ? 'selected' : '' ?>>Pending</option>
+                                    <option value="confirmed" <?= ($b->status == 'confirmed') ? 'selected' : '' ?>>Confirmed</option>
+                                    <option value="checked_in" <?= ($b->status == 'checked_in') ? 'selected' : '' ?>>Checked In</option>
+                                    <option value="checked_out" <?= ($b->status == 'checked_out') ? 'selected' : '' ?>>Checked Out</option>
+                                    <option value="cancelled" <?= ($b->status == 'cancelled') ? 'selected' : '' ?>>Cancelled</option>
                                 </select>
                                 <button class="btn btn-sm btn-primary">Cập nhật</button>
                             </form>
-                            <a href="/hotelreservationservice/admin/booking/cancel/<?= $b->id ?>" class="btn btn-sm btn-danger mt-1" onclick="return confirm('Bạn có chắc muốn hủy booking này?')">Hủy</a>
+                            <a href="/Hotel-Reservation-Service/hotelreservationservice/admin/booking/cancel/<?= $b->id ?>" class="btn btn-sm btn-danger mt-1" onclick="return confirm('Bạn có chắc muốn hủy booking này?')">Hủy</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

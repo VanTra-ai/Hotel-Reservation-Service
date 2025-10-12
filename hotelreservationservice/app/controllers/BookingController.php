@@ -3,6 +3,7 @@ require_once 'app/models/BookingModel.php';
 require_once 'app/models/RoomModel.php';
 require_once 'app/models/AccountModel.php';
 require_once 'app/helpers/SessionHelper.php';
+require_once 'app/config/database.php';
 
 class BookingController
 {
@@ -21,7 +22,7 @@ class BookingController
     }
 
     /**
-     * Lấy accountId từ session hoặc từ username
+     * Lấy accountId từ session
      */
     private function getAccountId()
     {
@@ -41,33 +42,39 @@ class BookingController
     }
 
     /**
-     * Xử lý đặt phòng
+     * Hiển thị form và xử lý đặt phòng
      */
     public function bookRoom()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: /hotelreservationservice/account/login');
+            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
             exit;
         }
 
         $accountId = $this->getAccountId();
-        if (empty($accountId)) {
-            header('Location: /hotelreservationservice/account/login');
+        if (!$accountId) {
+            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
             exit;
         }
 
         $method = $_SERVER['REQUEST_METHOD'];
-        $action = $_POST['action'] ?? '';
 
-        // --------------------------
-        // POST: preview booking
-        // --------------------------
-        if ($method === 'POST' && $action === 'preview') {
+        // POST: confirm booking
+        if ($method === 'POST') {
             $roomId = $_POST['room_id'] ?? '';
             $checkInDate = $_POST['check_in_date'] ?? '';
             $checkOutDate = $_POST['check_out_date'] ?? '';
             $guests = max(1, (int)($_POST['guests'] ?? 1));
 
+            $today = date('Y-m-d');
+            if (strtotime($checkInDate) < strtotime($today)) {
+                $error = "Ngày nhận phòng không được là ngày trong quá khứ.";
+                // Cần load lại thông tin phòng để hiển thị lại form
+                $room = $this->roomModel->getRoomById($roomId);
+                include 'app/views/booking/book.php';
+                return;
+            }
+
             $room = $this->roomModel->getRoomById($roomId);
             if (!$room) {
                 $error = "Không tìm thấy phòng.";
@@ -75,43 +82,23 @@ class BookingController
                 return;
             }
 
-            $nights = max(1, (strtotime($checkOutDate) - strtotime($checkInDate)) / (60*60*24));
+            if (strtotime($checkOutDate) <= strtotime($checkInDate)) {
+                $error = "Ngày trả phòng phải sau ngày nhận phòng.";
+                include 'app/views/booking/book.php';
+                return;
+            }
+
+            if (!$this->bookingModel->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) {
+                $error = "Phòng đã được đặt trong khoảng thời gian này. Vui lòng chọn ngày khác.";
+                include 'app/views/booking/book.php';
+                return;
+            }
+
+            $nights = max(1, (strtotime($checkOutDate) - strtotime($checkInDate)) / (60 * 60 * 24));
             $totalPrice = $nights * (float)$room->price;
 
-            if (!$this->bookingModel->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) {
-                $error = "Phòng đã được đặt trong khoảng thời gian này. Vui lòng chọn ngày khác.";
-                include 'app/views/booking/book.php';
-                return;
-            }
-
-            include 'app/views/booking/confirmation.php';
-            return;
-        }
-
-        // --------------------------
-        // POST: confirm booking
-        // --------------------------
-        if ($method === 'POST' && $action === 'confirm') {
-            $roomId = $_POST['room_id'] ?? '';
-            $checkInDate = $_POST['check_in_date'] ?? '';
-            $checkOutDate = $_POST['check_out_date'] ?? '';
-            $totalPrice = (float)($_POST['total_price'] ?? 0);
-
-            $room = $this->roomModel->getRoomById($roomId);
-            if (!$room) {
-                $error = "Không tìm thấy phòng.";
-                include 'app/views/booking/book.php';
-                return;
-            }
-
-            if (!$this->bookingModel->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) {
-                $error = "Phòng đã được đặt trong khoảng thời gian này. Vui lòng chọn ngày khác.";
-                include 'app/views/booking/book.php';
-                return;
-            }
-
             if ($this->bookingModel->createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice)) {
-                header('Location: /hotelreservationservice/booking/confirmation?success=1');
+                header('Location: /Hotel-Reservation-Service/hotelreservationservice/booking/confirmation?success=1');
                 exit;
             }
 
@@ -120,11 +107,10 @@ class BookingController
             return;
         }
 
-        // --------------------------
-        // GET: hiển thị form đặt phòng
-        // --------------------------
+        // GET: hiển thị form
         $roomId = $_GET['room_id'] ?? '';
         $room = $roomId ? $this->roomModel->getRoomById($roomId) : null;
+        $error = null;
         include 'app/views/booking/book.php';
     }
 
@@ -136,10 +122,13 @@ class BookingController
         include 'app/views/booking/confirmation.php';
     }
 
+    /**
+     * Lịch sử booking của user
+     */
     public function history()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: /hotelreservationservice/account/login');
+            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
             exit;
         }
 
@@ -148,10 +137,13 @@ class BookingController
         include 'app/views/booking/history.php';
     }
 
+    /**
+     * Hủy booking
+     */
     public function cancel()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: /hotelreservationservice/account/login');
+            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
             exit;
         }
 
@@ -162,7 +154,7 @@ class BookingController
             $this->bookingModel->cancelBooking($bookingId, $accountId);
         }
 
-        header('Location: /hotelreservationservice/booking/history');
+        header('Location: /Hotel-Reservation-Service/hotelreservationservice/booking/history');
         exit;
     }
 }

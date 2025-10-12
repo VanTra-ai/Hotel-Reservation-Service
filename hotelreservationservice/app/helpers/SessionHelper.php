@@ -50,7 +50,7 @@ class SessionHelper
     public static function requireLogin()
     {
         if (!self::isLoggedIn()) {
-            header('Location: /hotelreservationservice/account/login');
+            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
             exit;
         }
     }
@@ -70,7 +70,7 @@ class SessionHelper
         session_unset();
         session_destroy();
     }
-    
+
     // Thêm getter cho fullname
     public static function getFullname()
     {

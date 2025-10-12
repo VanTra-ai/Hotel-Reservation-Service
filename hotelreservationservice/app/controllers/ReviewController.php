@@ -21,33 +21,62 @@ class ReviewController
 
         if (!SessionHelper::isLoggedIn()) {
             $_SESSION['error_message'] = "Bạn cần đăng nhập để đánh giá.";
-            header("Location: /hotelreservationservice/Account/login");
+            header("Location: /Hotel-Reservation-Service/hotelreservationservice/Account/login");
             exit();
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $hotelId  = $_POST['hotel_id'] ?? '';
-    $rating   = $_POST['rating'] ?? '';
-    $comment  = $_POST['comment'] ?? '';
-    $category = $_POST['category'] ?? '';   // ✅ lấy thêm category
-    $accountId = $_SESSION['user_id'];
+            // Trim tất cả input
+            $hotelId   = trim($_POST['hotel_id'] ?? '');
+            $rating    = trim($_POST['rating'] ?? '');
+            $comment   = trim($_POST['comment'] ?? '');
+            $category  = trim($_POST['category'] ?? '');
+            $accountId = $_SESSION['user_id'];
 
-    if ($this->reviewModel->addReview($hotelId, $accountId, $rating, $comment, $category)) {
-        $_SESSION['success_message'] = "Đánh giá đã được gửi thành công!";
-    } else {
-        $_SESSION['error_message'] = "Có lỗi xảy ra khi gửi đánh giá.";
-    }
+            // Validate dữ liệu
+            $errors = [];
 
-    header("Location: /hotelreservationservice/Hotel/show/$hotelId");
-    exit();
-}
+            if (empty($hotelId) || !is_numeric($hotelId)) {
+                $errors[] = "Khách sạn không hợp lệ.";
+            }
+
+            if (!is_numeric($rating) || $rating < 1 || $rating > 5) {
+                $errors[] = "Đánh giá phải từ 1 đến 5.";
+            }
+
+            if (empty($category)) {
+                $errors[] = "Hạng mục đánh giá không được để trống.";
+            }
+
+            if (count($errors) > 0) {
+                $_SESSION['error_message'] = implode(', ', $errors);
+                header("Location: /Hotel-Reservation-Service/hotelreservationservice/Hotel/show/$hotelId");
+                exit();
+            }
+
+            // Gọi model để thêm review
+            $result = $this->reviewModel->addReview($hotelId, $accountId, $rating, $comment, $category);
+
+            // Xử lý kết quả trả về
+            if (is_array($result)) {
+                // Nếu model trả về lỗi validate
+                $_SESSION['error_message'] = implode(', ', $result);
+            } elseif ($result === true) {
+                $_SESSION['success_message'] = "Đánh giá đã được gửi thành công!";
+            } else {
+                $_SESSION['error_message'] = "Có lỗi xảy ra khi gửi đánh giá.";
+            }
+
+            header("Location: /Hotel-Reservation-Service/hotelreservationservice/Hotel/show/$hotelId");
+            exit();
+        }
     }
 
     // Lấy danh sách review theo hotel và render ra view
     public function listByHotel($hotelId)
     {
         $reviews = $this->reviewModel->getReviewsByHotelId($hotelId);
-        
+
         // Truyền vào view
         include 'app/views/review/list.php';
     }

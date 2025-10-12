@@ -14,8 +14,8 @@
                             <i class="fas fa-map-marker-alt text-muted"></i>
                         </span>
                         <input type="text" id="provinceInput" name="province"
-                               class="form-control border-start-0 ps-0 rounded-end-pill"
-                               placeholder="Chọn tỉnh thành...">
+                            class="form-control border-start-0 ps-0 rounded-end-pill"
+                            placeholder="Chọn tỉnh thành...">
                     </div>
                     <div id="provinceList" class="dropdown-menu"></div>
                 </div>
@@ -27,8 +27,8 @@
                             <i class="fas fa-calendar-alt text-muted"></i>
                         </span>
                         <input type="text" id="dateRangeInput" name="dates"
-                               class="form-control border-start-0 ps-0 rounded-end-pill"
-                               placeholder="Ngày nhận phòng - Ngày trả phòng">
+                            class="form-control border-start-0 ps-0 rounded-end-pill"
+                            placeholder="Ngày nhận phòng - Ngày trả phòng">
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                             <i class="fas fa-user-friends text-muted"></i>
                         </span>
                         <button type="button" class="form-control text-start border-start-0 ps-0 rounded-end-pill"
-                                data-bs-toggle="modal" data-bs-target="#guestsModal">
+                            data-bs-toggle="modal" data-bs-target="#guestsModal">
                             <span id="guestsSummary" class="text-muted">1 người lớn, 0 trẻ em, 1 phòng</span>
                         </button>
                     </div>
@@ -63,15 +63,15 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/Hotel-Reservation-Service/hotelreservationservice/public/images/carousel/carousel1.jfif"
-                     class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel1">
+                    class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel1">
             </div>
             <div class="carousel-item">
                 <img src="/Hotel-Reservation-Service/hotelreservationservice/public/images/carousel/carousel2.jpg"
-                     class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel2">
+                    class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel2">
             </div>
             <div class="carousel-item">
                 <img src="/Hotel-Reservation-Service/hotelreservationservice/public/images/carousel/carousel3.jpg"
-                     class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel3">
+                    class="d-block w-100 rounded-3 shadow-sm main-carousel-img" alt="carousel3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
@@ -100,15 +100,15 @@
                                 ?>
                                     <div class="col-md-2 col-sm-4 col-6">
                                         <a href="/Hotel-Reservation-Service/hotelreservationservice/Hotel/list?province=<?= urlencode($provinceName) ?>"
-                                           class="image-link">
+                                            class="image-link">
                                             <?php if (!empty($provinceImage)): ?>
                                                 <img src="/Hotel-Reservation-Service/hotelreservationservice/<?= htmlspecialchars($provinceImage) ?>"
-                                                     class="d-block w-100 rounded-3 shadow-sm explore-image"
-                                                     alt="<?= htmlspecialchars($provinceName) ?>">
+                                                    class="d-block w-100 rounded-3 shadow-sm explore-image"
+                                                    alt="<?= htmlspecialchars($provinceName) ?>">
                                             <?php else: ?>
                                                 <img src="https://via.placeholder.com/150"
-                                                     class="d-block w-100 rounded-3 shadow-sm explore-image"
-                                                     alt="No image available">
+                                                    class="d-block w-100 rounded-3 shadow-sm explore-image"
+                                                    alt="No image available">
                                             <?php endif; ?>
                                             <div class="image-text"><?= htmlspecialchars($provinceName) ?></div>
                                         </a>
@@ -116,7 +116,7 @@
                                 <?php endforeach; ?>
                             </div>
                         </div>
-                    <?php endforeach;
+                <?php endforeach;
                 endif; ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#provinceCarousel" data-bs-slide="prev">
@@ -149,10 +149,10 @@
                         <span><?= $f['label'] ?></span>
                         <div class="d-flex align-items-center">
                             <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    onclick="updateGuests('<?= strtolower(explode(' ', $f['label'])[0]) ?>', -1)">-</button>
+                                onclick="updateGuests('<?= strtolower(explode(' ', $f['label'])[0]) ?>', -1)">-</button>
                             <span id="<?= $f['id'] ?>" class="mx-2 fw-bold"><?= $f['value'] ?></span>
                             <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    onclick="updateGuests('<?= strtolower(explode(' ', $f['label'])[0]) ?>', 1)">+</button>
+                                onclick="updateGuests('<?= strtolower(explode(' ', $f['label'])[0]) ?>', 1)">+</button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -165,29 +165,3 @@
 </div>
 
 <?php include 'app/views/shares/footer.php'; ?>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Flatpickr
-    flatpickr("#dateRangeInput", {
-        mode: "range",
-        dateFormat: "d/m/Y",
-        locale: "vn"
-    });
-});
-
-// Cập nhật số lượng khách / phòng
-function updateGuests(type, delta) {
-    const map = {
-        adults: document.getElementById("adultsCount"),
-        children: document.getElementById("childrenCount"),
-        rooms: document.getElementById("roomsCount")
-    };
-    const el = map[type];
-    let val = parseInt(el.textContent) + delta;
-    if (val < 0) val = 0;
-    el.textContent = val;
-    document.getElementById("guestsSummary").textContent =
-        `${map.adults.textContent} người lớn, ${map.children.textContent} trẻ em, ${map.rooms.textContent} phòng`;
-}
-</script>

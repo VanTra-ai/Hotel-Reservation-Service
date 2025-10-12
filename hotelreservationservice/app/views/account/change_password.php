@@ -23,7 +23,7 @@
                             </div>
                         <?php endif; ?>
 
-                        <form action="/hotelreservationservice/account/processChangePassword" method="post">
+                        <form action="/Hotel-Reservation-Service/hotelreservationservice/account/processChangePassword" method="post">
                             <div class="form-group">
                                 <label for="current_password">Mật khẩu hiện tại:</label>
                                 <input type="password" class="form-control" id="current_password" name="current_password" required>
@@ -54,7 +54,7 @@
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a href="/hotelreservationservice/home">Quay lại trang chủ</a>
+                            <a href="/Hotel-Reservation-Service/hotelreservationservice/home">Quay lại trang chủ</a>
                         </div>
                     </div>
                 </div>

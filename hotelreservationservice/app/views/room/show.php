@@ -13,12 +13,12 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <?php if (!empty($room->image)): ?>
-                                        <img src="/hotelreservationservice/<?= htmlspecialchars($room->image) ?>" 
-                                             alt="Phòng <?= htmlspecialchars($room->room_number) ?>" 
-                                             class="img-fluid rounded shadow-sm">
+                                        <img src="<?= BASE_URL ?>/<?= htmlspecialchars($room->image) ?>"
+                                            alt="Phòng <?= htmlspecialchars($room->room_number) ?>"
+                                            class="img-fluid rounded shadow-sm">
                                     <?php else: ?>
-                                        <div class="bg-light d-flex align-items-center justify-content-center rounded" 
-                                             style="height: 300px;">
+                                        <div class="bg-light d-flex align-items-center justify-content-center rounded"
+                                            style="height: 300px;">
                                             <div class="text-center text-muted">
                                                 <i class="fas fa-image fa-3x mb-3"></i>
                                                 <p>Không có hình ảnh</p>
@@ -28,73 +28,58 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="mb-3">
-                                    <h5 class="text-primary">Thông tin cơ bản</h5>
-                                    <hr>
-                                </div>
-                                
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Số phòng:</strong></div>
-                                    <div class="col-sm-8">
-                                        <span class="badge bg-primary fs-6"><?= htmlspecialchars($room->room_number) ?></span>
-                                    </div>
-                                </div>
+                                <h5 class="text-primary">Thông tin cơ bản</h5>
+                                <hr>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Loại phòng:</strong></div>
-                                    <div class="col-sm-8">
-                                        <span class="badge bg-info fs-6"><?= htmlspecialchars($room->room_type) ?></span>
-                                    </div>
-                                </div>
+                                <dl class="row">
+                                    <dt class="col-sm-4">Số phòng:</dt>
+                                    <dd class="col-sm-8"><span class="badge bg-primary fs-6"><?= htmlspecialchars($room->room_number) ?></span></dd>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Sức chứa:</strong></div>
-                                    <div class="col-sm-8">
-                                        <span class="badge bg-secondary fs-6">
-                                            <i class="fas fa-users me-1"></i><?= htmlspecialchars($room->capacity) ?> người
-                                        </span>
-                                    </div>
-                                </div>
+                                    <dt class="col-sm-4">Loại phòng:</dt>
+                                    <dd class="col-sm-8"><span class="badge bg-info fs-6"><?= htmlspecialchars($room->room_type) ?></span></dd>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Giá phòng:</strong></div>
-                                    <div class="col-sm-8">
-                                        <span class="fw-bold text-success fs-5">
-                                            <?= number_format($room->price, 0, ',', '.') ?> VNĐ
-                                        </span>
-                                    </div>
-                                </div>
+                                    <dt class="col-sm-4">Sức chứa:</dt>
+                                    <dd class="col-sm-8"><span class="badge bg-secondary fs-6"><i class="fas fa-users me-1"></i><?= htmlspecialchars($room->capacity) ?> người</span></dd>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Khách sạn:</strong></div>
-                                    <div class="col-sm-8"><?= htmlspecialchars($room->hotel_name ?? 'N/A') ?></div>
-                                </div>
+                                    <dt class="col-sm-4">Giá phòng:</dt>
+                                    <dd class="col-sm-8"><span class="fw-bold text-success fs-5"><?= number_format($room->price, 0, ',', '.') ?> VNĐ</span></dd>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-4"><strong>Tỉnh thành:</strong></div>
-                                    <div class="col-sm-8"><?= htmlspecialchars($room->city_name ?? 'N/A') ?></div>
-                                </div>
+                                    <dt class="col-sm-4">Khách sạn:</dt>
+                                    <dd class="col-sm-8"><?= htmlspecialchars($room->hotel_name ?? 'N/A') ?></dd>
+
+                                    <dt class="col-sm-4">Tỉnh thành:</dt>
+                                    <dd class="col-sm-8"><?= htmlspecialchars($room->city_name ?? 'N/A') ?></dd>
+                                </dl>
 
                                 <?php if (!empty($room->description)): ?>
-                                    <div class="mb-3">
-                                        <h6 class="text-primary">Mô tả phòng</h6>
-                                        <p class="text-muted"><?= nl2br(htmlspecialchars($room->description)) ?></p>
-                                    </div>
+                                    <h6 class="text-primary mt-3">Mô tả phòng</h6>
+                                    <p class="text-muted"><?= nl2br(htmlspecialchars($room->description)) ?></p>
                                 <?php endif; ?>
 
-                                <div class="d-flex gap-2 mt-4">
-                                    <a href="/hotelreservationservice/Room/edit/<?= $room->id ?>" class="btn btn-warning">
-                                        <i class="fas fa-edit me-2"></i>Chỉnh sửa
-                                    </a>
-                                    <a href="/hotelreservationservice/Room/list" class="btn btn-secondary">
-                                        <i class="fas fa-list me-2"></i>Danh sách phòng
-                                    </a>
-                                    <a href="/hotelreservationservice/Room/delete/<?= $room->id ?>" 
-                                       class="btn btn-danger"
-                                       onclick="return confirm('Bạn có chắc chắn muốn xóa phòng này?')">
-                                        <i class="fas fa-trash me-2"></i>Xóa phòng
-                                    </a>
-                                </div>
+                                <?php if (SessionHelper::isAdmin()): ?>
+                                    <div class="d-flex gap-2 mt-4">
+                                        <a href="<?= BASE_URL ?>/admin/room/edit/<?= $room->id ?>" class="btn btn-warning">
+                                            <i class="fas fa-edit me-2"></i>Chỉnh sửa
+                                        </a>
+                                        <a href="<?= BASE_URL ?>/admin/room" class="btn btn-secondary">
+                                            <i class="fas fa-list me-2"></i>Danh sách QL
+                                        </a>
+                                        <a href="<?= BASE_URL ?>/admin/room/delete/<?= $room->id ?>"
+                                            class="btn btn-danger"
+                                            onclick="return confirm('Bạn có chắc chắn muốn xóa phòng này?')">
+                                            <i class="fas fa-trash me-2"></i>Xóa phòng
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="d-flex gap-2 mt-4">
+                                        <a href="javascript:history.back()" class="btn btn-secondary">
+                                            <i class="fas fa-arrow-left me-2"></i>Quay lại
+                                        </a>
+                                        <a href="<?= BASE_URL ?>/booking/bookRoom?room_id=<?= $room->id ?>" class="btn btn-primary">
+                                            <i class="fas fa-calendar-check me-2"></i>Đặt phòng này
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php else: ?>

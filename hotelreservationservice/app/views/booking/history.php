@@ -18,7 +18,7 @@
                     <p>Thành tiền: <?= number_format($b->total_price, 0, ',', '.') ?> VNĐ</p>
 
                     <?php if ($b->status != 'cancelled' && strtotime($b->check_in_date) > time()): ?>
-                        <form method="POST" action="/hotelreservationservice/booking/cancel" class="text-end">
+                        <form method="POST" action="/Hotel-Reservation-Service/hotelreservationservice/booking/cancel" class="text-end">
                             <input type="hidden" name="booking_id" value="<?= $b->id ?>">
                             <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Bạn có chắc muốn hủy phòng này?')">
                                 Hủy phòng

@@ -18,13 +18,13 @@
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
                         <?php if (!empty($hotel->image)): ?>
-                            <img src="/hotelreservationservice/<?= htmlspecialchars($hotel->image) ?>"
-                                 class="card-img-top hotel-list-image"
-                                 alt="<?= htmlspecialchars($hotel->name) ?>">
+                            <img src="/Hotel-Reservation-Service/hotelreservationservice/<?= htmlspecialchars($hotel->image) ?>"
+                                class="card-img-top hotel-list-image"
+                                alt="<?= htmlspecialchars($hotel->name) ?>">
                         <?php else: ?>
                             <img src="https://via.placeholder.com/400x250?text=No+Image+Available"
-                                 class="card-img-top hotel-list-image"
-                                 alt="No image available">
+                                class="card-img-top hotel-list-image"
+                                alt="No image available">
                         <?php endif; ?>
 
                         <div class="card-body d-flex flex-column">
@@ -38,8 +38,8 @@
                                 <span class="badge bg-warning text-dark">
                                     <?= number_format($hotel->rating ?? 0, 1) ?>/10
                                 </span>
-                                <a href="/hotelreservationservice/Hotel/show/<?= $hotel->id ?>"
-                                   class="btn btn-primary btn-sm">
+                                <a href="/Hotel-Reservation-Service/hotelreservationservice/Hotel/show/<?= $hotel->id ?>"
+                                    class="btn btn-primary btn-sm">
                                     Xem chi tiết
                                 </a>
                             </div>

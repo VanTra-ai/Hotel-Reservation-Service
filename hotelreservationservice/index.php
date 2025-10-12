@@ -1,4 +1,5 @@
 <?php
+define('BASE_URL', '/Hotel-Reservation-Service/hotelreservationservice');
 // Bắt đầu session
 session_start();
 
@@ -11,13 +12,6 @@ require_once 'app/models/AccountModel.php';
 require_once 'app/models/CityModel.php';
 require_once 'app/models/HotelModel.php';
 require_once 'app/models/RoomModel.php';
-require_once 'app/controllers/AccountController.php';
-require_once 'app/controllers/CityController.php';
-require_once 'app/controllers/DefaultController.php';
-require_once 'app/controllers/HotelController.php';
-require_once 'app/controllers/HomeController.php';
-require_once 'app/controllers/BookingController.php';
-require_once 'app/controllers/RoomController.php';
 
 // Phân tích URL
 $url = $_GET['url'] ?? '';
@@ -25,42 +19,42 @@ $url = rtrim($url, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 
-// Xác định Controller và Action
-$controllerName = isset($url[0]) && $url[0] != '' ? ucfirst($url[0]) . 'Controller' : 'HomeController';
-$action = isset($url[1]) && $url[1] != '' ? $url[1] : 'index';
-$params = array_slice($url, 2);
+$controllerName = 'HomeController';
+$action = 'index';
+$params = [];
+$controllerPathPrefix = 'app/controllers/';
 
-// Định nghĩa đường dẫn file controller
-$controllerPath = 'app/controllers/' . $controllerName . '.php';
-
-// Kiểm tra và tải controller
-if (file_exists($controllerPath)) {
-    // Tải và khởi tạo controller tương ứng
-    require_once $controllerPath;
-    $controller = new $controllerName();
-} else {
-    // Nếu controller không tồn tại, hiển thị lỗi 404
-    http_response_code(404);
-    die('404 Not Found: Controller not found');
+// Kiểm tra xem có phải là route admin không
+if (isset($url[0]) && $url[0] == 'admin' && isset($url[1])) {
+    // Ví dụ: /admin/hotel/add
+    $controllerName = 'Admin' . ucfirst($url[1]) . 'Controller'; // -> AdminHotelController
+    $action = isset($url[2]) ? $url[2] : 'index';
+    $params = array_slice($url, 3);
+} elseif (isset($url[0]) && !empty($url[0])) {
+    // Route công khai
+    $controllerName = ucfirst($url[0]) . 'Controller'; // -> HotelController
+    $action = isset($url[1]) ? $url[1] : 'index';
+    $params = array_slice($url, 2);
 }
 
-// Kiểm tra và gọi action
-if (method_exists($controller, $action)) {
-    // Sử dụng Reflection để lấy thông tin về phương thức
-    $reflectionMethod = new ReflectionMethod($controller, $action);
-    $numberOfRequiredParameters = $reflectionMethod->getNumberOfRequiredParameters();
+// Tải và chạy controller
+$controllerFile = $controllerPathPrefix . $controllerName . '.php';
 
-    // So sánh số lượng tham số có sẵn với số lượng yêu cầu
-    if (count($params) >= $numberOfRequiredParameters) {
-        // Gọi phương thức với các tham số
-        call_user_func_array([$controller, $action], $params);
+if (file_exists($controllerFile)) {
+    require_once $controllerFile;
+    if (class_exists($controllerName)) {
+        $controller = new $controllerName();
+        if (method_exists($controller, $action)) {
+            call_user_func_array([$controller, $action], $params);
+        } else {
+            die("Action '{$action}' not found in controller '{$controllerName}'");
+        }
     } else {
-        // Nếu thiếu tham số
-        http_response_code(404);
-        die('404 Not Found: Missing parameters');
+        die("Class '{$controllerName}' not found in file '{$controllerFile}'");
     }
 } else {
-    // Nếu action không tồn tại
-    http_response_code(404);
-    die('404 Not Found: Action not found');
+    // Controller mặc định nếu không tìm thấy, hoặc trang 404
+    require_once 'app/controllers/HomeController.php';
+    $controller = new HomeController();
+    $controller->index();
 }

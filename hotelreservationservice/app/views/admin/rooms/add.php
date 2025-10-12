@@ -18,12 +18,12 @@
                         </div>
                     <?php endif; ?>
 
-                    <form action="/hotelreservationservice/Room/save" method="POST" enctype="multipart/form-data">
+                    <form action="<?= BASE_URL ?>/admin/room/save" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="hotel_id" class="form-label">Khách sạn <span class="text-danger">*</span></label>
-                                    <select id="hotel_id" name="hotel_id" class="form-control" required>
+                                    <select id="hotel_id" name="hotel_id" class="form-select" required>
                                         <option value="">-- Chọn khách sạn --</option>
                                         <?php foreach ($hotels as $hotel): ?>
                                             <option value="<?= $hotel->id ?>" <?= (isset($_POST['hotel_id']) && $_POST['hotel_id'] == $hotel->id) ? 'selected' : '' ?>>
@@ -36,9 +36,8 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="room_number" class="form-label">Số phòng <span class="text-danger">*</span></label>
-                                    <input type="number" id="room_number" name="room_number" class="form-control" 
-       value="<?= htmlspecialchars($_POST['room_number'] ?? '') ?>" 
-       min="1" step="1" required>
+                                    <input type="text" id="room_number" name="room_number" class="form-control"
+                                        value="<?= htmlspecialchars($_POST['room_number'] ?? '') ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +46,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="room_type" class="form-label">Loại phòng <span class="text-danger">*</span></label>
-                                    <select id="room_type" name="room_type" class="form-control" required>
+                                    <select id="room_type" name="room_type" class="form-select" required>
                                         <option value="">-- Chọn loại phòng --</option>
                                         <?php
                                         $roomTypes = [
@@ -55,7 +54,7 @@
                                             'Phòng Superior Giường Đôi',
                                             'Phòng Giường Đôi',
                                             'Phòng Deluxe Giường Đôi Có Ban Công',
-                                            'Phòng Deluxe Giường Đôi',
+                                            'Phòng Deluxe Giường Đôi',
                                             'Phòng Giường Đôi Có Ban Công',
                                             'Phòng Superior Giường Đôi Có Ban Công',
                                             'Phòng Gia Đình',
@@ -74,24 +73,22 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="capacity" class="form-label">Sức chứa (người) <span class="text-danger">*</span></label>
-                                    <input type="number" id="capacity" name="capacity" class="form-control" 
-                                           value="<?= htmlspecialchars($_POST['capacity'] ?? '') ?>" 
-                                           min="1" max="10" required>
+                                    <input type="number" id="capacity" name="capacity" class="form-control"
+                                        value="<?= htmlspecialchars($_POST['capacity'] ?? '') ?>" min="1" max="10" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="price" class="form-label">Giá phòng (VNĐ) <span class="text-danger">*</span></label>
-                            <input type="number" id="price" name="price" class="form-control" 
-                                   value="<?= htmlspecialchars($_POST['price'] ?? '') ?>" 
-                                   min="0" step="1000" required>
+                            <input type="number" id="price" name="price" class="form-control"
+                                value="<?= htmlspecialchars($_POST['price'] ?? '') ?>" min="0" step="1000" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="description" class="form-label">Mô tả phòng</label>
-                            <textarea id="description" name="description" class="form-control" rows="4" 
-                                      placeholder="Mô tả chi tiết về phòng, tiện nghi, dịch vụ..."><?= htmlspecialchars($_POST['description'] ?? '') ?></textarea>
+                            <textarea id="description" name="description" class="form-control" rows="4"
+                                placeholder="Mô tả chi tiết về phòng, tiện nghi, dịch vụ..."><?= htmlspecialchars($_POST['description'] ?? '') ?></textarea>
                         </div>
 
                         <div class="mb-3">
@@ -101,7 +98,7 @@
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">
-                            <a href="/hotelreservationservice/Room/list" class="btn btn-secondary">
+                            <a href="<?= BASE_URL ?>/admin/room" class="btn btn-secondary">
                                 <i class="fas fa-arrow-left me-2"></i>Quay lại
                             </a>
                             <button type="submit" class="btn btn-primary">

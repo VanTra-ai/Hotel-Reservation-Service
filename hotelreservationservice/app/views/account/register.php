@@ -1,9 +1,9 @@
 <?php include 'app/views/shares/header.php';
 // Khởi tạo các biến để tránh lỗi undefined
 $errors = $errors ?? [];
-$username = $username ?? '';
-$fullName = $fullName ?? '';
-$role = $role ?? 'user';
+$username = $username ?? ($_POST['username'] ?? '');
+$fullName = $fullName ?? ($_POST['fullname'] ?? '');
+$email = $email ?? ($_POST['email'] ?? '');
 ?>
 <section class="vh-100 gradient-custom">
     <div class="container mt-5 mb-5">
@@ -23,7 +23,8 @@ $role = $role ?? 'user';
                                 </ul>
                             </div>
                         <?php endif; ?>
-                        <form action="/hotelreservationservice/account/save" method="post">
+
+                        <form action="/Hotel-Reservation-Service/hotelreservationservice/account/save" method="post" autocomplete="off" novalidate>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="username">Tên đăng nhập:</label>
@@ -38,34 +39,43 @@ $role = $role ?? 'user';
                                         value="<?php echo htmlspecialchars($fullName); ?>" required>
                                 </div>
                             </div>
-                            <div class="form-row">
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control"
+                                        id="email" name="email" placeholder="Nhập email"
+                                        value="<?php echo htmlspecialchars($email); ?>" required>
+                                </div>
                                 <div class="form-group col-md-6">
                                     <label for="password">Mật khẩu:</label>
                                     <input type="password" class="form-control"
                                         id="password" name="password" placeholder="Nhập mật khẩu" required>
                                 </div>
+                            </div>
+
+                            <div class="form-row mt-3">
                                 <div class="form-group col-md-6">
                                     <label for="confirmpassword">Xác nhận mật khẩu:</label>
                                     <input type="password" class="form-control"
                                         id="confirmpassword" name="confirmpassword" placeholder="Nhập lại mật khẩu" required>
                                 </div>
+                                <div class="form-group col-md-6 d-none">
+                                    <!-- Role bị ẩn: mặc định user. Không cho user chọn admin trên form public. -->
+                                    <input type="hidden" id="role" name="role" value="user">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="role">Loại tài khoản:</label>
-                                <select class="form-control" id="role" name="role">
-                                    <option value="user" <?php echo ($role == 'user') ? 'selected' : ''; ?>>User</option>
-                                    <option value="admin" <?php echo ($role == 'admin') ? 'selected' : ''; ?>>Admin (Test)</option>
-                                </select>
-                            </div>
+
                             <div class="form-group mt-4">
-                                <button type="submit" class="btn btn-primary btn-block">
+                                <button type="submit" class="btn btn-primary btn-block w-100">
                                     Đăng Ký
                                 </button>
                             </div>
                         </form>
+
                         <hr>
                         <div class="text-center">
-                            <p class="mb-0">Đã có tài khoản? <a href="/hotelreservationservice/account/login">Đăng nhập tại đây</a></p>
+                            <p class="mb-0">Đã có tài khoản? <a href="/Hotel-Reservation-Service/hotelreservationservice/account/login">Đăng nhập tại đây</a></p>
                         </div>
                     </div>
                 </div>
