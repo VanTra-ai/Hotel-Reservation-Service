@@ -32,12 +32,36 @@ SessionHelper::startSession();
                     <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/hotel/list">Khách sạn</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/room/list">Phòng</a></li>
 
+                    <?php if (SessionHelper::isPartner()): ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-success fw-bold" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-store me-1"></i>Kênh Đối tác
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="<?= BASE_URL ?>/partner/dashboard">
+                                        <i class="fas fa-tachometer-alt me-2"></i>Tổng quan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= BASE_URL ?>/partner/booking">
+                                        <i class="fas fa-book me-2"></i>Quản lý Booking
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
                     <?php if (SessionHelper::isAdmin()): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary fw-bold" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-cogs me-1"></i>Quản trị
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item" href="<?= BASE_URL ?>/admin/dashboard">Tổng quan</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="<?= BASE_URL ?>/admin/account">Quản lý Thành viên</a></li>
                                 <li><a class="dropdown-item" href="<?= BASE_URL ?>/admin/hotel">Quản lý Khách sạn</a></li>
                                 <li><a class="dropdown-item" href="<?= BASE_URL ?>/admin/room">Quản lý Phòng</a></li>
                                 <li><a class="dropdown-item" href="<?= BASE_URL ?>/admin/city">Quản lý Thành phố</a></li>

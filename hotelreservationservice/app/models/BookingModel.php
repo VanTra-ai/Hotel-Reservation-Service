@@ -72,17 +72,29 @@ class BookingModel
         $stmt->bindValue(':accountId', (int)$accountId, PDO::PARAM_INT);
         return $stmt->execute();
     }
-    // Lấy tất cả booking + thông tin account, room, hotel
-    public function getAllBookingsWithInfo()
+    /**
+     * Lấy tất cả booking.
+     * Nếu có $ownerId, chỉ lấy booking của các khách sạn thuộc sở hữu của người đó.
+     */
+    public function getAllBookingsWithInfo($ownerId = null)
     {
+        $params = [];
         $sql = "SELECT b.*, a.username, r.room_number, r.room_type, h.name AS hotel_name
-            FROM booking b
-            JOIN account a ON b.account_id = a.id
-            JOIN room r ON b.room_id = r.id
-            JOIN hotel h ON r.hotel_id = h.id
-            ORDER BY b.created_at DESC";
+                FROM booking b
+                JOIN account a ON b.account_id = a.id
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id";
+
+        // Nếu có ownerId, thêm điều kiện WHERE
+        if ($ownerId) {
+            $sql .= " WHERE h.owner_id = :ownerId";
+            $params[':ownerId'] = $ownerId;
+        }
+
+        $sql .= " ORDER BY b.created_at DESC";
+        
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
+        $stmt->execute($params);
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 

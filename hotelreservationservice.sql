@@ -13,7 +13,7 @@ CREATE TABLE account (
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) DEFAULT NULL,
     profile_picture VARCHAR(255) DEFAULT NULL,
-    role ENUM('admin','user') NOT NULL DEFAULT 'user',
+    role ENUM('admin', 'user', 'partner') NOT NULL DEFAULT 'user',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -51,7 +51,9 @@ CREATE TABLE hotel (
     location DECIMAL(10,2) DEFAULT 0,
     free_wifi DECIMAL(10,2) DEFAULT 0,
     city_id INT,
-    FOREIGN KEY (city_id) REFERENCES city(id) ON DELETE CASCADE
+    owner_id INT NULL,
+    FOREIGN KEY (city_id) REFERENCES city(id) ON DELETE CASCADE,
+    FOREIGN KEY (owner_id) REFERENCES account(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tạo bảng phòng (room)

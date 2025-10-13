@@ -24,15 +24,21 @@ $action = 'index';
 $params = [];
 $controllerPathPrefix = 'app/controllers/';
 
-// Kiểm tra xem có phải là route admin không
+// Kiểm tra route ADMIN
 if (isset($url[0]) && $url[0] == 'admin' && isset($url[1])) {
-    // Ví dụ: /admin/hotel/add
-    $controllerName = 'Admin' . ucfirst($url[1]) . 'Controller'; // -> AdminHotelController
+    $controllerName = 'Admin' . ucfirst($url[1]) . 'Controller';
     $action = isset($url[2]) ? $url[2] : 'index';
     $params = array_slice($url, 3);
-} elseif (isset($url[0]) && !empty($url[0])) {
-    // Route công khai
-    $controllerName = ucfirst($url[0]) . 'Controller'; // -> HotelController
+}
+// Kiểm tra route PARTNER DASHBOARD
+elseif (isset($url[0]) && $url[0] == 'partner' && isset($url[1])) {
+    $controllerName = 'Partner' . ucfirst($url[1]) . 'Controller';
+    $action = isset($url[2]) ? $url[2] : 'index';
+    $params = array_slice($url, 3);
+}
+// Kiểm tra các route CÔNG KHAI khác
+elseif (isset($url[0]) && !empty($url[0])) {
+    $controllerName = ucfirst($url[0]) . 'Controller';
     $action = isset($url[1]) ? $url[1] : 'index';
     $params = array_slice($url, 2);
 }

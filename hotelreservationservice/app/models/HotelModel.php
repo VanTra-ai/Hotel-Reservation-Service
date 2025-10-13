@@ -98,4 +98,56 @@ class HotelModel
         }
         return false;
     }
+    /**
+     * Lấy danh sách các khách sạn chưa có chủ sở hữu
+     */
+    public function getUnassignedHotels()
+    {
+        $query = "SELECT id, name FROM " . $this->table_name . " WHERE owner_id IS NULL";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    /**
+     * Gán một khách sạn cho một chủ sở hữu (partner/admin)
+     */
+    public function assignOwnerToHotel(int $hotelId, int $ownerId): bool
+    {
+        $query = "UPDATE " . $this->table_name . " SET owner_id = :owner_id WHERE id = :hotel_id";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':owner_id', $ownerId, PDO::PARAM_INT);
+            $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+    /**
+     * Lấy khách sạn mà một partner cụ thể đang sở hữu
+     */
+    public function getHotelByOwnerId(int $ownerId)
+    {
+        $query = "SELECT id, name FROM " . $this->table_name . " WHERE owner_id = :owner_id LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':owner_id', $ownerId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+    /**
+     * Gỡ bỏ chủ sở hữu khỏi tất cả các khách sạn mà họ đang quản lý.
+     * Dùng để "dọn dẹp" trước khi gán mới.
+     */
+    public function unassignOwnerFromAllHotels(int $ownerId): bool
+    {
+        $query = "UPDATE " . $this->table_name . " SET owner_id = NULL WHERE owner_id = :owner_id";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':owner_id', $ownerId, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
 }

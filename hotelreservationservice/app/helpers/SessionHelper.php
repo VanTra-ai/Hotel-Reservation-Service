@@ -84,4 +84,9 @@ class SessionHelper
         self::startSession();
         return $_SESSION['account_id'] ?? null;
     }
+    public static function isPartner()
+    {
+        self::startSession();
+        return self::isLoggedIn() && isset($_SESSION['role']) && $_SESSION['role'] === 'partner';
+    }
 }
