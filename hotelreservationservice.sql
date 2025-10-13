@@ -75,11 +75,11 @@ CREATE TABLE booking (
     check_in_date DATE NOT NULL,
     check_out_date DATE NOT NULL,
     total_price DECIMAL(10, 2) NOT NULL,
-    status ENUM('pending', 'confirmed', 'cancelled') DEFAULT 'pending',
+	 status ENUM('pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out') DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (account_id) REFERENCES account(id) ON DELETE CASCADE,
     FOREIGN KEY (room_id) REFERENCES room(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 -- Tạo bảng đánh giá (review)
 CREATE TABLE review (
