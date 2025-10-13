@@ -110,4 +110,9 @@ Dự án được tổ chức theo mô hình MVC:
 -   `hotelreservationservice/app/controllers/`: Chứa logic xử lý yêu cầu. Các controller cho admin/partner có tiền tố `Admin`/`Partner`.
 -   `hotelreservationservice/app/models/`: Chứa logic tương tác với cơ sở dữ liệu.
 -   `hotelreservationservice/app/views/`: Chứa các file giao diện. Giao diện admin/partner nằm trong thư mục con tương ứng.
--   `hotelreservationservice/public/`: Chứa các tài sản công khai
+-   `hotelreservationservice/public/`: Chứa các nội dung công khai
+## 👥 Thành viên đóng góp
+
+-   [@VanTra-ai](https://github.com/VanTra-ai)
+-   [@2280603697NguyenQuangVinh](https://github.com/2280603697NguyenQuangVinh)
+-   [@LBT-123-ux](https://github.com/LBT-123-ux)
