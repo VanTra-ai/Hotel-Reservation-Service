@@ -1,118 +1,159 @@
-# Hotel Reservation Service 🏨
+# Hotel Reservation Service 🏨✨
 
 [![PHP](https://img.shields.io/badge/PHP-8.x-blue.svg)](https://www.php.net/)
+[![Python](https://img.shields.io/badge/Python-3.x-yellow.svg)](https://www.python.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple.svg)](https://getbootstrap.com/)
 
-Dịch vụ đặt phòng khách sạn. Đây là một nền tảng trực tuyến giúp khách hàng tìm kiếm, so sánh và đặt phòng khách sạn một cách nhanh chóng, an toàn và tiện lợi, đồng thời cung cấp công cụ quản lý mạnh mẽ cho các đối tác và quản trị viên.
+Dịch vụ đặt phòng khách sạn là một nền tảng web toàn diện, giúp khách hàng tìm kiếm, so sánh và đặt phòng khách sạn. Điểm nổi bật của dự án là việc tích hợp **mô hình Trí tuệ Nhân tạo (AI)** để tự động phân tích và chấm điểm các bình luận của khách hàng, cung cấp một cái nhìn khách quan về chất lượng dịch vụ.
 
-## ✨ Tính năng chính
+## ⭐ Tính năng Nổi bật: Tích hợp AI
 
-Dự án được xây dựng theo mô hình MVC và phân chia rõ ràng thành 3 vai trò: Người dùng, Đối tác (Partner), và Quản trị viên (Admin).
+Dự án sử dụng một mô hình học sâu (Deep Learning) dựa trên **BERT** để phân tích cảm xúc và nội dung của bình luận tiếng Việt.
 
-### Chức năng cho Người dùng (User)
--   **Tài khoản:** Đăng ký, đăng nhập.
--   **Tìm kiếm & Khám phá:** Tìm kiếm khách sạn theo tỉnh/thành phố, xem danh sách phòng.
--   **Xem chi tiết:** Xem thông tin chi tiết về khách sạn, phòng, và các đánh giá từ người dùng khác.
--   **Đặt phòng:** Thực hiện quy trình đặt phòng với ngày nhận, ngày trả.
--   **Quản lý cá nhân:** Xem lịch sử đặt phòng và thực hiện hủy phòng.
--   **Đánh giá:** Để lại đánh giá và bình luận về khách sạn đã trải nghiệm.
+- **Đầu vào đa yếu tố:** Mô hình không chỉ phân tích văn bản bình luận mà còn kết hợp các thông tin khác như điểm chi tiết của khách sạn (sạch sẽ, nhân viên...), loại phòng, và đối tượng khách hàng để đưa ra dự đoán.
+- **Dự đoán điểm số:** Tự động chấm điểm cho một bình luận trên thang điểm 10.
+- **Chuyển đổi thành nhãn:** Chuyển đổi điểm số thành các nhãn văn bản thân thiện ("Tuyệt vời", "Rất tốt"...) để thống nhất giao diện.
+- **"AI Playground":** Một giao diện chuyên dụng cho phép thử nghiệm mô hình với đầy đủ các tham số đầu vào.
 
-### Chức năng cho Đối tác (Partner)
--   **Đăng nhập:** Sử dụng tài khoản đã được Admin cấp quyền Partner.
--   **Dashboard riêng:** Truy cập "Kênh Đối tác" với trang tổng quan riêng.
--   **Báo cáo & Thống kê:** Xem các chỉ số (tổng lượt đặt, tổng doanh thu), biểu đồ doanh thu và trạng thái booking **chỉ của các khách sạn mình sở hữu**.
--   **Quản lý Đặt phòng:** Xem và cập nhật trạng thái (Xác nhận, Hủy, Đã nhận phòng...) cho các booking thuộc khách sạn của mình.
+---
 
-### Chức năng cho Quản trị viên (Admin)
--   **Dashboard Toàn hệ thống:** Xem báo cáo và thống kê tổng quan của toàn bộ trang web.
--   **Quản lý Thành viên:**
-    - Xem danh sách tất cả tài khoản.
-    - Sửa thông tin và thay đổi vai trò (`user`, `partner`, `admin`).
-    - Gán một khách sạn cụ thể cho một tài khoản `partner`.
-    - Xóa tài khoản người dùng.
--   **Quản lý CRUD:** Toàn quyền Thêm, Sửa, Xóa đối với **Thành phố**, **Khách sạn**, và **Phòng**.
--   **Quản lý Đặt phòng:** Xem và quản lý tất cả các booking trong hệ thống.
+## ✨ Các Chức năng Chính
+
+Dự án được phân chia thành 3 vai trò: **Người dùng (User)**, **Đối tác (Partner)**, và **Quản trị viên (Admin)**.
+
+### Chức năng cho Người dùng (User) 🙋
+
+- **Tài khoản:** Đăng ký, đăng nhập.
+- **Tìm kiếm & Khám phá:** Tìm kiếm khách sạn, xem chi tiết phòng và các đánh giá.
+- **Xem đánh giá AI:** Xem điểm số tổng hợp và các bình luận đã được AI phân tích.
+- **Đặt phòng & Quản lý:** Thực hiện đặt phòng, xem lịch sử và hủy các booking.
+
+### Chức năng cho Đối tác (Partner) 🧑‍💼
+
+- **Dashboard riêng:** Truy cập "Kênh Đối tác" với trang tổng quan về các chỉ số kinh doanh.
+- **Báo cáo & Thống kê:** Xem báo cáo doanh thu, lượt đặt phòng, biểu đồ... **chỉ của các khách sạn mình sở hữu**.
+- **Quản lý Đặt phòng:** Cập nhật trạng thái cho các booking thuộc khách sạn của mình.
+
+### Chức năng cho Quản trị viên (Admin) 👑
+
+- **Dashboard Toàn hệ thống:** Xem báo cáo và thống kê của toàn bộ trang web.
+- **Quản lý Thành viên:** Quản lý tất cả tài khoản, phân quyền `user`, `partner`, `admin` và gán khách sạn cho đối tác.
+- **Quản lý Nội dung (CRUD):** Toàn quyền Thêm, Sửa, Xóa đối với **Thành phố**, **Khách sạn** (bao gồm 7 điểm đặc trưng cho AI), và **Phòng**.
+- **Quản lý Đặt phòng:** Quản lý tất cả các booking trong hệ thống.
+
+---
 
 ## 💻 Công nghệ sử dụng
 
--   **Backend:** PHP thuần (Lập trình hướng đối tượng, mô hình MVC).
--   **Frontend:** HTML, CSS, JavaScript.
--   **Database:** MySQL / MariaDB.
--   **Thư viện:** Bootstrap 5, FontAwesome, Flatpickr, Chart.js.
--   **Môi trường phát triển:** Laragon (Apache + MySQL).
+- **Backend (Web App) 🐘:** PHP thuần (OOP, MVC), Apache.
+- **Backend (AI Service) 🐍:** Python, Flask, PyTorch, Transformers (BERT), Scikit-learn.
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5, FontAwesome, Flatpickr, Chart.js.
+- **Database:** MySQL / MariaDB.
+- **Môi trường phát triển:** Laragon.
+
+---
 
 ## 🚀 Hướng dẫn cài đặt
 
-Làm theo các bước sau để chạy dự án trên máy local (khuyến khích sử dụng Laragon).
+Để chạy dự án, bạn cần thiết lập cả **Web App (PHP)** và **Dịch vụ AI (Python API)**.
+
+### Yêu cầu
+
+- [Git](https://git-scm.com/)
+- [Laragon](https://laragon.org/download/) (hoặc môi trường PHP/MySQL tương tự)
+- [Python](https://www.python.org/downloads/) (phiên bản 3.9+)
 
 ### 1. Clone Repository
 
 ```bash
 git clone [https://github.com/VanTra-ai/Hotel-Reservation-Service.git](https://github.com/VanTra-ai/Hotel-Reservation-Service.git)
+cd Hotel-Reservation-Service
 ```
 
-### 2. Thiết lập Cơ sở dữ liệu
+### 2. Cài đặt Web App (PHP)
 
-1.  Mở Laragon và nhấn nút **"Start All"**.
-2.  Nhấn nút **"Database"** để mở HeidiSQL (hoặc công cụ quản lý DB của bạn).
-3.  Tạo một cơ sở dữ liệu mới với tên là `hotel_reservation` (sử dụng `utf8mb4_unicode_ci`).
-4.  Chọn cơ sở dữ liệu `hotel_reservation` vừa tạo, sau đó vào **File > Run SQL file...** và chọn file `database.sql` từ thư mục gốc của dự án để import. Quá trình này sẽ tạo tất cả bảng và dữ liệu mẫu.
+1.  **Thiết lập Cơ sở dữ liệu:**
 
-### 3. Cấu hình Kết nối
+    - Mở Laragon, nhấn **"Start All"**.
+    - Nhấn **"Database"** để mở HeidiSQL.
+    - Tạo một database mới tên là `hotel_reservation` (sử dụng `utf8mb4_unicode_ci`).
+    - Chọn database `hotel_reservation`, vào **File > Run SQL file...** và chọn file `hotelreservationservice.sql` ở thư mục gốc của dự án để import.
 
-1.  Trong dự án, tìm đến thư mục `hotelreservationservice/app/config/`.
-2.  Tạo một file mới tên là **`database.php`**.
-3.  Sao chép nội dung dưới đây và dán vào file `database.php` vừa tạo. File này nằm trong `.gitignore` và sẽ không được đẩy lên Git.
+2.  **Cấu hình Kết nối:**
 
-    ```php
-    <?php
-    class Database
-    {
-        private $host = "localhost";
-        private $db_name = "hotel_reservation";
-        private $username = "root"; // Mặc định của Laragon
-        private $password = "";     // Mặc định của Laragon
-        public $conn;
-        
-        public function getConnection()
-        {
-            $this->conn = null;
-            try {
-                $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-                $this->conn->exec("set names utf8");
-                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            } catch (PDOException $exception) {
-                echo "Connection error: " . $exception->getMessage();
-            }
-            return $this->conn;
-        }
-    }
+    - Sao chép file `hotelreservationservice/app/config/database.example.php` và đổi tên thành `database.php`.
+    - Mở file `database.php` và chỉnh sửa thông tin `username` và `password` nếu cần.
+
+3.  **Chạy dự án:** Truy cập dự án qua URL của Laragon (ví dụ: `http://hotel-reservation-service.test/hotelreservationservice`).
+
+### 3. Cài đặt Dịch vụ AI (Python API)
+
+1.  **Mở Terminal:** Mở một cửa sổ terminal mới và di chuyển vào thư mục `HotelRatingAPI`:
+
+    ```bash
+    cd HotelRatingAPI
     ```
 
-### 4. Chạy dự án
+2.  **Tạo và Kích hoạt Môi trường ảo:**
 
-Truy cập vào dự án thông qua URL của Laragon (ví dụ: `http://hotel-reservation-service.test/hotelreservationservice`). Trang chủ sẽ hiện ra.
+    ```bash
+    # Tạo môi trường ảo
+    python -m venv venv
 
-## 🔑 Tài khoản mặc định
+    # Kích hoạt (Windows)
+    .\venv\Scripts\activate
 
-Sau khi import database, bạn có thể sử dụng các tài khoản sau để kiểm tra:
--   **Admin:**
-    -   **Username:** `admin`
-    -   **Password:** `admin123`
--   **User (ví dụ):**
-    -   **Username:** `vantra`
-    -   **Password:** `123456` *(Bạn có thể tạo thêm user tùy ý)*
+    # Kích hoạt (macOS/Linux)
+    # source venv/bin/activate
+    ```
+
+3.  **Cài đặt Thư viện:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Chạy API Server:**
+    ```bash
+    python api.py
+    ```
+    Giữ cửa sổ terminal này mở. API sẽ chạy ở địa chỉ `http://127.0.0.1:5000`.
+
+### 🔑 Tài khoản mặc định
+
+- **Admin:** `admin` / `admin123`
+- **Partner:** `partner` / `partner123`
+- **User:** `user` / `user123`
+
+---
 
 ## 📂 Cấu trúc thư mục
 
-Dự án được tổ chức theo mô hình MVC:
--   `hotelreservationservice/app/controllers/`: Chứa logic xử lý yêu cầu. Các controller cho admin/partner có tiền tố `Admin`/`Partner`.
--   `hotelreservationservice/app/models/`: Chứa logic tương tác với cơ sở dữ liệu.
--   `hotelreservationservice/app/views/`: Chứa các file giao diện. Giao diện admin/partner nằm trong thư mục con tương ứng.
--   `hotelreservationservice/public/`: Chứa các nội dung công khai
+```
+.
+├── HotelRatingAPI/             # Dự án API Python
+│   ├── production_model/       # Các file mô hình, tokenizer, scaler đã huấn luyện
+│   ├── venv/                   # Thư mục môi trường ảo (bị bỏ qua bởi Git)
+│   ├── api.py                  # File chính của Flask API
+│   └── requirements.txt        # Danh sách các thư viện Python
+│
+├── hotelreservationservice/    # Dự án Web PHP
+│   ├── app/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   └── views/
+│   ├── public/
+│   └── index.php
+│
+├── hotelreservationservice.sql # File khởi tạo cơ sở dữ liệu
+└── README.md
+```
+
+---
+
 ## 👥 Thành viên đóng góp
 
--   [@VanTra-ai](https://github.com/VanTra-ai)
--   [@2280603697NguyenQuangVinh](https://github.com/2280603697NguyenQuangVinh)
--   [@LBT-123-ux](https://github.com/LBT-123-ux)
+- [@VanTra-ai](https://github.com/VanTra-ai)
+- [@2280603697NguyenQuangVinh](https://github.com/2280603697NguyenQuangVinh)
+- [@LBT-123-ux](https://github.com/LBT-123-ux)
