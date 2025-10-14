@@ -24,36 +24,31 @@ class ReviewModel
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    // Thêm một đánh giá mới
-    public function addReview($hotelId, $accountId, $rating, $comment, $category)
+    /**
+     * Thêm một đánh giá mới, bao gồm cả điểm AI và văn bản đánh giá.
+     */
+    public function addReview($hotelId, $accountId, $rating, $comment, $category, $ai_rating = null, $rating_text = null)
     {
-        $errors = [];
-
-        // Validate rating
-        if (!is_numeric($rating) || $rating < 1 || $rating > 5) {
-            $errors['rating'] = 'Rating phải từ 1 đến 5';
-        }
-
-        // Comment và category có thể rỗng, vẫn chấp nhận
-        $comment = trim($comment);
-        $category = trim($category);
-
-        if (count($errors) > 0) {
-            return $errors;
-        }
-
         $query = "INSERT INTO " . $this->table_name . " 
-                  (hotel_id, account_id, rating, comment, category) 
-                  VALUES (:hotel_id, :account_id, :rating, :comment, :category)";
-        $stmt = $this->conn->prepare($query);
+                  (hotel_id, account_id, rating, ai_rating, rating_text, comment, category) 
+                  VALUES (:hotel_id, :account_id, :rating, :ai_rating, :rating_text, :comment, :category)";
 
-        $stmt->bindParam(':hotel_id', $hotelId);
-        $stmt->bindParam(':account_id', $accountId);
-        $stmt->bindParam(':rating', $rating);
-        $stmt->bindParam(':comment', $comment);
-        $stmt->bindParam(':category', $category);
+        try {
+            $stmt = $this->conn->prepare($query);
 
-        return $stmt->execute();
+            $stmt->bindParam(':hotel_id', $hotelId);
+            $stmt->bindParam(':account_id', $accountId);
+            $stmt->bindParam(':rating', $rating);
+            $stmt->bindParam(':ai_rating', $ai_rating);
+            $stmt->bindParam(':rating_text', $rating_text);
+            $stmt->bindParam(':comment', $comment);
+            $stmt->bindParam(':category', $category);
+
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Add review error: " . $e->getMessage());
+            return false;
+        }
     }
 
     // Lấy điểm trung bình theo category
@@ -61,7 +56,7 @@ class ReviewModel
     {
         $query = "SELECT category, ROUND(AVG(rating), 1) as avg_rating
                   FROM " . $this->table_name . " 
-                  WHERE hotel_id = :hotel_id
+                  WHERE hotel_id = :hotel_id AND category IS NOT NULL
                   GROUP BY category";
 
         $stmt = $this->conn->prepare($query);

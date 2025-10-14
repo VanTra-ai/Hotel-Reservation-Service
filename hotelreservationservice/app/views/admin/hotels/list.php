@@ -8,7 +8,9 @@
         </a>
     </div>
 
-    <?php if (empty($hotels)): ?>
+    <?php if (isset($_SESSION['flash_message'])): /* ... (code flash message giữ nguyên) ... */ endif; ?>
+
+    <?php if (empty($data['hotels'])): ?>
         <div class="alert alert-info text-center" role="alert">
             Hiện tại chưa có khách sạn nào được thêm.
         </div>
@@ -25,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($hotels as $hotel): ?>
+                    <?php foreach ($data['hotels'] as $hotel): ?>
                         <tr>
                             <td><?= htmlspecialchars($hotel->id) ?></td>
                             <td><?= htmlspecialchars($hotel->name) ?></td>

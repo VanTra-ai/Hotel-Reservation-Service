@@ -23,7 +23,7 @@ class AdminHotelController extends BaseAdminController
      */
     public function index()
     {
-        $hotels = $this->hotelModel->getHotels();
+        $data['hotels'] = $this->hotelModel->getHotelsWithCityName();
         include 'app/views/admin/hotels/list.php';
     }
     /**
@@ -31,8 +31,8 @@ class AdminHotelController extends BaseAdminController
      */
     public function add()
     {
-        $cities = $this->cityModel->getCities();
-        include_once 'app/views/admin/hotels/add.php';
+        $data['cities'] = $this->cityModel->getCities();
+        include 'app/views/admin/hotels/add.php';
     }
 
     /**
@@ -47,19 +47,41 @@ class AdminHotelController extends BaseAdminController
             $city_id = $_POST['city_id'] ?? null;
             $image = "";
 
+            $service_staff = (float)($_POST['service_staff'] ?? 8.0);
+            $amenities = (float)($_POST['amenities'] ?? 8.0);
+            $cleanliness = (float)($_POST['cleanliness'] ?? 8.0);
+            $comfort = (float)($_POST['comfort'] ?? 8.0);
+            $value_for_money = (float)($_POST['value_for_money'] ?? 8.0);
+            $location = (float)($_POST['location'] ?? 8.0);
+            $free_wifi = (float)($_POST['free_wifi'] ?? 8.0);
+
             if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
                 $image = $this->uploadImage($_FILES['image']);
             }
 
-            $result = $this->hotelModel->addHotel($name, $address, $description, $city_id, $image);
+            $result = $this->hotelModel->addHotel(
+                $name,
+                $address,
+                $description,
+                $city_id,
+                $image,
+                $service_staff,
+                $amenities,
+                $cleanliness,
+                $comfort,
+                $value_for_money,
+                $location,
+                $free_wifi
+            );
 
-            if (is_array($result)) {
-                $errors = $result;
-                $cities = $this->cityModel->getCities();
-                include 'app/views/admin/hotels/add.php';
-            } else {
-                header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/hotel');
+            if ($result) {
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Thêm khách sạn thành công!'];
+                header('Location: ' . BASE_URL . '/admin/hotel');
                 exit();
+            } else {
+                $data['errors'] = ['db_error' => 'Thêm khách sạn thất bại. Vui lòng thử lại.'];
+                $data['cities'] = $this->cityModel->getCities();
+                include 'app/views/admin/hotels/add.php';
             }
         }
     }
@@ -69,8 +91,8 @@ class AdminHotelController extends BaseAdminController
      */
     public function edit($id)
     {
-        $hotel = $this->hotelModel->getHotelById($id);
-        $cities = $this->cityModel->getCities();
+        $data['hotel'] = $this->hotelModel->getHotelById($id);
+        $data['cities'] = $this->cityModel->getCities();
         include 'app/views/admin/hotels/edit.php';
     }
 
@@ -80,16 +102,24 @@ class AdminHotelController extends BaseAdminController
     public function update($id)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $name = $_POST['name'];
-            $address = $_POST['address'];
-            $description = $_POST['description'];
-            $city_id = $_POST['city_id'];
-            $oldHotel = $this->hotelModel->getHotelById($id);
-            $image = $oldHotel ? $oldHotel->image : '';
+            $name = $_POST['name'] ?? '';
+            $address = $_POST['address'] ?? '';
+            $description = $_POST['description'] ?? '';
+            $city_id = $_POST['city_id'] ?? null;
+            $image = $_POST['existing_image'] ?? '';
+
+            $service_staff = (float)($_POST['service_staff'] ?? 8.0);
+            $amenities = (float)($_POST['amenities'] ?? 8.0);
+            $cleanliness = (float)($_POST['cleanliness'] ?? 8.0);
+            $comfort = (float)($_POST['comfort'] ?? 8.0);
+            $value_for_money = (float)($_POST['value_for_money'] ?? 8.0);
+            $location = (float)($_POST['location'] ?? 8.0);
+            $free_wifi = (float)($_POST['free_wifi'] ?? 8.0);
 
             if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
                 $newImagePath = $this->uploadImage($_FILES['image']);
                 if ($newImagePath) {
+                    // Xóa ảnh cũ nếu có
                     if (!empty($image) && file_exists($image)) {
                         @unlink($image);
                     }
@@ -97,11 +127,30 @@ class AdminHotelController extends BaseAdminController
                 }
             }
 
-            $edit = $this->hotelModel->updateHotel($id, $name, $address, $description, $city_id, $image);
+            $edit = $this->hotelModel->updateHotel(
+                $id,
+                $name,
+                $address,
+                $description,
+                $city_id,
+                $image,
+                $service_staff,
+                $amenities,
+                $cleanliness,
+                $comfort,
+                $value_for_money,
+                $location,
+                $free_wifi
+            );
+
             if ($edit) {
-                header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/hotel');
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Cập nhật khách sạn thành công!'];
+                header('Location: ' . BASE_URL . '/admin/hotel');
+                exit();
             } else {
-                echo "Đã xảy ra lỗi khi lưu khách sạn.";
+                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Cập nhật khách sạn thất bại.'];
+                header('Location: ' . BASE_URL . '/admin/hotel/edit/' . $id);
+                exit();
             }
         }
     }

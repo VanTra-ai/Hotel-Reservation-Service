@@ -150,4 +150,54 @@ class HotelModel
             return false;
         }
     }
+    /**
+     * Lấy tất cả khách sạn KÈM THEO TÊN THÀNH PHỐ
+     * Dùng cho trang quản trị để hiển thị đầy đủ thông tin.
+     */
+    public function getHotelsWithCityName()
+    {
+        $query = "SELECT h.*, c.name as city_name 
+                  FROM " . $this->table_name . " h
+                  LEFT JOIN city c ON h.city_id = c.id
+                  ORDER BY h.id DESC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    /**
+     * Tính toán và cập nhật lại điểm trung bình (rating) 
+     * và tổng số đánh giá (total_rating) cho một khách sạn.
+     * Hàm này sẽ tính trung bình dựa trên cột `ai_rating`.
+     */
+    public function recalculateHotelRating(int $hotelId): bool
+    {
+        // Câu lệnh SQL để tính AVG và COUNT từ bảng review
+        $query = "SELECT 
+                    AVG(ai_rating) as average_rating, 
+                    COUNT(id) as total_reviews 
+                  FROM review 
+                  WHERE hotel_id = :hotel_id AND ai_rating IS NOT NULL";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+        $stmt->execute();
+        $stats = $stmt->fetch(PDO::FETCH_OBJ);
+
+        if ($stats) {
+            // Câu lệnh SQL để cập nhật lại bảng hotel
+            $updateQuery = "UPDATE " . $this->table_name . " 
+                            SET rating = :avg_rating, total_rating = :total_reviews 
+                            WHERE id = :hotel_id";
+            
+            $updateStmt = $this->conn->prepare($updateQuery);
+            $updateStmt->bindParam(':avg_rating', $stats->average_rating);
+            $updateStmt->bindParam(':total_reviews', $stats->total_reviews, PDO::PARAM_INT);
+            $updateStmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+            
+            return $updateStmt->execute();
+        }
+        
+        return false;
+    }
 }
