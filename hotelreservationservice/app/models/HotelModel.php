@@ -125,11 +125,12 @@ class HotelModel
         }
     }
     /**
-     * Lấy khách sạn mà một partner cụ thể đang sở hữu
+     * Lấy TẤT CẢ thông tin khách sạn mà một partner cụ thể đang sở hữu
      */
     public function getHotelByOwnerId(int $ownerId)
     {
-        $query = "SELECT id, name FROM " . $this->table_name . " WHERE owner_id = :owner_id LIMIT 1";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE owner_id = :owner_id LIMIT 1";
+
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':owner_id', $ownerId, PDO::PARAM_INT);
         $stmt->execute();
@@ -178,7 +179,7 @@ class HotelModel
                     COUNT(id) as total_reviews 
                   FROM review 
                   WHERE hotel_id = :hotel_id AND ai_rating IS NOT NULL";
-        
+
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
         $stmt->execute();
@@ -189,15 +190,36 @@ class HotelModel
             $updateQuery = "UPDATE " . $this->table_name . " 
                             SET rating = :avg_rating, total_rating = :total_reviews 
                             WHERE id = :hotel_id";
-            
+
             $updateStmt = $this->conn->prepare($updateQuery);
             $updateStmt->bindParam(':avg_rating', $stats->average_rating);
             $updateStmt->bindParam(':total_reviews', $stats->total_reviews, PDO::PARAM_INT);
             $updateStmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
-            
+
             return $updateStmt->execute();
         }
-        
+
         return false;
+    }
+    /**
+     * Chỉ cập nhật các thông tin cơ bản của khách sạn (dành cho Partner)
+     */
+    public function updateHotelBasicInfo($id, $name, $address, $description, $city_id, $image): bool
+    {
+        $query = "UPDATE " . $this->table_name . " SET 
+                  name=:name, address=:address, description=:description, 
+                  city_id=:city_id, image=:image 
+                  WHERE id=:id";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':city_id', $city_id);
+        $stmt->bindParam(':image', $image);
+
+        return $stmt->execute();
     }
 }

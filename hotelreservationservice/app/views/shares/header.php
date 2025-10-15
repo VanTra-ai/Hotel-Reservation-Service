@@ -53,6 +53,19 @@ SessionHelper::startSession();
                                         <i class="fas fa-book me-2"></i>Quản lý Booking
                                     </a>
                                 </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= BASE_URL ?>/partner/hotel">
+                                        <i class="fas fa-hotel me-2"></i>Quản lý Khách sạn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= BASE_URL ?>/partner/room">
+                                        <i class="fas fa-bed me-2"></i>Quản lý Phòng
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     <?php endif; ?>

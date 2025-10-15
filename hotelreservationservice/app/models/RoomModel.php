@@ -68,12 +68,12 @@ class RoomModel
     }
 
     /**
-     * Lấy phòng theo ID
+     * Lấy phòng theo ID, kèm theo owner_id của khách sạn
      */
     public function getRoomById($id)
     {
         try {
-            $sql = "SELECT r.*, h.name AS hotel_name, c.name AS city_name
+            $sql = "SELECT r.*, h.name AS hotel_name, c.name AS city_name, h.owner_id
                     FROM " . $this->table_name . " r
                     JOIN hotel h ON r.hotel_id = h.id
                     JOIN city c ON h.city_id = c.id
