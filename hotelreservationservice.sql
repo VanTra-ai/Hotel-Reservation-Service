@@ -108,14 +108,28 @@ CREATE TABLE `review` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `hotel_id` INT NOT NULL,
   `account_id` INT NOT NULL,
-  `rating` INT NOT NULL,
+  `booking_id` INT NULL, -- Liên kết với booking đã hoàn thành
+  
+  -- 7 điểm chi tiết do người dùng chấm
+  `rating_staff` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_amenities` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_cleanliness` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_comfort` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_value` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_location` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  `rating_wifi` DECIMAL(3,1) NOT NULL DEFAULT 1.0,
+  
+  -- Điểm từ AI và bình luận
   `ai_rating` DECIMAL(3, 1) NULL DEFAULT NULL,
   `rating_text` VARCHAR(50) NULL DEFAULT NULL,
   `comment` TEXT,
-  `category` VARCHAR(100) DEFAULT NULL,
+  
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  
   FOREIGN KEY (`hotel_id`) REFERENCES `hotel`(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`account_id`) REFERENCES `account`(`id`) ON DELETE CASCADE
+  FOREIGN KEY (`account_id`) REFERENCES `account`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`booking_id`) REFERENCES `booking`(`id`) ON DELETE SET NULL,
+  UNIQUE KEY `uq_booking_review` (`booking_id`) -- Đảm bảo 1 booking chỉ có 1 review
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- =================================================================
 -- Dữ liệu mẫu (Sample Data)
@@ -193,8 +207,18 @@ BEGIN
     
     UPDATE hotel
     SET 
-        rating = (SELECT AVG(rating) FROM review WHERE hotel_id = current_hotel_id),
-        total_rating = (SELECT COUNT(*) FROM review WHERE hotel_id = current_hotel_id)
+        -- Tính điểm trung bình tổng (dựa trên điểm AI)
+        rating = (SELECT AVG(ai_rating) FROM review WHERE hotel_id = current_hotel_id AND ai_rating IS NOT NULL),
+        total_rating = (SELECT COUNT(*) FROM review WHERE hotel_id = current_hotel_id),
+
+        -- Tính điểm trung bình cho 7 tiêu chí (dựa trên điểm người dùng chấm)
+        service_staff = (SELECT AVG(rating_staff) FROM review WHERE hotel_id = current_hotel_id),
+        amenities = (SELECT AVG(rating_amenities) FROM review WHERE hotel_id = current_hotel_id),
+        cleanliness = (SELECT AVG(rating_cleanliness) FROM review WHERE hotel_id = current_hotel_id),
+        comfort = (SELECT AVG(rating_comfort) FROM review WHERE hotel_id = current_hotel_id),
+        value_for_money = (SELECT AVG(rating_value) FROM review WHERE hotel_id = current_hotel_id),
+        location = (SELECT AVG(rating_location) FROM review WHERE hotel_id = current_hotel_id),
+        free_wifi = (SELECT AVG(rating_wifi) FROM review WHERE hotel_id = current_hotel_id)
     WHERE id = current_hotel_id;
 END$$
 DELIMITER ;

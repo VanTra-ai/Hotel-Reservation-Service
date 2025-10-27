@@ -137,12 +137,16 @@ class BookingController
     public function history()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
+            header('Location: ' . BASE_URL . '/account/login'); // Sửa đường dẫn nếu cần
             exit;
         }
 
         $accountId = $this->getAccountId();
-        $bookings = $this->bookingModel->getBookingsByAccountId($accountId);
+        // Cần truyền biến hằng số trạng thái để View có thể xử lý hiển thị nút Review
+        $data = [
+            'bookings' => $this->bookingModel->getBookingsByAccountId($accountId),
+            'STATUS_CHECKED_OUT' => BOOKING_STATUS_CHECKED_OUT // Truyền hằng số
+        ];
         include 'app/views/booking/history.php';
     }
 

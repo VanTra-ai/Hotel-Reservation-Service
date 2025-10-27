@@ -142,4 +142,38 @@ class BookingModel
             return [];
         }
     }
+    // Lấy thông tin booking để tạo form review
+    public function getBookingByIdForReview($bookingId, $accountId)
+    {
+        $sql = "SELECT b.*, r.hotel_id, r.room_type, r.room_number, h.name AS hotel_name, 
+            (SELECT COUNT(*) FROM review rev WHERE rev.booking_id = b.id) as review_count
+                 FROM booking b
+                 JOIN room r ON b.room_id = r.id
+                 JOIN hotel h ON r.hotel_id = h.id
+                 WHERE b.id = :bookingId AND b.account_id = :accountId AND b.status = :status_checked_out
+                 LIMIT 1";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':bookingId', (int)$bookingId, PDO::PARAM_INT);
+            $stmt->bindValue(':accountId', (int)$accountId, PDO::PARAM_INT);
+            $stmt->bindValue(':status_checked_out', BOOKING_STATUS_CHECKED_OUT); // Sử dụng constant
+            $stmt->execute();
+            $booking = $stmt->fetch(PDO::FETCH_OBJ);
+
+            // Tính số đêm ở
+            if ($booking) {
+                $check_in = strtotime($booking->check_in_date);
+                $check_out = strtotime($booking->check_out_date);
+                $diff = $check_out - $check_in;
+                $nights = max(1, round($diff / (60 * 60 * 24)));
+                $booking->nights = $nights;
+            }
+
+            return $booking;
+        } catch (PDOException $e) {
+            error_log("getBookingByIdForReview error: " . $e->getMessage());
+            return null;
+        }
+    }
 }

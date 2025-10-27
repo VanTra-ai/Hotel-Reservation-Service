@@ -86,7 +86,6 @@ class HotelController
 
         $data['rooms'] = $this->roomModel->getRoomsByHotelId($id);
         $data['reviews'] = $this->reviewModel->getReviewsByHotelId($id);
-        $data['averageRatings'] = $this->reviewModel->getAverageRatingsByCategory($id);
 
         include_once 'app/views/hotel/show.php';
     }
