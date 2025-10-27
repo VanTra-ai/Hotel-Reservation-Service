@@ -1,21 +1,25 @@
 <?php
+// app/controllers/ReviewController.php
 require_once 'app/models/ReviewModel.php';
 require_once 'app/models/HotelModel.php';
 require_once 'app/helpers/SessionHelper.php';
 require_once 'app/config/database.php';
 require_once 'app/helpers/RatingHelper.php';
+require_once 'app/helpers/AiApiService.php';
 
 class ReviewController
 {
     private $reviewModel;
     private $hotelModel;
     private $db;
+    private AiApiService $aiService;
 
     public function __construct()
     {
         $this->db = (new Database())->getConnection();
         $this->reviewModel = new ReviewModel($this->db);
         $this->hotelModel = new HotelModel($this->db);
+        $this->aiService = new AiApiService();
     }
 
     /**
@@ -66,11 +70,11 @@ class ReviewController
 
                 // 3. Gọi API để lấy điểm dự đoán
                 if ($comment && !empty($hotel_info)) {
-                    $predicted_score = $this->get_ai_rating($comment, $hotel_info, $review_info);
+                    $predicted_score = $this->aiService->getPredictedRating($comment, $hotel_info, $review_info); // <--- Sử dụng service
                 }
             } catch (Exception $e) {
-                error_log("AI Prediction Error: " . $e->getMessage());
-                $predicted_score = null;
+                error_log("AI Data Preparation Error: " . $e->getMessage());
+                $predicted_score = null; // Đảm bảo null nếu có lỗi chuẩn bị dữ liệu
             }
 
             $rating_text = RatingHelper::getTextFromScore($predicted_score);
@@ -99,40 +103,5 @@ class ReviewController
     {
         $reviews = $this->reviewModel->getReviewsByHotelId($hotelId);
         include 'app/views/review/list.php';
-    }
-    /**
-     * Gửi yêu cầu đến API Python để lấy điểm số dự đoán từ AI.
-     */
-    private function get_ai_rating($comment, $hotel_info, $review_info)
-    {
-        // Địa chỉ của API Flask đang chạy trên máy của bạn
-        $apiUrl = 'http://127.0.0.1:5000/predict';
-
-        $postData = [
-            'comment' => $comment,
-            'hotel_info' => $hotel_info,
-            'review_info' => $review_info
-        ];
-
-        $ch = curl_init($apiUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-        // Đặt timeout để không phải chờ quá lâu
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-
-        $response = curl_exec($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($http_code == 200) {
-            $result = json_decode($response, true);
-            return $result['predicted_score'] ?? null;
-        } else {
-            error_log("AI API call failed: " . $response);
-            return null;
-        }
     }
 }

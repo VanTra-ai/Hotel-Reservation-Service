@@ -40,12 +40,10 @@ class AdminBookingController extends BaseAdminController // Kế thừa BaseAdmi
         $status = $_POST['status'] ?? '';
 
         $allowed = ['pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out'];
-        if ($bookingId <= 0 || !in_array($status, $allowed, true)) {
-            // Nếu dữ liệu không hợp lệ, chuyển hướng về với thông báo lỗi
+        if ($bookingId <= 0 || !in_array($status, ALLOWED_BOOKING_STATUSES, true)) {
             header('Location: ' . BASE_URL . '/admin/booking?error=invalid_data');
             exit;
         }
-
         $result = $this->bookingModel->updateBookingStatus($bookingId, $status);
 
         // Chuyển hướng về trang danh sách sau khi cập nhật
@@ -60,7 +58,7 @@ class AdminBookingController extends BaseAdminController // Kế thừa BaseAdmi
     {
         $bookingId = (int)$id;
         if ($bookingId > 0) {
-            $this->bookingModel->updateBookingStatus($bookingId, 'cancelled');
+            $this->bookingModel->updateBookingStatus($bookingId, BOOKING_STATUS_CANCELLED);
         }
 
         // Chuyển hướng về trang danh sách sau khi hủy

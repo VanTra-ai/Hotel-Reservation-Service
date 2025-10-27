@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/account/change_password.php
+?>
 <section class="vh-100 gradient-custom">
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">

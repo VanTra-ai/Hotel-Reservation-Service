@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/account/login.php
+?>
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">

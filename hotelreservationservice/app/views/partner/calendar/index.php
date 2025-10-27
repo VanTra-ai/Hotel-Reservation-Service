@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/partner/calendar/index.php
+?>
 
 <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
 

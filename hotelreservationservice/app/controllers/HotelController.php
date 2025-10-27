@@ -1,6 +1,5 @@
 <?php
 // app/controllers/HotelController.php
-// FILE NÀY BÂY GIỜ CHỈ DÀNH CHO USER XEM
 
 require_once('app/config/database.php');
 require_once 'app/models/HotelModel.php';

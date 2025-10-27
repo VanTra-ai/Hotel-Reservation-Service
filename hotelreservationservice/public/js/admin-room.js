@@ -1,3 +1,4 @@
+// public/js/admin-room.js
 function updateRoomField(id, field, input) {
   let value = input.value;
 

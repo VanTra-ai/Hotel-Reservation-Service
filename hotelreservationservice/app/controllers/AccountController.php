@@ -59,9 +59,12 @@ class AccountController
         if (strlen($fullname) > 255) $errors['fullname_len'] = "Họ tên quá dài.";
 
         // Ngăn role escalation: chỉ admin hiện tại mới có thể tạo admin
-        $role = 'user';
+        $role = ROLE_USER; // Mặc định là user
         if (SessionHelper::isLoggedIn() && SessionHelper::isAdmin() && $roleFromForm) {
-            if (in_array($roleFromForm, ['admin', 'user'], true)) $role = $roleFromForm;
+            // Sử dụng mảng hằng số ALLOWED_ROLES
+            if (in_array($roleFromForm, ALLOWED_ROLES, true)) {
+                $role = $roleFromForm;
+            }
         }
 
         // Kiểm tra tồn tại username/email trước (thêm check để trả nhanh)

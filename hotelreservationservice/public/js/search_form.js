@@ -1,3 +1,4 @@
+// public/js/search_form.js
 document.addEventListener("DOMContentLoaded", function () {
   const provinceInput = document.getElementById("provinceInput");
   const provinceList = document.getElementById("provinceList");

@@ -1,4 +1,5 @@
 <?php
+// app/models/BookingModel.php
 class BookingModel
 {
     private $conn;
@@ -17,14 +18,15 @@ class BookingModel
         if (strtotime($checkInDate) >= strtotime($checkOutDate)) return false;
 
         $sql = "INSERT INTO " . $this->table_name . "
-                (account_id, room_id, check_in_date, check_out_date, total_price, status)
-                VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price, 'pending')";
+            (account_id, room_id, check_in_date, check_out_date, total_price, status)
+            VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price, :status)"; // Thêm :status
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(':account_id', (int)$accountId, PDO::PARAM_INT);
         $stmt->bindValue(':room_id', (int)$roomId, PDO::PARAM_INT);
         $stmt->bindValue(':check_in_date', $checkInDate);
         $stmt->bindValue(':check_out_date', $checkOutDate);
         $stmt->bindValue(':total_price', (float)$totalPrice);
+        $stmt->bindValue(':status', BOOKING_STATUS_PENDING);
 
         return $stmt->execute();
     }
@@ -33,14 +35,18 @@ class BookingModel
     public function isRoomAvailable($roomId, $checkInDate, $checkOutDate)
     {
         $sql = "SELECT COUNT(*) FROM " . $this->table_name . "
-                WHERE room_id=:room_id
-                AND status IN ('pending','confirmed')
-                AND (:check_in < check_out_date)
-                AND (:check_out > check_in_date)";
+            WHERE room_id=:room_id
+            -- Sử dụng constants cho trạng thái cần kiểm tra
+            AND status IN (:status_pending, :status_confirmed)
+            AND (:check_in < check_out_date)
+            AND (:check_out > check_in_date)";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(':room_id', (int)$roomId, PDO::PARAM_INT);
         $stmt->bindValue(':check_in', $checkInDate);
         $stmt->bindValue(':check_out', $checkOutDate);
+        // Bind các trạng thái
+        $stmt->bindValue(':status_pending', BOOKING_STATUS_PENDING);
+        $stmt->bindValue(':status_confirmed', BOOKING_STATUS_CONFIRMED);
         $stmt->execute();
         return ((int)$stmt->fetchColumn() === 0);
     }
@@ -65,11 +71,12 @@ class BookingModel
     public function cancelBooking($bookingId, $accountId)
     {
         $sql = "UPDATE " . $this->table_name . "
-                SET status='cancelled'
+                SET status= :status_cancelled
                 WHERE id=:bookingId AND account_id=:accountId AND status!='cancelled'";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(':bookingId', (int)$bookingId, PDO::PARAM_INT);
         $stmt->bindValue(':accountId', (int)$accountId, PDO::PARAM_INT);
+        $stmt->bindValue(':status_cancelled', BOOKING_STATUS_CANCELLED);
         return $stmt->execute();
     }
     /**
@@ -120,12 +127,14 @@ class BookingModel
                 JOIN hotel h ON r.hotel_id = h.id
                 JOIN account a ON b.account_id = a.id
                 WHERE h.owner_id = :ownerId
-                AND b.status != 'cancelled' 
-                AND b.status != 'checked_out'";
+                AND b.status != :status_cancelled 
+                AND b.status != :status_checked_out";
 
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':ownerId', $ownerId, PDO::PARAM_INT);
+            $stmt->bindValue(':status_cancelled', BOOKING_STATUS_CANCELLED);
+            $stmt->bindValue(':status_checked_out', BOOKING_STATUS_CHECKED_OUT);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch (PDOException $e) {

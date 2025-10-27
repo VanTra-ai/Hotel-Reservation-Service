@@ -4,10 +4,12 @@
 require_once 'app/controllers/BaseAdminController.php';
 require_once 'app/models/HotelModel.php';
 require_once 'app/models/CityModel.php';
+require_once 'app/helpers/ImageUploader.php';
 class AdminHotelController extends BaseAdminController
 {
     private $hotelModel;
     private $cityModel;
+    private ImageUploader $hotelImageUploader;
 
     public function __construct()
     {
@@ -16,6 +18,7 @@ class AdminHotelController extends BaseAdminController
         parent::__construct();
         $this->hotelModel = new HotelModel($this->db);
         $this->cityModel = new CityModel($this->db);
+        $this->hotelImageUploader = new ImageUploader('public/images/hotel/');
     }
 
     /**
@@ -45,7 +48,7 @@ class AdminHotelController extends BaseAdminController
             $address = $_POST['address'] ?? '';
             $description = $_POST['description'] ?? '';
             $city_id = $_POST['city_id'] ?? null;
-            $image = "";
+            $imagePath = "";
 
             $service_staff = (float)($_POST['service_staff'] ?? 8.0);
             $amenities = (float)($_POST['amenities'] ?? 8.0);
@@ -55,8 +58,17 @@ class AdminHotelController extends BaseAdminController
             $location = (float)($_POST['location'] ?? 8.0);
             $free_wifi = (float)($_POST['free_wifi'] ?? 8.0);
 
-            if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-                $image = $this->uploadImage($_FILES['image']);
+            if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
+                try {
+                    // Sử dụng ImageUploader để upload
+                    $imagePath = $this->hotelImageUploader->upload($_FILES['image'], 'hotel_'); // <--- Sử dụng helper
+                } catch (Exception $e) {
+                    // Xử lý lỗi upload (ví dụ: lưu vào session, hiển thị lại form)
+                    $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi upload ảnh: ' . $e->getMessage()];
+                    // Chuyển hướng lại form add kèm thông báo lỗi (cần điều chỉnh)
+                    header('Location: ' . BASE_URL . '/admin/hotel/add');
+                    exit;
+                }
             }
 
             $result = $this->hotelModel->addHotel(
@@ -64,7 +76,7 @@ class AdminHotelController extends BaseAdminController
                 $address,
                 $description,
                 $city_id,
-                $image,
+                $imagePath,
                 $service_staff,
                 $amenities,
                 $cleanliness,
@@ -108,6 +120,13 @@ class AdminHotelController extends BaseAdminController
             $city_id = $_POST['city_id'] ?? null;
             $image = $_POST['existing_image'] ?? '';
 
+            $hotel = $this->hotelModel->getHotelById($id); // Lấy thông tin cũ
+            if (!$hotel) { /* xử lý lỗi */
+            }
+
+            $imagePath = $hotel->image; // Giữ ảnh cũ mặc định
+            $oldImagePath = $hotel->image; // Lưu lại để xóa nếu có ảnh mới
+
             $service_staff = (float)($_POST['service_staff'] ?? 8.0);
             $amenities = (float)($_POST['amenities'] ?? 8.0);
             $cleanliness = (float)($_POST['cleanliness'] ?? 8.0);
@@ -116,14 +135,19 @@ class AdminHotelController extends BaseAdminController
             $location = (float)($_POST['location'] ?? 8.0);
             $free_wifi = (float)($_POST['free_wifi'] ?? 8.0);
 
-            if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-                $newImagePath = $this->uploadImage($_FILES['image']);
-                if ($newImagePath) {
-                    // Xóa ảnh cũ nếu có
-                    if (!empty($image) && file_exists($image)) {
-                        @unlink($image);
+            if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
+                try {
+                    // Upload ảnh mới
+                    $newImagePath = $this->hotelImageUploader->upload($_FILES['image'], 'hotel_'); // <--- Upload ảnh mới
+                    if ($newImagePath) {
+                        // Xóa ảnh cũ thành công trước khi gán ảnh mới
+                        $this->hotelImageUploader->delete($oldImagePath); // <--- Xóa ảnh cũ
+                        $imagePath = $newImagePath; // Cập nhật đường dẫn ảnh mới
                     }
-                    $image = $newImagePath;
+                } catch (Exception $e) {
+                    $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi upload ảnh: ' . $e->getMessage()];
+                    header('Location: ' . BASE_URL . '/admin/hotel/edit/' . $id);
+                    exit;
                 }
             }
 
@@ -133,7 +157,7 @@ class AdminHotelController extends BaseAdminController
                 $address,
                 $description,
                 $city_id,
-                $image,
+                $imagePath,
                 $service_staff,
                 $amenities,
                 $cleanliness,
@@ -160,6 +184,11 @@ class AdminHotelController extends BaseAdminController
      */
     public function delete($id)
     {
+        $hotel = $this->hotelModel->getHotelById($id);
+        if ($hotel) {
+            // Xóa ảnh liên quan trước khi xóa hotel khỏi DB
+            $this->hotelImageUploader->delete($hotel->image); // <--- Xóa ảnh khi xóa hotel
+        }
         if ($this->hotelModel->deleteHotel($id)) {
             header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/hotel');
         } else {

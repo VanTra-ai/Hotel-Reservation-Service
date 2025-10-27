@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php'; 
+//app/views/booking/book.php
+?>
 
 <div class="container my-5">
     <div class="row justify-content-center">

@@ -1,4 +1,5 @@
 <?php
+// app/models/CityModel.php
 class CityModel
 {
     private $conn;

@@ -42,7 +42,7 @@ class PartnerBookingController extends BasePartnerController
         // Thêm kiểm tra: Partner có thực sự sở hữu booking này không? (Nâng cao, tùy chọn)
 
         $allowed = ['pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out'];
-        if ($bookingId <= 0 || !in_array($status, $allowed, true)) {
+        if ($bookingId <= 0 || !in_array($status, ALLOWED_BOOKING_STATUSES, true)) {
             header('Location: ' . BASE_URL . '/partner/booking?error=invalid_data');
             exit;
         }
@@ -59,7 +59,7 @@ class PartnerBookingController extends BasePartnerController
     {
         $bookingId = (int)$id;
         if ($bookingId > 0) {
-            $this->bookingModel->updateBookingStatus($bookingId, 'cancelled');
+            $this->bookingModel->updateBookingStatus($bookingId, BOOKING_STATUS_CANCELLED);
         }
 
         header('Location: ' . BASE_URL . '/partner/booking?success=cancelled');

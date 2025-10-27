@@ -1,5 +1,5 @@
 <?php include 'app/views/shares/header.php';
-// Khởi tạo các biến để tránh lỗi undefined
+//app/views/account/register.php
 $errors = $errors ?? [];
 $username = $username ?? ($_POST['username'] ?? '');
 $fullName = $fullName ?? ($_POST['fullname'] ?? '');

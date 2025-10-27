@@ -1,4 +1,5 @@
 <?php
+// app/helpers/SessionHelper.php
 class SessionHelper
 {
     private static function ensureSessionStarted()

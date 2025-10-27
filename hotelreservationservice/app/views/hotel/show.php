@@ -1,6 +1,7 @@
 <?php
 include 'app/views/shares/header.php';
 require_once 'app/helpers/RatingHelper.php';
+//app/views/hotel/show.php
 
 // [SỬA LỖI] - Lấy các biến từ mảng $data mà Controller đã gửi
 $hotel = $data['hotel'] ?? null;

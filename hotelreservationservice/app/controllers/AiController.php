@@ -3,16 +3,19 @@
 require_once 'app/models/HotelModel.php';
 require_once 'app/helpers/SessionHelper.php';
 require_once 'app/helpers/RatingHelper.php';
+require_once 'app/helpers/AiApiService.php';
 
 class AiController
 {
     private $db;
     private $hotelModel;
+    private AiApiService $aiService;
 
     public function __construct()
     {
         $this->db = (new Database())->getConnection();
         $this->hotelModel = new HotelModel($this->db);
+        $this->aiService = new AiApiService();
     }
 
     /**
@@ -80,7 +83,7 @@ class AiController
         $postData = json_decode(file_get_contents('php://input'), true);
 
         // 1. Gọi API Python để lấy điểm số dạng số
-        $predicted_score = $this->get_ai_rating(
+        $predicted_score = $this->aiService->getPredictedRating(
             $postData['comment'] ?? '',
             $postData['hotel_info'] ?? [],
             $postData['review_info'] ?? []
@@ -95,34 +98,5 @@ class AiController
             'rating_text' => $rating_text
         ]);
         exit;
-    }
-
-    /**
-     * Hàm private để gọi đến API Python (sử dụng cURL)
-     */
-    private function get_ai_rating($comment, $hotel_info, $review_info)
-    {
-        $apiUrl = 'http://127.0.0.1:5000/predict';
-        $postData = ['comment' => $comment, 'hotel_info' => $hotel_info, 'review_info' => $review_info];
-
-        $ch = curl_init($apiUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-
-        $response = curl_exec($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($http_code == 200) {
-            $result = json_decode($response, true);
-            return $result['predicted_score'] ?? null;
-        } else {
-            error_log("AI API call failed: " . $response);
-            return null;
-        }
     }
 }

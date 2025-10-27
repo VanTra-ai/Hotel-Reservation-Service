@@ -187,20 +187,10 @@ class RoomModel
         $errors = [];
         if (empty($hotel_id) || !is_numeric($hotel_id)) $errors['hotel_id'] = 'Khách sạn không hợp lệ';
         if (empty($room_number)) $errors['room_number'] = 'Số phòng không được để trống';
+        if (empty($room_type) || !in_array($room_type, ALLOWED_ROOM_TYPES, true)) {
+            $errors['room_type'] = 'Loại phòng không hợp lệ';
+        }
 
-        $allowedTypes = [
-            'Phòng Tiêu Chuẩn Giường Đôi',
-            'Phòng Superior Giường Đôi',
-            'Phòng Giường Đôi',
-            'Phòng Deluxe Giường Đôi Có Ban Công',
-            'Phòng Deluxe Giường Đôi',
-            'Phòng Giường Đôi Có Ban Công',
-            'Phòng Superior Giường Đôi Có Ban Công',
-            'Phòng Gia Đình',
-            'Phòng Deluxe Gia đình',
-            'Phòng Superior Giường Đôi/2 Giường Đơn',
-        ];
-        if (empty($room_type) || !in_array($room_type, $allowedTypes, true)) $errors['room_type'] = 'Loại phòng không hợp lệ';
         if (!is_numeric($capacity) || $capacity <= 0) $errors['capacity'] = 'Sức chứa phải lớn hơn 0';
         if (!is_numeric($price) || $price <= 0) $errors['price'] = 'Giá phòng phải lớn hơn 0';
 

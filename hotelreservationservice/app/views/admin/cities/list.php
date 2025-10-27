@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/admin/cities/list.php
+?>
 
 <div class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-4">

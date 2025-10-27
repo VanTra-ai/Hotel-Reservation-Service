@@ -1,3 +1,4 @@
+// public/js/admin-booking.js
 function updateBookingStatus(id, select) {
   const status = select.value;
 

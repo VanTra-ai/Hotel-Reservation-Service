@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/home/index.php
+?>
 
 <div class="container my-5">
     <!-- TÌM KHÁCH SẠN -->

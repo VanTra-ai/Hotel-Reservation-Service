@@ -1,4 +1,5 @@
 <?php
+// app/controllers/BookingController.php
 require_once 'app/models/BookingModel.php';
 require_once 'app/models/RoomModel.php';
 require_once 'app/models/AccountModel.php';

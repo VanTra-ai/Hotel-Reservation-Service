@@ -1,3 +1,4 @@
+// public/js/hotel_detail.js
 document.addEventListener("DOMContentLoaded", function () {
   const checkInInput = document.getElementById("ajax_check_in");
   const checkOutInput = document.getElementById("ajax_check_out");

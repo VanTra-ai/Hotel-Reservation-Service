@@ -6,6 +6,7 @@ session_start();
 // Tải các file cần thiết cho toàn bộ ứng dụng
 require_once 'app/config/database.php';
 require_once 'app/helpers/SessionHelper.php';
+require_once 'app/config/constants.php';
 
 // Tải tất cả các model và controller
 require_once 'app/models/AccountModel.php';

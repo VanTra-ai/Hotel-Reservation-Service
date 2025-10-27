@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/admin/bookings/list.php
+?>
 
 <div class="container my-5">
     <h3>Quản lý booking</h3>

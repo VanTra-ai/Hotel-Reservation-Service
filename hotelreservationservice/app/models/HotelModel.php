@@ -1,4 +1,5 @@
 <?php
+// app/models/HotelModel.php
 class HotelModel
 {
     private $conn;

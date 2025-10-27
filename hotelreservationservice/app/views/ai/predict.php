@@ -1,5 +1,6 @@
 <?php 
 include 'app/views/shares/header.php'; 
+//app/views/ai/predict.php
 // Lấy ID khách sạn được truyền qua URL (nếu có) để chọn sẵn
 $preselected_hotel_id = isset($_GET['hotel_id']) ? (int)$_GET['hotel_id'] : null;
 ?>

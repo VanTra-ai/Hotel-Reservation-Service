@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/booking/history.php
+?>
 
 <div class="container my-5">
     <h3 class="mb-4">Lịch sử đặt phòng</h3>

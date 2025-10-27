@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/partner/bookings/list.php
+?>
 
 <div class="container my-5">
     <h3 class="mb-4">Quản lý booking cho khách sạn của bạn</h3>

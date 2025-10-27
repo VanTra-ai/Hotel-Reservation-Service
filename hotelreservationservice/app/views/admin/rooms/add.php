@@ -1,4 +1,12 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php
+// app/views/admin/rooms/add.php
+include 'app/views/shares/header.php';
+
+// Khởi tạo các biến từ controller (giả định controller đã truyền vào)
+$hotels = $hotels ?? []; // Danh sách khách sạn
+$errors = $errors ?? []; // Mảng lỗi validation
+$old_input = $old_input ?? []; // Mảng chứa input cũ
+?>
 
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -11,8 +19,14 @@
                     <?php if (!empty($errors)): ?>
                         <div class="alert alert-danger">
                             <ul class="mb-0">
-                                <?php foreach ($errors as $error): ?>
-                                    <li><?= htmlspecialchars($error) ?></li>
+                                <?php foreach ($errors as $field => $error): // Hiển thị cả key (tên field) nếu có 
+                                ?>
+                                    <li>
+                                        <!-- Optional: Thêm tên field lỗi -->
+                                        <?php // if (!is_int($field)) echo "<strong>" . htmlspecialchars(ucfirst(str_replace('_', ' ', $field))) . ":</strong> "; 
+                                        ?>
+                                        <?= htmlspecialchars($error) ?>
+                                    </li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -23,21 +37,27 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="hotel_id" class="form-label">Khách sạn <span class="text-danger">*</span></label>
-                                    <select id="hotel_id" name="hotel_id" class="form-select" required>
+                                    <select id="hotel_id" name="hotel_id" class="form-select <?= isset($errors['hotel_id']) ? 'is-invalid' : '' ?>" required>
                                         <option value="">-- Chọn khách sạn --</option>
                                         <?php foreach ($hotels as $hotel): ?>
-                                            <option value="<?= $hotel->id ?>" <?= (isset($_POST['hotel_id']) && $_POST['hotel_id'] == $hotel->id) ? 'selected' : '' ?>>
+                                            <option value="<?= $hotel->id ?>" <?= (($old_input['hotel_id'] ?? '') == $hotel->id) ? 'selected' : '' ?>>
                                                 <?= htmlspecialchars($hotel->name) ?>
                                             </option>
                                         <?php endforeach; ?>
                                     </select>
+                                    <?php if (isset($errors['hotel_id'])): ?>
+                                        <div class="invalid-feedback"><?= htmlspecialchars($errors['hotel_id']) ?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="room_number" class="form-label">Số phòng <span class="text-danger">*</span></label>
-                                    <input type="text" id="room_number" name="room_number" class="form-control"
-                                        value="<?= htmlspecialchars($_POST['room_number'] ?? '') ?>" required>
+                                    <input type="text" id="room_number" name="room_number" class="form-control <?= isset($errors['room_number']) ? 'is-invalid' : '' ?>"
+                                        value="<?= htmlspecialchars($old_input['room_number'] ?? '') ?>" required>
+                                    <?php if (isset($errors['room_number'])): ?>
+                                        <div class="invalid-feedback"><?= htmlspecialchars($errors['room_number']) ?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -46,55 +66,55 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="room_type" class="form-label">Loại phòng <span class="text-danger">*</span></label>
-                                    <select id="room_type" name="room_type" class="form-select" required>
+                                    <select id="room_type" name="room_type" class="form-select <?= isset($errors['room_type']) ? 'is-invalid' : '' ?>" required>
                                         <option value="">-- Chọn loại phòng --</option>
                                         <?php
-                                        $roomTypes = [
-                                            'Phòng Tiêu Chuẩn Giường Đôi',
-                                            'Phòng Superior Giường Đôi',
-                                            'Phòng Giường Đôi',
-                                            'Phòng Deluxe Giường Đôi Có Ban Công',
-                                            'Phòng Deluxe Giường Đôi',
-                                            'Phòng Giường Đôi Có Ban Công',
-                                            'Phòng Superior Giường Đôi Có Ban Công',
-                                            'Phòng Gia Đình',
-                                            'Phòng Deluxe Gia đình',
-                                            'Phòng Superior Giường Đôi/2 Giường Đơn',
-                                        ];
-                                        $selectedType = $_POST['room_type'] ?? '';
-                                        foreach ($roomTypes as $type): ?>
+                                        $selectedType = $old_input['room_type'] ?? '';
+                                        foreach (ALLOWED_ROOM_TYPES as $type): ?>
                                             <option value="<?= htmlspecialchars($type) ?>" <?= ($selectedType === $type) ? 'selected' : '' ?>>
                                                 <?= htmlspecialchars($type) ?>
                                             </option>
                                         <?php endforeach; ?>
                                     </select>
+                                    <?php if (isset($errors['room_type'])): ?>
+                                        <div class="invalid-feedback"><?= htmlspecialchars($errors['room_type']) ?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="capacity" class="form-label">Sức chứa (người) <span class="text-danger">*</span></label>
-                                    <input type="number" id="capacity" name="capacity" class="form-control"
-                                        value="<?= htmlspecialchars($_POST['capacity'] ?? '') ?>" min="1" max="10" required>
+                                    <input type="number" id="capacity" name="capacity" class="form-control <?= isset($errors['capacity']) ? 'is-invalid' : '' ?>"
+                                        value="<?= htmlspecialchars($old_input['capacity'] ?? '1') ?>" min="1" max="10" required>
+                                    <?php if (isset($errors['capacity'])): ?>
+                                        <div class="invalid-feedback"><?= htmlspecialchars($errors['capacity']) ?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="price" class="form-label">Giá phòng (VNĐ) <span class="text-danger">*</span></label>
-                            <input type="number" id="price" name="price" class="form-control"
-                                value="<?= htmlspecialchars($_POST['price'] ?? '') ?>" min="0" step="1000" required>
+                            <input type="number" id="price" name="price" class="form-control <?= isset($errors['price']) ? 'is-invalid' : '' ?>"
+                                value="<?= htmlspecialchars($old_input['price'] ?? '') ?>" min="0" step="1000" required>
+                            <?php if (isset($errors['price'])): ?>
+                                <div class="invalid-feedback"><?= htmlspecialchars($errors['price']) ?></div>
+                            <?php endif; ?>
                         </div>
 
                         <div class="mb-3">
                             <label for="description" class="form-label">Mô tả phòng</label>
                             <textarea id="description" name="description" class="form-control" rows="4"
-                                placeholder="Mô tả chi tiết về phòng, tiện nghi, dịch vụ..."><?= htmlspecialchars($_POST['description'] ?? '') ?></textarea>
+                                placeholder="Mô tả chi tiết về phòng, tiện nghi, dịch vụ..."><?= htmlspecialchars($old_input['description'] ?? '') ?></textarea>
                         </div>
 
                         <div class="mb-3">
                             <label for="image" class="form-label">Hình ảnh phòng</label>
-                            <input type="file" id="image" name="image" class="form-control" accept="image/*">
+                            <input type="file" id="image" name="image" class="form-control <?= isset($errors['image']) ? 'is-invalid' : '' ?>" accept="image/*">
                             <div class="form-text">Chỉ chấp nhận file JPG, PNG, JPEG, GIF. Kích thước tối đa 10MB.</div>
+                            <?php if (isset($errors['image'])): ?>
+                                <div class="invalid-feedback"><?= htmlspecialchars($errors['image']) ?></div>
+                            <?php endif; ?>
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">

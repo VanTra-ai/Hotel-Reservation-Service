@@ -1,4 +1,6 @@
-<?php include 'app/views/shares/header.php'; ?>
+<?php include 'app/views/shares/header.php';
+//app/views/admin/accounts/list.php
+?>
 
 <div class="container my-5">
     <h2 class="fw-bold mb-4">Quản lý Thành viên</h2>

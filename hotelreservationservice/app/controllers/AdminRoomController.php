@@ -4,18 +4,22 @@
 require_once 'app/controllers/BaseAdminController.php';
 require_once 'app/models/RoomModel.php';
 require_once 'app/models/HotelModel.php';
+require_once 'app/helpers/ImageUploader.php';
+
 class AdminRoomController extends BaseAdminController
 {
     private $roomModel;
     private $hotelModel;
+    private ImageUploader $roomImageUploader;
 
     public function __construct()
     {
-        // Gọi hàm __construct của cha (BaseAdminController) để kiểm tra quyền và kết nối DB
         parent::__construct();
         $this->roomModel = new RoomModel($this->db);
         $this->hotelModel = new HotelModel($this->db);
+        $this->roomImageUploader = new ImageUploader('public/images/room/');
     }
+
     /**
      * Hiển thị danh sách phòng cho Admin
      */
@@ -31,9 +35,14 @@ class AdminRoomController extends BaseAdminController
     public function add()
     {
         $hotels = $this->hotelModel->getHotels();
+        // Lấy lỗi từ session (nếu có redirect từ hàm save)
         $errors = $_SESSION['form_errors'] ?? [];
         unset($_SESSION['form_errors']);
-        include 'app/views/admin/rooms/add.php';
+        // Lấy dữ liệu cũ từ session (nếu có redirect từ hàm save)
+        $old_input = $_SESSION['old_input'] ?? [];
+        unset($_SESSION['old_input']);
+
+        include 'app/views/admin/rooms/add.php'; // Truyền $errors và $old_input vào view
     }
 
     /**
@@ -42,9 +51,12 @@ class AdminRoomController extends BaseAdminController
     public function save()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room');
+            header('Location: ' . BASE_URL . '/admin/room/add'); // Chuyển hướng về form add
             exit;
         }
+
+        // Lưu lại input để hiển thị lại nếu có lỗi
+        $_SESSION['old_input'] = $_POST;
 
         $hotel_id = $_POST['hotel_id'] ?? '';
         $room_number = $_POST['room_number'] ?? '';
@@ -53,133 +65,165 @@ class AdminRoomController extends BaseAdminController
         $price = $_POST['price'] ?? '';
         $description = $_POST['description'] ?? '';
         $errors = [];
-        $image = '';
+        $imagePath = '';
 
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             try {
-                $image = $this->uploadImage($_FILES['image']);
+                $imagePath = $this->roomImageUploader->upload($_FILES['image'], 'room_');
             } catch (Exception $e) {
-                $errors[] = $e->getMessage();
+                $errors['image'] = "Lỗi upload ảnh: " . $e->getMessage(); // Gán lỗi cụ thể
             }
+        } elseif (isset($_FILES['image']) && $_FILES['image']['error'] != UPLOAD_ERR_NO_FILE) {
+            $errors['image'] = "Có lỗi xảy ra khi upload file (Mã lỗi: " . $_FILES['image']['error'] . ").";
         }
 
+
+        // Chỉ gọi model addRoom nếu không có lỗi upload
         if (empty($errors)) {
-            $result = $this->roomModel->addRoom($hotel_id, $room_number, $room_type, $capacity, $price, $description, $image);
+            $result = $this->roomModel->addRoom($hotel_id, $room_number, $room_type, $capacity, $price, $description, $imagePath); // Truyền imagePath
+
             if ($result === true) {
-                header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room');
+                unset($_SESSION['old_input']);
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Thêm phòng thành công!'];
+                header('Location: ' . BASE_URL . '/admin/room');
                 exit;
             } elseif (is_array($result)) {
+                // Lỗi validation từ model
                 $errors = array_merge($errors, $result);
             } else {
-                $errors[] = "Có lỗi khi thêm phòng.";
+                // Lỗi DB không xác định
+                $errors['database'] = "Có lỗi xảy ra khi lưu vào cơ sở dữ liệu.";
             }
         }
 
+        // Nếu có lỗi (upload hoặc validation hoặc DB), lưu lỗi vào session và redirect lại form add
         $_SESSION['form_errors'] = $errors;
-        header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room/add');
+        header('Location: ' . BASE_URL . '/admin/room/add');
         exit;
     }
+
 
     /**
      * Hiển thị form sửa phòng
      */
     public function edit($id)
     {
+        $id = (int)$id; // Ép kiểu ID
         $room = $this->roomModel->getRoomById($id);
+
         if (!$room) {
-            http_response_code(404);
-            echo "Không tìm thấy phòng";
-            return;
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Không tìm thấy phòng ID: ' . $id];
+            header('Location: ' . BASE_URL . '/admin/room');
+            exit();
         }
+
         $hotels = $this->hotelModel->getHotels();
-        include 'app/views/admin/rooms/edit.php';
+        // Lấy lỗi từ session (nếu có redirect từ hàm update)
+        $errors = $_SESSION['form_errors'] ?? [];
+        unset($_SESSION['form_errors']);
+        // Giữ lại input cũ nếu có lỗi (chưa làm ở đây, cần sửa view edit để nhận $old_input)
+        include 'app/views/admin/rooms/edit.php'; // Truyền $errors vào view
     }
+
 
     /**
      * Cập nhật dữ liệu từ form sửa
      */
     public function update($id)
     {
+        $id = (int)$id; // Ép kiểu ID
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room');
+            header('Location: ' . BASE_URL . '/admin/room/edit/' . $id); // Chuyển hướng về form edit
             exit;
         }
 
-        $hotel_id = $_POST['hotel_id'] ?? '';
-        $room_number = $_POST['room_number'] ?? '';
-        $room_type = $_POST['room_type'] ?? '';
-        $capacity = $_POST['capacity'] ?? '';
-        $price = $_POST['price'] ?? '';
-        $description = $_POST['description'] ?? '';
-        $errors = [];
         $room = $this->roomModel->getRoomById($id);
-
         if (!$room) {
-            $errors[] = "Phòng không tồn tại.";
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Phòng không tồn tại để cập nhật.'];
+            header('Location: ' . BASE_URL . '/admin/room');
+            exit();
         }
 
-        $imagePath = $room->image ?? '';
+        $hotel_id = $_POST['hotel_id'] ?? $room->hotel_id; // Giữ giá trị cũ nếu không có post
+        $room_number = $_POST['room_number'] ?? $room->room_number;
+        $room_type = $_POST['room_type'] ?? $room->room_type;
+        $capacity = $_POST['capacity'] ?? $room->capacity;
+        $price = $_POST['price'] ?? $room->price;
+        $description = $_POST['description'] ?? $room->description;
+        $errors = [];
+
+        $imagePath = $room->image ?? ''; // Giữ ảnh cũ mặc định
+        $oldImagePath = $room->image ?? ''; // Lưu lại để xóa
+
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             try {
-                $newImage = $this->uploadImage($_FILES['image']);
+                $newImage = $this->roomImageUploader->upload($_FILES['image'], 'room_');
                 if ($newImage) {
-                    if (!empty($imagePath) && file_exists($imagePath)) @unlink($imagePath);
-                    $imagePath = $newImage;
+                    $this->roomImageUploader->delete($oldImagePath); // Xóa ảnh cũ
+                    $imagePath = $newImage; // Cập nhật đường dẫn mới
                 }
             } catch (Exception $e) {
-                $errors[] = $e->getMessage();
+                $errors['image'] = "Lỗi upload ảnh: " . $e->getMessage();
             }
+        } elseif (isset($_FILES['image']) && $_FILES['image']['error'] != UPLOAD_ERR_NO_FILE) {
+            $errors['image'] = "Có lỗi xảy ra khi upload file (Mã lỗi: " . $_FILES['image']['error'] . ").";
         }
 
+
+        // Chỉ gọi model updateRoom nếu không có lỗi upload
         if (empty($errors)) {
             $res = $this->roomModel->updateRoom($id, $hotel_id, $room_number, $room_type, $capacity, $price, $description, $imagePath);
+
             if ($res === true) {
-                header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room');
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Cập nhật phòng thành công!'];
+                header('Location: ' . BASE_URL . '/admin/room');
                 exit;
+            } elseif (is_array($res)) {
+                // Lỗi validation từ model
+                $errors = array_merge($errors, $res);
+            } else {
+                // Lỗi DB không xác định
+                $errors['database'] = "Có lỗi xảy ra khi cập nhật cơ sở dữ liệu.";
             }
-            $errors[] = "Cập nhật thất bại.";
         }
 
-        $hotels = $this->hotelModel->getHotels();
-        include 'app/views/admin/rooms/edit.php';
+        // Nếu có lỗi (upload hoặc validation hoặc DB), lưu lỗi vào session và redirect lại form edit
+        $_SESSION['form_errors'] = $errors;
+        // Có thể lưu lại input vào session nếu muốn giữ giá trị người dùng vừa nhập
+        // $_SESSION['old_input'] = $_POST;
+        header('Location: ' . BASE_URL . '/admin/room/edit/' . $id);
+        exit;
     }
+
 
     /**
      * Xóa phòng (hành động từ form/link)
      */
     public function delete($id)
     {
+        $id = (int)$id; // Ép kiểu ID
         $room = $this->roomModel->getRoomById($id);
-        if ($room && !empty($room->image) && file_exists($room->image)) {
-            @unlink($room->image);
+
+        if ($room) {
+            // Chỉ gọi helper để xóa ảnh
+            $this->roomImageUploader->delete($room->image); // <<< SỬA: Chỉ dùng helper, bỏ unlink
+        } else {
+            $_SESSION['flash_message'] = ['type' => 'warning', 'message' => 'Không tìm thấy phòng để xóa.'];
+            header('Location: ' . BASE_URL . '/admin/room');
+            exit();
         }
 
-        $this->roomModel->deleteRoom($id);
-        header('Location: /Hotel-Reservation-Service/hotelreservationservice/admin/room');
+
+        if ($this->roomModel->deleteRoom($id)) {
+            $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Xóa phòng thành công!'];
+        } else {
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Đã xảy ra lỗi khi xóa phòng. Có thể phòng này đang có booking liên quan.'];
+        }
+        header('Location: ' . BASE_URL . '/admin/room');
         exit;
     }
 
-    /**
-     * Hàm private hỗ trợ upload ảnh
-     */
-    private function uploadImage($file)
-    {
-        $target_dir = "public/images/room/";
-        if (!is_dir($target_dir)) mkdir($target_dir, 0777, true);
 
-        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
-        $allowed = ['jpg', 'jpeg', 'png', 'gif'];
-        if (!in_array($ext, $allowed, true)) throw new Exception("Chỉ cho phép JPG/PNG/GIF.");
-        if ($file['size'] > 10 * 1024 * 1024) throw new Exception("Kích thước ảnh vượt quá 10MB.");
-
-        $filename = uniqid('room_', true) . '.' . $ext;
-        $target = $target_dir . $filename;
-
-        if (!move_uploaded_file($file['tmp_name'], $target)) {
-            throw new Exception("Lỗi khi tải ảnh lên.");
-        }
-        return $target;
-    }
     /**
      * Xử lý yêu cầu cập nhật một trường qua AJAX
      */
@@ -187,7 +231,7 @@ class AdminRoomController extends BaseAdminController
     {
         header('Content-Type: application/json');
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            echo json_encode(['error' => 'Invalid request']);
+            echo json_encode(['success' => false, 'error' => 'Invalid request method']); // Trả về JSON chuẩn
             exit;
         }
 
@@ -198,13 +242,16 @@ class AdminRoomController extends BaseAdminController
         $allowedFields = ['room_number', 'room_type', 'capacity', 'price', 'description'];
 
         if ($id <= 0 || !in_array($field, $allowedFields, true)) {
-            echo json_encode(['error' => 'Invalid data']);
+            echo json_encode(['success' => false, 'error' => 'Invalid data provided']); // Trả về JSON chuẩn
             exit;
         }
 
+        // Thêm validate cho giá trị dựa trên field (nếu cần thiết chặt chẽ hơn)
+        // Ví dụ: kiểm tra capacity, price phải là số > 0
+
         $result = $this->roomModel->updateRoomField($id, $field, $value);
 
-        echo json_encode($result ? ['success' => true] : ['error' => 'Update failed']);
+        echo json_encode($result ? ['success' => true] : ['success' => false, 'error' => 'Update failed in database']); // Trả về JSON chuẩn
         exit;
     }
 
@@ -215,18 +262,32 @@ class AdminRoomController extends BaseAdminController
     {
         header('Content-Type: application/json');
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            echo json_encode(['error' => 'Invalid request']);
+            echo json_encode(['success' => false, 'error' => 'Invalid request method']);
             exit;
         }
+
 
         $id = (int)($_POST['id'] ?? 0);
         if ($id <= 0) {
-            echo json_encode(['error' => 'Invalid room id']);
+            echo json_encode(['success' => false, 'error' => 'Invalid room id']);
             exit;
         }
 
+        // Thêm bước xóa ảnh khi xóa qua AJAX
+        $room = $this->roomModel->getRoomById($id);
+        if ($room) {
+            $this->roomImageUploader->delete($room->image);
+        } else {
+            // Có thể không cần báo lỗi nếu phòng đã bị xóa trước đó
+            // echo json_encode(['success' => false, 'error' => 'Room not found']);
+            // exit;
+        }
+
+
         $result = $this->roomModel->deleteRoom($id);
-        echo json_encode($result ? ['success' => true] : ['error' => 'Delete failed']);
+        echo json_encode($result ? ['success' => true] : ['success' => false, 'error' => 'Delete failed in database']);
         exit;
     }
+
+    // Hàm uploadImage() cũ không còn cần thiết, đã xóa.
 }
