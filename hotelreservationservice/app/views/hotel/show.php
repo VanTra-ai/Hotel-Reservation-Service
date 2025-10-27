@@ -1,13 +1,23 @@
 <?php
 include 'app/views/shares/header.php';
-// Đảm bảo đã gọi helper để sử dụng hàm getTextFromScore
 require_once 'app/helpers/RatingHelper.php';
+
+// [SỬA LỖI] - Lấy các biến từ mảng $data mà Controller đã gửi
+$hotel = $data['hotel'] ?? null;
+$rooms = $data['rooms'] ?? [];
+$reviews = $data['reviews'] ?? [];
+$averageRatings = $data['averageRatings'] ?? [];
+$check_in = $data['check_in'] ?? '';
+$check_out = $data['check_out'] ?? '';
 ?>
 
 <div class="container my-5">
     <?php if ($hotel): ?>
         <div class="row g-4">
+
+            <!-- CỘT NỘI DUNG CHÍNH (BÊN TRÁI) -->
             <div class="col-lg-8">
+                <!-- 1. THÔNG TIN KHÁCH SẠN -->
                 <div class="card shadow-sm mb-4">
                     <div class="card-body">
                         <?php if (!empty($hotel->image)): ?>
@@ -22,11 +32,38 @@ require_once 'app/helpers/RatingHelper.php';
                     </div>
                 </div>
 
+                <!-- 2. KHỐI TÌM PHÒNG TRỐNG -->
+                <div class="card mb-4 shadow-sm bg-light-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Kiểm tra phòng trống</h5>
+                        <input type="hidden" id="hotel_id_for_ajax" value="<?= $hotel->id ?>">
+                        <div class="row g-2">
+                            <div class="col-md-5">
+                                <label for="ajax_check_in" class="form-label">Ngày nhận phòng</label>
+                                <input type="text" id="ajax_check_in" class="form-control" placeholder="Chọn ngày"
+                                    value="<?= htmlspecialchars($check_in) ?>">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="ajax_check_out" class="form-label">Ngày trả phòng</label>
+                                <input type="text" id="ajax_check_out" class="form-control" placeholder="Chọn ngày"
+                                    value="<?= htmlspecialchars($check_out) ?>">
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button id="filter-rooms-btn" class="btn btn-primary w-100"
+                                    <?= (!empty($check_in)) ? 'data-autorun="true"' : '' ?>>
+                                    Kiểm tra
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. DANH SÁCH PHÒNG -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-primary text-white">
                         <h5 class="mb-0">Các loại phòng có sẵn</h5>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush" id="room-list-container">
                         <?php if (!empty($rooms)): ?>
                             <?php foreach ($rooms as $room): ?>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -36,7 +73,14 @@ require_once 'app/helpers/RatingHelper.php';
                                     </div>
                                     <div class="text-end">
                                         <span class="fw-bold text-success d-block mb-1"><?= number_format($room->price, 0, ',', '.') ?> VNĐ/đêm</span>
-                                        <a href="<?= BASE_URL ?>/booking/bookRoom?room_id=<?= $room->id ?>" class="btn btn-primary btn-sm">Đặt ngay</a>
+                                        <?php
+                                        // Gắn thêm ngày tháng vào link đặt phòng
+                                        $date_query = '';
+                                        if (!empty($check_in) && !empty($check_out)) {
+                                            $date_query = '&check_in=' . htmlspecialchars($check_in) . '&check_out=' . htmlspecialchars($check_out);
+                                        }
+                                        ?>
+                                        <a href="<?= BASE_URL ?>/booking/bookRoom?room_id=<?= $room->id ?><?= $date_query ?>" class="btn btn-primary btn-sm">Đặt ngay</a>
                                     </div>
                                 </li>
                             <?php endforeach; ?>
@@ -46,6 +90,7 @@ require_once 'app/helpers/RatingHelper.php';
                     </ul>
                 </div>
 
+                <!-- 4. DANH SÁCH BÌNH LUẬN CHI TIẾT CỦA KHÁCH -->
                 <div class="mt-4">
                     <h4 class="mb-3">Khách lưu trú ở đây thích điều gì?</h4>
                     <?php if (!empty($reviews)): ?>
@@ -54,7 +99,7 @@ require_once 'app/helpers/RatingHelper.php';
                                 <div class="flex-shrink-0 me-3 text-center">
                                     <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; font-size: 1.5rem;"><?= strtoupper(substr($review->username, 0, 1)) ?></div>
                                 </div>
-                                <div class="flex-grow-1 border-start ps-3">
+                                <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <span class="fw-bold"><?= htmlspecialchars($review->username) ?></span>
@@ -76,7 +121,9 @@ require_once 'app/helpers/RatingHelper.php';
 
             </div>
 
+            <!-- CỘT BÊN PHẢI (THÔNG TIN ĐÁNH GIÁ) -->
             <div class="col-lg-4">
+                <!-- 5. KHU VỰC ĐÁNH GIÁ TỔNG HỢP -->
                 <div class="card shadow-sm mb-4">
                     <div class="card-header bg-light">
                         <h5 class="mb-0">Đánh giá của khách</h5>
@@ -116,6 +163,7 @@ require_once 'app/helpers/RatingHelper.php';
                     </div>
                 </div>
 
+                <!-- 6. NÚT DẪN ĐẾN AI PLAYGROUND -->
                 <div class="card shadow-sm mt-4 bg-light-subtle border-info">
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">Thử nghiệm với AI 🤖</h5>
@@ -132,5 +180,8 @@ require_once 'app/helpers/RatingHelper.php';
         <div class="alert alert-danger text-center" role="alert">Không tìm thấy khách sạn này.</div>
     <?php endif; ?>
 </div>
+
+<!-- Tải file JavaScript dành riêng cho trang này -->
+<script src="<?= BASE_URL ?>/public/js/hotel_detail.js"></script>
 
 <?php include 'app/views/shares/footer.php'; ?>

@@ -92,7 +92,7 @@ class BookingModel
         }
 
         $sql .= " ORDER BY b.created_at DESC";
-        
+
         $stmt = $this->conn->prepare($sql);
         $stmt->execute($params);
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -105,5 +105,32 @@ class BookingModel
         $stmt->bindValue(':status', $status);
         $stmt->bindValue(':id', (int)$bookingId, PDO::PARAM_INT);
         return $stmt->execute();
+    }
+    /**
+     * Lấy thông tin booking cho Partner Calendar
+     */
+    public function getBookingsForCalendar($ownerId)
+    {
+        $sql = "SELECT 
+                    b.id, b.check_in_date, b.check_out_date, b.status,
+                    r.room_number,
+                    a.username
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id
+                JOIN account a ON b.account_id = a.id
+                WHERE h.owner_id = :ownerId
+                AND b.status != 'cancelled' 
+                AND b.status != 'checked_out'";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':ownerId', $ownerId, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getBookingsForCalendar error: " . $e->getMessage());
+            return [];
+        }
     }
 }

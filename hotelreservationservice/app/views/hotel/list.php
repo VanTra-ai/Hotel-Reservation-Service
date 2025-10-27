@@ -2,30 +2,24 @@
 
 <div class="container my-5">
     <h2 class="fw-bold mb-4 text-center">
-        Danh sách Khách sạn tại <?= htmlspecialchars($provinceName ?? 'Tỉnh thành') ?>
+        Danh sách Khách sạn tại <?= htmlspecialchars($data['provinceName'] ?? 'Tất cả') ?>
     </h2>
     <p class="text-muted mb-4 text-center">
         Tìm kiếm chỗ ở hoàn hảo cho chuyến đi của bạn.
     </p>
 
-    <?php if (empty($hotels)): ?>
+    <?php if (empty($data['hotels'])): ?>
         <div class="alert alert-info text-center" role="alert">
             Hiện tại chưa có khách sạn nào được thêm cho tỉnh thành này.
         </div>
     <?php else: ?>
         <div class="row g-4">
-            <?php foreach ($hotels as $hotel): ?>
+            <?php foreach ($data['hotels'] as $hotel): ?>
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <?php if (!empty($hotel->image)): ?>
-                            <img src="/Hotel-Reservation-Service/hotelreservationservice/<?= htmlspecialchars($hotel->image) ?>"
-                                class="card-img-top hotel-list-image"
-                                alt="<?= htmlspecialchars($hotel->name) ?>">
-                        <?php else: ?>
-                            <img src="https://via.placeholder.com/400x250?text=No+Image+Available"
-                                class="card-img-top hotel-list-image"
-                                alt="No image available">
-                        <?php endif; ?>
+                        <img src="<?= BASE_URL ?>/<?= htmlspecialchars($hotel->image ?? 'public/images/placeholder.png') ?>"
+                            class="card-img-top" style="height: 200px; object-fit: cover;"
+                            alt="<?= htmlspecialchars($hotel->name) ?>">
 
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold"><?= htmlspecialchars($hotel->name) ?></h5>
@@ -38,7 +32,8 @@
                                 <span class="badge bg-warning text-dark">
                                     <?= number_format($hotel->rating ?? 0, 1) ?>/10
                                 </span>
-                                <a href="/Hotel-Reservation-Service/hotelreservationservice/Hotel/show/<?= $hotel->id ?>"
+
+                                <a href="<?= BASE_URL ?>/hotel/show/<?= $hotel->id ?>?dates=<?= urlencode($data['dates_raw']) ?>"
                                     class="btn btn-primary btn-sm">
                                     Xem chi tiết
                                 </a>

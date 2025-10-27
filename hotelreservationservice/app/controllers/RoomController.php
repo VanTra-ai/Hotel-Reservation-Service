@@ -50,4 +50,27 @@ class RoomController
         }
         include 'app/views/room/show.php';
     }
+    /**
+     * API nội bộ để lấy các phòng trống qua AJAX
+     */
+    public function getAvailableRoomsAjax()
+    {
+        header('Content-Type: application/json');
+
+        // Lấy dữ liệu ngày tháng từ yêu cầu POST (gửi bằng JavaScript)
+        $hotelId = $_POST['hotel_id'] ?? 0;
+        $checkIn = $_POST['check_in'] ?? null;
+        $checkOut = $_POST['check_out'] ?? null;
+
+        if (!$hotelId || !$checkIn || !$checkOut) {
+            echo json_encode(['error' => 'Thông tin không hợp lệ.']);
+            exit;
+        }
+
+        $availableRooms = $this->roomModel->getAvailableRooms($hotelId, $checkIn, $checkOut);
+
+        // Trả về dữ liệu dưới dạng JSON
+        echo json_encode($availableRooms);
+        exit;
+    }
 }

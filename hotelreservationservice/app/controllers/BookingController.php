@@ -46,18 +46,22 @@ class BookingController
      */
     public function bookRoom()
     {
-        if (!SessionHelper::isLoggedIn()) {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
-            exit;
-        }
-
+        SessionHelper::requireLogin();
         $accountId = $this->getAccountId();
         if (!$accountId) {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
+            header('Location: ' . BASE_URL . '/account/login');
             exit;
         }
 
         $method = $_SERVER['REQUEST_METHOD'];
+        $roomId = $_POST['room_id'] ?? $_GET['room_id'] ?? '';
+
+        // Tạo mảng $data để truyền cho view
+        $data = [];
+        $data['room'] = $this->roomModel->getRoomById($roomId);
+        if (!$data['room']) {
+            die("Không tìm thấy phòng."); // Xử lý lỗi không tìm thấy phòng
+        }
 
         // POST: confirm booking
         if ($method === 'POST') {
@@ -83,7 +87,9 @@ class BookingController
             }
 
             if (strtotime($checkOutDate) <= strtotime($checkInDate)) {
-                $error = "Ngày trả phòng phải sau ngày nhận phòng.";
+                $data['error'] = "Ngày trả phòng phải sau ngày nhận phòng.";
+                $data['check_in'] = $checkInDate; // Giữ lại ngày đã nhập
+                $data['check_out'] = $checkOutDate;
                 include 'app/views/booking/book.php';
                 return;
             }
@@ -98,19 +104,21 @@ class BookingController
             $totalPrice = $nights * (float)$room->price;
 
             if ($this->bookingModel->createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice)) {
-                header('Location: /Hotel-Reservation-Service/hotelreservationservice/booking/confirmation?success=1');
+                header('Location: ' . BASE_URL . '/booking/confirmation');
                 exit;
             }
 
-            $error = "Có lỗi xảy ra khi lưu đặt phòng.";
+            $data['error'] = "Có lỗi xảy ra khi lưu đặt phòng.";
+            $data['check_in'] = $checkInDate; // Giữ lại ngày đã nhập nếu lỗi
+            $data['check_out'] = $checkOutDate;
             include 'app/views/booking/book.php';
             return;
         }
 
-        // GET: hiển thị form
-        $roomId = $_GET['room_id'] ?? '';
-        $room = $roomId ? $this->roomModel->getRoomById($roomId) : null;
-        $error = null;
+        $data['error'] = null;
+        $data['check_in'] = $_GET['check_in'] ?? '';
+        $data['check_out'] = $_GET['check_out'] ?? '';
+
         include 'app/views/booking/book.php';
     }
 

@@ -220,7 +220,33 @@ class RoomModel
 
             return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch (PDOException $e) {
-            // Trong thực tế, bạn nên log lỗi này thay vì để trống
+            return [];
+        }
+    }
+    /**
+     * Lấy các phòng còn trống của một khách sạn theo khoảng ngày
+     */
+    public function getAvailableRooms($hotelId, $checkInDate, $checkOutDate)
+    {
+        $sql = "SELECT * FROM " . $this->table_name . "
+                WHERE hotel_id = :hotelId
+                AND id NOT IN (
+                    SELECT room_id FROM booking
+                    WHERE status IN ('pending', 'confirmed', 'checked_in')
+                    AND (
+                        (check_in_date < :checkOut AND check_out_date > :checkIn)
+                    )
+                )";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->bindParam(':checkIn', $checkInDate);
+            $stmt->bindParam(':checkOut', $checkOutDate);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getAvailableRooms error: " . $e->getMessage());
             return [];
         }
     }

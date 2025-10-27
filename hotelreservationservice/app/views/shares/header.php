@@ -66,6 +66,11 @@ SessionHelper::startSession();
                                         <i class="fas fa-bed me-2"></i>Quản lý Phòng
                                     </a>
                                 </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= BASE_URL ?>/partner/calendar">
+                                        <i class="fas fa-calendar-alt me-2"></i>Lịch trình
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     <?php endif; ?>
