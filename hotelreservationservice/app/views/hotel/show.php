@@ -3,7 +3,6 @@
 include 'app/views/shares/header.php';
 require_once 'app/helpers/RatingHelper.php';
 
-// [SỬA ĐỔI] - Lấy các biến từ mảng $data mà Controller đã gửi
 $hotel = $data['hotel'] ?? null;
 $rooms = $data['rooms'] ?? [];
 $reviews = $data['reviews'] ?? [];
@@ -97,7 +96,7 @@ $criteria_map = [
                 </div>
 
                 <div class="mt-4">
-                    <h4 class="mb-3">Khách lưu trú ở đây thích điều gì?</h4>
+                    <h4 class="mb-3">Khách lưu trú ở đây thích điều gì? (<?= count($reviews) ?> đánh giá)</h4>
                     <?php if (!empty($reviews)): ?>
                         <?php foreach ($reviews as $review): ?>
                             <div class="d-flex mb-4 p-3 border rounded shadow-sm bg-white">
@@ -113,7 +112,8 @@ $criteria_map = [
                                             <span class="fw-bold"><?= htmlspecialchars($review->username) ?></span>
                                             <small class="text-muted">• <?= date('d/m/Y', strtotime($review->created_at)) ?></small>
 
-                                            <?php if ($review->ai_rating): ?>
+                                            <?php if (isset($review->ai_rating) && $review->ai_rating !== null): // Kiểm tra null rõ ràng 
+                                            ?>
                                                 <span class="badge bg-primary ms-2 fs-6">
                                                     <?= number_format((float)$review->ai_rating, 1) ?>
                                                 </span>
@@ -123,11 +123,18 @@ $criteria_map = [
 
                                     <h5 class="fw-bold mt-1 mb-2"><?= htmlspecialchars($review->rating_text ?? 'Chưa có đánh giá') ?></h5>
 
-                                    <?php if ($review->booking_id): ?>
+                                    <?php if ($review->booking_id): // Kiểm tra có booking_id không 
+                                    ?>
                                         <p class="mb-1 text-muted" style="font-size: 0.9em;">
                                             <i class="fas fa-bed me-1"></i> Phòng: <?= htmlspecialchars($review->room_type ?? 'N/A') ?>
-                                            <span class="mx-2">|</span>
-                                            <i class="fas fa-clock me-1"></i> Lưu trú: <?= htmlspecialchars($review->nights ?? '?') ?> đêm
+                                            <?php if (isset($review->nights) && $review->nights !== null): ?>
+                                                <span class="mx-2">|</span>
+                                                <i class="fas fa-clock me-1"></i> Lưu trú: <?= htmlspecialchars($review->nights) ?> đêm
+                                            <?php endif; ?>
+                                            <?php if (!empty($review->group_type)): ?>
+                                                <span class="mx-2">|</span>
+                                                <i class="fas fa-users me-1"></i> Nhóm: <?= htmlspecialchars($review->group_type) ?>
+                                            <?php endif; ?>
                                         </p>
                                     <?php endif; ?>
 
@@ -147,7 +154,7 @@ $criteria_map = [
             <div class="col-lg-4">
                 <div class="card shadow-sm mb-4">
                     <div class="card-header bg-light">
-                        <h5 class="mb-0">Đánh giá của khách</h5>
+                        <h5 class="mb-0">Điểm đánh giá trung bình</h5>
                     </div>
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-4">
@@ -161,13 +168,15 @@ $criteria_map = [
                         </div>
 
                         <?php foreach ($criteria_map as $key => $label): ?>
+                            <?php $score = $hotel->$key ?? 0; // Lấy điểm từ thuộc tính của $hotel 
+                            ?>
                             <div class="mb-2">
                                 <div class="d-flex justify-content-between" style="font-size: 0.9em;">
                                     <span><?= $label ?></span>
-                                    <span class="fw-bold"><?= number_format((float)($hotel->$key ?? 0), 1) ?></span>
+                                    <span class="fw-bold"><?= number_format((float)$score, 1) ?></span>
                                 </div>
                                 <div class="progress" style="height: 6px;">
-                                    <div class="progress-bar" role="progressbar" style="width: <?= (($hotel->$key ?? 0) * 10) ?>%;"></div>
+                                    <div class="progress-bar" role="progressbar" style="width: <?= (($score / 10) * 100) ?>%;"></div>
                                 </div>
                             </div>
                         <?php endforeach; ?>

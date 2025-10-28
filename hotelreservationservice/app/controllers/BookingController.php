@@ -70,6 +70,7 @@ class BookingController
             $checkInDate = $_POST['check_in_date'] ?? '';
             $checkOutDate = $_POST['check_out_date'] ?? '';
             $guests = max(1, (int)($_POST['guests'] ?? 1));
+            $groupType = $_POST['group_type'] ?? null;
 
             $today = date('Y-m-d');
             if (strtotime($checkInDate) < strtotime($today)) {
@@ -100,11 +101,18 @@ class BookingController
                 include 'app/views/booking/book.php';
                 return;
             }
+            $allowedGroupTypes = ['Cặp đôi', 'Phòng gia đình', 'Nhóm', 'Khách lẻ']; // Nên dùng constant nếu có
+            if (empty($groupType) || !in_array($groupType, $allowedGroupTypes, true)) {
+                $data['error'] = "Vui lòng chọn loại nhóm khách hợp lệ.";
+                // ... (Chuẩn bị $data để render lại view) ...
+                include 'app/views/booking/book.php';
+                return;
+            }
 
             $nights = max(1, (strtotime($checkOutDate) - strtotime($checkInDate)) / (60 * 60 * 24));
             $totalPrice = $nights * (float)$room->price;
 
-            if ($this->bookingModel->createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice)) {
+            if ($this->bookingModel->createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice, $groupType)) {
                 header('Location: ' . BASE_URL . '/booking/confirmation');
                 exit;
             }

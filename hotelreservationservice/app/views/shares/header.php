@@ -32,11 +32,6 @@ SessionHelper::startSession();
                     <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/hotel/list">Khách sạn</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/room/list">Phòng</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-info fw-bold" href="<?= BASE_URL ?>/ai">
-                            <i class="fas fa-magic me-1"></i>AI Playground
-                        </a>
-                    </li>
                     <?php if (SessionHelper::isPartner()): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-success fw-bold" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -75,6 +70,11 @@ SessionHelper::startSession();
                         </li>
                     <?php endif; ?>
                     <?php if (SessionHelper::isAdmin()): ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-info fw-bold" href="<?= BASE_URL ?>/ai">
+                                <i class="fas fa-magic me-1"></i>AI Playground
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary fw-bold" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-cogs me-1"></i>Quản trị

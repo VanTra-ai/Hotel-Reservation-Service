@@ -14,9 +14,9 @@ class ReviewModel
     public function getReviewsByHotelId($hotelId)
     {
         // Thêm JOIN với booking và room để lấy thông tin ngữ cảnh
-        $query = "SELECT r.*, a.username, 
-                         b.check_in_date, b.check_out_date,
-                         room.room_type
+        $query = "SELECT r.*, a.username,
+                 b.check_in_date, b.check_out_date, b.group_type,
+                 room.room_type
                   FROM " . $this->table_name . " r 
                   JOIN account a ON r.account_id = a.id 
                   LEFT JOIN booking b ON r.booking_id = b.id -- Sử dụng LEFT JOIN để không bị lỗi nếu booking_id là NULL

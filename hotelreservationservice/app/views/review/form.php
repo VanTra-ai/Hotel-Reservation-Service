@@ -48,6 +48,7 @@ endif;
                             <p class="mb-1">Khách sạn: <strong><?= htmlspecialchars($booking->hotel_name) ?></strong></p>
                             <p class="mb-1">Phòng đã ở: <strong><?= htmlspecialchars($booking->room_type) ?></strong></p>
                             <p class="mb-0">Thời gian: <strong><?= htmlspecialchars($booking->check_in_date) ?></strong> đến <strong><?= htmlspecialchars($booking->check_out_date) ?></strong> (<?= htmlspecialchars($booking->nights ?? '?') ?> đêm)</p>
+                            <p class="mb-0">Nhóm khách: <strong><?= htmlspecialchars($booking->group_type ?? 'Không xác định') ?></strong></p>
                         </div>
 
                         <div class="mb-3">

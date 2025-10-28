@@ -11,24 +11,31 @@ class BookingModel
     }
 
     // Tạo booking mới
-    public function createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice)
+    public function createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice, $groupType = null)
     {
         if (!$this->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) return false;
 
         if (strtotime($checkInDate) >= strtotime($checkOutDate)) return false;
 
         $sql = "INSERT INTO " . $this->table_name . "
-            (account_id, room_id, check_in_date, check_out_date, total_price, status)
-            VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price, :status)"; // Thêm :status
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue(':account_id', (int)$accountId, PDO::PARAM_INT);
-        $stmt->bindValue(':room_id', (int)$roomId, PDO::PARAM_INT);
-        $stmt->bindValue(':check_in_date', $checkInDate);
-        $stmt->bindValue(':check_out_date', $checkOutDate);
-        $stmt->bindValue(':total_price', (float)$totalPrice);
-        $stmt->bindValue(':status', BOOKING_STATUS_PENDING);
+                (account_id, room_id, check_in_date, check_out_date, total_price, status, group_type)
+                VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :total_price, :status, :group_type)";
 
-        return $stmt->execute();
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':account_id', (int)$accountId, PDO::PARAM_INT);
+            $stmt->bindValue(':room_id', (int)$roomId, PDO::PARAM_INT);
+            $stmt->bindValue(':check_in_date', $checkInDate);
+            $stmt->bindValue(':check_out_date', $checkOutDate);
+            $stmt->bindValue(':total_price', (float)$totalPrice);
+            $stmt->bindValue(':status', BOOKING_STATUS_PENDING);
+            $stmt->bindValue(':group_type', $groupType, PDO::PARAM_STR);
+
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Create booking error: " . $e->getMessage());
+            return false;
+        }
     }
 
     // Kiểm tra phòng có trống
@@ -145,8 +152,8 @@ class BookingModel
     // Lấy thông tin booking để tạo form review
     public function getBookingByIdForReview($bookingId, $accountId)
     {
-        $sql = "SELECT b.*, r.hotel_id, r.room_type, r.room_number, h.name AS hotel_name, 
-            (SELECT COUNT(*) FROM review rev WHERE rev.booking_id = b.id) as review_count
+        $sql = "SELECT b.*, r.hotel_id, r.room_type, r.room_number, h.name AS hotel_name, b.group_type,
+                        (SELECT COUNT(*) FROM review rev WHERE rev.booking_id = b.id) as review_count
                  FROM booking b
                  JOIN room r ON b.room_id = r.id
                  JOIN hotel h ON r.hotel_id = h.id
@@ -157,11 +164,10 @@ class BookingModel
             $stmt = $this->conn->prepare($sql);
             $stmt->bindValue(':bookingId', (int)$bookingId, PDO::PARAM_INT);
             $stmt->bindValue(':accountId', (int)$accountId, PDO::PARAM_INT);
-            $stmt->bindValue(':status_checked_out', BOOKING_STATUS_CHECKED_OUT); // Sử dụng constant
+            $stmt->bindValue(':status_checked_out', BOOKING_STATUS_CHECKED_OUT);
             $stmt->execute();
             $booking = $stmt->fetch(PDO::FETCH_OBJ);
 
-            // Tính số đêm ở
             if ($booking) {
                 $check_in = strtotime($booking->check_in_date);
                 $check_out = strtotime($booking->check_out_date);

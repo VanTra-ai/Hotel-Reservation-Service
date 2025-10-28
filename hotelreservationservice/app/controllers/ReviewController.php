@@ -65,26 +65,40 @@ class ReviewController
 
             // --- BẮT ĐẦU GỌI AI ---
             $predicted_score = null;
-            $rating_text = 'Chưa có đánh giá';
+            $rating_text = 'Chưa có đánh giá'; // Mặc định
             try {
-                // 3. Chuẩn bị dữ liệu cho AI (review_info)
-                // Lấy thông tin từ booking/hotel
-                $room_type_text = $booking->room_type ?? 'Phòng Giường Đôi';
-                // Tạm thời hardcode group_type/stay_duration nếu CSDL chưa có cột đó trong booking
-                $group_type_text = 'Cặp đôi/Hai người';
-                $stay_duration_text = $booking->nights . ' đêm'; // Dùng số đêm tính được
+                // 3. Chuẩn bị review_info (Ngữ cảnh)
+                $room_type_text = $booking->room_type ?? 'Phòng Giường Đôi'; // Lấy từ booking
+                $group_type_text = $booking->group_type ?? 'Khách lẻ'; // Lấy từ booking, fallback 'Khách lẻ'
+                $stay_duration_text = ($booking->nights ?? 1) . ' đêm'; // Dùng số đêm đã tính
 
-                $mapping_file = file_get_contents('app/config/metadata_mapping.json');
-                $mappings = json_decode($mapping_file, true);
+                // Đọc file mapping
+                $mapping_file_path = 'app/config/metadata_mapping.json'; // Đảm bảo đường dẫn đúng
+                if (!file_exists($mapping_file_path)) {
+                    throw new Exception("Không tìm thấy file metadata_mapping.json");
+                }
+                $mappings = json_decode(file_get_contents($mapping_file_path), true);
+                if (json_last_error() !== JSON_ERROR_NONE) {
+                    throw new Exception("Lỗi đọc file JSON: " . json_last_error_msg());
+                }
 
-                // Chuyển đổi sang ID số cho AI
+                // Chuyển đổi sang ID số cho AI (Cần map key chính xác)
+                $room_type_key = $room_type_text; // Giả sử key khớp, nếu không cần map
+                $stay_duration_key = $stay_duration_text; // Giả sử key khớp, nếu không cần map
+
+                // Map group_type từ CSDL sang key trong JSON
+                $group_type_key = 'Khách lẻ'; // Default
+                if ($group_type_text === 'Cặp đôi') $group_type_key = 'Cặp đôi/Hai người';
+                elseif ($group_type_text === 'Phòng gia đình') $group_type_key = 'Gia đình có trẻ nhỏ'; // Kiểm tra key trong JSON
+                elseif ($group_type_text === 'Nhóm') $group_type_key = 'Nhóm bạn'; // Kiểm tra key trong JSON
+
                 $review_info = [
-                    $mappings['room_type_mapping'][$room_type_text] ?? 0,
-                    $mappings['stay_duration_mapping'][$stay_duration_text] ?? 1,
-                    $mappings['group_type_mapping'][$group_type_text] ?? 0
+                    $mappings['room_type_mapping'][$room_type_key] ?? 0,      // ID loại phòng
+                    $mappings['stay_duration_mapping'][$stay_duration_key] ?? 1, // ID thời gian ở
+                    $mappings['group_type_mapping'][$group_type_key] ?? 4       // ID loại nhóm 
                 ];
 
-                // 4. Chuẩn bị Hotel Info (7 điểm tĩnh) cho AI (CẦN THIẾT vì mô hình được huấn luyện với nó)
+                // 4. Chuẩn bị Hotel Info (7 điểm tĩnh) cho AI
                 $hotel_info = [
                     (float)$hotel->service_staff,
                     (float)$hotel->amenities,
@@ -101,11 +115,12 @@ class ReviewController
                     $rating_text = RatingHelper::getTextFromScore($predicted_score);
                 }
             } catch (Exception $e) {
-                error_log("AI Process Error: " . $e->getMessage());
-                // Giữ predicted_score là null, rating_text là 'Chưa có đánh giá'
+                // Ghi log lỗi chi tiết hơn
+                error_log("AI Process/Mapping Error in ReviewController::add: " . $e->getMessage());
+                // Không dừng chương trình, vẫn lưu review với điểm AI là null
             }
 
-            // 6. Lưu vào Database
+            // 6. Lưu vào Database (Giữ nguyên)
             $reviewAdded = $this->reviewModel->addReview(
                 $hotel->id,
                 $accountId,
@@ -123,13 +138,12 @@ class ReviewController
             );
 
             if ($reviewAdded) {
-                // Trigger tự cập nhật rating của hotel.
                 $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Cảm ơn bạn đã gửi đánh giá!'];
             } else {
-                // Nếu xảy ra lỗi CSDL (ví dụ: duplicate key)
-                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Đã xảy ra lỗi khi lưu đánh giá. Booking này có thể đã được đánh giá trước đó.']; // Thông báo lỗi rõ ràng hơn
+                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Không thể lưu đánh giá vào CSDL. Booking này có thể đã được đánh giá.'];
             }
 
+            // Luôn chuyển hướng về trang chi tiết khách sạn sau khi xử lý
             header("Location: " . BASE_URL . "/hotel/show/" . $hotel->id);
             exit();
         }

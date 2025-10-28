@@ -94,6 +94,7 @@ CREATE TABLE `booking` (
   `room_id` INT NOT NULL,
   `check_in_date` DATE NOT NULL,
   `check_out_date` DATE NOT NULL,
+  `group_type` VARCHAR(50) NULL DEFAULT NULL,
   `total_price` DECIMAL(10, 2) NOT NULL,
   `status` ENUM('pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out') DEFAULT 'pending',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

@@ -1,4 +1,4 @@
-<?php include 'app/views/shares/header.php'; 
+<?php include 'app/views/shares/header.php';
 //app/views/booking/book.php
 ?>
 
@@ -46,6 +46,18 @@
                             <label for="guests" class="form-label">Số người (Tối đa: <?= htmlspecialchars($room->capacity ?? 2) ?>)</label>
                             <input type="number" id="guests" name="guests" class="form-control"
                                 value="1" min="1" max="<?= htmlspecialchars($room->capacity ?? 2) ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="group_type" class="form-label">Bạn đi cùng ai?</label>
+                            <select id="group_type" name="group_type" class="form-select" required>
+                                <option value="">-- Chọn loại nhóm --</option>
+                                <?php
+                                $group_options = ['Cặp đôi', 'Phòng gia đình', 'Nhóm', 'Khách lẻ'];
+                                foreach ($group_options as $option):
+                                ?>
+                                    <option value="<?= htmlspecialchars($option) ?>"><?= htmlspecialchars($option) ?></option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">
