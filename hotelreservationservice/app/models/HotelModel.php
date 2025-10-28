@@ -37,37 +37,83 @@ class HotelModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
-    public function addHotel($name, $address, $description, $city_id, $image)
-    {
+    public function addHotel(
+        $name,
+        $address,
+        $description,
+        $city_id,
+        $image,
+        $service_staff = 8.0,
+        $amenities = 8.0,
+        $cleanliness = 8.0,
+        $comfort = 8.0,
+        $value_for_money = 8.0,
+        $location = 8.0,
+        $free_wifi = 8.0
+    ) {
         $errors = [];
         if (empty($name)) {
             $errors['name'] = 'Tên khách sạn không được để trống';
         }
-        if (empty($address)) {
-            $errors['address'] = 'Địa chỉ khách sạn không được để trống';
-        }
-        if (empty($description)) {
-            $errors['description'] = 'Mô tả không được để trống';
-        }
+        // Thêm validation khác nếu cần
         if (count($errors) > 0) {
             return $errors;
         }
-        $query = "INSERT INTO " . $this->table_name . " (name, address, description, city_id, image) VALUES (:name, :address, :description, :city_id, :image)";
-        $stmt = $this->conn->prepare($query);
-        $name = htmlspecialchars(strip_tags($name));
-        $address = htmlspecialchars(strip_tags($address));
-        $description = htmlspecialchars(strip_tags($description));
-        $city_id = htmlspecialchars(strip_tags($city_id));
-        $image = htmlspecialchars(strip_tags($image));
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':address', $address);
-        $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':city_id', $city_id);
-        $stmt->bindParam(':image', $image);
-        if ($stmt->execute()) {
-            return true;
+
+        // <<< THÊM 7 CỘT VÀ PLACEHOLDER VÀO INSERT >>>
+        $query = "INSERT INTO " . $this->table_name . "
+                    (name, address, description, city_id, image,
+                     service_staff, amenities, cleanliness, comfort,
+                     value_for_money, location, free_wifi)
+                  VALUES
+                    (:name, :address, :description, :city_id, :image,
+                     :service_staff, :amenities, :cleanliness, :comfort,
+                     :value_for_money, :location, :free_wifi)";
+        try { // <<< Thêm try-catch >>>
+            $stmt = $this->conn->prepare($query);
+
+            // Bind dữ liệu cơ bản
+            $name = htmlspecialchars(strip_tags($name));
+            $address = htmlspecialchars(strip_tags($address));
+            $description = htmlspecialchars(strip_tags($description));
+            $city_id = filter_var($city_id, FILTER_VALIDATE_INT) ? (int)$city_id : null;
+            $image = $image ? htmlspecialchars(strip_tags($image)) : null; // Cho phép NULL
+
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':address', $address);
+            $stmt->bindParam(':description', $description);
+            $stmt->bindParam(':city_id', $city_id, PDO::PARAM_INT);
+            $stmt->bindParam(':image', $image, PDO::PARAM_STR);
+
+            // <<< BIND 7 ĐIỂM SỐ >>>
+            // Đảm bảo là float và trong khoảng hợp lệ (ví dụ 1-10)
+            $service_staff = max(1.0, min(10.0, (float)$service_staff));
+            $amenities = max(1.0, min(10.0, (float)$amenities));
+            $cleanliness = max(1.0, min(10.0, (float)$cleanliness));
+            $comfort = max(1.0, min(10.0, (float)$comfort));
+            $value_for_money = max(1.0, min(10.0, (float)$value_for_money));
+            $location = max(1.0, min(10.0, (float)$location));
+            $free_wifi = max(1.0, min(10.0, (float)$free_wifi));
+
+            $stmt->bindParam(':service_staff', $service_staff);
+            $stmt->bindParam(':amenities', $amenities);
+            $stmt->bindParam(':cleanliness', $cleanliness);
+            $stmt->bindParam(':comfort', $comfort);
+            $stmt->bindParam(':value_for_money', $value_for_money);
+            $stmt->bindParam(':location', $location);
+            $stmt->bindParam(':free_wifi', $free_wifi);
+
+
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                error_log("Add hotel failed: " . implode(", ", $stmt->errorInfo()));
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log("Add hotel PDO error: " . $e->getMessage());
+            return false;
         }
-        return false;
     }
     public function updateHotel($id, $name, $address, $description, $city_id, $image)
     {

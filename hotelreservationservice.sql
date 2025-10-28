@@ -7,7 +7,7 @@
 DROP DATABASE IF EXISTS hotel_reservation;
 
 -- Tạo mới database và sử dụng nó
-CREATE DATABASE hotel_reservation CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE hotel_reservation CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE hotel_reservation;
 
 -- ------------------------------------------------------------------
@@ -20,9 +20,10 @@ CREATE TABLE `account` (
   `email` VARCHAR(255) NOT NULL UNIQUE,
   `password` VARCHAR(255) DEFAULT NULL,
   `profile_picture` VARCHAR(255) DEFAULT NULL,
+  `country` VARCHAR(100) NULL DEFAULT NULL,
   `role` ENUM('admin', 'user', 'partner') NOT NULL DEFAULT 'user',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 2: `oauth_accounts`
@@ -35,7 +36,7 @@ CREATE TABLE `oauth_accounts` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   UNIQUE KEY `uq_provider_user` (`provider`, `provider_user_id`),
   FOREIGN KEY (`account_id`) REFERENCES `account`(`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 3: `city`
@@ -44,7 +45,7 @@ CREATE TABLE `city` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(100) NOT NULL,
   `image` VARCHAR(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 4: `hotel`
@@ -68,7 +69,7 @@ CREATE TABLE `hotel` (
   `owner_id` INT NULL,
   FOREIGN KEY (`city_id`) REFERENCES `city`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`owner_id`) REFERENCES `account`(`id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 5: `room`
@@ -83,7 +84,7 @@ CREATE TABLE `room` (
   `description` TEXT,
   `image` VARCHAR(255) DEFAULT NULL,
   FOREIGN KEY (`hotel_id`) REFERENCES `hotel`(`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 6: `booking`
@@ -100,7 +101,7 @@ CREATE TABLE `booking` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (`account_id`) REFERENCES `account`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`room_id`) REFERENCES `room`(`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ------------------------------------------------------------------
 -- Bảng 7: `review`
@@ -131,7 +132,7 @@ CREATE TABLE `review` (
   FOREIGN KEY (`account_id`) REFERENCES `account`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`booking_id`) REFERENCES `booking`(`id`) ON DELETE SET NULL,
   UNIQUE KEY `uq_booking_review` (`booking_id`) -- Đảm bảo 1 booking chỉ có 1 review
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 -- =================================================================
 -- Dữ liệu mẫu (Sample Data)
 -- =================================================================
@@ -141,9 +142,7 @@ CREATE TABLE `review` (
 -- Mật khẩu partner: partner123
 -- Mật khẩu user: user123
 INSERT INTO `account` (`id`, `username`, `fullname`, `email`, `password`, `role`) VALUES
-(1, 'admin', 'Quản Trị Viên', 'admin@gmail.com', '$2y$10$wyGTVCICfuAUG/jQQTlb.e4wU3LxRrPXnwOtBRcSVbc5YGb6iwxKi', 'admin'),
-(2, 'partner', 'Chủ Khách Sạn A', 'partner@example.com', '$2y$10$e.L6..sgg7Xg4wJ5Yx39UeOqR7D3jf2g2F2.8.zWbvc3BH3L2aYvK', 'partner'),
-(3, 'user', 'Người Dùng Test', 'user@example.com', '$2y$10$wE2/dG2.4.eL/C6YAbwY3uLpU8f0..3zF/PzV3i5f.21/e.pQYy1u', 'user');
+(1, 'admin', 'Quản Trị Viên', 'admin@gmail.com', '$2y$10$wyGTVCICfuAUG/jQQTlb.e4wU3LxRrPXnwOtBRcSVbc5YGb6iwxKi', 'admin');
 
 -- Chèn dữ liệu thành phố
 INSERT INTO city (name, image) VALUES
@@ -175,17 +174,6 @@ INSERT INTO city (name, image) VALUES
 ('Trà Vinh', 'public/images/cityimages/tra-vinh.jpg'),
 ('Vĩnh Long', 'public/images/cityimages/vinh-long.jpg');
 
--- Chèn dữ liệu khách sạn (đã có owner_id và 7 điểm đặc trưng)
-INSERT INTO `hotel` (`name`, `address`, `description`, `city_id`, `owner_id`, `service_staff`, `amenities`, `cleanliness`, `comfort`, `value_for_money`, `location`, `free_wifi`) VALUES
-('3H Grand Hotel', '274 Phan Chu Trinh, Phường 2, Vũng Tàu', 'Mô tả về 3H Grand Hotel.', 1, NULL, 9.1, 8.8, 9.2, 9.0, 8.5, 8.9, 8.7),
-('Summer Beach Hotel', 'Hẻm 45 Thùy Vân, Vũng Tàu', 'Mô tả về Summer Beach Hotel.', 1, 2, 9.5, 9.3, 9.5, 9.5, 9.2, 9.0, 8.6),
-('Fairfield by Marriott', 'NO. 5 Huu Nghi Avenue, Thuận An', 'Mô tả về Fairfield by Marriott.', 5, NULL, 9.0, 9.1, 9.3, 9.2, 8.8, 8.5, 9.4);
-
--- Chèn dữ liệu phòng
-INSERT INTO `room` (`hotel_id`, `room_number`, `room_type`, `capacity`, `price`, `description`) VALUES
-(1, '101', 'Phòng Tiêu Chuẩn', 2, 500000, 'Phòng tiêu chuẩn giường đôi.'),
-(1, '102', 'Phòng Superior', 2, 750000, 'Phòng superior có view đẹp hơn.'),
-(2, 'A201', 'Phòng Deluxe', 3, 1200000, 'Phòng deluxe hướng biển.');
 
 -- =================================================================
 -- Chỉ mục (Indexes) và Trigger

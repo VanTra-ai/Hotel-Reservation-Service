@@ -15,11 +15,12 @@ class AccountModel
      * Lưu tài khoản mới (password sẽ được hash ở đây).
      * Trả về true/false. Nếu false, có thể kiểm tra lỗi server log.
      */
-    public function save(string $username, string $fullName, string $email, string $password, string $role = 'user'): bool
+    public function save(string $username, string $fullName, string $email, string $password, string $role = ROLE_USER, ?string $profilePicture = null, ?string $country = null): bool
     {
         try {
-            $query = "INSERT INTO " . $this->table_name . " (username, fullname, email, password, role)
-                      VALUES (:username, :fullname, :email, :password, :role)";
+            // Thêm cột country và :country
+            $query = "INSERT INTO " . $this->table_name . " (username, fullname, email, password, role, profile_picture, country)
+                      VALUES (:username, :fullname, :email, :password, :role, :profile_picture, :country)";
             $stmt = $this->conn->prepare($query);
 
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -28,16 +29,20 @@ class AccountModel
             $fullName = htmlspecialchars(strip_tags($fullName));
             $email = htmlspecialchars(strip_tags($email));
             $role = htmlspecialchars(strip_tags($role));
+            $profilePicture = $profilePicture ? htmlspecialchars(strip_tags($profilePicture)) : null;
+            $country = $country ? htmlspecialchars(strip_tags($country)) : null; // Xử lý country
 
             $stmt->bindParam(":username", $username);
             $stmt->bindParam(":fullname", $fullName);
             $stmt->bindParam(":email", $email);
             $stmt->bindParam(":password", $hashed_password);
             $stmt->bindParam(":role", $role);
+            $stmt->bindParam(":profile_picture", $profilePicture, PDO::PARAM_STR);
+            $stmt->bindParam(":country", $country, PDO::PARAM_STR); // Bind country
 
             return $stmt->execute();
         } catch (PDOException $e) {
-            // TODO: Log $e->getMessage() vào file log nếu cần
+            error_log("Account save error: " . $e->getMessage());
             return false;
         }
     }
@@ -47,7 +52,7 @@ class AccountModel
      */
     public function getAccountByEmail(string $email): ?object
     {
-        $query = "SELECT id, username, fullname, email, password, role
+        $query = "SELECT id, username, fullname, email, password, role, profile_picture, country
                   FROM " . $this->table_name . " WHERE email = :email LIMIT 1";
         $stmt = $this->conn->prepare($query);
         $email = htmlspecialchars(strip_tags($email));
@@ -62,7 +67,7 @@ class AccountModel
      */
     public function getAccountByUsername(string $username): ?object
     {
-        $query = "SELECT id, username, fullname, email, password, role
+        $query = "SELECT id, username, fullname, email, password, role, profile_picture, country
                   FROM " . $this->table_name . " WHERE username = :username LIMIT 1";
         $stmt = $this->conn->prepare($query);
         $username = htmlspecialchars(strip_tags($username));
@@ -77,7 +82,7 @@ class AccountModel
      */
     public function getAccountById(int $id): ?object
     {
-        $query = "SELECT id, username, fullname, email, password, role
+        $query = "SELECT id, username, fullname, email, password, role, profile_picture, country
                   FROM " . $this->table_name . " WHERE id = :id LIMIT 1";
         $stmt = $this->conn->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
@@ -131,7 +136,7 @@ class AccountModel
         // Sử dụng Subquery để đảm bảo mỗi tài khoản chỉ trả về một hàng duy nhất,
         // ngay cả khi có lỗi dữ liệu (một partner sở hữu nhiều khách sạn).
         $query = "SELECT 
-                    a.id, a.username, a.fullname, a.email, a.role, a.created_at,
+                    a.id, a.username, a.fullname, a.email, a.role, a.created_at, a.profile_picture, a.country,
                     (SELECT h.name FROM hotel h WHERE h.owner_id = a.id LIMIT 1) as hotel_name 
                   FROM " . $this->table_name . " a
                   ORDER BY a.role, a.username ASC";
@@ -144,9 +149,10 @@ class AccountModel
     /**
      * Cập nhật thông tin và vai trò của một tài khoản
      */
-    public function updateAccountInfo(int $id, string $fullname, string $email, string $role): bool
+    public function updateAccountInfo(int $id, string $fullname, string $email, string $role, ?string $country = null): bool
     {
-        $query = "UPDATE " . $this->table_name . " SET fullname = :fullname, email = :email, role = :role WHERE id = :id";
+        // Thêm SET country = :country nếu muốn cập nhật cả country ở đây
+        $query = "UPDATE " . $this->table_name . " SET fullname = :fullname, email = :email, role = :role, country = :country WHERE id = :id";
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':fullname', $fullname);

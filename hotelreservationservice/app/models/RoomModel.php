@@ -216,28 +216,109 @@ class RoomModel
     /**
      * Lấy các phòng còn trống của một khách sạn theo khoảng ngày
      */
-    public function getAvailableRooms($hotelId, $checkInDate, $checkOutDate)
+    public function getAvailableRooms($hotelId, $checkInDate, $checkOutDate, ?string $roomType = null, int $limit = 5, int $offset = 0): array
     {
         $sql = "SELECT * FROM " . $this->table_name . "
-                WHERE hotel_id = :hotelId
-                AND id NOT IN (
+                WHERE hotel_id = :hotelId";
+
+        if ($roomType !== null && $roomType !== '') {
+            $sql .= " AND room_type = :roomType ";
+        }
+
+        $sql .= " AND id NOT IN (
                     SELECT room_id FROM booking
-                    WHERE status IN ('pending', 'confirmed', 'checked_in')
-                    AND (
-                        (check_in_date < :checkOut AND check_out_date > :checkIn)
-                    )
-                )";
+                    WHERE status IN (:status_pending, :status_confirmed, :status_checked_in)
+                    AND (check_in_date < :checkOut AND check_out_date > :checkIn)
+                 )
+                 ORDER BY price ASC
+                 LIMIT :limit OFFSET :offset";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            // Bind các tham số cũ
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->bindParam(':checkIn', $checkInDate);
+            $stmt->bindParam(':checkOut', $checkOutDate);
+            $stmt->bindValue(':status_pending', BOOKING_STATUS_PENDING);
+            $stmt->bindValue(':status_confirmed', BOOKING_STATUS_CONFIRMED);
+            $stmt->bindValue(':status_checked_in', BOOKING_STATUS_CHECKED_IN);
+
+            if ($roomType !== null && $roomType !== '') {
+                $stmt->bindParam(':roomType', $roomType, PDO::PARAM_STR);
+            }
+
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getAvailableRooms error: " . $e->getMessage());
+            return [];
+        }
+    }
+    /**
+     * Lấy danh sách các loại phòng duy nhất và giá thấp nhất của chúng
+     * cho một khách sạn cụ thể. (Phiên bản SQL đơn giản hơn)
+     * @param int $hotelId ID của khách sạn
+     * @return array Mảng các đối tượng, mỗi đối tượng chứa room_type, min_price, capacity
+     */
+    public function getUniqueRoomTypesByHotelId(int $hotelId): array
+    {
+        $sql = "SELECT
+                    room_type,
+                    MIN(price) as min_price,
+                    MIN(capacity) as capacity -- Lấy capacity nhỏ nhất trong nhóm làm đại diện
+                FROM " . $this->table_name . "
+                WHERE hotel_id = :hotelId
+                GROUP BY room_type
+                ORDER BY min_price ASC"; // Sắp xếp theo giá tăng dần
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getUniqueRoomTypesByHotelId error: " . $e->getMessage());
+            return []; // Trả về mảng rỗng nếu có lỗi
+        }
+    }
+    /**
+     * Lấy SỐ LƯỢNG phòng còn trống (để phân trang)
+     */
+    public function getAvailableRoomsCount($hotelId, $checkInDate, $checkOutDate, ?string $roomType = null): int
+    {
+        $sql = "SELECT COUNT(*) FROM " . $this->table_name . "
+                WHERE hotel_id = :hotelId";
+
+        if ($roomType !== null && $roomType !== '') {
+            $sql .= " AND room_type = :roomType ";
+        }
+
+        $sql .= " AND id NOT IN (
+                    SELECT room_id FROM booking
+                    WHERE status IN (:status_pending, :status_confirmed, :status_checked_in)
+                    AND (check_in_date < :checkOut AND check_out_date > :checkIn)
+                 )";
 
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
             $stmt->bindParam(':checkIn', $checkInDate);
             $stmt->bindParam(':checkOut', $checkOutDate);
+            $stmt->bindValue(':status_pending', BOOKING_STATUS_PENDING);
+            $stmt->bindValue(':status_confirmed', BOOKING_STATUS_CONFIRMED);
+            $stmt->bindValue(':status_checked_in', BOOKING_STATUS_CHECKED_IN);
+
+            if ($roomType !== null && $roomType !== '') {
+                $stmt->bindParam(':roomType', $roomType, PDO::PARAM_STR);
+            }
             $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            return (int)$stmt->fetchColumn();
         } catch (PDOException $e) {
-            error_log("getAvailableRooms error: " . $e->getMessage());
-            return [];
+            error_log("getAvailableRoomsCount error: " . $e->getMessage());
+            return 0;
         }
     }
 }

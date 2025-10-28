@@ -11,26 +11,28 @@ class ReviewModel
     }
 
     // Lấy danh sách đánh giá theo ID khách sạn
-    public function getReviewsByHotelId($hotelId)
+    public function getReviewsByHotelId(int $hotelId, int $limit, int $offset): array
     {
-        // Thêm JOIN với booking và room để lấy thông tin ngữ cảnh
-        $query = "SELECT r.*, a.username,
-                 b.check_in_date, b.check_out_date, b.group_type,
-                 room.room_type
+        $query = "SELECT r.*, a.username, a.country, a.fullname, 
+                         b.check_in_date, b.check_out_date,
+                         room.room_type
                   FROM " . $this->table_name . " r 
                   JOIN account a ON r.account_id = a.id 
-                  LEFT JOIN booking b ON r.booking_id = b.id -- Sử dụng LEFT JOIN để không bị lỗi nếu booking_id là NULL
+                  LEFT JOIN booking b ON r.booking_id = b.id 
                   LEFT JOIN room ON b.room_id = room.id
                   WHERE r.hotel_id = :hotel_id 
-                  ORDER BY r.created_at DESC";
+                  ORDER BY r.created_at DESC
+                  LIMIT :limit OFFSET :offset";
 
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':hotel_id', $hotelId);
+        $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT); // <<< BIND LIMIT
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT); // <<< BIND OFFSET
         $stmt->execute();
 
         $reviews = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-        // Tính số đêm ở cho mỗi review (tương tự như trong BookingModel)
+        // Tính số đêm ở cho mỗi review (giữ nguyên)
         foreach ($reviews as $review) {
             if ($review->check_in_date && $review->check_out_date) {
                 $check_in = strtotime($review->check_in_date);
@@ -39,7 +41,7 @@ class ReviewModel
                 $nights = max(1, round($diff / (60 * 60 * 24)));
                 $review->nights = $nights;
             } else {
-                $review->nights = null; // Hoặc giá trị mặc định
+                $review->nights = null;
             }
         }
 
@@ -62,17 +64,18 @@ class ReviewModel
         float $ratingLocation,
         float $ratingWifi,
         ?float $aiRating,
-        ?string $ratingText
+        ?string $ratingText,
+        ?string $createdAt = null
     ) {
         $query = "INSERT INTO " . $this->table_name . " 
-                  (hotel_id, account_id, booking_id, 
-                   rating_staff, rating_amenities, rating_cleanliness, rating_comfort, 
+                  (hotel_id, account_id, booking_id,
+                   rating_staff, rating_amenities, rating_cleanliness, rating_comfort,
                    rating_value, rating_location, rating_wifi,
-                   ai_rating, rating_text, comment) 
+                   ai_rating, rating_text, comment, created_at) -- <<< Xóa country
                   VALUES (:hotel_id, :account_id, :booking_id,
-                          :rating_staff, :rating_amenities, :rating_cleanliness, :rating_comfort, 
+                          :rating_staff, :rating_amenities, :rating_cleanliness, :rating_comfort,
                           :rating_value, :rating_location, :rating_wifi,
-                          :ai_rating, :rating_text, :comment)";
+                          :ai_rating, :rating_text, :comment, COALESCE(:created_at, NOW()))";
 
         try {
             $stmt = $this->conn->prepare($query);
@@ -95,11 +98,28 @@ class ReviewModel
             $stmt->bindParam(':ai_rating', $aiRating);
             $stmt->bindParam(':rating_text', $ratingText);
             $stmt->bindParam(':comment', $comment);
+            $stmt->bindParam(':created_at', $createdAt, PDO::PARAM_STR);
 
             return $stmt->execute();
         } catch (PDOException $e) {
             error_log("Add review error: " . $e->getMessage());
             return false;
+        }
+    }
+    /**
+     * Lấy tổng số review cho một khách sạn
+     */
+    public function getReviewCountByHotelId(int $hotelId): int
+    {
+        $query = "SELECT COUNT(*) FROM " . $this->table_name . " WHERE hotel_id = :hotel_id";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+            $stmt->execute();
+            return (int)$stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("GetReviewCount Error: " . $e->getMessage());
+            return 0;
         }
     }
 }

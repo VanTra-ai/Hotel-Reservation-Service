@@ -165,5 +165,5 @@
         </div>
     </div>
 </div>
-
+<script src="<?= BASE_URL ?>/public/js/search_form.js"></script>
 <?php include 'app/views/shares/footer.php'; ?>

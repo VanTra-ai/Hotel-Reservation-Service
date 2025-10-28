@@ -13,7 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 
 <!-- ✅ Script custom (ĐÃ SỬA DÙNG BASE_URL) -->
-<script src="<?= BASE_URL ?>/public/js/search_form.js"></script>
+<!-- <script src="<?= BASE_URL ?>/public/js/search_form.js"></script> -->
 
 </body>
 

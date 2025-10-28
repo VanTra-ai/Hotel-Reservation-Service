@@ -57,20 +57,39 @@ class RoomController
     {
         header('Content-Type: application/json');
 
-        // Lấy dữ liệu ngày tháng từ yêu cầu POST (gửi bằng JavaScript)
         $hotelId = $_POST['hotel_id'] ?? 0;
         $checkIn = $_POST['check_in'] ?? null;
         $checkOut = $_POST['check_out'] ?? null;
+        $roomType = $_POST['room_type'] ?? null;
+
+        // <<< THÊM: Lấy trang hiện tại từ AJAX >>>
+        $page = (int)($_POST['page'] ?? 1); // Trang mặc định là 1
+        if ($page < 1) $page = 1;
+        $limit = 5; // 5 phòng mỗi trang
+        $offset = ($page - 1) * $limit;
 
         if (!$hotelId || !$checkIn || !$checkOut) {
             echo json_encode(['error' => 'Thông tin không hợp lệ.']);
             exit;
         }
 
-        $availableRooms = $this->roomModel->getAvailableRooms($hotelId, $checkIn, $checkOut);
+        // 1. Lấy tổng số phòng trống (để tính toán phân trang)
+        $totalRooms = $this->roomModel->getAvailableRoomsCount($hotelId, $checkIn, $checkOut, $roomType);
+        $totalPages = (int)ceil($totalRooms / $limit);
 
-        // Trả về dữ liệu dưới dạng JSON
-        echo json_encode($availableRooms);
+        // 2. Lấy phòng cho trang hiện tại
+        $availableRooms = $this->roomModel->getAvailableRooms($hotelId, $checkIn, $checkOut, $roomType, $limit, $offset);
+
+        // 3. Trả về JSON bao gồm cả phòng và thông tin phân trang
+        echo json_encode([
+            'success' => true,
+            'rooms' => $availableRooms,
+            'pagination' => [
+                'current_page' => $page,
+                'total_pages' => $totalPages,
+                'total_rooms' => $totalRooms
+            ]
+        ]);
         exit;
     }
 }

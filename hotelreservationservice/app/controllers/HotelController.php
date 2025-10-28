@@ -84,8 +84,34 @@ class HotelController
             return;
         }
 
-        $data['rooms'] = $this->roomModel->getRoomsByHotelId($id);
-        $data['reviews'] = $this->reviewModel->getReviewsByHotelId($id);
+        // <<< BẮT ĐẦU LOGIC PHÂN TRANG REVIEW >>>
+
+        $reviews_per_page = 10; // Số review mỗi trang (có thể đặt 5 hoặc 10)
+        // Lấy trang review hiện tại từ URL (ví dụ: ?review_page=2)
+        $current_review_page = (int)($_GET['review_page'] ?? 1);
+        if ($current_review_page < 1) $current_review_page = 1;
+
+        // 1. Lấy tổng số review
+        $total_reviews = $this->reviewModel->getReviewCountByHotelId($id);
+
+        // 2. Tính toán tổng số trang và offset
+        $total_review_pages = (int)ceil($total_reviews / $reviews_per_page);
+        if ($current_review_page > $total_review_pages && $total_reviews > 0) $current_review_page = $total_review_pages;
+        $offset = ($current_review_page - 1) * $reviews_per_page;
+
+        // 3. Lấy reviews cho trang hiện tại
+        $data['reviews'] = $this->reviewModel->getReviewsByHotelId($id, $reviews_per_page, $offset);
+
+        // 4. Gửi thông tin phân trang sang View
+        $data['review_pagination'] = [
+            'current_page' => $current_review_page,
+            'total_pages'  => $total_review_pages,
+            'total_reviews' => $total_reviews
+        ];
+
+        // <<< KẾT THÚC LOGIC PHÂN TRANG REVIEW >>>
+
+        $data['roomTypes'] = $this->roomModel->getUniqueRoomTypesByHotelId($id);
 
         include_once 'app/views/hotel/show.php';
     }
