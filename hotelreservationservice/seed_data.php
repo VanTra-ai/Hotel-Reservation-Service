@@ -1,25 +1,24 @@
 <?php
-// seed_data.php (Đặt ở thư mục gốc)
-// Tăng thời gian thực thi và bộ nhớ cho script import lớn
-ini_set('max_execution_time', 6000); // 5 phút
-ini_set('memory_limit', '512M'); // 256 MB
+// seed_data.php
+ini_set('max_execution_time', 6000);
+ini_set('memory_limit', '512M');
 
-echo "<pre>"; // Dùng thẻ <pre> để dễ đọc output trên trình duyệt nếu chạy qua web server
+echo "<pre>";
 
 // --- 1. Setup ---
-define('BASE_URL', '/Hotel-Reservation-Service/hotelreservationservice'); // Đảm bảo đúng BASE_URL
+define('BASE_URL', '/Hotel-Reservation-Service/hotelreservationservice');
 require_once 'app/config/database.php';
-require_once 'app/config/constants.php'; // Cần constants
+require_once 'app/config/constants.php';
 require_once 'app/models/CityModel.php';
 require_once 'app/models/HotelModel.php';
 require_once 'app/models/AccountModel.php';
 require_once 'app/models/ReviewModel.php';
-require_once 'app/models/RoomModel.php'; // Đảm bảo đã include RoomModel
+require_once 'app/models/RoomModel.php';
 
 // Kết nối DB
 try {
     $db = (new Database())->getConnection();
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Bật báo lỗi Exception
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Lỗi kết nối CSDL: " . $e->getMessage());
 }
@@ -29,7 +28,19 @@ $cityModel = new CityModel($db);
 $hotelModel = new HotelModel($db);
 $accountModel = new AccountModel($db);
 $reviewModel = new ReviewModel($db);
-$roomModel = new RoomModel($db); // Khởi tạo RoomModel
+$roomModel = new RoomModel($db);
+
+try {
+    // Chuẩn bị các câu lệnh INSERT
+    $imageInsertStmt = $db->prepare("INSERT INTO hotel_images (hotel_id, image_path, is_thumbnail, display_order) VALUES (:hotel_id, :image_path, :is_thumbnail, :display_order)");
+
+    $bookingInsertStmt = $db->prepare(
+        "INSERT INTO booking (account_id, room_id, check_in_date, check_out_date, group_type, total_price, status, created_at) 
+         VALUES (:account_id, :room_id, :check_in_date, :check_out_date, :group_type, :total_price, :status, :created_at)"
+    );
+} catch (PDOException $e) {
+    die("Lỗi chuẩn bị câu lệnh SQL: " . $e->getMessage());
+}
 
 // Đường dẫn đến thư mục chứa dữ liệu JSON và Ảnh
 $jsonBaseDir = __DIR__ . '/../Hotel information'; // Thư mục chứa các tỉnh JSON (thư mục gốc)
@@ -40,12 +51,7 @@ echo "BẮT ĐẦU IMPORT DỮ LIỆU\n";
 echo "Kiểm tra thư mục JSON tại: " . realpath($jsonBaseDir) . "\n";
 echo "========================================\n";
 
-// --- 2. Quét thư mục Tỉnh/Thành phố ---
-$cityFolders = glob($jsonBaseDir . '/*', GLOB_ONLYDIR);
 
-if (empty($cityFolders)) {
-    die("Lỗi: Không tìm thấy thư mục tỉnh/thành phố nào trong '$jsonBaseDir'\n");
-}
 $cityFolderNameMapping = [
     'ba-ria-vung-tau' => 'Bà Rịa Vũng Tàu',
     'binh-duong' => 'Bình Dương',
@@ -75,12 +81,17 @@ $cityFolderNameMapping = [
     'tra-vinh' => 'Trà Vinh',
     'vinh-long' => 'Vĩnh Long',
 ];
+// --- 2. Quét thư mục Tỉnh/Thành phố ---
+$cityFolders = glob($jsonBaseDir . '/*', GLOB_ONLYDIR);
 
+if (empty($cityFolders)) {
+    die("Lỗi: Không tìm thấy thư mục tỉnh/thành phố nào trong '$jsonBaseDir'\n");
+}
 foreach ($cityFolders as $cityFolder) {
     $cityFolderName = basename($cityFolder);
+    $cityName = $cityFolderNameMapping[$cityFolderName] ?? ucwords(str_replace(['-', '_'], ' ', $cityFolderName));
 
     echo "\n---> Đang xử lý Thành phố: " . $cityName . " (Thư mục: " . $cityFolderName . ")\n";
-
     // --- 3. Xử lý City ---
     $city = $cityModel->getCityByName($cityName); // Dùng tên đã chuẩn hóa
     if (!$city) {
@@ -133,11 +144,13 @@ foreach ($cityFolders as $cityFolder) {
         // --- 5. Xử lý Ảnh Khách sạn ---
         $hotelImageFolderPath = $imageBaseDir . '/' . $cityFolderName . '/' . $hotelFolderName; // Đường dẫn đến thư mục ảnh của khách sạn
         $hotelRepresentativeImage = null; // Đường dẫn ảnh đại diện (tương đối)
+        $allHotelImages = [];
         if (is_dir($hotelImageFolderPath)) {
             $images = glob($hotelImageFolderPath . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE); // Quét nhiều loại đuôi file
             if (!empty($images)) {
                 // Lấy ảnh đầu tiên làm đại diện, lưu đường dẫn tương đối
                 $hotelRepresentativeImage = $images[0]; // Ví dụ: public/images/hotels/ba-ria-vung-tau/3h-grand/abc.jpg
+                $allHotelImages = $images;
                 echo "      Ảnh đại diện: " . $hotelRepresentativeImage . "\n";
             } else {
                 echo "      Cảnh báo: Không tìm thấy file ảnh nào trong thư mục: " . $hotelImageFolderPath . "\n";
@@ -147,74 +160,81 @@ foreach ($cityFolders as $cityFolder) {
         }
 
         // --- 6. Xử lý Hotel ---
-        $eval = $jsonData->evaluation_categories ?? (object)[]; // Lấy điểm 7 tiêu chí, đảm bảo là object ngay cả khi null
-
-        // **QUAN TRỌNG**: Cần đảm bảo hàm addHotel trong HotelModel đã được cập nhật để nhận 7 điểm số
+        $eval = $jsonData->evaluation_categories ?? (object)[];
         $hotelAdded = $hotelModel->addHotel(
             $hotelName,
             $jsonData->address ?? '',
             $jsonData->description ?? '',
             $city_id,
-            $hotelRepresentativeImage, // Đường dẫn ảnh đại diện
+            $hotelRepresentativeImage, // Chỉ lưu ảnh đại diện vào bảng hotel
             (float)($eval->service_staff ?? 8.0),
             (float)($eval->amenities ?? 8.0),
             (float)($eval->cleanliness ?? 8.0),
             (float)($eval->comfort ?? 8.0),
-            (float)($eval->value_for_money ?? 8.0), // Kiểm tra key trong JSON
+            (float)($eval->value_for_money ?? 8.0),
             (float)($eval->location ?? 8.0),
-            (float)($eval->free_wifi ?? 8.0)     // Kiểm tra key trong JSON
+            (float)($eval->free_wifi ?? 8.0)
         );
 
 
         if ($hotelAdded === true) {
             $hotel_id = $db->lastInsertId();
             echo "      + Đã thêm khách sạn mới vào CSDL với ID: " . $hotel_id . "\n";
-            // <<< === BẮT ĐẦU THÊM LOGIC TẠO PHÒNG TỰ ĐỘNG === >>>
+
+            // <<< === THÊM MỚI: LƯU TẤT CẢ ẢNH VÀO hotel_images === >>>
+            $imageOrder = 0;
+            $thumbnailSet = false;
+            foreach ($allHotelImages as $imagePath) {
+                $isThumbnail = false;
+                // Đánh dấu ảnh đầu tiên là thumbnail (hoặc ảnh đại diện đã chọn)
+                if ($imagePath === $hotelRepresentativeImage && !$thumbnailSet) {
+                    $isThumbnail = true;
+                    $thumbnailSet = true;
+                }
+
+                try {
+                    $imageInsertStmt->execute([
+                        ':hotel_id' => $hotel_id,
+                        ':image_path' => $imagePath,
+                        ':is_thumbnail' => (int)$isThumbnail,
+                        ':display_order' => $imageOrder++
+                    ]);
+                } catch (PDOException $e) {
+                    echo "    !!! LỖI: Không thể lưu ảnh '$imagePath' vào hotel_images: " . $e->getMessage() . "\n";
+                }
+            }
+            echo "      + Đã lưu " . $imageOrder . " ảnh vào bảng hotel_images.\n";
+            // <<< === KẾT THÚC THÊM MỚI === >>>
+
+
+            // <<< === LOGIC TẠO PHÒNG TỰ ĐỘNG === >>>
             echo "        -> Bắt đầu tạo phòng mẫu...\n";
-            $roomCounter = 1; // Biến đếm để tạo số phòng duy nhất
+            // ... (Code tạo phòng mẫu giữ nguyên) ...
+            $roomCounter = 1;
             $roomsCreatedCount = 0;
-
-            // Lặp qua 10 loại phòng đã định nghĩa trong constants.php
             foreach (ALLOWED_ROOM_TYPES as $roomType) {
-                // Tạo 5 phòng cho mỗi loại
                 for ($i = 1; $i <= 5; $i++) {
-                    // Tạo số phòng đơn giản (ví dụ: P101, P102...)
+                    // ... (Code tạo $roomNumber, $randomPrice, $capacity) ...
                     $roomNumber = 'P' . ($roomCounter++);
-
-                    // Giá ngẫu nhiên từ 100,000 đến 700,000
                     $randomPrice = mt_rand(100, 700) * 1000;
-
-                    // Sức chứa mặc định (có thể điều chỉnh tùy loại phòng)
                     $capacity = 2;
-                    if (str_contains(strtolower($roomType), 'gia đình')) { // Ví dụ: Phòng gia đình cho 4 người
-                        $capacity = 4;
-                    } elseif (str_contains(strtolower($roomType), 'superior') || str_contains(strtolower($roomType), 'deluxe')) {
-                        $capacity = 3; // Ví dụ
-                    }
+                    if (str_contains(strtolower($roomType), 'gia đình')) $capacity = 4;
+                    elseif (str_contains(strtolower($roomType), 'superior') || str_contains(strtolower($roomType), 'deluxe')) $capacity = 3;
 
-
-                    // Gọi RoomModel để thêm phòng
                     $roomAddResult = $roomModel->addRoom(
                         $hotel_id,
                         $roomNumber,
                         $roomType,
                         $capacity,
                         $randomPrice,
-                        "Phòng " . $roomType . " tại " . $hotelName, // Mô tả đơn giản
-                        null // Không có ảnh phòng mẫu
+                        "Phòng " . $roomType . " tại " . $hotelName,
+                        null
                     );
-
-                    if ($roomAddResult === true) {
-                        $roomsCreatedCount++;
-                    } else {
-                        echo "        !!! LỖI: Không thể thêm phòng mẫu '$roomNumber' ($roomType) cho khách sạn ID $hotel_id.\n";
-                        // Có thể in lỗi chi tiết hơn nếu $roomAddResult là mảng lỗi validation
-                        // if (is_array($roomAddResult)) print_r($roomAddResult);
-                    }
-                } // Kết thúc vòng lặp 5 phòng/loại
-            } // Kết thúc vòng lặp qua các loại phòng
+                    if ($roomAddResult === true) $roomsCreatedCount++;
+                }
+            }
             echo "        -> Đã tạo thành công " . $roomsCreatedCount . " phòng mẫu.\n";
-            // <<< === KẾT THÚC LOGIC TẠO PHÒNG TỰ ĐỘNG === >>>
+            // <<< === KẾT THÚC LOGIC TẠO PHÒNG === >>>
 
             // --- 7. Xử lý Reviews ---
             $reviewCount = 0;
@@ -267,8 +287,73 @@ foreach ($cityFolders as $cityFolder) {
                             }
                         }
                     }
+                    // --- 7b. TẠO BOOKING GIẢ LẬP ---
+                    $booking_id_to_save = null; // Khởi tạo
+                    $reviewDateStr = $reviewInfo->date ?? null; // "24/09/2023"
+                    $stayDurationStr = $reviewInfo->stay_duration ?? '1 đêm'; // "1 đêm · tháng 9/2023"
 
-                    // --- 7b. Chuẩn bị dữ liệu Review ---
+                    // 1. Trích xuất số đêm
+                    $nights = 1; // Mặc định
+                    if (preg_match('/(\d+)\s*đêm/', $stayDurationStr, $matches)) {
+                        $nights = (int)$matches[1];
+                    }
+
+                    // 2. Phân tích ngày (dùng $createdAtTimestamp đã có)
+                    $createdAtTimestamp = null; // Dùng cho review
+                    $checkOutDateObj = null; // Dùng cho booking
+                    if ($reviewDateStr) {
+                        $normalizedDateStr = preg_replace('#/0(\d{2})/#', '/$1/', $reviewDateStr);
+                        $timestamp = strtotime(str_replace('/', '-', $normalizedDateStr));
+                        if ($timestamp !== false) {
+                            $checkOutDateObj = new DateTime(date('Y-m-d H:i:s', $timestamp));
+                            $createdAtTimestamp = $checkOutDateObj->format('Y-m-d H:i:s'); // Ngày tạo review = ngày checkout
+                        }
+                    }
+
+                    // 3. Nếu ngày hợp lệ, tạo booking
+                    if ($checkOutDateObj) {
+                        $checkOutDateStr = $checkOutDateObj->format('Y-m-d');
+
+                        // Tính ngày nhận phòng
+                        $checkInDateObj = clone $checkOutDateObj;
+                        $checkInDateObj->modify("-$nights days");
+                        $checkInDateStr = $checkInDateObj->format('Y-m-d');
+
+                        // Ngày đặt (created_at) = ngày nhận phòng (theo yêu cầu)
+                        $bookingCreatedAtStr = $checkInDateStr . ' 12:00:00'; // Giả sử đặt lúc 12h trưa
+
+                        // Lấy 1 room_id ngẫu nhiên thuộc khách sạn này
+                        $roomId = $roomModel->getRandomRoomIdForHotel($hotel_id);
+
+                        if ($roomId) {
+                            $groupType = $reviewInfo->group_type ?? null; // "Cặp đôi"
+                            $randomPricePerNight = mt_rand(100, 700) * 1000; // Giá ngẫu nhiên 100k-700k
+                            $totalPrice = $randomPricePerNight * $nights;
+
+                            try {
+                                $bookingInsertStmt->execute([
+                                    ':account_id' => $account_id,
+                                    ':room_id' => $roomId,
+                                    ':check_in_date' => $checkInDateStr,
+                                    ':check_out_date' => $checkOutDateStr,
+                                    ':group_type' => $groupType,
+                                    ':total_price' => $totalPrice,
+                                    ':status' => BOOKING_STATUS_CHECKED_OUT, // Đã check out vì có review
+                                    ':created_at' => $bookingCreatedAtStr
+                                ]);
+                                $booking_id_to_save = $db->lastInsertId(); // Lấy ID booking vừa tạo
+                            } catch (PDOException $e) {
+                                echo "        !!! LỖI: Không thể tạo booking giả: " . $e->getMessage() . "\n";
+                            }
+                        } else {
+                            echo "        !!! LỖI: Không tìm thấy phòng nào cho hotel ID $hotel_id để tạo booking giả.\n";
+                        }
+                    } else {
+                        echo "        !!! Cảnh báo: Không thể phân tích ngày '$reviewDateStr' để tạo booking giả. Review sẽ không được liên kết.\n";
+                    }
+                    // --- KẾT THÚC 7b ---
+
+                    // --- 7c. Chuẩn bị dữ liệu Review ---
                     if ($account_id === null || $account_id <= 0) {
                         echo "        !!! LỖI: account_id không hợp lệ ($account_id) trước khi lưu review cho '$reviewerName'\n";
                         continue; // Bỏ qua nếu không có account_id

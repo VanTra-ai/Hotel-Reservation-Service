@@ -269,4 +269,16 @@ class HotelModel
 
         return $stmt->execute();
     }
+    /**
+     * Lấy tất cả hình ảnh của một khách sạn
+     * @param int $hotelId
+     * @return array Danh sách đối tượng hình ảnh
+     */
+    public function getHotelImages(int $hotelId): array
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM hotel_images WHERE hotel_id = :hotel_id ORDER BY display_order ASC, id ASC");
+        $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }

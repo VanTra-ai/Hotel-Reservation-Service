@@ -5,17 +5,17 @@ require_once 'app/helpers/RatingHelper.php';
 
 // Lấy các biến từ mảng $data mà Controller đã gửi
 $hotel = $data['hotel'] ?? null;
-$roomTypes = $data['roomTypes'] ?? []; // Dùng biến này
+$hotelImages = $data['hotelImages'] ?? []; // Lấy mảng hình ảnh
+$roomTypes = $data['roomTypes'] ?? [];
 $reviews = $data['reviews'] ?? [];
 $check_in = $data['check_in'] ?? '';
 $check_out = $data['check_out'] ?? '';
-$pagination = $data['review_pagination'] ?? [ // Lấy thông tin phân trang
+$pagination = $data['review_pagination'] ?? [
     'current_page' => 1,
     'total_pages' => 1,
     'total_reviews' => 0
 ];
 
-// Định nghĩa 7 tiêu chí đánh giá (Dùng cho hiển thị cột phải)
 $criteria_map = [
     'service_staff' => 'Nhân viên',
     'amenities' => 'Tiện nghi',
@@ -25,30 +25,66 @@ $criteria_map = [
     'location' => 'Địa điểm',
     'free_wifi' => 'WiFi miễn phí'
 ];
+
+// <<< SỬA 1: Tìm index của ảnh thumbnail >>>
+$thumbnailImage = null;
+$thumbnailIndex = 0; // Mặc định là ảnh đầu tiên
+if (!empty($hotelImages)) {
+    foreach ($hotelImages as $index => $img) { // Thêm $index
+        if (isset($img->is_thumbnail) && $img->is_thumbnail) {
+            $thumbnailImage = $img;
+            $thumbnailIndex = $index; // <<< Lưu lại index của ảnh thumbnail
+            break;
+        }
+    }
+    // Nếu không có ảnh nào được đánh dấu, lấy ảnh đầu tiên
+    if (!$thumbnailImage) {
+        $thumbnailImage = $hotelImages[0];
+        $thumbnailIndex = 0;
+    }
+}
 ?>
 
 <div class="container my-5">
     <?php if ($hotel): ?>
         <div class="row g-4">
 
-            <!-- CỘT NỘI DUNG CHÍNH (BÊN TRÁI) -->
             <div class="col-lg-8">
-                <!-- 1. THÔNG TIN KHÁCH SẠN (Giữ nguyên) -->
                 <div class="card shadow-sm mb-4">
                     <div class="card-body">
-                        <?php if (!empty($hotel->image)): ?>
-                            <img src="<?= BASE_URL ?>/<?= htmlspecialchars($hotel->image) ?>" class="img-fluid rounded mb-3" alt="<?= htmlspecialchars($hotel->name) ?>">
-                        <?php endif; ?>
+
                         <h2 class="card-title fw-bold"><?= htmlspecialchars($hotel->name) ?></h2>
                         <p class="card-text text-muted mb-1"><i class="fas fa-map-marker-alt me-1"></i> <?= htmlspecialchars($hotel->address) ?></p>
                         <p class="card-text text-muted"><i class="fas fa-phone me-1"></i> <?= htmlspecialchars($hotel->phone ?? 'Chưa có số điện thoại') ?></p>
+
+                        <?php if (!empty($hotelImages) && $thumbnailImage): ?>
+                            <div class="mb-4">
+                                <div class="main-image-display position-relative mb-2 rounded overflow-hidden">
+                                    <img src="<?= BASE_URL ?>/<?= htmlspecialchars($thumbnailImage->image_path) ?>"
+                                        class="img-fluid w-100 rounded"
+                                        alt="<?= htmlspecialchars($hotel->name) ?>"
+                                        style="max-height: 500px; object-fit: cover; cursor: pointer;"
+                                        data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
+                                        data-image-index="<?= $thumbnailIndex ?>" <div class="thumbnail-gallery d-flex flex-wrap gap-2 justify-content-start">
+                                    <?php foreach ($hotelImages as $index => $img): ?>
+                                        <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>"
+                                            class="img-thumbnail rounded"
+                                            alt="Ảnh khách sạn <?= $index + 1 ?>"
+                                            style="width: 100px; height: 75px; object-fit: cover; cursor: pointer;"
+                                            data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
+                                            data-image-index="<?= $index ?>"> <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php elseif (!empty($hotel->image)): // Fallback nếu chỉ có 1 ảnh cũ 
+                        ?>
+                            <img src="<?= BASE_URL ?>/<?= htmlspecialchars($hotel->image) ?>" class="img-fluid rounded mb-3" alt="<?= htmlspecialchars($hotel->name) ?>">
+                        <?php endif; ?>
                         <hr>
                         <h5 class="fw-bold">Mô tả</h5>
                         <p><?= nl2br(htmlspecialchars($hotel->description)) ?></p>
                     </div>
                 </div>
 
-                <!-- 2. KHỐI TÌM PHÒNG TRỐNG (Giữ nguyên) -->
                 <div class="card mb-4 shadow-sm bg-light-subtle">
                     <div class="card-body">
                         <h5 class="card-title">Kiểm tra phòng trống</h5>
@@ -74,7 +110,6 @@ $criteria_map = [
                     </div>
                 </div>
 
-                <!-- 3. DANH SÁCH CÁC LOẠI PHÒNG (Giữ nguyên) -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-primary text-white">
                         <h5 class="mb-0">Các loại phòng có sẵn</h5>
@@ -105,17 +140,13 @@ $criteria_map = [
                     </ul>
                 </div>
 
-                <!-- 3.5 HIỂN THỊ CÁC PHÒNG TRỐNG CHI TIẾT (Giữ nguyên) -->
                 <div id="available-rooms-details" class="mt-4" style="display: none;">
                     <h5 class="mb-3">Phòng trống chi tiết cho ngày đã chọn:</h5>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item text-center text-muted">Vui lòng chọn ngày và nhấn "Kiểm tra" để xem phòng trống.</li>
                     </ul>
-                    <!-- Container cho phân trang phòng trống -->
                     <div id="available-rooms-pagination" class="mt-4"></div>
                 </div>
-
-                <!-- 4. KHỐI BÌNH LUẬN ĐÃ ĐƯỢC DI CHUYỂN SANG CỘT PHẢI -->
 
             </div> <!-- <<< Kết thúc col-lg-8 (cột trái) -->
 
@@ -294,8 +325,70 @@ $criteria_map = [
         <div class="alert alert-danger text-center" role="alert">Không tìm thấy khách sạn này.</div>
     <?php endif; ?>
 </div>
+<div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-labelledby="imageGalleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center pt-0">
+                <div id="hotelImageCarousel" class="carousel slide" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <?php if (empty($hotelImages)): // Fallback nếu mảng rỗng 
+                        ?>
+                            <div class="carousel-item active">
+                                <img src="<?= BASE_URL ?>/public/images/placeholder.png" class="d-block w-100 rounded" alt="Không có ảnh" style="max-height: 80vh; object-fit: contain;">
+                            </div>
+                        <?php else: ?>
+                            <?php foreach ($hotelImages as $index => $img): ?>
+                                <div class="carousel-item <?= ($index === $thumbnailIndex) ? 'active' : '' ?>"> <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>" class="d-block w-100 rounded" alt="Hotel Image <?= $index + 1 ?>" style="max-height: 80vh; object-fit: contain;">
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                    <?php if (count($hotelImages) > 1): ?>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#hotelImageCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Trước</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#hotelImageCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Sau</span>
+                        </button>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Include script cho trang chi tiết khách sạn -->
 <script src="<?= BASE_URL ?>/public/js/hotel_detail.js"></script>
-
 <?php include 'app/views/shares/footer.php'; ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageGalleryModal = document.getElementById('imageGalleryModal');
+        if (imageGalleryModal) {
+
+            imageGalleryModal.addEventListener('shown.bs.modal', function(event) {
+                try {
+                    const button = event.relatedTarget;
+                    const imageIndex = button.dataset.imageIndex;
+
+                    const carouselElement = document.getElementById('hotelImageCarousel');
+                    if (carouselElement) {
+                        // Lấy instance đã có hoặc tạo mới
+                        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+
+                        // Chuyển đến slide tương ứng
+                        // 'pause' ngăn carousel tự chạy (nếu có)
+                        carousel.to(parseInt(imageIndex));
+                        // carousel.pause(); // Tạm dừng nếu carousel tự chạy
+                    }
+                } catch (e) {
+                    console.error("Lỗi khi khởi tạo carousel gallery:", e);
+                }
+            });
+        }
+    });
+</script>

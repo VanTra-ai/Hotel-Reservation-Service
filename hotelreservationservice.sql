@@ -133,6 +133,17 @@ CREATE TABLE `review` (
   FOREIGN KEY (`booking_id`) REFERENCES `booking`(`id`) ON DELETE SET NULL,
   UNIQUE KEY `uq_booking_review` (`booking_id`) -- Đảm bảo 1 booking chỉ có 1 review
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `hotel_images` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `hotel_id` INT NOT NULL,
+  `image_path` VARCHAR(255) NOT NULL,
+  `is_thumbnail` BOOLEAN DEFAULT FALSE,
+  `display_order` INT DEFAULT 0,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (`hotel_id`) REFERENCES `hotel`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 -- =================================================================
 -- Dữ liệu mẫu (Sample Data)
 -- =================================================================

@@ -61,22 +61,18 @@ class HotelController
         $check_out = '';
 
         if (!empty($dates_raw)) {
-            // Tách chuỗi ngày (ví dụ: "25/10/2025 đến 27/10/2025")
             $date_parts = explode(' đến ', $dates_raw);
             if (count($date_parts) == 2) {
-                // Chuyển đổi định dạng "d/m/Y" sang "Y-m-d" mà flatpickr hiểu
                 $check_in_dt = DateTime::createFromFormat('d/m/Y', $date_parts[0]);
                 $check_out_dt = DateTime::createFromFormat('d/m/Y', $date_parts[1]);
-
                 if ($check_in_dt) $check_in = $check_in_dt->format('Y-m-d');
                 if ($check_out_dt) $check_out = $check_out_dt->format('Y-m-d');
             }
         }
-
-        // Gửi ngày tháng đã xử lý sang view
         $data['check_in'] = $check_in;
         $data['check_out'] = $check_out;
 
+        // Lấy thông tin khách sạn
         $data['hotel'] = $this->hotelModel->getHotelById($id);
         if (!$data['hotel']) {
             http_response_code(404);
@@ -84,35 +80,35 @@ class HotelController
             return;
         }
 
-        // <<< BẮT ĐẦU LOGIC PHÂN TRANG REVIEW >>>
+        $hotelImages = $this->hotelModel->getHotelImages($id);
 
-        $reviews_per_page = 10; // Số review mỗi trang (có thể đặt 5 hoặc 10)
-        // Lấy trang review hiện tại từ URL (ví dụ: ?review_page=2)
+        // Logic dự phòng: Nếu không có ảnh trong bảng mới, 
+        // hãy dùng ảnh đại diện cũ (hotel.image)
+        if (empty($hotelImages) && !empty($data['hotel']->image)) {
+            $fallbackImage = new stdClass(); // Tạo đối tượng rỗng
+            $fallbackImage->image_path = $data['hotel']->image;
+            $fallbackImage->is_thumbnail = true;
+            $hotelImages[] = $fallbackImage; // Thêm ảnh cũ vào mảng
+        }
+
+        $data['hotelImages'] = $hotelImages; // <<< Truyền mảng ảnh vào $data >>>
+
+        $reviews_per_page = 10;
         $current_review_page = (int)($_GET['review_page'] ?? 1);
         if ($current_review_page < 1) $current_review_page = 1;
-
-        // 1. Lấy tổng số review
         $total_reviews = $this->reviewModel->getReviewCountByHotelId($id);
-
-        // 2. Tính toán tổng số trang và offset
         $total_review_pages = (int)ceil($total_reviews / $reviews_per_page);
         if ($current_review_page > $total_review_pages && $total_reviews > 0) $current_review_page = $total_review_pages;
         $offset = ($current_review_page - 1) * $reviews_per_page;
-
-        // 3. Lấy reviews cho trang hiện tại
         $data['reviews'] = $this->reviewModel->getReviewsByHotelId($id, $reviews_per_page, $offset);
-
-        // 4. Gửi thông tin phân trang sang View
         $data['review_pagination'] = [
             'current_page' => $current_review_page,
             'total_pages'  => $total_review_pages,
             'total_reviews' => $total_reviews
         ];
-
-        // <<< KẾT THÚC LOGIC PHÂN TRANG REVIEW >>>
-
         $data['roomTypes'] = $this->roomModel->getUniqueRoomTypesByHotelId($id);
 
+        // Tải View và truyền $data
         include_once 'app/views/hotel/show.php';
     }
 }

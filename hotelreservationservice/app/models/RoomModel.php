@@ -321,4 +321,31 @@ class RoomModel
             return 0;
         }
     }
+    /**
+     * Lấy ID của một phòng ngẫu nhiên thuộc khách sạn
+     * (Dùng để tạo dữ liệu booking giả lập cho script seed)
+     *
+     * @param int $hotelId
+     * @return int|null
+     */
+    public function getRandomRoomIdForHotel(int $hotelId): ?int
+    {
+        // Lấy 1 ID phòng bất kỳ
+        $query = "SELECT id FROM " . $this->table_name . " 
+                  WHERE hotel_id = :hotelId 
+                  ORDER BY RAND() 
+                  LIMIT 1";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_COLUMN); // Lấy chỉ cột đầu tiên
+
+            return $result ? (int)$result : null; // Trả về ID (int) hoặc null
+
+        } catch (PDOException $e) {
+            error_log("getRandomRoomIdForHotel error: " . $e->getMessage());
+            return null;
+        }
+    }
 }
