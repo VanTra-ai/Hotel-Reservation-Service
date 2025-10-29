@@ -24,23 +24,26 @@ Dự án được phân chia thành 3 vai trò: **Người dùng (User)**, **Đ�
 
 ### Chức năng cho Người dùng (User) 🙋
 
-- **Tài khoản:** Đăng ký, đăng nhập.
-- **Tìm kiếm & Khám phá:** Tìm kiếm khách sạn, xem chi tiết phòng và các đánh giá.
-- **Xem đánh giá AI:** Xem điểm số tổng hợp và các bình luận đã được AI phân tích.
-- **Đặt phòng & Quản lý:** Thực hiện đặt phòng, xem lịch sử và hủy các booking.
+- **Tài khoản:** Đăng ký, đăng nhập (bao gồm cả đăng nhập qua Google OAuth).
+- **Tìm kiếm & Khám phá:** Tìm kiếm khách sạn theo tỉnh thành, xem chi tiết khách sạn (với gallery nhiều ảnh), lọc phòng trống theo ngày.
+- **Xem đánh giá AI:** Xem điểm số tổng hợp và các bình luận đã được AI phân tích, bao gồm cả thông tin ngữ cảnh (loại phòng, số đêm ở, nhóm khách).
+- **Đặt phòng & Thanh toán:** Thực hiện đặt phòng, mô phỏng thanh toán qua cổng VNPAY hoặc chọn "Thanh toán tại quầy".
+- **Quản lý Cá nhân:** Xem lịch sử đặt phòng, hủy các booking (chưa xác nhận), và viết đánh giá cho các chuyến đi đã hoàn thành.
 
 ### Chức năng cho Đối tác (Partner) 🧑‍💼
 
-- **Dashboard riêng:** Truy cập "Kênh Đối tác" với trang tổng quan về các chỉ số kinh doanh.
-- **Báo cáo & Thống kê:** Xem báo cáo doanh thu, lượt đặt phòng, biểu đồ... **chỉ của các khách sạn mình sở hữu**.
-- **Quản lý Đặt phòng:** Cập nhật trạng thái cho các booking thuộc khách sạn của mình.
+- **Dashboard riêng:** Truy cập "Kênh Đối tác" với trang tổng quan về các chỉ số kinh doanh (doanh thu, lượt đặt) được lọc theo thời gian (Ngày/Tháng/Năm).
+- **Quản lý Khách sạn:** Cập nhật thông tin cơ bản và quản lý **gallery nhiều ảnh** cho khách sạn của mình.
+- **Quản lý Phòng:** Toàn quyền CRUD (Thêm/Sửa/Xóa) phòng, phân trang và tìm kiếm phòng theo tên/loại.
+- **Quản lý Đặt phòng:** Xem, lọc và cập nhật trạng thái (Xác nhận, Hủy, Check-in, Check-out) cho các booking thuộc khách sạn của mình.
+- **Bảng điều khiển Phòng trống (Availability Matrix):** Xem ma trận (matrix) hiển thị số lượng phòng trống theo **từng loại phòng** và **từng ngày**, giúp nhân viên kiểm soát tình trạng phòng trống (availability) theo thời gian thực.
 
 ### Chức năng cho Quản trị viên (Admin) 👑
 
-- **Dashboard Toàn hệ thống:** Xem báo cáo và thống kê của toàn bộ trang web.
-- **Quản lý Thành viên:** Quản lý tất cả tài khoản, phân quyền `user`, `partner`, `admin` và gán khách sạn cho đối tác.
-- **Quản lý Nội dung (CRUD):** Toàn quyền Thêm, Sửa, Xóa đối với **Thành phố**, **Khách sạn** (bao gồm 7 điểm đặc trưng cho AI), và **Phòng**.
-- **Quản lý Đặt phòng:** Quản lý tất cả các booking trong hệ thống.
+- **Dashboard Toàn hệ thống:** Xem báo cáo và thống kê của toàn bộ trang web, với bộ lọc mạnh mẽ theo Tỉnh/Thành phố, Khách sạn, và Thời gian (Ngày/Tháng/Năm).
+- **Quản lý Thành viên (CRUD):** Quản lý tất cả tài khoản, phân quyền `user`, `partner`, `admin` và gán khách sạn cho đối tác. Hỗ trợ tìm kiếm và phân trang.
+- **Quản lý Nội dung (CRUD):** Toàn quyền Thêm, Sửa, Xóa đối với **Thành phố**, **Khách sạn** (bao gồm quản lý gallery nhiều ảnh), và **Phòng**. Hỗ trợ tìm kiếm và phân trang.
+- **Quản lý Đặt phòng (CRUD):** Quản lý tất cả các booking trong hệ thống. Hỗ trợ tìm kiếm và phân trang.
 
 ---
 
@@ -48,8 +51,8 @@ Dự án được phân chia thành 3 vai trò: **Người dùng (User)**, **Đ�
 
 - **Backend (Web App) 🐘:** PHP thuần (OOP, MVC), Apache.
 - **Backend (AI Service) 🐍:** Python, Flask, PyTorch, Transformers (BERT), Scikit-learn.
-- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5, FontAwesome, Flatpickr, Chart.js.
-- **Database:** MySQL / MariaDB.
+- **Frontend:** HTML, CSS, JavaScript (AJAX, DOM), Bootstrap 5, FontAwesome, Flatpickr, Chart.js.
+- **Database:** MySQL / MariaDB (Sử dụng Triggers để tự động cập nhật điểm).
 - **Môi trường phát triển:** Laragon.
 
 ---
@@ -66,10 +69,9 @@ Dự án được phân chia thành 3 vai trò: **Người dùng (User)**, **Đ�
 
 ### 1. Clone Repository
 
-```bash
+````bash
 git clone [https://github.com/VanTra-ai/Hotel-Reservation-Service.git](https://github.com/VanTra-ai/Hotel-Reservation-Service.git)
 cd Hotel-Reservation-Service
-```
 
 ### 2. Cài đặt Web App (PHP)
 
@@ -122,32 +124,32 @@ cd Hotel-Reservation-Service
 
 ### 🔑 Tài khoản mặc định
 
-- **Admin:** `admin` / `admin123`
-- **Partner:** `partner` / `partner123`
-- **User:** `user` / `user123`
+- **Admin:** `admin` / `admin`
 
 ---
 
 ## 📂 Cấu trúc thư mục
 
-```
+````
+
 .
-├── HotelRatingAPI/             # Dự án API Python
-│   ├── production_model/       # Các file mô hình, tokenizer, scaler đã huấn luyện
-│   ├── venv/                   # Thư mục môi trường ảo (bị bỏ qua bởi Git)
-│   ├── api.py                  # File chính của Flask API
-│   └── requirements.txt        # Danh sách các thư viện Python
+├── HotelRatingAPI/ # Dự án API Python
+│ ├── production_model/ # Các file mô hình, tokenizer, scaler đã huấn luyện
+│ ├── venv/ # Thư mục môi trường ảo (bị bỏ qua bởi Git)
+│ ├── api.py # File chính của Flask API
+│ └── requirements.txt # Danh sách các thư viện Python
 │
-├── hotelreservationservice/    # Dự án Web PHP
-│   ├── app/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   └── views/
-│   ├── public/
-│   └── index.php
+├── hotelreservationservice/ # Dự án Web PHP
+│ ├── app/
+│ │ ├── controllers/
+│ │ ├── models/
+│ │ └── views/
+│ ├── public/
+│ └── index.php
 │
 ├── hotelreservationservice.sql # File khởi tạo cơ sở dữ liệu
 └── README.md
+
 ```
 
 ---
@@ -157,3 +159,4 @@ cd Hotel-Reservation-Service
 - [@VanTra-ai](https://github.com/VanTra-ai)
 - [@2280603697NguyenQuangVinh](https://github.com/2280603697NguyenQuangVinh)
 - [@LBT-123-ux](https://github.com/LBT-123-ux)
+```
