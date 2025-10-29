@@ -1,5 +1,10 @@
 <?php include 'app/views/shares/header.php';
 //app/views/booking/book.php
+$room = $data['room'] ?? null;
+$check_in_value = htmlspecialchars($data['check_in'] ?? '');
+$check_out_value = htmlspecialchars($data['check_out'] ?? '');
+$nights = $data['nights'] ?? 0;
+$total_price = $data['total_price'] ?? 0;
 ?>
 
 <div class="container my-5">
@@ -59,10 +64,31 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h5 class="fw-bold">Tóm tắt giá</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Giá mỗi đêm:</span>
+                                <span><?= number_format($room->price ?? 0, 0, ',', '.') ?> VNĐ</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Số đêm:</span>
+                                <span><?= htmlspecialchars($nights) ?></span>
+                            </div>
+                            <hr class="my-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5">Tổng tiền:</span>
+                                <span class="fw-bold fs-4 text-success">
+                                    <?= number_format($total_price, 0, ',', '.') ?> VNĐ
+                                </span>
+                            </div>
+                        </div>
 
                         <div class="d-flex justify-content-end gap-2">
                             <a href="javascript:history.back()" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Quay lại</a>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-check me-2"></i>Xác nhận đặt phòng</button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-check me-2"></i>Tiếp tục Thanh toán
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -71,6 +97,7 @@
     </div>
 </div>
 
+<?php include 'app/views/shares/footer.php'; ?>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const checkInInput = document.getElementById('check_in_date');
@@ -96,5 +123,3 @@
         });
     });
 </script>
-
-<?php include 'app/views/shares/footer.php'; ?>

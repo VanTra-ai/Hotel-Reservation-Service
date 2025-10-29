@@ -51,27 +51,37 @@ class AdminBookingController extends BaseAdminController // Kế thừa BaseAdmi
      * Cập nhật trạng thái từ form
      * Hàm này giờ sẽ nhận ID từ URL
      */
-    public function updateStatus($id) // Thêm tham số $id
+    public function updateStatus($id)
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            // Nếu không phải POST, chuyển hướng về trang danh sách
-            header('Location: ' . BASE_URL . '/admin/booking');
-            exit;
-        }
+        parent::__construct(); // Đảm bảo là Admin
 
-        // Lấy ID từ tham số URL, không cần lấy từ $_POST nữa
         $bookingId = (int)$id;
-        $status = $_POST['status'] ?? '';
+        $newStatus = $_POST['status'] ?? ''; // Lấy trạng thái từ form POST
 
-        $allowed = ['pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out'];
-        if ($bookingId <= 0 || !in_array($status, ALLOWED_BOOKING_STATUSES, true)) {
-            header('Location: ' . BASE_URL . '/admin/booking?error=invalid_data');
-            exit;
+        // Kiểm tra xem trạng thái mới có hợp lệ không
+        $allowedStatus = [
+            BOOKING_STATUS_PENDING,
+            BOOKING_STATUS_CONFIRMED,
+            BOOKING_STATUS_CHECKED_IN,
+            BOOKING_STATUS_CHECKED_OUT,
+            BOOKING_STATUS_CANCELLED
+        ];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($newStatus, $allowedStatus)) {
+
+            // <<< SỬA LỖI: Gọi hàm adminUpdateBookingStatus mới (không cần accountId) >>>
+            $success = $this->bookingModel->adminUpdateBookingStatus($bookingId, $newStatus);
+
+            if ($success) {
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Cập nhật trạng thái booking #' . $bookingId . ' thành công!'];
+            } else {
+                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Không thể cập nhật trạng thái.'];
+            }
+        } else {
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Yêu cầu không hợp lệ hoặc trạng thái không được phép.'];
         }
-        $result = $this->bookingModel->updateBookingStatus($bookingId, $status);
 
-        // Chuyển hướng về trang danh sách sau khi cập nhật
-        header('Location: ' . BASE_URL . '/admin/booking?success=updated');
+        header('Location: ' . BASE_URL . '/admin/booking'); // Quay lại trang danh sách booking
         exit;
     }
 
@@ -81,8 +91,9 @@ class AdminBookingController extends BaseAdminController // Kế thừa BaseAdmi
     public function cancel($id)
     {
         $bookingId = (int)$id;
+        $newStatus = $_POST['status'] ?? ''; // Lấy trạng thái từ form POST
         if ($bookingId > 0) {
-            $this->bookingModel->updateBookingStatus($bookingId, BOOKING_STATUS_CANCELLED);
+            $this->bookingModel->adminUpdateBookingStatus($bookingId, $newStatus);
         }
 
         // Chuyển hướng về trang danh sách sau khi hủy

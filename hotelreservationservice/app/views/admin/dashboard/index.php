@@ -69,7 +69,7 @@ $groupBy = $filters['group_by'] ?? 'day';
                     <label for="filter_year" class="form-label">Năm</label>
                     <select name="year" id="filter_year" class="form-select">
                         <option value="" <?= (empty($filters['year'])) ? 'selected' : '' ?>>-- Tất cả Năm --</option>
-                        <?php for ($y = 2023; $y <= 2026; $y++): ?>
+                        <?php for ($y = 2020; $y <= 2025; $y++): ?>
                             <option value="<?= $y ?>" <?= (($filters['year'] ?? 0) == $y) ? 'selected' : '' ?>><?= $y ?></option>
                         <?php endfor; ?>
                     </select>

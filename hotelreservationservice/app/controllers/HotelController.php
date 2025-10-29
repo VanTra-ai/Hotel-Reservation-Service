@@ -30,22 +30,49 @@ class HotelController
      */
     public function list()
     {
+        // 1. Lấy tham số Filter và Sort từ URL
         $provinceName = $_GET['province'] ?? '';
         $dates_raw = $_GET['dates'] ?? '';
-        $hotels = [];
 
+        $sortBy = $_GET['sort_by'] ?? 'rating'; // Mặc định: điểm cao nhất
+        $order = $_GET['order'] ?? 'DESC';
+
+        // 2. Xử lý City ID (nếu có)
+        $cityId = null;
         if (!empty($provinceName)) {
             $city = $this->cityModel->getCityByName($provinceName);
             if ($city) {
-                $hotels = $this->hotelModel->getHotelsByCityId($city->id);
+                $cityId = $city->id;
             }
-        } else {
-            $hotels = $this->hotelModel->getHotels();
         }
 
-        $data['hotels'] = $hotels;
-        $data['provinceName'] = $provinceName;
-        $data['dates_raw'] = $dates_raw; // Gửi nguyên chuỗi ngày tháng sang view
+        // 3. Cấu hình Phân trang
+        $limit = 9; // Ví dụ: 9 khách sạn mỗi trang (để chia đẹp 3 cột)
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+
+        // 4. Lấy dữ liệu
+        $total_hotels = $this->hotelModel->getHotelCount($cityId);
+        $offset = ($current_page - 1) * $limit;
+
+        $data['hotels'] = $this->hotelModel->getHotelsPaginated($limit, $offset, $cityId, $sortBy, $order);
+        // 5. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_hotels / $limit);
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_hotels,
+            'base_url' => BASE_URL . '/hotel/list'
+        ];
+
+        // 6. Gửi các giá trị lọc/sắp xếp sang View (để giữ trạng thái)
+        $data['filters'] = [
+            'province' => $provinceName,
+            'dates' => $dates_raw,
+            'sort_by' => $sortBy,
+            'order' => $order
+        ];
 
         include_once 'app/views/hotel/list.php';
     }

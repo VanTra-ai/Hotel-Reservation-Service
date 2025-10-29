@@ -10,22 +10,21 @@ class HotelModel
     }
     public function getHotels(?int $limit = null, ?int $offset = null, ?string $searchTerm = null)
     {
-        $query = "SELECT h.*, c.name AS city_name, a.fullname AS owner_name
+        $query = "SELECT h.*, c.name AS city_name, a.fullname AS owner_name,
+                         (SELECT MIN(price) FROM room r WHERE r.hotel_id = h.id) as min_price
                   FROM hotel h 
                   LEFT JOIN city c ON h.city_id = c.id
                   LEFT JOIN account a ON h.owner_id = a.id";
 
         $params = [];
 
-        // Thêm điều kiện tìm kiếm (WHERE)
         if (!empty($searchTerm)) {
-            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search";
+            $query .= " WHERE (h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search)";
             $params[':search'] = '%' . $searchTerm . '%';
         }
 
-        $query .= " ORDER BY h.id DESC"; // Sắp xếp mặc định
+        $query .= " ORDER BY h.id DESC";
 
-        // <<< LOGIC XỬ LÝ PHÂN TRANG TÙY CHỌN >>>
         if ($limit !== null && $offset !== null) {
             $query .= " LIMIT :limit OFFSET :offset";
             $params[':limit'] = $limit;
@@ -36,11 +35,11 @@ class HotelModel
 
         // Bind các tham số
         if (!empty($searchTerm)) {
-            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+            $stmt->bindValue(':search', $params[':search'], PDO::PARAM_STR);
         }
         if ($limit !== null && $offset !== null) {
-            $stmt->bindParam(':limit', $params[':limit'], PDO::PARAM_INT);
-            $stmt->bindParam(':offset', $params[':offset'], PDO::PARAM_INT);
+            $stmt->bindValue(':limit', $params[':limit'], PDO::PARAM_INT);
+            $stmt->bindValue(':offset', $params[':offset'], PDO::PARAM_INT);
         }
 
         $stmt->execute();
@@ -49,9 +48,15 @@ class HotelModel
     // Lấy danh sách khách sạn theo city_id
     public function getHotelsByCityId($cityId)
     {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE city_id = :city_id ORDER BY name ASC";
+        $query = "SELECT h.*, c.name as city_name,
+                         (SELECT MIN(price) FROM room r WHERE r.hotel_id = h.id) as min_price
+                  FROM " . $this->table_name . " h
+                  LEFT JOIN city c ON h.city_id = c.id
+                  WHERE h.city_id = :city_id 
+                  ORDER BY h.name ASC";
+
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':city_id', $cityId);
+        $stmt->bindParam(':city_id', $cityId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
@@ -315,17 +320,14 @@ class HotelModel
     /**
      * Lấy tổng số khách sạn (để phân trang)
      */
-    public function getHotelCount(?string $searchTerm = null): int
+    public function getHotelCount(?int $cityId = null): int
     {
-        $query = "SELECT COUNT(h.id) FROM hotel h 
-                  LEFT JOIN city c ON h.city_id = c.id";
+        $query = "SELECT COUNT(id) FROM " . $this->table_name;
         $params = [];
-
-        if (!empty($searchTerm)) {
-            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search";
-            $params[':search'] = '%' . $searchTerm . '%';
+        if ($cityId) {
+            $query .= " WHERE city_id = :cityId";
+            $params[':cityId'] = $cityId;
         }
-
         $stmt = $this->conn->prepare($query);
         $stmt->execute($params);
         return (int)$stmt->fetchColumn();
@@ -422,5 +424,69 @@ class HotelModel
         $stmt->bindParam(':imagePath', $imagePath, PDO::PARAM_STR);
         $stmt->execute();
         return (int)$stmt->fetchColumn() > 0;
+    }
+    /**
+     * Lấy danh sách khách sạn (ĐÃ CÓ PHÂN TRANG VÀ SẮP XẾP)
+     * Hàm này thay thế cho getHotels() và getHotelsByCityId() cũ
+     */
+    public function getHotelsPaginated(
+        int $limit,
+        int $offset,
+        ?int $cityId = null,
+        string $sortBy = 'rating',
+        string $order = 'DESC'
+    ): array {
+        // 1. Validate cột sắp xếp (để tránh SQL Injection)
+        $allowedSortBy = ['rating', 'min_price', 'name'];
+        if (!in_array($sortBy, $allowedSortBy)) {
+            $sortBy = 'rating'; // Mặc định
+        }
+
+        // 2. Validate thứ tự
+        $order = strtoupper($order) === 'ASC' ? 'ASC' : 'DESC';
+
+        // 3. Xây dựng câu lệnh SQL
+        // Chúng ta dùng LEFT JOIN thay vì subquery để có thể ORDER BY min_price
+        $query = "SELECT 
+                    h.*, 
+                    c.name as city_name, 
+                    MIN(r.price) as min_price
+                  FROM " . $this->table_name . " h
+                  LEFT JOIN city c ON h.city_id = c.id
+                  LEFT JOIN room r ON h.id = r.hotel_id";
+
+        $params = [];
+
+        // Thêm lọc theo thành phố (nếu có)
+        if ($cityId) {
+            $query .= " WHERE h.city_id = :cityId";
+            $params[':cityId'] = $cityId;
+        }
+
+        // GROUP BY để MIN(price) hoạt động
+        $query .= " GROUP BY h.id, c.name";
+
+        // Thêm ORDER BY
+        $query .= " ORDER BY $sortBy $order, h.id DESC"; // Thêm h.id để ổn định thứ tự
+
+        // Thêm LIMIT/OFFSET
+        $query .= " LIMIT :limit OFFSET :offset";
+        $params[':limit'] = $limit;
+        $params[':offset'] = $offset;
+
+        // 4. Thực thi
+        try {
+            $stmt = $this->conn->prepare($query);
+
+            if ($cityId) $stmt->bindParam(':cityId', $cityId, PDO::PARAM_INT);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getHotelsPaginated error: " . $e->getMessage());
+            return [];
+        }
     }
 }

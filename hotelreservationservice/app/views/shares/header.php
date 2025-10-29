@@ -29,8 +29,8 @@ SessionHelper::startSession();
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/hotel/list">Khách sạn</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/room/list">Phòng</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/hotel/list">Khách sạn</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="<?= BASE_URL ?>/room/list">Phòng</a></li> -->
 
                     <?php if (SessionHelper::isPartner()): ?>
                         <li class="nav-item dropdown">

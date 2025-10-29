@@ -11,7 +11,7 @@ class BookingModel
     }
 
     // Tạo booking mới
-    public function createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice, $groupType = null)
+    public function createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice, $groupType)
     {
         if (!$this->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) return false;
 
@@ -31,7 +31,10 @@ class BookingModel
             $stmt->bindValue(':status', BOOKING_STATUS_PENDING);
             $stmt->bindValue(':group_type', $groupType, PDO::PARAM_STR);
 
-            return $stmt->execute();
+            if ($stmt->execute()) {
+                return $this->conn->lastInsertId(); // <<< Phải trả về ID
+            }
+            return false;
         } catch (PDOException $e) {
             error_log("Create booking error: " . $e->getMessage());
             return false;
@@ -128,14 +131,39 @@ class BookingModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
-
-    // Cập nhật trạng thái booking
-    public function updateBookingStatus($bookingId, $status)
+    /**
+     * Cập nhật trạng thái
+     */
+    public function updateBookingStatus(int $bookingId, int $accountId, string $newStatus): bool
     {
-        $stmt = $this->conn->prepare("UPDATE booking SET status=:status WHERE id=:id");
-        $stmt->bindValue(':status', $status);
-        $stmt->bindValue(':id', (int)$bookingId, PDO::PARAM_INT);
+        $query = "UPDATE " . $this->table_name . " 
+                  SET status = :status 
+                  WHERE id = :id AND account_id = :accountId";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':status', $newStatus, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $bookingId, PDO::PARAM_INT);
+        $stmt->bindParam(':accountId', $accountId, PDO::PARAM_INT);
         return $stmt->execute();
+    }
+    /**
+     * THÊM MỚI: Cập nhật trạng thái (dành cho Admin/Partner)
+     * Admin/Partner có thể cập nhật bất kỳ booking nào (hoặc đã được lọc theo owner_id).
+     */
+    public function adminUpdateBookingStatus(int $bookingId, string $newStatus): bool
+    {
+        // Bỏ kiểm tra account_id
+        $query = "UPDATE " . $this->table_name . " 
+                  SET status = :status 
+                  WHERE id = :id";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':status', $newStatus, PDO::PARAM_STR);
+            $stmt->bindParam(':id', $bookingId, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("adminUpdateBookingStatus error: " . $e->getMessage());
+            return false;
+        }
     }
     /**
      * Lấy thông tin booking cho Partner Calendar
@@ -284,5 +312,17 @@ class BookingModel
 
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    /**
+     * THÊM MỚI: Lấy 1 booking (để kiểm tra thanh toán)
+     */
+    public function getBookingById(int $bookingId, int $accountId)
+    {
+        $query = "SELECT * FROM " . $this->table_name . " WHERE id = :id AND account_id = :accountId";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $bookingId, PDO::PARAM_INT);
+        $stmt->bindParam(':accountId', $accountId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
     }
 }
