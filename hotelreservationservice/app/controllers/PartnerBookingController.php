@@ -59,38 +59,73 @@ class PartnerBookingController extends BasePartnerController
      */
     public function updateStatus($id)
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: ' . BASE_URL . '/partner/booking');
-            exit;
-        }
+        // Đảm bảo đã đăng nhập và là Partner
+        parent::__construct();
 
         $bookingId = (int)$id;
-        $status = $_POST['status'] ?? '';
+        $partnerId = SessionHelper::getAccountId(); // Lấy ID của Partner đang đăng nhập
+        $newStatus = $_POST['status'] ?? '';
 
-        // Thêm kiểm tra: Partner có thực sự sở hữu booking này không? (Nâng cao, tùy chọn)
+        // Kiểm tra xem trạng thái mới có hợp lệ không
+        $allowedStatus = [
+            BOOKING_STATUS_PENDING,
+            BOOKING_STATUS_CONFIRMED,
+            BOOKING_STATUS_CHECKED_IN,
+            BOOKING_STATUS_CHECKED_OUT,
+            BOOKING_STATUS_CANCELLED
+        ];
 
-        $allowed = ['pending', 'confirmed', 'cancelled', 'checked_in', 'checked_out'];
-        if ($bookingId <= 0 || !in_array($status, ALLOWED_BOOKING_STATUSES, true)) {
-            header('Location: ' . BASE_URL . '/partner/booking?error=invalid_data');
-            exit;
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($newStatus, $allowedStatus)) {
+
+            $success = $this->bookingModel->updateBookingStatusByPartner($bookingId, $partnerId, $newStatus);
+
+            if ($success) {
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Cập nhật trạng thái booking #' . $bookingId . ' thành công!'];
+            } else {
+                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Không thể cập nhật trạng thái.'];
+            }
+        } else {
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Yêu cầu không hợp lệ hoặc trạng thái không được phép.'];
         }
 
-        $this->bookingModel->updateBookingStatus($bookingId, $status);
-        header('Location: ' . BASE_URL . '/partner/booking?success=updated');
+        // Quay lại trang danh sách booking của partner
+        header('Location: ' . BASE_URL . '/partner/booking');
         exit;
     }
 
     /**
      * Hủy booking (giống hệt admin, chỉ khác URL redirect)
      */
+    /**
+     * Hủy booking (dành cho Partner)
+     */
     public function cancel($id)
     {
+        // 1. Xác thực Partner và lấy $partnerId
+        parent::__construct();
+        $partnerId = SessionHelper::getAccountId();
+
         $bookingId = (int)$id;
+
         if ($bookingId > 0) {
-            $this->bookingModel->updateBookingStatus($bookingId, BOOKING_STATUS_CANCELLED);
+
+            // 2. Gọi hàm Model đúng (kiểm tra owner_id)
+            $success = $this->bookingModel->updateBookingStatusByPartner(
+                $bookingId,
+                $partnerId,
+                BOOKING_STATUS_CANCELLED // Truyền trạng thái Hủy
+            );
+
+            if ($success) {
+                $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Đã hủy booking #' . $bookingId . ' thành công.'];
+            } else {
+                $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: Không thể hủy booking. Booking không tồn tại hoặc bạn không có quyền.'];
+            }
+        } else {
+            $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Lỗi: ID booking không hợp lệ.'];
         }
 
-        header('Location: ' . BASE_URL . '/partner/booking?success=cancelled');
+        header('Location: ' . BASE_URL . '/partner/booking');
         exit;
     }
 }

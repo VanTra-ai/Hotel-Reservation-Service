@@ -320,14 +320,17 @@ class HotelModel
     /**
      * Lấy tổng số khách sạn (để phân trang)
      */
-    public function getHotelCount(?int $cityId = null): int
+    public function getHotelCount(?string $searchTerm = null): int
     {
-        $query = "SELECT COUNT(id) FROM " . $this->table_name;
+        $query = "SELECT COUNT(h.id) FROM hotel h 
+                  LEFT JOIN city c ON h.city_id = c.id";
         $params = [];
-        if ($cityId) {
-            $query .= " WHERE city_id = :cityId";
-            $params[':cityId'] = $cityId;
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
         }
+
         $stmt = $this->conn->prepare($query);
         $stmt->execute($params);
         return (int)$stmt->fetchColumn();

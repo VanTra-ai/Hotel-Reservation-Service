@@ -35,8 +35,7 @@ class AdminHotelController extends BaseAdminController
         $offset = ($current_page - 1) * $limit;
 
         $total_hotels = $this->hotelModel->getHotelCount($searchTerm);
-        $data['hotels'] = $this->hotelModel->getHotels($limit, $offset, $searchTerm); // Sử dụng getHotels đã sửa
-
+        $data['hotels'] = $this->hotelModel->getHotels($limit, $offset, $searchTerm);
         $total_pages = (int)ceil($total_hotels / $limit);
         $data['searchTerm'] = $searchTerm;
 

@@ -26,6 +26,7 @@
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
+            dayMaxEvents: true,
             // 4. Lấy dữ liệu sự kiện từ Controller
             events: '<?= BASE_URL ?>/partner/calendar/getEvents',
 

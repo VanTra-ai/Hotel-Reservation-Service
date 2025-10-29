@@ -184,7 +184,7 @@ class BookingController
         }
 
         $data['booking'] = $booking;
-        include 'app/views/booking/payment.php'; // Tạo file view này
+        include 'app/views/booking/payment.php';
     }
 
     /**
@@ -195,8 +195,6 @@ class BookingController
         SessionHelper::requireLogin();
         $accountId = $this->getAccountId();
         $bookingId = (int)($_POST['booking_id'] ?? 0);
-
-        // (Code thực tế sẽ gọi API NAPAS ở đây)
 
         // Mô phỏng thành công:
         $success = $this->bookingModel->updateBookingStatus($bookingId, $accountId, BOOKING_STATUS_CONFIRMED);

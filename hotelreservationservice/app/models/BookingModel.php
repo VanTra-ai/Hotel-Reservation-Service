@@ -314,7 +314,7 @@ class BookingModel
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
     /**
-     * THÊM MỚI: Lấy 1 booking (để kiểm tra thanh toán)
+     * Lấy 1 booking (để kiểm tra thanh toán)
      */
     public function getBookingById(int $bookingId, int $accountId)
     {
@@ -324,5 +324,34 @@ class BookingModel
         $stmt->bindParam(':accountId', $accountId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+    /**
+     * Cập nhật trạng thái booking (dành cho Partner)
+     * Kiểm tra xem partner có sở hữu khách sạn của booking này không
+     */
+    public function updateBookingStatusByPartner(int $bookingId, int $ownerId, string $newStatus): bool
+    {
+        // Câu lệnh này JOIN 3 bảng để đảm bảo partner ($ownerId)
+        // sở hữu khách sạn (h.owner_id) của phòng (r.hotel_id)
+        // thuộc booking (b.room_id)
+        $query = "UPDATE " . $this->table_name . " b
+                  JOIN room r ON b.room_id = r.id
+                  JOIN hotel h ON r.hotel_id = h.id
+                  SET b.status = :status
+                  WHERE b.id = :bookingId AND h.owner_id = :ownerId";
+
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':status', $newStatus, PDO::PARAM_STR);
+            $stmt->bindParam(':bookingId', $bookingId, PDO::PARAM_INT);
+            $stmt->bindParam(':ownerId', $ownerId, PDO::PARAM_INT);
+
+            // execute() trả về true nếu thành công
+            // rowCount() sẽ > 0 nếu có dòng bị ảnh hưởng (để xác nhận)
+            return $stmt->execute() && $stmt->rowCount() > 0;
+        } catch (PDOException $e) {
+            error_log("updateBookingStatusByPartner error: " . $e->getMessage());
+            return false;
+        }
     }
 }
