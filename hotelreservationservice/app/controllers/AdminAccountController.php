@@ -83,24 +83,22 @@ class AdminAccountController extends BaseAdminController
             $fullname = $_POST['fullname'] ?? '';
             $email = $_POST['email'] ?? '';
             $role = $_POST['role'] ?? 'user';
-            $hotel_id = !empty($_POST['hotel_id']) ? (int)$_POST['hotel_id'] : null;
 
-            // Lấy country từ form edit (Nếu bạn có trường đó)
             $country = $_POST['country'] ?? null;
+
+            $hotel_id = !empty($_POST['hotel_id']) ? (int)$_POST['hotel_id'] : null;
 
             if (!in_array($role, ['admin', 'user', 'partner'])) {
                 $role = 'user';
             }
 
-            // Cập nhật thông tin tài khoản trước (fullname, email, role)
+            // Cập nhật thông tin tài khoản (fullname, email, role, country)
             $accountUpdated = $this->accountModel->updateAccountInfo($accountId, $fullname, $email, $role, $country);
+
             if ($accountUpdated) {
-                // Luôn luôn dọn dẹp các gán cũ của tài khoản này
                 $this->hotelModel->unassignOwnerFromAllHotels($accountId);
 
-                // Nếu vai trò mới là 'partner' VÀ admin đã chọn một khách sạn hợp lệ
                 if ($role === 'partner' && $hotel_id !== null) {
-                    // Thì thực hiện gán mới
                     $this->hotelModel->assignOwnerToHotel($hotel_id, $accountId);
                 }
 

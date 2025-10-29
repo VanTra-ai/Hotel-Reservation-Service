@@ -44,7 +44,7 @@ try {
 
 // Đường dẫn đến thư mục chứa dữ liệu JSON và Ảnh
 $jsonBaseDir = __DIR__ . '/../Hotel information'; // Thư mục chứa các tỉnh JSON (thư mục gốc)
-$imageBaseDir = 'public/images/hotels'; // Thư mục ảnh đã copy vào public (đường dẫn tương đối)
+$imageBaseDir = 'public/images/hotelimages'; // Thư mục ảnh đã copy vào public (đường dẫn tương đối)
 
 echo "========================================\n";
 echo "BẮT ĐẦU IMPORT DỮ LIỆU\n";
@@ -142,21 +142,30 @@ foreach ($cityFolders as $cityFolder) {
         // $existingHotel = $hotelModel->getHotelByNameAndCity($hotelName, $city_id); // Tạm thời bỏ qua kiểm tra trùng
 
         // --- 5. Xử lý Ảnh Khách sạn ---
-        $hotelImageFolderPath = $imageBaseDir . '/' . $cityFolderName . '/' . $hotelFolderName; // Đường dẫn đến thư mục ảnh của khách sạn
-        $hotelRepresentativeImage = null; // Đường dẫn ảnh đại diện (tương đối)
-        $allHotelImages = [];
-        if (is_dir($hotelImageFolderPath)) {
-            $images = glob($hotelImageFolderPath . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE); // Quét nhiều loại đuôi file
-            if (!empty($images)) {
-                // Lấy ảnh đầu tiên làm đại diện, lưu đường dẫn tương đối
-                $hotelRepresentativeImage = $images[0]; // Ví dụ: public/images/hotels/ba-ria-vung-tau/3h-grand/abc.jpg
-                $allHotelImages = $images;
+        $hotelImageFolderPath_FS = __DIR__ . '/' . $imageBaseDir . '/' . $cityFolderName . '/' . $hotelFolderName; // Đường dẫn vật lý
+        $hotelImageFolderPath_Web = $imageBaseDir . '/' . $cityFolderName . '/' . $hotelFolderName; // Đường dẫn lưu CSDL
+
+        $hotelRepresentativeImage = null; // Đường dẫn ảnh đại diện (web path)
+        $allHotelImages = []; // Mảng chứa TẤT CẢ ảnh (web path)
+        if (is_dir($hotelImageFolderPath_FS)) { // <<< SỬA: Dùng đường dẫn FS
+            $images_fs = glob($hotelImageFolderPath_FS . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
+
+            if (!empty($images_fs)) {
+                // Lấy ảnh đầu tiên làm đại diện, lưu đường dẫn WEB
+                $hotelRepresentativeImage = $hotelImageFolderPath_Web . '/' . basename($images_fs[0]);
+
+                // Lưu tất cả đường dẫn WEB
+                foreach ($images_fs as $img_fs) {
+                    $allHotelImages[] = $hotelImageFolderPath_Web . '/' . basename($img_fs);
+                }
+
                 echo "      Ảnh đại diện: " . $hotelRepresentativeImage . "\n";
+                echo "      Tìm thấy tổng cộng " . count($allHotelImages) . " ảnh.\n";
             } else {
-                echo "      Cảnh báo: Không tìm thấy file ảnh nào trong thư mục: " . $hotelImageFolderPath . "\n";
+                echo "      Cảnh báo: Không tìm thấy file ảnh nào trong thư mục: " . $hotelImageFolderPath_FS . "\n";
             }
         } else {
-            echo "      Cảnh báo: Không tìm thấy thư mục ảnh: " . $hotelImageFolderPath . "\n";
+            echo "      Cảnh báo: Không tìm thấy thư mục ảnh: " . $hotelImageFolderPath_FS . "\n";
         }
 
         // --- 6. Xử lý Hotel ---
@@ -410,7 +419,15 @@ foreach ($cityFolders as $cityFolder) {
                             // Vẫn tiếp tục xử lý review, CSDL sẽ dùng NOW()
                         }
                     }
-                    // Nếu không có ngày hoặc lỗi, sẽ dùng CURRENT_TIMESTAMP mặc định của CSDL
+                    $jsonReviewRoomType = $reviewInfo->room_type ?? null;
+                    $jsonReviewGroupType = $reviewInfo->group_type ?? null;
+                    $jsonStayDuration = $reviewInfo->stay_duration ?? '1 đêm';
+
+                    // Trích xuất số đêm
+                    $jsonReviewNights = 1;
+                    if (preg_match('/(\d+)\s*đêm/', $jsonStayDuration, $matches)) {
+                        $jsonReviewNights = (int)$matches[1];
+                    }
 
                     // Lưu review (Truyền thêm $createdAtTimestamp)
                     $reviewAdded = $reviewModel->addReview(
@@ -427,8 +444,10 @@ foreach ($cityFolders as $cityFolder) {
                         $ratingWifi,
                         $aiRating,
                         $ratingText,
-                        $createdAtTimestamp
-                        // Bỏ $reviewerCountry ở đây
+                        $createdAtTimestamp,
+                        $jsonReviewRoomType,
+                        $jsonReviewGroupType,
+                        $jsonReviewNights
                     );
                     if ($reviewAdded) {
                         $reviewCount++;

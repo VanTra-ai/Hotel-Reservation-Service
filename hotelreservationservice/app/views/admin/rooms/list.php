@@ -56,7 +56,6 @@ unset($currentGetParams['page']);
                 <thead class="table-dark">
                     <tr>
                         <th>ID</th>
-                        <th>Hình ảnh</th>
                         <th>Số phòng</th>
                         <th>Loại phòng</th>
                         <th>Khách sạn</th>
@@ -68,18 +67,6 @@ unset($currentGetParams['page']);
                     <?php foreach ($rooms as $room): ?>
                         <tr>
                             <td><?= htmlspecialchars($room->id) ?></td>
-                            <td>
-                                <?php if (!empty($room->image)): ?>
-                                    <img src="<?= BASE_URL ?>/<?= htmlspecialchars($room->image) ?>"
-                                        alt="Phòng <?= htmlspecialchars($room->room_number) ?>"
-                                        class="img-thumbnail" style="width: 60px; height: 60px; object-fit: cover;">
-                                <?php else: ?>
-                                    <div class="bg-light d-flex align-items-center justify-content-center"
-                                        style="width: 60px; height: 60px;">
-                                        <i class="fas fa-image text-muted"></i>
-                                    </div>
-                                <?php endif; ?>
-                            </td>
                             <td><?= htmlspecialchars($room->room_number) ?></td>
                             <td><span class="badge bg-info"><?= htmlspecialchars($room->room_type) ?></span></td>
                             <td><?= htmlspecialchars($room->hotel_name ?? 'N/A') ?></td>

@@ -10,9 +10,13 @@
                     <h4 class="mb-0"><i class="fas fa-plus me-2"></i>Thêm Khách sạn mới</h4>
                 </div>
                 <div class="card-body">
-                    <?php if (isset($data['errors'])): ?>
+                    <?php if (isset($data['errors']) && !empty($data['errors'])): ?>
                         <div class="alert alert-danger">
-                            <?= htmlspecialchars($data['errors']['db_error']); ?>
+                            <ul class="mb-0">
+                                <?php foreach ($data['errors'] as $error): ?>
+                                    <li><?= htmlspecialchars($error); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                     <?php endif; ?>
 
@@ -33,47 +37,22 @@
                             <label for="city_id" class="form-label">Tỉnh thành:</label>
                             <select id="city_id" name="city_id" class="form-select" required>
                                 <option value="" selected disabled>-- Chọn một tỉnh thành --</option>
-                                <?php foreach ($data['cities'] as $city): ?>
-                                    <option value="<?= $city->id; ?>"><?= htmlspecialchars($city->name); ?></option>
-                                <?php endforeach; ?>
+                                <?php if (!empty($data['cities'])): ?>
+                                    <?php foreach ($data['cities'] as $city): ?>
+                                        <option value="<?= $city->id; ?>"><?= htmlspecialchars($city->name); ?></option>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="image" class="form-label">Hình ảnh:</label>
-                            <input type="file" id="image" name="image" class="form-control">
+                            <label for="image" class="form-label">Hình ảnh đại diện (Bắt buộc):</label>
+                            <input type="file" id="image" name="image" class="form-control" required accept="image/*">
                         </div>
 
-                        <hr>
-                        <h5 class="mt-4">Điểm đánh giá chi tiết (cho AI)</h5>
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <label for="service_staff" class="form-label">Nhân viên:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="service_staff" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="amenities" class="form-label">Tiện nghi:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="amenities" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="cleanliness" class="form-label">Sạch sẽ:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="cleanliness" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="comfort" class="form-label">Thoải mái:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="comfort" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="value_for_money" class="form-label">Đáng giá tiền:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="value_for_money" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="location" class="form-label">Địa điểm:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="location" value="8.0">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="free_wifi" class="form-label">WiFi miễn phí:</label>
-                                <input type="number" step="0.1" max="10" min="1" class="form-control" name="free_wifi" value="8.0">
-                            </div>
+                        <div class="mb-3">
+                            <label for="gallery_images" class="form-label">Hình ảnh Gallery (Tùy chọn):</label>
+                            <input type="file" id="gallery_images" name="gallery_images[]" class="form-control" multiple accept="image/*">
+                            <small class="form-text text-muted">Bạn có thể chọn nhiều ảnh.</small>
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">

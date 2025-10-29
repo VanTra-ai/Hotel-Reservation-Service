@@ -125,6 +125,9 @@ CREATE TABLE `review` (
   `ai_rating` DECIMAL(3, 1) NULL DEFAULT NULL,
   `rating_text` VARCHAR(50) NULL DEFAULT NULL,
   `comment` TEXT,
+  `review_room_type` VARCHAR(255) NULL DEFAULT NULL,
+  `review_group_type` VARCHAR(100) NULL DEFAULT NULL,
+  `review_nights` INT NULL DEFAULT NULL,
   
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   

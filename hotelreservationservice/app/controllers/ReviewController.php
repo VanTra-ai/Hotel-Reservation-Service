@@ -155,7 +155,10 @@ class ReviewController
 
     public function listByHotel($hotelId)
     {
-        $reviews = $this->reviewModel->getReviewsByHotelId($hotelId);
+        $limit = 10;
+        $offset = 0;
+        $reviews = $this->reviewModel->getReviewsByHotelId($hotelId, $limit, $offset);
+
         include 'app/views/review/list.php';
     }
     /**

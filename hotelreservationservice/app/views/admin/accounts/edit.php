@@ -1,4 +1,4 @@
-<?php include 'app/views/shares/header.php'; 
+<?php include 'app/views/shares/header.php';
 //app/views/admin/accounts/edit.php
 ?>
 
@@ -19,6 +19,13 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" value="<?= htmlspecialchars($data['account']->email) ?>">
                         </div>
+
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Quốc gia</label>
+                            <input type="text" class="form-control" id="country" name="country"
+                                value="<?= htmlspecialchars($data['account']->country ?? '') ?>"
+                                placeholder="Ví dụ: Việt Nam">
+                        </div>
                         <div class="mb-3">
                             <label for="role" class="form-label">Vai trò</label>
                             <select name="role" id="role" class="form-select">
@@ -28,28 +35,21 @@
                             </select>
                         </div>
 
-                        <div class="mb-3" id="hotel-assignment-section" style="display: none;">
+                        <div class="mb-3" id="hotel-assignment-section" style="display: <?= $data['account']->role == 'partner' ? 'block' : 'none' ?>;">
                             <label for="hotel_id" class="form-label">Gán Khách sạn</label>
                             <select name="hotel_id" id="hotel_id" class="form-select">
                                 <option value="">-- Không gán / Bỏ gán --</option>
-
-                                <?php // Ưu tiên hiển thị khách sạn hiện tại của partner (nếu có) 
-                                ?>
                                 <?php if (isset($data['current_hotel']) && $data['current_hotel']): ?>
                                     <option value="<?= $data['current_hotel']->id; ?>" selected>
                                         Đang quản lý: <?= htmlspecialchars($data['current_hotel']->name); ?>
                                     </option>
                                 <?php endif; ?>
-
-                                <?php // Hiển thị danh sách các khách sạn chưa có chủ 
-                                ?>
                                 <?php foreach ($data['unassigned_hotels'] as $hotel): ?>
                                     <option value="<?= $hotel->id; ?>"><?= htmlspecialchars($hotel->name); ?></option>
                                 <?php endforeach; ?>
                             </select>
-                            <div class="form-text">Chỉ áp dụng khi vai trò là "Partner". Chọn một khách sạn chưa có chủ để gán.</div>
+                            <div class="form-text">Chỉ áp dụng khi vai trò là "Partner".</div>
                         </div>
-
                         <div class="d-flex justify-content-end gap-2">
                             <a href="<?= BASE_URL ?>/admin/account" class="btn btn-secondary">Hủy</a>
                             <button type="submit" class="btn btn-warning">Lưu thay đổi</button>

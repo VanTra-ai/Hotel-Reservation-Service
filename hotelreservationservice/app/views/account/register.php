@@ -4,6 +4,8 @@ $errors = $errors ?? [];
 $username = $username ?? ($_POST['username'] ?? '');
 $fullName = $fullName ?? ($_POST['fullname'] ?? '');
 $email = $email ?? ($_POST['email'] ?? '');
+// Lấy giá trị country cũ nếu có lỗi
+$country = $country ?? ($_POST['country'] ?? ''); 
 ?>
 <section class="vh-100 gradient-custom">
     <div class="container mt-5 mb-5">
@@ -47,21 +49,28 @@ $email = $email ?? ($_POST['email'] ?? '');
                                         id="email" name="email" placeholder="Nhập email"
                                         value="<?php echo htmlspecialchars($email); ?>" required>
                                 </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label for="country">Quốc gia:</label>
+                                    <input type="text" class="form-control"
+                                        id="country" name="country" placeholder="Ví dụ: Việt Nam"
+                                        value="<?php echo htmlspecialchars($country); ?>">
+                                </div>
+                                </div>
+
+                            <div class="form-row mt-3">
                                 <div class="form-group col-md-6">
                                     <label for="password">Mật khẩu:</label>
                                     <input type="password" class="form-control"
                                         id="password" name="password" placeholder="Nhập mật khẩu" required>
                                 </div>
-                            </div>
-
-                            <div class="form-row mt-3">
                                 <div class="form-group col-md-6">
                                     <label for="confirmpassword">Xác nhận mật khẩu:</label>
                                     <input type="password" class="form-control"
                                         id="confirmpassword" name="confirmpassword" placeholder="Nhập lại mật khẩu" required>
                                 </div>
+                                
                                 <div class="form-group col-md-6 d-none">
-                                    <!-- Role bị ẩn: mặc định user. Không cho user chọn admin trên form public. -->
                                     <input type="hidden" id="role" name="role" value="user">
                                 </div>
                             </div>

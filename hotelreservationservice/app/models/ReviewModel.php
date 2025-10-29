@@ -14,8 +14,9 @@ class ReviewModel
     public function getReviewsByHotelId(int $hotelId, int $limit, int $offset): array
     {
         $query = "SELECT r.*, a.username, a.country, a.fullname, a.profile_picture,
-                         b.check_in_date, b.check_out_date,
-                         room.room_type
+                         b.check_in_date, b.check_out_date, b.group_type,
+                         room.room_type,
+                         r.review_room_type, r.review_group_type, r.review_nights
                   FROM " . $this->table_name . " r 
                   JOIN account a ON r.account_id = a.id 
                   LEFT JOIN booking b ON r.booking_id = b.id 
@@ -65,17 +66,22 @@ class ReviewModel
         float $ratingWifi,
         ?float $aiRating,
         ?string $ratingText,
-        ?string $createdAt = null
+        ?string $createdAt = null,
+        ?string $reviewRoomType = null,
+        ?string $reviewGroupType = null,
+        ?int $reviewNights = null
     ) {
         $query = "INSERT INTO " . $this->table_name . " 
                   (hotel_id, account_id, booking_id,
                    rating_staff, rating_amenities, rating_cleanliness, rating_comfort,
                    rating_value, rating_location, rating_wifi,
-                   ai_rating, rating_text, comment, created_at) -- <<< Xóa country
+                   ai_rating, rating_text, comment, created_at,
+                   review_room_type, review_group_type, review_nights) 
                   VALUES (:hotel_id, :account_id, :booking_id,
                           :rating_staff, :rating_amenities, :rating_cleanliness, :rating_comfort,
                           :rating_value, :rating_location, :rating_wifi,
-                          :ai_rating, :rating_text, :comment, COALESCE(:created_at, NOW()))";
+                          :ai_rating, :rating_text, :comment, COALESCE(:created_at, NOW()),
+                          :review_room_type, :review_group_type, :review_nights)";
 
         try {
             $stmt = $this->conn->prepare($query);
@@ -99,6 +105,9 @@ class ReviewModel
             $stmt->bindParam(':rating_text', $ratingText);
             $stmt->bindParam(':comment', $comment);
             $stmt->bindParam(':created_at', $createdAt, PDO::PARAM_STR);
+            $stmt->bindParam(':review_room_type', $reviewRoomType, PDO::PARAM_STR);
+            $stmt->bindParam(':review_group_type', $reviewGroupType, PDO::PARAM_STR);
+            $stmt->bindParam(':review_nights', $reviewNights, PDO::PARAM_INT);
 
             return $stmt->execute();
         } catch (PDOException $e) {

@@ -10,15 +10,16 @@ class HotelModel
     }
     public function getHotels(?int $limit = null, ?int $offset = null, ?string $searchTerm = null)
     {
-        $query = "SELECT h.*, c.name as city_name 
-                  FROM " . $this->table_name . " h
-                  LEFT JOIN city c ON h.city_id = c.id";
+        $query = "SELECT h.*, c.name AS city_name, a.fullname AS owner_name
+                  FROM hotel h 
+                  LEFT JOIN city c ON h.city_id = c.id
+                  LEFT JOIN account a ON h.owner_id = a.id";
 
         $params = [];
 
-        // Thêm điều kiện tìm kiếm (Tên khách sạn hoặc Tên thành phố)
+        // Thêm điều kiện tìm kiếm (WHERE)
         if (!empty($searchTerm)) {
-            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search";
+            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search";
             $params[':search'] = '%' . $searchTerm . '%';
         }
 
@@ -43,8 +44,7 @@ class HotelModel
         }
 
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_OBJ);
-        return $result;
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
     // Lấy danh sách khách sạn theo city_id
     public function getHotelsByCityId($cityId)
@@ -307,7 +307,7 @@ class HotelModel
      */
     public function getHotelImages(int $hotelId): array
     {
-        $stmt = $this->conn->prepare("SELECT * FROM hotel_images WHERE hotel_id = :hotel_id ORDER BY display_order ASC, id ASC");
+        $stmt = $this->conn->prepare("SELECT id, image_path, is_thumbnail FROM hotel_images WHERE hotel_id = :hotel_id ORDER BY display_order ASC, id ASC");
         $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -318,7 +318,7 @@ class HotelModel
     public function getHotelCount(?string $searchTerm = null): int
     {
         $query = "SELECT COUNT(h.id) FROM hotel h 
-                  JOIN city c ON h.city_id = c.id";
+                  LEFT JOIN city c ON h.city_id = c.id";
         $params = [];
 
         if (!empty($searchTerm)) {
@@ -329,5 +329,98 @@ class HotelModel
         $stmt = $this->conn->prepare($query);
         $stmt->execute($params);
         return (int)$stmt->fetchColumn();
+    }
+    /**
+     * Lưu đường dẫn của nhiều ảnh vào bảng hotel_images
+     * @param int $hotelId ID khách sạn vừa tạo
+     * @param array $imagePaths Mảng các đường dẫn ảnh
+     * @param string $mainImagePath Đường dẫn ảnh chính (dùng để đánh dấu is_thumbnail)
+     * @return bool
+     */
+    public function saveHotelImages(int $hotelId, array $imagePaths, ?string $mainImagePath = null): bool
+    {
+        if (empty($imagePaths)) {
+            return true;
+        }
+
+        // Tạo chuỗi placeholders và danh sách values
+        $placeholders = [];
+        $values = [];
+        $order = 0;
+
+        foreach ($imagePaths as $path) {
+            $isThumbnail = ($path === $mainImagePath) ? 1 : 0;
+
+            $placeholders[] = "(:hotel_id_{$order}, :path_{$order}, :is_thumbnail_{$order}, :order_{$order})";
+
+            $values[":hotel_id_{$order}"] = $hotelId;
+            $values[":path_{$order}"] = $path;
+            $values[":is_thumbnail_{$order}"] = $isThumbnail;
+            $values[":order_{$order}"] = $order;
+
+            $order++;
+        }
+
+        $query = "INSERT INTO hotel_images (hotel_id, image_path, is_thumbnail, display_order) 
+                  VALUES " . implode(', ', $placeholders);
+
+        try {
+            $stmt = $this->conn->prepare($query);
+
+            // Bind tất cả các giá trị
+            foreach ($values as $key => &$val) {
+                $type = is_int($val) ? PDO::PARAM_INT : PDO::PARAM_STR;
+                $stmt->bindParam($key, $val, $type);
+            }
+
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Save hotel images error: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Xóa tất cả ảnh trong bảng hotel_images cho một khách sạn
+     */
+    public function deleteHotelImages(int $hotelId): bool
+    {
+        $query = "DELETE FROM hotel_images WHERE hotel_id = :hotelId";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Delete hotel images error: " . $e->getMessage());
+            return false;
+        }
+    }
+    /**
+     * Xóa một ảnh cụ thể khỏi bảng hotel_images bằng ID của ảnh
+     */
+    public function deleteHotelImageById(int $imageId): bool
+    {
+        $query = "DELETE FROM hotel_images WHERE id = :imageId";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':imageId', $imageId, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Delete hotel image by ID error: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Kiểm tra xem ảnh đã tồn tại trong gallery của khách sạn chưa
+     */
+    public function checkImageExists(int $hotelId, string $imagePath): bool
+    {
+        $query = "SELECT COUNT(*) FROM hotel_images WHERE hotel_id = :hotelId AND image_path = :imagePath";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+        $stmt->bindParam(':imagePath', $imagePath, PDO::PARAM_STR);
+        $stmt->execute();
+        return (int)$stmt->fetchColumn() > 0;
     }
 }

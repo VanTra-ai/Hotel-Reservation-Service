@@ -26,19 +26,19 @@ $criteria_map = [
     'free_wifi' => 'WiFi miễn phí'
 ];
 
-// <<< SỬA 1: Tìm index của ảnh thumbnail >>>
+// Tìm ảnh thumbnail (ảnh chính) và index của nó
 $thumbnailImage = null;
-$thumbnailIndex = 0; // Mặc định là ảnh đầu tiên
+$thumbnailIndex = 0; // Mặc định là ảnh đầu tiên (index 0)
 if (!empty($hotelImages)) {
     foreach ($hotelImages as $index => $img) { // Thêm $index
         if (isset($img->is_thumbnail) && $img->is_thumbnail) {
             $thumbnailImage = $img;
-            $thumbnailIndex = $index; // <<< Lưu lại index của ảnh thumbnail
+            $thumbnailIndex = $index; // Lưu lại index của ảnh thumbnail
             break;
         }
     }
     // Nếu không có ảnh nào được đánh dấu, lấy ảnh đầu tiên
-    if (!$thumbnailImage) {
+    if (!$thumbnailImage && isset($hotelImages[0])) { // Kiểm tra $hotelImages[0] tồn tại
         $thumbnailImage = $hotelImages[0];
         $thumbnailIndex = 0;
     }
@@ -58,27 +58,36 @@ if (!empty($hotelImages)) {
                         <p class="card-text text-muted"><i class="fas fa-phone me-1"></i> <?= htmlspecialchars($hotel->phone ?? 'Chưa có số điện thoại') ?></p>
 
                         <?php if (!empty($hotelImages) && $thumbnailImage): ?>
-                            <div class="mb-4">
+                            <div class="my-4">
                                 <div class="main-image-display position-relative mb-2 rounded overflow-hidden">
                                     <img src="<?= BASE_URL ?>/<?= htmlspecialchars($thumbnailImage->image_path) ?>"
                                         class="img-fluid w-100 rounded"
                                         alt="<?= htmlspecialchars($hotel->name) ?>"
                                         style="max-height: 500px; object-fit: cover; cursor: pointer;"
                                         data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                                        data-image-index="<?= $thumbnailIndex ?>" <div class="thumbnail-gallery d-flex flex-wrap gap-2 justify-content-start">
+                                        data-image-index="<?= $thumbnailIndex ?>"
+                                        id="currentHotelImage"> <span class="position-absolute top-0 end-0 bg-dark text-white px-2 py-1 rounded-bottom-start"
+                                        style="font-size: 0.8em; opacity: 0.8;">
+                                        Click để xem toàn bộ ảnh
+                                    </span>
+                                </div>
+
+                                <div class="thumbnail-gallery d-flex flex-wrap gap-2 justify-content-start">
                                     <?php foreach ($hotelImages as $index => $img): ?>
                                         <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>"
                                             class="img-thumbnail rounded"
                                             alt="Ảnh khách sạn <?= $index + 1 ?>"
                                             style="width: 100px; height: 75px; object-fit: cover; cursor: pointer;"
                                             data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                                            data-image-index="<?= $index ?>"> <?php endforeach; ?>
+                                            data-image-index="<?= $index ?>">
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         <?php elseif (!empty($hotel->image)): // Fallback nếu chỉ có 1 ảnh cũ 
                         ?>
                             <img src="<?= BASE_URL ?>/<?= htmlspecialchars($hotel->image) ?>" class="img-fluid rounded mb-3" alt="<?= htmlspecialchars($hotel->name) ?>">
                         <?php endif; ?>
+
                         <hr>
                         <h5 class="fw-bold">Mô tả</h5>
                         <p><?= nl2br(htmlspecialchars($hotel->description)) ?></p>
@@ -148,12 +157,9 @@ if (!empty($hotelImages)) {
                     <div id="available-rooms-pagination" class="mt-4"></div>
                 </div>
 
-            </div> <!-- <<< Kết thúc col-lg-8 (cột trái) -->
-
-            <!-- CỘT BÊN PHẢI (THÔNG TIN ĐÁNH GIÁ) -->
+            </div>
             <div class="col-lg-4">
 
-                <!-- 5. KHU VỰC ĐÁNH GIÁ TỔNG HỢP (Giữ nguyên) -->
                 <div class="card shadow-sm mb-4">
                     <div class="card-header bg-light">
                         <h5 class="mb-0">Điểm đánh giá trung bình</h5>
@@ -165,7 +171,7 @@ if (!empty($hotelImages)) {
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-0"><?= RatingHelper::getTextFromScore($hotel->rating) ?></h6>
-                                <span class="text-muted" style="font-size: 0.9em;">Dựa trên <?= $pagination['total_reviews'] ?? 0 ?> đánh giá</span> <!-- Sửa: dùng $pagination -->
+                                <span class="text-muted" style="font-size: 0.9em;">Dựa trên <?= $pagination['total_reviews'] ?? 0 ?> đánh giá</span>
                             </div>
                         </div>
                         <?php foreach ($criteria_map as $key => $label): ?>
@@ -183,7 +189,6 @@ if (!empty($hotelImages)) {
                     </div>
                 </div>
 
-                <!-- 6. NÚT DẪN ĐẾN AI PLAYGROUND (Giữ nguyên) -->
                 <div class="card shadow-sm mt-4 bg-light-subtle border-info">
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">Thử nghiệm với AI 🤖</h5>
@@ -194,59 +199,83 @@ if (!empty($hotelImages)) {
                     </div>
                 </div>
 
-                <!-- <<< 4. DANH SÁCH BÌNH LUẬN (ĐÃ DI CHUYỂN ĐẾN ĐÂY) >>> -->
                 <div class="mt-5">
-                    <h4 class="mb-3">Khách lưu trú ở đây thích điều gì? (<?= $pagination['total_reviews'] ?> đánh giá)</h4> <!-- Sửa: dùng $pagination -->
+                    <h4 class="mb-3">Khách lưu trú ở đây thích điều gì? (<?= $pagination['total_reviews'] ?> đánh giá)</h4>
                     <?php if (!empty($reviews)): ?>
                         <?php foreach ($reviews as $review): ?>
-                            <!-- ... (Code hiển thị từng review card giữ nguyên) ... -->
                             <div class="d-flex mb-4 p-3 border rounded shadow-sm bg-white">
+
                                 <div class="flex-shrink-0 me-3 text-center">
-                                    <?php if (!empty($review->profile_picture)): // KIỂM TRA NẾU CÓ ẢNH 
+                                    <?php
+                                    $avatarLetter = strtoupper(substr($review->fullname, 0, 1));
+                                    $avatarImg = $review->profile_picture ?? null;
                                     ?>
 
-                                        <img src="<?= htmlspecialchars($review->profile_picture) ?>"
+                                    <?php if ($avatarImg): // 1. Nếu có link ảnh 
+                                    ?>
+                                        <img src="<?= htmlspecialchars($avatarImg) ?>"
                                             class="rounded-circle"
                                             style="width: 48px; height: 48px; object-fit: cover;"
-                                            alt="<?= htmlspecialchars($review->fullname) ?>">
+                                            alt="<?= htmlspecialchars($review->fullname) ?>"
+                                            onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-fallback').style.display='flex';">
 
-                                    <?php else: // NẾU KHÔNG CÓ ẢNH, HIỂN THỊ CHỮ CÁI ĐẦU 
+                                    <?php else: // 2. Nếu không có link ảnh (NULL) 
                                     ?>
-
                                         <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
                                             style="width: 48px; height: 48px; font-size: 1.5rem;">
-                                            <?= strtoupper(substr($review->fullname, 0, 1)) ?>
+                                            <?= $avatarLetter ?>
                                         </div>
-
                                     <?php endif; ?>
 
-                                    <small class="d-block mt-1 text-muted" style="font-size: 0.8em;"><?= htmlspecialchars($review->country ?? 'Việt Nam') ?></small>
+                                    <div class="mt-1 text-muted" style="font-size: 0.8em; display: flex; align-items: center; justify-content: center; gap: 4px;">
+
+                                        <span><?= htmlspecialchars($review->country ?? 'Việt Nam') ?></span>
+                                    </div>
                                 </div>
+
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div>
-                                            <span class="fw-bold"><?= htmlspecialchars($review->fullname) ?></span> <!-- ĐÃ SỬA: fullname -->
+                                            <span class="fw-bold"><?= htmlspecialchars($review->fullname) ?></span>
                                             <small class="text-muted">• <?= date('d/m/Y', strtotime($review->created_at)) ?></small>
                                             <?php if (isset($review->ai_rating) && $review->ai_rating !== null): ?>
-                                                <span class="badge bg-primary ms-2 fs-6">
-                                                    <?= number_format((float)$review->ai_rating, 1) ?>
-                                                </span>
+                                                <span class="badge bg-primary ms-2 fs-6"><?= number_format((float)$review->ai_rating, 1) ?></span>
                                             <?php endif; ?>
                                         </div>
                                     </div>
                                     <h5 class="fw-bold mt-1 mb-2"><?= htmlspecialchars($review->rating_text ?? 'Chưa có đánh giá') ?></h5>
-                                    <?php if ($review->booking_id): ?>
-                                        <p class="mb-1 text-muted" style="font-size: 0.9em;">
-                                            <i class="fas fa-bed me-1"></i> Phòng: <?= htmlspecialchars($review->room_type ?? 'N/A') ?>
-                                            <?php if (isset($review->nights) && $review->nights !== null): ?>
-                                                <span class="mx-2">|</span>
-                                                <i class="fas fa-clock me-1"></i> Lưu trú: <?= htmlspecialchars($review->nights) ?> đêm
+
+                                    <?php
+                                    // Ưu tiên dữ liệu từ Booking (JOIN), nếu không có thì lấy từ cột review (Imported)
+                                    $displayRoomType = $review->room_type ?? ($review->review_room_type ?? null);
+                                    $displayNights = $review->nights ?? ($review->review_nights ?? null);
+                                    $displayGroupType = $review->group_type ?? ($review->review_group_type ?? null);
+                                    ?>
+
+                                    <?php if ($displayRoomType || $displayNights || $displayGroupType): // Chỉ hiển thị nếu có ít nhất 1 thông tin 
+                                    ?>
+                                        <div class="mb-1 text-muted" style="font-size: 0.9em;">
+
+                                            <?php if ($displayRoomType): ?>
+                                                <p class="mb-0"> <i class="fas fa-bed me-1" style="width: 1.25em;"></i> <?= htmlspecialchars($displayRoomType) ?>
+                                                </p>
                                             <?php endif; ?>
-                                            <?php if (!empty($review->group_type)): ?>
-                                                <span class="mx-2">|</span>
-                                                <i class="fas fa-users me-1"></i> Nhóm: <?= htmlspecialchars($review->group_type) ?>
+
+                                            <?php if ($displayNights): ?>
+                                                <p class="mb-0">
+                                                    <i class="fas fa-clock me-1" style="width: 1.25em;"></i>
+                                                    <?= htmlspecialchars($displayNights) ?> đêm
+                                                </p>
                                             <?php endif; ?>
-                                        </p>
+
+                                            <?php if ($displayGroupType): ?>
+                                                <p class="mb-0">
+                                                    <i class="fas fa-users me-1" style="width: 1.25em;"></i>
+                                                    <?= htmlspecialchars($displayGroupType) ?>
+                                                </p>
+                                            <?php endif; ?>
+
+                                        </div>
                                     <?php endif; ?>
                                     <?php if (!empty($review->comment)): ?>
                                         <p class="mb-0 fst-italic">"<?= nl2br(htmlspecialchars($review->comment, ENT_QUOTES, 'UTF-8')) ?>"</p>
@@ -255,7 +284,6 @@ if (!empty($hotelImages)) {
                             </div>
                         <?php endforeach; ?>
 
-                        <!-- <<< KHỐI PHÂN TRANG ĐÃ SỬA (SLIDING WINDOW) >>> -->
                         <?php if (($pagination['total_pages'] ?? 1) > 1): ?>
                             <nav aria-label="Trang bình luận">
                                 <ul class="pagination pagination-sm justify-content-center mt-4">
@@ -263,31 +291,23 @@ if (!empty($hotelImages)) {
                                     <?php
                                     $currentPage = $pagination['current_page'];
                                     $totalPages = $pagination['total_pages'];
-                                    $window = 1; // Số trang hiển thị ở mỗi bên (VD: 12, [13], 14)
+                                    $window = 1;
                                     ?>
 
-                                    <!-- Nút Trang trước -->
                                     <li class="page-item <?= ($currentPage <= 1) ? 'disabled' : '' ?>">
-                                        <?php
-                                        $prevParams = array_merge($_GET, ['review_page' => $currentPage - 1]);
-                                        ?>
+                                        <?php $prevParams = array_merge($_GET, ['review_page' => $currentPage - 1]); ?>
                                         <a class="page-link" href="?<?= http_build_query($prevParams) ?>">Trước</a>
                                     </li>
 
-                                    <!-- Hiển thị trang 1 -->
-                                    <?php
-                                    $pageParams = array_merge($_GET, ['review_page' => 1]);
-                                    ?>
+                                    <?php $pageParams = array_merge($_GET, ['review_page' => 1]); ?>
                                     <li class="page-item <?= (1 == $currentPage) ? 'active' : '' ?>">
                                         <a class="page-link" href="?<?= http_build_query($pageParams) ?>">1</a>
                                     </li>
 
-                                    <!-- Dấu ... (bên trái) -->
                                     <?php if ($currentPage > $window + 2): ?>
                                         <li class="page-item disabled"><span class="page-link">...</span></li>
                                     <?php endif; ?>
 
-                                    <!-- Các trang ở giữa (cửa sổ trượt) -->
                                     <?php
                                     $start = max(2, $currentPage - $window);
                                     $end = min($totalPages - 1, $currentPage + $window);
@@ -300,46 +320,36 @@ if (!empty($hotelImages)) {
                                         </li>
                                     <?php endfor; ?>
 
-                                    <!-- Dấu ... (bên phải) -->
                                     <?php if ($currentPage < $totalPages - $window - 1): ?>
                                         <li class="page-item disabled"><span class="page-link">...</span></li>
                                     <?php endif; ?>
 
-                                    <!-- Hiển thị trang cuối (nếu không phải là trang 1) -->
                                     <?php if ($totalPages > 1): ?>
-                                        <?php
-                                        $pageParams = array_merge($_GET, ['review_page' => $totalPages]);
-                                        ?>
+                                        <?php $pageParams = array_merge($_GET, ['review_page' => $totalPages]); ?>
                                         <li class="page-item <?= ($totalPages == $currentPage) ? 'active' : '' ?>">
                                             <a class="page-link" href="?<?= http_build_query($pageParams) ?>"><?= $totalPages ?></a>
                                         </li>
                                     <?php endif; ?>
 
-                                    <!-- Nút Trang sau -->
                                     <li class="page-item <?= ($currentPage >= $totalPages) ? 'disabled' : '' ?>">
-                                        <?php
-                                        $nextParams = array_merge($_GET, ['review_page' => $currentPage + 1]);
-                                        ?>
+                                        <?php $nextParams = array_merge($_GET, ['review_page' => $currentPage + 1]); ?>
                                         <a class="page-link" href="?<?= http_build_query($nextParams) ?>">Sau</a>
                                     </li>
                                 </ul>
                             </nav>
                         <?php endif; ?>
-                        <!-- <<< KẾT THÚC KHỐI PHÂN TRANG >>> -->
 
                     <?php else: ?>
                         <p class="text-info">Chưa có đánh giá nào cho khách sạn này. Hãy là người đầu tiên!</p>
                     <?php endif; ?>
                 </div>
-                <!-- <<< KẾT THÚC KHỐI BÌNH LUẬN ĐÃ DI CHUYỂN >>> -->
 
-            </div> <!-- Kết thúc col-lg-4 (cột phải) -->
-        </div> <!-- Kết thúc row -->
-
-    <?php else: ?>
+            </div>
+        </div> <?php else: ?>
         <div class="alert alert-danger text-center" role="alert">Không tìm thấy khách sạn này.</div>
     <?php endif; ?>
 </div>
+
 <div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-labelledby="imageGalleryModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content bg-transparent border-0">
@@ -349,15 +359,22 @@ if (!empty($hotelImages)) {
             <div class="modal-body text-center pt-0">
                 <div id="hotelImageCarousel" class="carousel slide" data-bs-interval="false">
                     <div class="carousel-inner">
-                        <?php if (empty($hotelImages)): // Fallback nếu mảng rỗng 
+                        <?php if (empty($hotelImages)): // Fallback 
                         ?>
                             <div class="carousel-item active">
                                 <img src="<?= BASE_URL ?>/public/images/placeholder.png" class="d-block w-100 rounded" alt="Không có ảnh" style="max-height: 80vh; object-fit: contain;">
                             </div>
                         <?php else: ?>
+                            <?php
+                            // Xác định ảnh placeholder
+                            $placeholderImg = BASE_URL . '/public/images/placeholder.png';
+                            ?>
                             <?php foreach ($hotelImages as $index => $img): ?>
-                                <div class="carousel-item <?= ($index === $thumbnailIndex) ? 'active' : '' ?>"> <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>" class="d-block w-100 rounded" alt="Hotel Image <?= $index + 1 ?>" style="max-height: 80vh; object-fit: contain;">
-                                </div>
+                                <div class="carousel-item"> <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>"
+                                        class="d-block w-100 rounded"
+                                        alt="Hotel Image <?= $index + 1 ?>"
+                                        style="max-height: 80vh; object-fit: contain;"
+                                        onerror="this.onerror=null; this.src='<?= $placeholderImg ?>';"> </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
@@ -376,29 +393,37 @@ if (!empty($hotelImages)) {
         </div>
     </div>
 </div>
-
-<!-- Include script cho trang chi tiết khách sạn -->
 <script src="<?= BASE_URL ?>/public/js/hotel_detail.js"></script>
 <?php include 'app/views/shares/footer.php'; ?>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const imageGalleryModal = document.getElementById('imageGalleryModal');
         if (imageGalleryModal) {
 
-            imageGalleryModal.addEventListener('shown.bs.modal', function(event) {
+            imageGalleryModal.addEventListener('show.bs.modal', function(event) { // Dùng 'show.bs.modal'
                 try {
                     const button = event.relatedTarget;
-                    const imageIndex = button.dataset.imageIndex;
+                    const imageIndex = parseInt(button.dataset.imageIndex || 0, 10);
 
                     const carouselElement = document.getElementById('hotelImageCarousel');
                     if (carouselElement) {
-                        // Lấy instance đã có hoặc tạo mới
-                        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
 
-                        // Chuyển đến slide tương ứng
-                        // 'pause' ngăn carousel tự chạy (nếu có)
-                        carousel.to(parseInt(imageIndex));
-                        // carousel.pause(); // Tạm dừng nếu carousel tự chạy
+                        // Logic JS mới để đặt 'active'
+                        const allItems = carouselElement.querySelectorAll('.carousel-item');
+                        if (allItems.length > 0) {
+                            allItems.forEach(item => item.classList.remove('active'));
+
+                            if (allItems[imageIndex]) {
+                                allItems[imageIndex].classList.add('active');
+                            } else {
+                                allItems[0].classList.add('active');
+                            }
+                        }
+
+                        // Khởi tạo hoặc lấy instance và nhảy đến slide
+                        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+                        carousel.to(imageIndex);
                     }
                 } catch (e) {
                     console.error("Lỗi khi khởi tạo carousel gallery:", e);

@@ -2,10 +2,10 @@
 // app/views/admin/rooms/edit.php
 include 'app/views/shares/header.php';
 
-// Khởi tạo các biến từ controller (giả định controller đã truyền vào)
-$room = $room ?? null; // Dữ liệu phòng cần sửa
-$hotels = $hotels ?? []; // Danh sách khách sạn
-$errors = $errors ?? []; // Mảng lỗi validation (nếu có redirect từ hàm update)
+// Lấy các biến từ $data
+$room = $data['room'] ?? null;
+$hotels = $data['hotels'] ?? [];
+$errors = $data['errors'] ?? [];
 ?>
 
 <div class="container my-5">
@@ -39,8 +39,9 @@ $errors = $errors ?? []; // Mảng lỗi validation (nếu có redirect từ hà
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="hotel_id" class="form-label">Khách sạn <span class="text-danger">*</span></label>
-                                        <select id="hotel_id" name="hotel_id" class="form-select <?= isset($errors['hotel_id']) ? 'is-invalid' : '' ?>" required>
+                                        <label for="hotel_id_disabled" class="form-label">Khách sạn (Không thể thay đổi)</label>
+
+                                        <select id="hotel_id_disabled" name="hotel_id_disabled" class="form-select" required disabled>
                                             <option value="">-- Chọn khách sạn --</option>
                                             <?php foreach ($hotels as $hotel): ?>
                                                 <option value="<?= $hotel->id ?>" <?= ($room->hotel_id == $hotel->id) ? 'selected' : '' ?>>
@@ -48,6 +49,8 @@ $errors = $errors ?? []; // Mảng lỗi validation (nếu có redirect từ hà
                                                 </option>
                                             <?php endforeach; ?>
                                         </select>
+
+                                        <input type="hidden" name="hotel_id" value="<?= htmlspecialchars($room->hotel_id) ?>">
                                         <?php if (isset($errors['hotel_id'])): ?>
                                             <div class="invalid-feedback"><?= htmlspecialchars($errors['hotel_id']) ?></div>
                                         <?php endif; ?>
@@ -72,7 +75,6 @@ $errors = $errors ?? []; // Mảng lỗi validation (nếu có redirect từ hà
                                         <select id="room_type" name="room_type" class="form-select <?= isset($errors['room_type']) ? 'is-invalid' : '' ?>" required>
                                             <option value="">-- Chọn loại phòng --</option>
                                             <?php
-                                            // Sử dụng hằng số ALLOWED_ROOM_TYPES
                                             foreach (ALLOWED_ROOM_TYPES as $type): ?>
                                                 <option value="<?= htmlspecialchars($type) ?>" <?= ($room->room_type === $type) ? 'selected' : '' ?>>
                                                     <?= htmlspecialchars($type) ?>
@@ -125,7 +127,7 @@ $errors = $errors ?? []; // Mảng lỗi validation (nếu có redirect từ hà
                                 <label for="image" class="form-label mt-2">Tải lên ảnh mới (để trống nếu không muốn đổi)</label>
                                 <input type="file" id="image" name="image" class="form-control <?= isset($errors['image']) ? 'is-invalid' : '' ?>" accept="image/*">
                                 <?php if (isset($errors['image'])): ?>
-                                    <div class="invalid-feedback d-block"><?= htmlspecialchars($errors['image']) ?></div> <!-- d-block for file input -->
+                                    <div class="invalid-feedback d-block"><?= htmlspecialchars($errors['image']) ?></div>
                                 <?php endif; ?>
                             </div>
 

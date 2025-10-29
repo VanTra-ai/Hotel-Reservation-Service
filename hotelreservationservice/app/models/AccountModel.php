@@ -168,7 +168,6 @@ class AccountModel
     public function updateAccountInfo(int $id, string $fullname, string $email, string $role, ?string $country = null): bool
     {
         $query = "UPDATE " . $this->table_name . " SET fullname = :fullname, email = :email, role = :role, country = :country WHERE id = :id";
-
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':fullname', $fullname);

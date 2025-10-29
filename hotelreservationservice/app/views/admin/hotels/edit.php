@@ -29,63 +29,101 @@
                                     <div class="mb-3">
                                         <label for="city_id" class="form-label">Tỉnh thành:</label>
                                         <select id="city_id" name="city_id" class="form-select" required>
-                                            <?php foreach ($data['cities'] as $city): ?>
-                                                <option value="<?= $city->id ?>" <?= ($data['hotel']->city_id == $city->id) ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($city->name) ?>
-                                                </option>
-                                            <?php endforeach; ?>
+                                            <?php if (!empty($data['cities'])): ?>
+                                                <?php foreach ($data['cities'] as $city): ?>
+                                                    <option value="<?= $city->id ?>" <?= ($data['hotel']->city_id == $city->id) ? 'selected' : '' ?>>
+                                                        <?= htmlspecialchars($city->name) ?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Ảnh hiện tại:</label>
+                                        <label class="form-label">Ảnh đại diện hiện tại:</label>
                                         <img src="<?= BASE_URL ?>/<?= htmlspecialchars($data['hotel']->image ?? 'public/images/placeholder.png') ?>" alt="Ảnh khách sạn" class="img-fluid rounded mb-2">
                                         <input type="hidden" name="existing_image" value="<?= htmlspecialchars($data['hotel']->image) ?>">
 
-                                        <label for="image" class="form-label">Tải lên ảnh mới:</label>
+                                        <label for="image" class="form-label">Tải lên ảnh đại diện mới:</label>
                                         <input type="file" id="image" name="image" class="form-control">
                                     </div>
                                 </div>
                             </div>
 
                             <hr>
-                            <h5 class="mt-4">Điểm đánh giá chi tiết (cho AI)</h5>
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="service_staff" class="form-label">Nhân viên:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="service_staff" value="<?= htmlspecialchars($data['hotel']->service_staff ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="amenities" class="form-label">Tiện nghi:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="amenities" value="<?= htmlspecialchars($data['hotel']->amenities ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="cleanliness" class="form-label">Sạch sẽ:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="cleanliness" value="<?= htmlspecialchars($data['hotel']->cleanliness ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="comfort" class="form-label">Thoải mái:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="comfort" value="<?= htmlspecialchars($data['hotel']->comfort ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="value_for_money" class="form-label">Đáng giá tiền:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="value_for_money" value="<?= htmlspecialchars($data['hotel']->value_for_money ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="location" class="form-label">Địa điểm:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="location" value="<?= htmlspecialchars($data['hotel']->location ?? 8.0) ?>disabled readonly">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="free_wifi" class="form-label">WiFi miễn phí:</label>
-                                    <input type="number" step="0.1" max="10" min="1" class="form-control" name="free_wifi" value="<?= htmlspecialchars($data['hotel']->free_wifi ?? 8.0) ?>disabled readonly">
-                                </div>
+                            <h5 class="mt-4">Quản lý Ảnh Gallery</h5>
+                            <div class="mb-3">
+                                <label for="gallery_images" class="form-label">Thêm ảnh mới vào gallery:</label>
+                                <input type="file" id="gallery_images" name="gallery_images[]" class="form-control" multiple accept="image/*">
+                                <small class="form-text text-muted">Bạn có thể chọn nhiều ảnh mới để tải lên.</small>
                             </div>
 
-                            <div class="d-flex justify-content-end gap-2">
+                            <?php if (!empty($data['gallery_images'])): ?>
+                                <label class="form-label">Các ảnh hiện có:</label>
+                                <div class="d-flex flex-wrap gap-2 border p-2 rounded bg-light">
+                                    <?php foreach ($data['gallery_images'] as $img): ?>
+                                        <div class="position-relative">
+                                            <img src="<?= BASE_URL ?>/<?= htmlspecialchars($img->image_path) ?>" class="img-thumbnail" style="width: 100px; height: 75px; object-fit: cover;">
+                                            <div class="form-check position-absolute top-0 end-0 p-1" style="background: rgba(255,255,255,0.7);">
+                                                <input class="form-check-input" type="checkbox" name="delete_images[]" value="<?= $img->id ?>" id="del_img_<?= $img->id ?>">
+                                                <label class="form-check-label small" for="del_img_<?= $img->id ?>" title="Đánh dấu để xóa">Xóa</label>
+                                            </div>
+                                            <?php if ($img->is_thumbnail): ?>
+                                                <span class="badge bg-primary position-absolute bottom-0 start-0 m-1" style="font-size: 0.7em;">Đại diện</span>
+                                            <?php endif; ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <small class="form-text text-muted">Đánh dấu vào các ảnh bạn muốn xóa khi Lưu thay đổi.</small>
+                            <?php endif; ?>
+                            <hr>
+
+                            <h5 class="mt-4">Điểm đánh giá chi tiết (Tính tự động từ Review)</h5>
+                            <small class="form-text text-muted d-block mb-2">Các điểm này được tính tự động khi khách hàng đánh giá. Admin không thể sửa trực tiếp.</small>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Nhân viên:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->service_staff ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Tiện nghi:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->amenities ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Sạch sẽ:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->cleanliness ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Thoải mái:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->comfort ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Đáng giá tiền:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->value_for_money ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Địa điểm:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->location ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">WiFi miễn phí:</label>
+                                    <input type="number" step="0.1" class="form-control" value="<?= htmlspecialchars($data['hotel']->free_wifi ?? 0.0) ?>" disabled readonly>
+                                </div>
+                                <input type="hidden" name="service_staff" value="<?= htmlspecialchars($data['hotel']->service_staff ?? 8.0) ?>">
+                                <input type="hidden" name="amenities" value="<?= htmlspecialchars($data['hotel']->amenities ?? 8.0) ?>">
+                                <input type="hidden" name="cleanliness" value="<?= htmlspecialchars($data['hotel']->cleanliness ?? 8.0) ?>">
+                                <input type="hidden" name="comfort" value="<?= htmlspecialchars($data['hotel']->comfort ?? 8.0) ?>">
+                                <input type="hidden" name="value_for_money" value="<?= htmlspecialchars($data['hotel']->value_for_money ?? 8.0) ?>">
+                                <input type="hidden" name="location" value="<?= htmlspecialchars($data['hotel']->location ?? 8.0) ?>">
+                                <input type="hidden" name="free_wifi" value="<?= htmlspecialchars($data['hotel']->free_wifi ?? 8.0) ?>">
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2 mt-4">
                                 <a href="<?= BASE_URL ?>/admin/hotel" class="btn btn-secondary">Quay lại</a>
                                 <button type="submit" class="btn btn-warning">Lưu thay đổi</button>
                             </div>
+
                         </form>
                     <?php else: ?>
                         <div class="alert alert-danger">Không tìm thấy khách sạn.</div>

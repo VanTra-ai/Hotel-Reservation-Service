@@ -22,9 +22,6 @@ class BookingController
         SessionHelper::startSession();
     }
 
-    /**
-     * Lấy accountId từ session
-     */
     private function getAccountId()
     {
         $accountId = SessionHelper::getAccountId();
@@ -38,13 +35,9 @@ class BookingController
                 return $account->id;
             }
         }
-
         return null;
     }
 
-    /**
-     * Hiển thị form và xử lý đặt phòng
-     */
     public function bookRoom()
     {
         SessionHelper::requireLogin();
@@ -57,68 +50,67 @@ class BookingController
         $method = $_SERVER['REQUEST_METHOD'];
         $roomId = $_POST['room_id'] ?? $_GET['room_id'] ?? '';
 
-        // Tạo mảng $data để truyền cho view
         $data = [];
         $data['room'] = $this->roomModel->getRoomById($roomId);
         if (!$data['room']) {
-            die("Không tìm thấy phòng."); // Xử lý lỗi không tìm thấy phòng
+            die("Không tìm thấy phòng.");
         }
 
-        // POST: confirm booking
         if ($method === 'POST') {
             $roomId = $_POST['room_id'] ?? '';
             $checkInDate = $_POST['check_in_date'] ?? '';
             $checkOutDate = $_POST['check_out_date'] ?? '';
             $guests = max(1, (int)($_POST['guests'] ?? 1));
-            $groupType = $_POST['group_type'] ?? null;
+            $groupType = $_POST['group_type'] ?? null; // Lấy giá trị (VD: "Phòng gia đình")
 
             $today = date('Y-m-d');
             if (strtotime($checkInDate) < strtotime($today)) {
-                $error = "Ngày nhận phòng không được là ngày trong quá khứ.";
-                // Cần load lại thông tin phòng để hiển thị lại form
-                $room = $this->roomModel->getRoomById($roomId);
-                include 'app/views/booking/book.php';
-                return;
-            }
-
-            $room = $this->roomModel->getRoomById($roomId);
-            if (!$room) {
-                $error = "Không tìm thấy phòng.";
+                $data['error'] = "Ngày nhận phòng không được là ngày trong quá khứ.";
                 include 'app/views/booking/book.php';
                 return;
             }
 
             if (strtotime($checkOutDate) <= strtotime($checkInDate)) {
                 $data['error'] = "Ngày trả phòng phải sau ngày nhận phòng.";
-                $data['check_in'] = $checkInDate; // Giữ lại ngày đã nhập
+                $data['check_in'] = $checkInDate;
                 $data['check_out'] = $checkOutDate;
                 include 'app/views/booking/book.php';
                 return;
             }
 
             if (!$this->bookingModel->isRoomAvailable($roomId, $checkInDate, $checkOutDate)) {
-                $error = "Phòng đã được đặt trong khoảng thời gian này. Vui lòng chọn ngày khác.";
+                $data['error'] = "Phòng đã được đặt trong khoảng thời gian này. Vui lòng chọn ngày khác.";
                 include 'app/views/booking/book.php';
                 return;
             }
-            $allowedGroupTypes = ['Cặp đôi', 'Phòng gia đình', 'Nhóm', 'Khách lẻ']; // Nên dùng constant nếu có
+
+            // <<< SỬA ĐỔI: Đảm bảo mảng này KHỚP VỚI VIEW book.php >>>
+            $allowedGroupTypes = ['Cặp đôi', 'Phòng gia đình', 'Nhóm', 'Khách lẻ'];
+
             if (empty($groupType) || !in_array($groupType, $allowedGroupTypes, true)) {
-                $data['error'] = "Vui lòng chọn loại nhóm khách hợp lệ.";
-                // ... (Chuẩn bị $data để render lại view) ...
-                include 'app/views/booking/book.php';
+                $data['error'] = "Vui lòng chọn loại nhóm khách hợp lệ."; // Đây là lỗi bạn thấy
+
+                // Giữ lại các giá trị đã nhập để hiển thị lại form
+                $data['check_in'] = $checkInDate;
+                $data['check_out'] = $checkOutDate;
+
+                include 'app/views/booking/book.php'; // Trả về form với lỗi
                 return;
             }
+            // <<< KẾT THÚC SỬA ĐỔI >>>
+
 
             $nights = max(1, (strtotime($checkOutDate) - strtotime($checkInDate)) / (60 * 60 * 24));
-            $totalPrice = $nights * (float)$room->price;
+            $totalPrice = $nights * (float)$data['room']->price;
 
+            // Truyền $groupType (VD: "Phòng gia đình") vào hàm createBooking
             if ($this->bookingModel->createBooking($accountId, $roomId, $checkInDate, $checkOutDate, $totalPrice, $groupType)) {
                 header('Location: ' . BASE_URL . '/booking/confirmation');
                 exit;
             }
 
             $data['error'] = "Có lỗi xảy ra khi lưu đặt phòng.";
-            $data['check_in'] = $checkInDate; // Giữ lại ngày đã nhập nếu lỗi
+            $data['check_in'] = $checkInDate;
             $data['check_out'] = $checkOutDate;
             include 'app/views/booking/book.php';
             return;
@@ -131,40 +123,30 @@ class BookingController
         include 'app/views/booking/book.php';
     }
 
-    /**
-     * Trang xác nhận booking
-     */
     public function confirmation()
     {
         include 'app/views/booking/confirmation.php';
     }
 
-    /**
-     * Lịch sử booking của user
-     */
     public function history()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: ' . BASE_URL . '/account/login'); // Sửa đường dẫn nếu cần
+            header('Location: ' . BASE_URL . '/account/login');
             exit;
         }
 
         $accountId = $this->getAccountId();
-        // Cần truyền biến hằng số trạng thái để View có thể xử lý hiển thị nút Review
         $data = [
             'bookings' => $this->bookingModel->getBookingsByAccountId($accountId),
-            'STATUS_CHECKED_OUT' => BOOKING_STATUS_CHECKED_OUT // Truyền hằng số
+            'STATUS_CHECKED_OUT' => BOOKING_STATUS_CHECKED_OUT
         ];
         include 'app/views/booking/history.php';
     }
 
-    /**
-     * Hủy booking
-     */
     public function cancel()
     {
         if (!SessionHelper::isLoggedIn()) {
-            header('Location: /Hotel-Reservation-Service/hotelreservationservice/account/login');
+            header('Location: ' . BASE_URL . '/account/login');
             exit;
         }
 
@@ -175,7 +157,7 @@ class BookingController
             $this->bookingModel->cancelBooking($bookingId, $accountId);
         }
 
-        header('Location: /Hotel-Reservation-Service/hotelreservationservice/booking/history');
+        header('Location: ' . BASE_URL . '/booking/history');
         exit;
     }
 }
