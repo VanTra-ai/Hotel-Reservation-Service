@@ -2,97 +2,171 @@
 // app/models/ReportModel.php
 class ReportModel
 {
-    private $conn;
+    private $db;
+
     public function __construct($db)
     {
-        $this->conn = $db;
+        $this->db = $db;
+    }
+
+    // XÓA 3 HÀM CŨ: getOverallStats, getBookingStatusDistribution, getDailyRevenueForMonth
+
+    /**
+     * Hàm helper để xây dựng WHERE clause động
+     */
+    private function buildWhereClause(
+        ?int $cityId,
+        ?int $hotelId,
+        ?int $month,
+        ?int $year,
+        string $bookingAlias = 'b',
+        string $hotelAlias = 'h'
+    ): array {
+        $where = " WHERE 1=1 ";
+        $params = [];
+
+        if ($hotelId) {
+            $where .= " AND $hotelAlias.id = :hotelId ";
+            $params[':hotelId'] = $hotelId;
+        } elseif ($cityId) {
+            $where .= " AND $hotelAlias.city_id = :cityId ";
+            $params[':cityId'] = $cityId;
+        }
+
+        // SỬA: Chỉ lọc theo booking_date nếu groupBy là 'day'
+        if ($month && $year) {
+            $where .= " AND MONTH(b.created_at) = :month AND YEAR(b.created_at) = :year ";
+            $params[':month'] = $month;
+            $params[':year'] = $year;
+        } elseif ($year) {
+            $where .= " AND YEAR(b.created_at) = :year ";
+            $params[':year'] = $year;
+        }
+
+        return ['where' => $where, 'params' => $params];
     }
 
     /**
-     * Lấy các chỉ số thống kê tổng quan.
-     * Nếu có $ownerId, chỉ tính cho các khách sạn của người đó.
+     * Lấy tổng số booking (Đã lọc)
      */
-    public function getOverallStats($ownerId = null)
+    public function getBookingCount(?int $cityId, ?int $hotelId, ?int $month, ?int $year): int
     {
-        $params = [];
-        if ($ownerId) {
-            // SQL dành riêng cho Partner
-            $sql = "SELECT 
-                        COUNT(b.id) as total_bookings,
-                        SUM(CASE WHEN b.status IN ('confirmed', 'checked_out') THEN b.total_price ELSE 0 END) as total_revenue,
-                        (SELECT COUNT(*) FROM hotel h_sub WHERE h_sub.owner_id = :ownerId) as total_hotels
-                    FROM booking b
-                    JOIN room r ON b.room_id = r.id
-                    JOIN hotel h ON r.hotel_id = h.id
-                    WHERE h.owner_id = :ownerId";
-            $params[':ownerId'] = $ownerId;
-        } else {
-            // SQL dành cho Admin (toàn hệ thống)
-            $sql = "SELECT 
-                        (SELECT COUNT(*) FROM booking) as total_bookings,
-                        (SELECT SUM(total_price) FROM booking WHERE status IN ('confirmed', 'checked_out')) as total_revenue,
-                        (SELECT COUNT(*) FROM account) as total_users,
-                        (SELECT COUNT(*) FROM hotel) as total_hotels
-                    ";
-        }
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute($params);
-        return $stmt->fetch(PDO::FETCH_OBJ);
+        $filters = $this->buildWhereClause($cityId, $hotelId, $month, $year);
+
+        $sql = "SELECT COUNT(b.id) 
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id" . $filters['where'];
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($filters['params']);
+        return (int)$stmt->fetchColumn();
     }
 
     /**
-     * Lấy phân phối trạng thái booking.
-     * Nếu có $ownerId, chỉ tính cho các khách sạn của người đó.
+     * Lấy tổng doanh thu (Đã lọc)
      */
-    public function getBookingStatusDistribution($ownerId = null)
+    public function getTotalRevenue(?int $cityId, ?int $hotelId, ?int $month, ?int $year): float
     {
-        $params = [];
-        $sql = "SELECT b.status, COUNT(b.id) as count 
-                FROM booking b";
+        $filters = $this->buildWhereClause($cityId, $hotelId, $month, $year);
 
-        if ($ownerId) {
-            $sql .= " JOIN room r ON b.room_id = r.id
-                      JOIN hotel h ON r.hotel_id = h.id
-                      WHERE h.owner_id = :ownerId";
-            $params[':ownerId'] = $ownerId;
+        $sql = "SELECT SUM(b.total_price) 
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id" . $filters['where'] .
+            " AND b.status = :status";
+
+        $filters['params'][':status'] = BOOKING_STATUS_CHECKED_OUT;
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($filters['params']);
+        return (float)$stmt->fetchColumn();
+    }
+
+    /**
+     * Lấy tổng số thành viên (Không bị ảnh hưởng bởi lọc)
+     */
+    public function getMemberCount(): int
+    {
+        // SỬA: Chỉ đếm 'user', không đếm 'admin' hay 'partner'
+        $stmt = $this->db->prepare("SELECT COUNT(id) FROM account WHERE role = 'user'");
+        $stmt->execute();
+        return (int)$stmt->fetchColumn();
+    }
+
+    /**
+     * Lấy tổng số khách sạn (Lọc theo thành phố)
+     */
+    public function getHotelCount(?int $cityId): int
+    {
+        $sql = "SELECT COUNT(id) FROM hotel";
+        $params = [];
+        if ($cityId) {
+            $sql .= " WHERE city_id = :cityId";
+            $params[':cityId'] = $cityId;
+        }
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
+    }
+
+    /**
+     * Lấy dữ liệu biểu đồ doanh thu (Đã lọc VÀ Group By)
+     */
+    public function getDailyRevenueData(?int $cityId, ?int $hotelId, ?int $month, ?int $year, string $groupBy = 'day'): array
+    {
+        // SỬA: Truyền $month và $year dựa trên $groupBy
+        $filterMonth = ($groupBy === 'day') ? $month : null; // Chỉ lọc theo tháng nếu xem theo ngày
+        $filterYear = ($groupBy === 'day' || $groupBy === 'month') ? $year : null; // Lọc theo năm nếu xem theo ngày/tháng
+
+        $filters = $this->buildWhereClause($cityId, $hotelId, $filterMonth, $filterYear);
+
+        $sql = "SELECT ";
+        $groupBySql = "";
+
+        switch ($groupBy) {
+            case 'month':
+                $sql .= " MONTH(b.created_at) as month, YEAR(b.created_at) as year, SUM(b.total_price) as revenue";
+                $groupBySql = " GROUP BY YEAR(b.created_at), MONTH(b.created_at) ORDER BY year, month ASC";
+                break;
+            case 'year':
+                $sql .= " YEAR(b.created_at) as year, SUM(b.total_price) as revenue";
+                $groupBySql = " GROUP BY YEAR(b.created_at) ORDER BY year ASC";
+                break;
+            case 'day':
+            default:
+                $sql .= " DATE(b.created_at) as booking_date, SUM(b.total_price) as daily_revenue";
+                $groupBySql = " GROUP BY DATE(b.created_at) ORDER BY booking_date ASC";
+                break;
         }
 
-        $sql .= " GROUP BY b.status";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute($params);
+        $sql .= " FROM booking b
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id" . $filters['where'] .
+            " AND b.status = :status" . $groupBySql;
+
+        $filters['params'][':status'] = BOOKING_STATUS_CHECKED_OUT;
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($filters['params']);
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     /**
-     * Lấy doanh thu theo từng ngày trong tháng.
-     * Nếu có $ownerId, chỉ tính cho các khách sạn của người đó.
+     * Lấy dữ liệu thống kê trạng thái (Đã lọc)
      */
-    public function getDailyRevenueForMonth($year, $month, $ownerId = null)
+    public function getBookingStatusData(?int $cityId, ?int $hotelId, ?int $month, ?int $year): array
     {
-        $params = [':year' => $year, ':month' => $month];
-        $sql = "SELECT 
-                    DAY(b.created_at) as day, 
-                    SUM(b.total_price) as revenue 
-                FROM booking b";
+        $filters = $this->buildWhereClause($cityId, $hotelId, $month, $year);
 
-        if ($ownerId) {
-            $sql .= " JOIN room r ON b.room_id = r.id
-                      JOIN hotel h ON r.hotel_id = h.id
-                      WHERE YEAR(b.created_at) = :year AND 
-                            MONTH(b.created_at) = :month AND
-                            b.status IN ('confirmed', 'checked_out') AND
-                            h.owner_id = :ownerId";
-            $params[':ownerId'] = $ownerId;
-        } else {
-            $sql .= " WHERE YEAR(b.created_at) = :year AND 
-                             MONTH(b.created_at) = :month AND
-                             b.status IN ('confirmed', 'checked_out')";
-        }
+        $sql = "SELECT status, COUNT(*) as count 
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                JOIN hotel h ON r.hotel_id = h.id" . $filters['where'] .
+            " GROUP BY status";
 
-        $sql .= " GROUP BY DAY(b.created_at) ORDER BY day ASC";
-
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute($params);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($filters['params']);
+        return $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
     }
 }

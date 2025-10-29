@@ -1,7 +1,7 @@
 <?php
 // seed_data.php
-ini_set('max_execution_time', 6000);
-ini_set('memory_limit', '512M');
+ini_set('max_execution_time', 10000);
+ini_set('memory_limit', '1024M');
 
 echo "<pre>";
 
@@ -147,7 +147,7 @@ foreach ($cityFolders as $cityFolder) {
 
         $hotelRepresentativeImage = null; // Đường dẫn ảnh đại diện (web path)
         $allHotelImages = []; // Mảng chứa TẤT CẢ ảnh (web path)
-        if (is_dir($hotelImageFolderPath_FS)) { // <<< SỬA: Dùng đường dẫn FS
+        if (is_dir($hotelImageFolderPath_FS)) {
             $images_fs = glob($hotelImageFolderPath_FS . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
 
             if (!empty($images_fs)) {
@@ -159,13 +159,13 @@ foreach ($cityFolders as $cityFolder) {
                     $allHotelImages[] = $hotelImageFolderPath_Web . '/' . basename($img_fs);
                 }
 
-                echo "      Ảnh đại diện: " . $hotelRepresentativeImage . "\n";
-                echo "      Tìm thấy tổng cộng " . count($allHotelImages) . " ảnh.\n";
+                echo "Ảnh đại diện: " . $hotelRepresentativeImage . "\n";
+                echo "Tìm thấy tổng cộng " . count($allHotelImages) . " ảnh.\n";
             } else {
-                echo "      Cảnh báo: Không tìm thấy file ảnh nào trong thư mục: " . $hotelImageFolderPath_FS . "\n";
+                echo "Cảnh báo: Không tìm thấy file ảnh nào trong thư mục: " . $hotelImageFolderPath_FS . "\n";
             }
         } else {
-            echo "      Cảnh báo: Không tìm thấy thư mục ảnh: " . $hotelImageFolderPath_FS . "\n";
+            echo "Cảnh báo: Không tìm thấy thư mục ảnh: " . $hotelImageFolderPath_FS . "\n";
         }
 
         // --- 6. Xử lý Hotel ---
