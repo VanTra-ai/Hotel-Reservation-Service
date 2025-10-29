@@ -72,7 +72,7 @@ Dự án được phân chia thành 3 vai trò: **Người dùng (User)**, **Đ�
 ````bash
 git clone [https://github.com/VanTra-ai/Hotel-Reservation-Service.git](https://github.com/VanTra-ai/Hotel-Reservation-Service.git)
 cd Hotel-Reservation-Service
-
+````
 ### 2. Cài đặt Web App (PHP)
 
 1.  **Thiết lập Cơ sở dữ liệu:**
@@ -130,7 +130,7 @@ cd Hotel-Reservation-Service
 
 ## 📂 Cấu trúc thư mục
 
-````
+
 
 .
 ├── HotelRatingAPI/ # Dự án API Python
