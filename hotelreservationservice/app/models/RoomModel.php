@@ -348,4 +348,132 @@ class RoomModel
             return null;
         }
     }
+    /**
+     * Lấy tổng số phòng (để phân trang)
+     */
+    public function getRoomCount(?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(r.id) FROM room r 
+                  JOIN hotel h ON r.hotel_id = h.id";
+        $params = [];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE r.room_number LIKE :search OR r.room_type LIKE :search OR h.name LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
+    }
+    /**
+     * Lấy danh sách tất cả phòng (CÓ PHÂN TRANG VÀ LỌC)
+     */
+    public function getAllRooms(int $limit, int $offset, ?string $searchTerm = null)
+    {
+        $query = "SELECT r.*, h.name AS hotel_name, h.rating AS hotel_rating 
+                  FROM room r 
+                  JOIN hotel h ON r.hotel_id = h.id";
+
+        $params = [
+            ':limit' => $limit,
+            ':offset' => $offset
+        ];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE r.room_number LIKE :search OR r.room_type LIKE :search OR h.name LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $query .= " ORDER BY r.hotel_id, r.id ASC LIMIT :limit OFFSET :offset";
+
+        $stmt = $this->conn->prepare($query);
+
+        // Bind các tham số
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $params[':search'] = '%' . $searchTerm . '%';
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    /**
+     * Lấy danh sách phòng (CÓ PHÂN TRANG) kèm theo tên khách sạn và thành phố.
+     */
+    public function getRoomsWithRelatedData(int $limit, int $offset): array
+    {
+        $sql = "SELECT r.*, h.name AS hotel_name, c.name AS city_name
+                FROM " . $this->table_name . " r
+                JOIN hotel h ON r.hotel_id = h.id
+                JOIN city c ON h.city_id = c.id
+                ORDER BY r.id ASC
+                LIMIT :limit OFFSET :offset";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getRoomsWithRelatedData error: " . $e->getMessage());
+            return [];
+        }
+    }
+    /**
+     * Lấy tổng số phòng cho một khách sạn cụ thể (CÓ LỌC)
+     */
+    public function getRoomCountByHotelId(int $hotelId, ?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(r.id) FROM room r 
+                  WHERE r.hotel_id = :hotelId";
+        $params = [':hotelId' => $hotelId];
+
+        if (!empty($searchTerm)) {
+            $query .= " AND (r.room_number LIKE :search OR r.room_type LIKE :search)";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+        $stmt->execute();
+        return (int)$stmt->fetchColumn();
+    }
+    /**
+     * Lấy danh sách phòng cho một khách sạn cụ thể (CÓ PHÂN TRANG VÀ LỌC)
+     */
+    public function getRoomsByPartnerHotel(int $hotelId, int $limit, int $offset, ?string $searchTerm = null)
+    {
+        $query = "SELECT r.*, h.name AS hotel_name
+                  FROM room r 
+                  JOIN hotel h ON r.hotel_id = h.id
+                  WHERE r.hotel_id = :hotelId";
+
+        $params = [':hotelId' => $hotelId];
+
+        if (!empty($searchTerm)) {
+            $query .= " AND (r.room_number LIKE :search OR r.room_type LIKE :search)";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $query .= " ORDER BY r.id ASC LIMIT :limit OFFSET :offset";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }

@@ -8,12 +8,40 @@ class HotelModel
     {
         $this->conn = $db;
     }
-    public function getHotels()
+    public function getHotels(?int $limit = null, ?int $offset = null, ?string $searchTerm = null)
     {
-        $query = "SELECT p.id, p.name, p.address, p.description, p.rating, p.total_rating, p.image, c.name as city_name
-                    FROM " . $this->table_name . " p
-                    LEFT JOIN city c ON p.city_id = c.id";
+        $query = "SELECT h.*, c.name as city_name 
+                  FROM " . $this->table_name . " h
+                  LEFT JOIN city c ON h.city_id = c.id";
+
+        $params = [];
+
+        // Thêm điều kiện tìm kiếm (Tên khách sạn hoặc Tên thành phố)
+        if (!empty($searchTerm)) {
+            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $query .= " ORDER BY h.id DESC"; // Sắp xếp mặc định
+
+        // <<< LOGIC XỬ LÝ PHÂN TRANG TÙY CHỌN >>>
+        if ($limit !== null && $offset !== null) {
+            $query .= " LIMIT :limit OFFSET :offset";
+            $params[':limit'] = $limit;
+            $params[':offset'] = $offset;
+        }
+
         $stmt = $this->conn->prepare($query);
+
+        // Bind các tham số
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+        if ($limit !== null && $offset !== null) {
+            $stmt->bindParam(':limit', $params[':limit'], PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $params[':offset'], PDO::PARAM_INT);
+        }
+
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
         return $result;
@@ -202,14 +230,17 @@ class HotelModel
      * Lấy tất cả khách sạn KÈM THEO TÊN THÀNH PHỐ
      * Dùng cho trang quản trị để hiển thị đầy đủ thông tin.
      */
-    public function getHotelsWithCityName()
+    public function getHotelsWithCityName(int $limit, int $offset)
     {
         $query = "SELECT h.*, c.name as city_name 
                   FROM " . $this->table_name . " h
                   LEFT JOIN city c ON h.city_id = c.id
-                  ORDER BY h.id DESC";
+                  ORDER BY h.id ASC
+                  LIMIT :limit OFFSET :offset";
 
         $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
@@ -280,5 +311,23 @@ class HotelModel
         $stmt->bindParam(':hotel_id', $hotelId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    /**
+     * Lấy tổng số khách sạn (để phân trang)
+     */
+    public function getHotelCount(?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(h.id) FROM hotel h 
+                  JOIN city c ON h.city_id = c.id";
+        $params = [];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE h.name LIKE :search OR c.name LIKE :search OR h.id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
     }
 }

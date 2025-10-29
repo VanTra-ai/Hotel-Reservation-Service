@@ -23,7 +23,32 @@ class AdminCityController extends BaseAdminController
      */
     public function index()
     {
-        $cities = $this->cityModel->getCities();
+        $searchTerm = trim($_GET['search'] ?? '');
+
+        // 1. Cấu hình Phân trang
+        $limit = 10; // 10 thành phố mỗi trang
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_cities = $this->cityModel->getCityCount($searchTerm); // <<< TRUYỀN $searchTerm
+        $cities = $this->cityModel->getCities($limit, $offset, $searchTerm); // <<< TRUYỀN $searchTerm
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_cities / $limit);
+
+        $data = [
+            'cities' => $cities,
+            'searchTerm' => $searchTerm, // <<< TRUYỀN $searchTerm SANG VIEW
+            'pagination' => [
+                'current_page' => $current_page,
+                'total_pages' => $total_pages,
+                'total_items' => $total_cities,
+                'base_url' => BASE_URL . '/admin/city/index'
+            ]
+        ];
+
         include 'app/views/admin/cities/list.php';
     }
 
@@ -42,35 +67,29 @@ class AdminCityController extends BaseAdminController
      */
     public function save()
     {
-        $errors = []; // Luôn khởi tạo mảng lỗi ở đầu hàm
+        $errors = [];
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $name = $_POST['name'] ?? '';
-            $imagePath = ""; // Khởi tạo
+            $imagePath = "";
 
             if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
                 try {
-                    // Sử dụng đúng thuộc tính cityImageUploader
-                    $imagePath = $this->cityImageUploader->upload($_FILES['image'], 'city_'); // <<< SỬA TÊN THUỘC TÍNH
+                    $imagePath = $this->cityImageUploader->upload($_FILES['image'], 'city_');
                 } catch (Exception $e) {
                     $errors[] = "Lỗi upload ảnh: " . $e->getMessage();
-                    // Hiển thị lại form add với lỗi
-                    include 'app/views/admin/cities/add.php'; // Truyền $errors vào view
+                    include 'app/views/admin/cities/add.php';
                     return;
                 }
             } elseif (isset($_FILES['image']) && $_FILES['image']['error'] != UPLOAD_ERR_NO_FILE) {
-                // Xử lý các lỗi upload khác nếu có file nhưng bị lỗi
                 $errors[] = "Có lỗi xảy ra trong quá trình upload file (Mã lỗi: " . $_FILES['image']['error'] . ").";
                 include 'app/views/admin/cities/add.php';
                 return;
             }
 
-
-            // Kiểm tra tên thành phố không được trống
             if (empty(trim($name))) {
                 $errors[] = "Tên thành phố không được để trống.";
             }
 
-            // Chỉ lưu nếu không có lỗi
             if (empty($errors)) {
                 if ($this->cityModel->addCity($name, $imagePath)) {
                     $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Thêm thành phố thành công!'];
@@ -81,13 +100,11 @@ class AdminCityController extends BaseAdminController
                 }
             }
 
-            // Nếu có lỗi (kể cả lỗi DB), hiển thị lại form add
             if (!empty($errors)) {
-                include 'app/views/admin/cities/add.php'; // Truyền $errors vào view
-                return; // Dừng thực thi sau khi include view
+                include 'app/views/admin/cities/add.php';
+                return;
             }
         } else {
-            // Nếu không phải POST, chuyển hướng về trang add
             header('Location: ' . BASE_URL . '/admin/city/add');
             exit();
         }
@@ -99,7 +116,7 @@ class AdminCityController extends BaseAdminController
      */
     public function edit($id)
     {
-        $city = $this->cityModel->getCityById((int)$id); // Ép kiểu ID sang int
+        $city = $this->cityModel->getCityById((int)$id);
         if ($city) {
             include 'app/views/admin/cities/edit.php';
         } else {
@@ -114,7 +131,7 @@ class AdminCityController extends BaseAdminController
      */
     public function update($id)
     {
-        $id = (int)$id; // Ép kiểu ID
+        $id = (int)$id;
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $name = trim($_POST['name'] ?? '');
             $oldCity = $this->cityModel->getCityById($id);
@@ -125,35 +142,30 @@ class AdminCityController extends BaseAdminController
                 exit();
             }
 
-            // Kiểm tra tên không được trống
             if (empty($name)) {
-                // Hiển thị lại form edit với lỗi
                 $error = "Tên thành phố không được để trống.";
-                $city = $oldCity; // Cần $city để view edit hiển thị lại
+                $city = $oldCity;
                 include 'app/views/admin/cities/edit.php';
                 return;
             }
 
-            $imagePath = $oldCity->image; // Giữ ảnh cũ mặc định
-            $oldImagePath = $oldCity->image; // Lưu lại để xóa
+            $imagePath = $oldCity->image;
+            $oldImagePath = $oldCity->image;
 
             if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
                 try {
-                    // Sử dụng đúng thuộc tính cityImageUploader
-                    $newImagePath = $this->cityImageUploader->upload($_FILES['image'], 'city_'); // <<< SỬA TÊN THUỘC TÍNH
+                    $newImagePath = $this->cityImageUploader->upload($_FILES['image'], 'city_');
                     if ($newImagePath) {
-                        $this->cityImageUploader->delete($oldImagePath); // Xóa ảnh cũ
-                        $imagePath = $newImagePath; // Cập nhật đường dẫn mới
+                        $this->cityImageUploader->delete($oldImagePath);
+                        $imagePath = $newImagePath;
                     }
                 } catch (Exception $e) {
-                    // Hiển thị lại form edit với lỗi upload
                     $error = "Lỗi upload ảnh: " . $e->getMessage();
-                    $city = $oldCity; // Cần $city để view edit hiển thị lại
+                    $city = $oldCity;
                     include 'app/views/admin/cities/edit.php';
                     return;
                 }
             } elseif (isset($_FILES['image']) && $_FILES['image']['error'] != UPLOAD_ERR_NO_FILE) {
-                // Xử lý các lỗi upload khác
                 $error = "Có lỗi xảy ra trong quá trình upload file (Mã lỗi: " . $_FILES['image']['error'] . ").";
                 $city = $oldCity;
                 include 'app/views/admin/cities/edit.php';
@@ -166,15 +178,13 @@ class AdminCityController extends BaseAdminController
                 header('Location: ' . BASE_URL . '/admin/city');
                 exit();
             } else {
-                // Hiển thị lại form edit với lỗi DB
                 $error = "Đã xảy ra lỗi khi cập nhật vào cơ sở dữ liệu.";
-                $city = $oldCity; // Nạp lại dữ liệu cũ
-                $city->name = $name; // Giữ lại tên người dùng vừa nhập
+                $city = $oldCity;
+                $city->name = $name;
                 include 'app/views/admin/cities/edit.php';
                 return;
             }
         } else {
-            // Nếu không phải POST, chuyển hướng về trang edit
             header('Location: ' . BASE_URL . '/admin/city/edit/' . $id);
             exit();
         }
@@ -186,18 +196,16 @@ class AdminCityController extends BaseAdminController
      */
     public function delete($id)
     {
-        $id = (int)$id; // Ép kiểu ID
+        $id = (int)$id;
         $city = $this->cityModel->getCityById($id);
 
         if ($city) {
-            // Chỉ gọi helper để xóa ảnh
             $this->cityImageUploader->delete($city->image);
         } else {
             $_SESSION['flash_message'] = ['type' => 'warning', 'message' => 'Không tìm thấy thành phố để xóa.'];
             header('Location: ' . BASE_URL . '/admin/city');
             exit();
         }
-
 
         if ($this->cityModel->deleteCity($id)) {
             $_SESSION['flash_message'] = ['type' => 'success', 'message' => 'Xóa thành phố thành công!'];

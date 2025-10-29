@@ -131,17 +131,33 @@ class AccountModel
     /**
      * Lấy tất cả các tài khoản, sử dụng subquery để tránh trùng lặp
      */
-    public function getAllAccounts()
+    public function getAllAccounts(int $limit, int $offset, ?string $searchTerm = null)
     {
-        // Sử dụng Subquery để đảm bảo mỗi tài khoản chỉ trả về một hàng duy nhất,
-        // ngay cả khi có lỗi dữ liệu (một partner sở hữu nhiều khách sạn).
         $query = "SELECT 
                     a.id, a.username, a.fullname, a.email, a.role, a.created_at, a.profile_picture, a.country,
                     (SELECT h.name FROM hotel h WHERE h.owner_id = a.id LIMIT 1) as hotel_name 
-                  FROM " . $this->table_name . " a
-                  ORDER BY a.role, a.username ASC";
+                  FROM " . $this->table_name . " a";
+        $params = [
+            ':limit' => $limit,
+            ':offset' => $offset
+        ];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE a.username LIKE :search OR a.fullname LIKE :search OR a.email LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $query .= " ORDER BY a.role, a.username ASC LIMIT :limit OFFSET :offset";
 
         $stmt = $this->conn->prepare($query);
+
+        // Bind các tham số
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
@@ -151,17 +167,23 @@ class AccountModel
      */
     public function updateAccountInfo(int $id, string $fullname, string $email, string $role, ?string $country = null): bool
     {
-        // Thêm SET country = :country nếu muốn cập nhật cả country ở đây
         $query = "UPDATE " . $this->table_name . " SET fullname = :fullname, email = :email, role = :role, country = :country WHERE id = :id";
+
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':fullname', $fullname);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':role', $role);
+
+            // Bind country (SỬA ĐỔI)
+            $country = $country ? htmlspecialchars(strip_tags($country)) : null; // Xử lý sanitization
+            $stmt->bindParam(':country', $country, PDO::PARAM_STR);
+
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
             return $stmt->execute();
         } catch (PDOException $e) {
-            // Ghi log lỗi nếu cần
+            error_log("Update account info error: " . $e->getMessage());
             return false;
         }
     }
@@ -184,5 +206,22 @@ class AccountModel
         } catch (PDOException $e) {
             return false;
         }
+    }
+    /**
+     * Lấy tổng số tài khoản (để phân trang)
+     */
+    public function getAccountCount(?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(id) FROM " . $this->table_name . " a";
+        $params = [];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE a.username LIKE :search OR a.fullname LIKE :search OR a.email LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
     }
 }

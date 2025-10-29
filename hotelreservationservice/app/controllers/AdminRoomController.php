@@ -25,7 +25,35 @@ class AdminRoomController extends BaseAdminController
      */
     public function index()
     {
-        $rooms = $this->roomModel->getRooms();
+        // <<< THÊM: Lấy từ khóa tìm kiếm từ URL >>>
+        $searchTerm = trim($_GET['search'] ?? '');
+
+        // 1. Cấu hình Phân trang
+        $limit = 10; // 10 phòng mỗi trang
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        // Cần đảm bảo hàm getRoomCount nhận $searchTerm
+        $total_rooms = $this->roomModel->getRoomCount($searchTerm);
+
+        // Lấy phòng đã JOIN dữ liệu và LỌC
+        // SỬA: Hàm getRoomsWithRelatedData không có tham số search, nên dùng getAllRooms đã sửa
+        $data['rooms'] = $this->roomModel->getAllRooms($limit, $offset, $searchTerm);
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_rooms / $limit);
+
+        $data['searchTerm'] = $searchTerm; // <<< TRUYỀN $searchTerm SANG VIEW
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_rooms,
+            'base_url' => BASE_URL . '/admin/room/index'
+        ];
+
         include 'app/views/admin/rooms/list.php';
     }
 
@@ -34,15 +62,13 @@ class AdminRoomController extends BaseAdminController
      */
     public function add()
     {
-        $hotels = $this->hotelModel->getHotels();
-        // Lấy lỗi từ session (nếu có redirect từ hàm save)
+        // Lấy tất cả khách sạn (không cần phân trang)
+        $data['hotels'] = $this->hotelModel->getHotels();
+        // Lấy lỗi từ session (giữ nguyên)
         $errors = $_SESSION['form_errors'] ?? [];
         unset($_SESSION['form_errors']);
-        // Lấy dữ liệu cũ từ session (nếu có redirect từ hàm save)
-        $old_input = $_SESSION['old_input'] ?? [];
-        unset($_SESSION['old_input']);
 
-        include 'app/views/admin/rooms/add.php'; // Truyền $errors và $old_input vào view
+        include 'app/views/admin/rooms/add.php';
     }
 
     /**
@@ -108,21 +134,20 @@ class AdminRoomController extends BaseAdminController
      */
     public function edit($id)
     {
-        $id = (int)$id; // Ép kiểu ID
         $room = $this->roomModel->getRoomById($id);
-
         if (!$room) {
             $_SESSION['flash_message'] = ['type' => 'danger', 'message' => 'Không tìm thấy phòng ID: ' . $id];
             header('Location: ' . BASE_URL . '/admin/room');
-            exit();
+            exit;
         }
 
+        // Lấy tất cả khách sạn (không cần phân trang)
         $hotels = $this->hotelModel->getHotels();
-        // Lấy lỗi từ session (nếu có redirect từ hàm update)
+        // Lấy lỗi từ session (giữ nguyên)
         $errors = $_SESSION['form_errors'] ?? [];
         unset($_SESSION['form_errors']);
-        // Giữ lại input cũ nếu có lỗi (chưa làm ở đây, cần sửa view edit để nhận $old_input)
-        include 'app/views/admin/rooms/edit.php'; // Truyền $errors vào view
+
+        include 'app/views/admin/rooms/edit.php';
     }
 
 

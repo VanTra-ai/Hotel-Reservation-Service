@@ -202,9 +202,24 @@ if (!empty($hotelImages)) {
                             <!-- ... (Code hiển thị từng review card giữ nguyên) ... -->
                             <div class="d-flex mb-4 p-3 border rounded shadow-sm bg-white">
                                 <div class="flex-shrink-0 me-3 text-center">
-                                    <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; font-size: 1.5rem;">
-                                        <?= strtoupper(substr($review->fullname, 0, 1)) ?>
-                                    </div>
+                                    <?php if (!empty($review->profile_picture)): // KIỂM TRA NẾU CÓ ẢNH 
+                                    ?>
+
+                                        <img src="<?= htmlspecialchars($review->profile_picture) ?>"
+                                            class="rounded-circle"
+                                            style="width: 48px; height: 48px; object-fit: cover;"
+                                            alt="<?= htmlspecialchars($review->fullname) ?>">
+
+                                    <?php else: // NẾU KHÔNG CÓ ẢNH, HIỂN THỊ CHỮ CÁI ĐẦU 
+                                    ?>
+
+                                        <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
+                                            style="width: 48px; height: 48px; font-size: 1.5rem;">
+                                            <?= strtoupper(substr($review->fullname, 0, 1)) ?>
+                                        </div>
+
+                                    <?php endif; ?>
+
                                     <small class="d-block mt-1 text-muted" style="font-size: 0.8em;"><?= htmlspecialchars($review->country ?? 'Việt Nam') ?></small>
                                 </div>
                                 <div class="flex-grow-1">

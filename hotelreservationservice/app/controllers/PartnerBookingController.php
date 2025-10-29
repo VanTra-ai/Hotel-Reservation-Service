@@ -20,9 +20,37 @@ class PartnerBookingController extends BasePartnerController
     public function index()
     {
         $partnerId = SessionHelper::getAccountId();
-        $data['bookings'] = $this->bookingModel->getAllBookingsWithInfo($partnerId);
+        $searchTerm = trim($_GET['search'] ?? '');
 
-        // Tái sử dụng view của admin, nhưng chúng ta sẽ tạo bản sao cho partner
+        // 1. Cấu hình Phân trang
+        $limit = 10;
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_bookings = $this->bookingModel->getPartnerBookingCount($partnerId, $searchTerm);
+        $bookings_raw = $this->bookingModel->getAllPartnerBookings($partnerId, $limit, $offset, $searchTerm);
+
+        // 3. Ánh xạ dữ liệu để View sử dụng tên thuộc tính cũ
+        $data['bookings'] = array_map(function ($b) {
+            // Khắc phục lỗi: View đang gọi $b->username, nhưng Model trả về $b->customer_name
+            $b->username = $b->customer_name;
+            return $b;
+        }, $bookings_raw);
+
+        // 4. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_bookings / $limit);
+
+        $data['searchTerm'] = $searchTerm;
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_bookings,
+            'base_url' => BASE_URL . '/partner/booking/index'
+        ];
+
         include 'app/views/partner/bookings/list.php';
     }
 

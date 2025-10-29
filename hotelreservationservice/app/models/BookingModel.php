@@ -90,25 +90,42 @@ class BookingModel
      * Lấy tất cả booking.
      * Nếu có $ownerId, chỉ lấy booking của các khách sạn thuộc sở hữu của người đó.
      */
-    public function getAllBookingsWithInfo($ownerId = null)
+    public function getAllBookings(int $limit, int $offset, ?string $searchTerm = null)
     {
-        $params = [];
-        $sql = "SELECT b.*, a.username, r.room_number, r.room_type, h.name AS hotel_name
-                FROM booking b
-                JOIN account a ON b.account_id = a.id
-                JOIN room r ON b.room_id = r.id
-                JOIN hotel h ON r.hotel_id = h.id";
+        $query = "SELECT 
+                    b.id, b.check_in_date, b.check_out_date, b.total_price, b.status, b.created_at,
+                    h.name AS hotel_name, 
+                    a.fullname AS username,
+                    r.room_number,
+                    r.room_type
+                  FROM booking b 
+                  JOIN room r ON b.room_id = r.id         
+                  JOIN hotel h ON r.hotel_id = h.id       
+                  LEFT JOIN account a ON b.account_id = a.id";
 
-        // Nếu có ownerId, thêm điều kiện WHERE
-        if ($ownerId) {
-            $sql .= " WHERE h.owner_id = :ownerId";
-            $params[':ownerId'] = $ownerId;
+        $params = [
+            ':limit' => $limit,
+            ':offset' => $offset
+        ];
+
+        // Thêm điều kiện tìm kiếm (WHERE)
+        if (!empty($searchTerm)) {
+            $query .= " WHERE a.fullname LIKE :search OR a.email LIKE :search OR b.id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
         }
 
-        $sql .= " ORDER BY b.created_at DESC";
+        $query .= " ORDER BY b.created_at DESC LIMIT :limit OFFSET :offset";
 
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute($params);
+        $stmt = $this->conn->prepare($query);
+
+        // Bind các tham số
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
@@ -181,5 +198,91 @@ class BookingModel
             error_log("getBookingByIdForReview error: " . $e->getMessage());
             return null;
         }
+    }
+    /**
+     * Lấy tổng số lượng đặt phòng (CÓ LỌC)
+     */
+    public function getBookingCount(?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(b.id) FROM booking b 
+                  LEFT JOIN account a ON b.account_id = a.id";
+        $params = [];
+
+        if (!empty($searchTerm)) {
+            // Lọc theo fullname, email, ID Booking
+            $query .= " WHERE a.fullname LIKE :search OR a.email LIKE :search OR b.id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
+    }
+    /**
+     * Lấy tổng số lượng đặt phòng của Partner (CÓ LỌC)
+     * @param int $ownerId ID của Partner (chủ sở hữu khách sạn)
+     */
+    public function getPartnerBookingCount(int $ownerId, ?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(b.id) 
+                  FROM booking b 
+                  JOIN room r ON b.room_id = r.id
+                  JOIN hotel h ON r.hotel_id = h.id
+                  LEFT JOIN account a ON b.account_id = a.id
+                  WHERE h.owner_id = :ownerId";
+        $params = [':ownerId' => $ownerId]; // Bắt đầu với :ownerId
+
+        if (!empty($searchTerm)) {
+            $query .= " AND (a.fullname LIKE :search OR a.email LIKE :search OR b.id LIKE :search OR r.room_number LIKE :search)";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':ownerId', $ownerId, PDO::PARAM_INT);
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
+        return (int)$stmt->fetchColumn();
+    }
+    /**
+     * Lấy danh sách đặt phòng của Partner (CÓ PHÂN TRANG, LỌC)
+     */
+    public function getAllPartnerBookings(int $ownerId, int $limit, int $offset, ?string $searchTerm = null): array
+    {
+        $query = "SELECT 
+                    b.id, b.check_in_date, b.check_out_date, b.total_price, b.status, b.created_at,
+                    h.name AS hotel_name, h.id AS hotel_id,
+                    a.fullname AS customer_name, a.email AS customer_email, a.id AS customer_id,
+                    r.room_number, r.room_type
+                  FROM booking b 
+                  JOIN room r ON b.room_id = r.id         
+                  JOIN hotel h ON r.hotel_id = h.id       
+                  LEFT JOIN account a ON b.account_id = a.id
+                  WHERE h.owner_id = :ownerId";
+
+        $params = [':ownerId' => $ownerId]; // Bắt đầu với :ownerId
+
+        if (!empty($searchTerm)) {
+            $query .= " AND (a.fullname LIKE :search OR a.email LIKE :search OR b.id LIKE :search OR r.room_number LIKE :search)";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $query .= " ORDER BY b.created_at DESC LIMIT :limit OFFSET :offset";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':ownerId', $ownerId, PDO::PARAM_INT);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 }

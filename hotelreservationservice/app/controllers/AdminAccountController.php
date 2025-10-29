@@ -22,7 +22,30 @@ class AdminAccountController extends BaseAdminController
      */
     public function index()
     {
-        $data['accounts'] = $this->accountModel->getAllAccounts();
+        $searchTerm = trim($_GET['search'] ?? '');
+
+        // 1. Cấu hình Phân trang
+        $limit = 10;
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_accounts = $this->accountModel->getAccountCount($searchTerm); // <<< TRUYỀN $searchTerm
+        $data['accounts'] = $this->accountModel->getAllAccounts($limit, $offset, $searchTerm); // <<< TRUYỀN $searchTerm
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_accounts / $limit);
+
+        $data['searchTerm'] = $searchTerm; // <<< TRUYỀN $searchTerm SANG VIEW
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_accounts,
+            'base_url' => BASE_URL . '/admin/account/index'
+        ];
+
         include 'app/views/admin/accounts/list.php';
     }
 
@@ -60,16 +83,17 @@ class AdminAccountController extends BaseAdminController
             $fullname = $_POST['fullname'] ?? '';
             $email = $_POST['email'] ?? '';
             $role = $_POST['role'] ?? 'user';
-            // Lấy hotel_id, nếu không có thì là null
             $hotel_id = !empty($_POST['hotel_id']) ? (int)$_POST['hotel_id'] : null;
+
+            // Lấy country từ form edit (Nếu bạn có trường đó)
+            $country = $_POST['country'] ?? null;
 
             if (!in_array($role, ['admin', 'user', 'partner'])) {
                 $role = 'user';
             }
 
             // Cập nhật thông tin tài khoản trước (fullname, email, role)
-            $accountUpdated = $this->accountModel->updateAccountInfo($accountId, $fullname, $email, $role);
-
+            $accountUpdated = $this->accountModel->updateAccountInfo($accountId, $fullname, $email, $role, $country);
             if ($accountUpdated) {
                 // Luôn luôn dọn dẹp các gán cũ của tài khoản này
                 $this->hotelModel->unassignOwnerFromAllHotels($accountId);

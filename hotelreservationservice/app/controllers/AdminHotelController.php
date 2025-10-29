@@ -26,7 +26,30 @@ class AdminHotelController extends BaseAdminController
      */
     public function index()
     {
-        $data['hotels'] = $this->hotelModel->getHotelsWithCityName();
+        $searchTerm = trim($_GET['search'] ?? '');
+
+        // 1. Cấu hình Phân trang
+        $limit = 10; // 10 khách sạn mỗi trang
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_hotels = $this->hotelModel->getHotelCount($searchTerm); // <<< TRUYỀN $searchTerm
+        $data['hotels'] = $this->hotelModel->getHotels($limit, $offset, $searchTerm); // <<< TRUYỀN $searchTerm
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_hotels / $limit);
+
+        $data['searchTerm'] = $searchTerm; // <<< TRUYỀN $searchTerm SANG VIEW
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_hotels,
+            'base_url' => BASE_URL . '/admin/hotel/index'
+        ];
+
         include 'app/views/admin/hotels/list.php';
     }
     /**

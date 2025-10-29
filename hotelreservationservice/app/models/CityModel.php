@@ -10,11 +10,38 @@ class CityModel
         $this->conn = $db;
     }
 
-    public function getCities()
+    public function getCities(?int $limit = null, ?int $offset = null, ?string $searchTerm = null)
     {
-        // Cập nhật câu truy vấn để lấy thêm cột 'image'
         $query = "SELECT id, name, image FROM " . $this->table_name;
+        $params = [];
+
+        // Thêm điều kiện tìm kiếm (WHERE)
+        if (!empty($searchTerm)) {
+            $query .= " WHERE name LIKE :search OR id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        // Sắp xếp
+        $query .= " ORDER BY name ASC";
+
+        // Thêm LIMIT/OFFSET
+        if ($limit !== null && $offset !== null) {
+            $query .= " LIMIT :limit OFFSET :offset";
+            $params[':limit'] = $limit;
+            $params[':offset'] = $offset;
+        }
+
         $stmt = $this->conn->prepare($query);
+
+        // Bind các tham số
+        if (!empty($searchTerm)) {
+            $stmt->bindParam(':search', $params[':search'], PDO::PARAM_STR);
+        }
+        if ($limit !== null && $offset !== null) {
+            $stmt->bindParam(':limit', $params[':limit'], PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $params[':offset'], PDO::PARAM_INT);
+        }
+
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
         return $result;
@@ -32,17 +59,17 @@ class CityModel
     }
 
     public function getCityByName($name)
-{
-    $query = "SELECT id, name, image 
+    {
+        $query = "SELECT id, name, image 
               FROM " . $this->table_name . " 
               WHERE LOWER(name) LIKE LOWER(:name) 
               LIMIT 1";
-    $stmt = $this->conn->prepare($query);
-    $search = "%" . $name . "%";  // tìm gần đúng
-    $stmt->bindParam(':name', $search);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_OBJ);
-}
+        $stmt = $this->conn->prepare($query);
+        $search = "%" . $name . "%";  // tìm gần đúng
+        $stmt->bindParam(':name', $search);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
 
     // Bạn cũng cần cập nhật hàm addCity để có thể thêm image
     public function addCity($name, $image)
@@ -92,5 +119,22 @@ class CityModel
             return true;
         }
         return false;
+    }
+    /**
+     * Lấy tổng số tỉnh/thành phố (CÓ LỌC)
+     */
+    public function getCityCount(?string $searchTerm = null): int
+    {
+        $query = "SELECT COUNT(id) FROM " . $this->table_name;
+        $params = [];
+
+        if (!empty($searchTerm)) {
+            $query .= " WHERE name LIKE :search OR id LIKE :search";
+            $params[':search'] = '%' . $searchTerm . '%';
+        }
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return (int)$stmt->fetchColumn();
     }
 }

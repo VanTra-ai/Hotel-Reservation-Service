@@ -19,7 +19,31 @@ class AdminBookingController extends BaseAdminController // Kế thừa BaseAdmi
      */
     public function index()
     {
-        $bookings = $this->bookingModel->getAllBookingsWithInfo();
+        // <<< THÊM: Lấy từ khóa tìm kiếm từ URL >>>
+        $searchTerm = trim($_GET['search'] ?? '');
+
+        // 1. Cấu hình Phân trang
+        $limit = 10; // 10 đặt phòng mỗi trang
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_bookings = $this->bookingModel->getBookingCount($searchTerm); // <<< TRUYỀN $searchTerm
+        $data['bookings'] = $this->bookingModel->getAllBookings($limit, $offset, $searchTerm); // <<< TRUYỀN $searchTerm
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_bookings / $limit);
+
+        $data['searchTerm'] = $searchTerm; // <<< TRUYỀN $searchTerm SANG VIEW
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_bookings,
+            'base_url' => BASE_URL . '/admin/booking/index'
+        ];
+
         include 'app/views/admin/bookings/list.php';
     }
 

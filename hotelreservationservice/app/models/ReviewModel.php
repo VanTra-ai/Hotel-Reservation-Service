@@ -13,7 +13,7 @@ class ReviewModel
     // Lấy danh sách đánh giá theo ID khách sạn
     public function getReviewsByHotelId(int $hotelId, int $limit, int $offset): array
     {
-        $query = "SELECT r.*, a.username, a.country, a.fullname, 
+        $query = "SELECT r.*, a.username, a.country, a.fullname, a.profile_picture,
                          b.check_in_date, b.check_out_date,
                          room.room_type
                   FROM " . $this->table_name . " r 

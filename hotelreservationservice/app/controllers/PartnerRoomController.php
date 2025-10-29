@@ -36,7 +36,31 @@ class PartnerRoomController extends BasePartnerController
      */
     public function index()
     {
-        $data['rooms'] = $this->roomModel->getRoomsByHotelId($this->partnerHotel->id);
+        $hotelId = $this->partnerHotel->id;
+        $searchTerm = trim($_GET['search'] ?? ''); // <<< LẤY SEARCH TERM
+
+        // 1. Cấu hình Phân trang
+        $limit = 10; // 10 phòng mỗi trang
+        $current_page = (int)($_GET['page'] ?? 1);
+        if ($current_page < 1) $current_page = 1;
+        $offset = ($current_page - 1) * $limit;
+
+        // 2. Lấy dữ liệu
+        $total_rooms = $this->roomModel->getRoomCountByHotelId($hotelId, $searchTerm); // <<< TRUYỀN $hotelId, $searchTerm
+        $data['rooms'] = $this->roomModel->getRoomsByPartnerHotel($hotelId, $limit, $offset, $searchTerm); // <<< TRUYỀN $hotelId, $limit, $offset, $searchTerm
+
+        // 3. Tính toán thông tin phân trang
+        $total_pages = (int)ceil($total_rooms / $limit);
+
+        $data['searchTerm'] = $searchTerm; // TRUYỀN $searchTerm SANG VIEW
+
+        $data['pagination'] = [
+            'current_page' => $current_page,
+            'total_pages' => $total_pages,
+            'total_items' => $total_rooms,
+            'base_url' => BASE_URL . '/partner/room/index'
+        ];
+
         $data['hotel_name'] = $this->partnerHotel->name;
         include 'app/views/partner/rooms/list.php';
     }
