@@ -155,8 +155,7 @@ cd Hotel-Reservation-Service
 ---
 
 ## 👥 Thành viên đóng góp
-```bash
+
 - [@VanTra-ai](https://github.com/VanTra-ai)
 - [@2280603697NguyenQuangVinh](https://github.com/2280603697NguyenQuangVinh)
 - [@LBT-123-ux](https://github.com/LBT-123-ux)
-```
