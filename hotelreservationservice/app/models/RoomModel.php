@@ -476,4 +476,48 @@ class RoomModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
+    /**
+     * Lấy tất cả các phòng thuộc về một khách sạn cụ thể (Không phân trang)
+     */
+    public function getAllRoomsByHotelId(int $hotelId)
+    {
+        try {
+            $sql = "SELECT id, room_number, room_type 
+                    FROM " . $this->table_name . " 
+                    WHERE hotel_id = :hotel_id 
+                    ORDER BY room_number ASC";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':hotel_id', $hotelId, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getAllRoomsByHotelId error: " . $e->getMessage());
+            return [];
+        }
+    }
+    /**
+     * Đếm tổng số phòng của mỗi loại phòng
+     * Dùng để xây dựng ma trận (Tổng kho phòng).
+     *
+     * @param int $hotelId
+     * @return array (VD: ['Phòng Deluxe Giường Đôi' => 5, 'Phòng Gia Đình' => 3])
+     */
+    public function getRoomCountsPerType(int $hotelId): array
+    {
+        $query = "SELECT room_type, COUNT(id) as total_rooms
+                  FROM " . $this->table_name . "
+                  WHERE hotel_id = :hotelId
+                  GROUP BY room_type
+                  ORDER BY room_type ASC";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->execute();
+            // Trả về một mảng kết hợp [room_type => total_rooms]
+            return $stmt->fetchAll(PDO::FETCH_KEY_PAIR); 
+        } catch (PDOException $e) {
+            error_log("getRoomCountsPerType error: " . $e->getMessage());
+            return [];
+        }
+    }
 }

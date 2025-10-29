@@ -354,4 +354,78 @@ class BookingModel
             return false;
         }
     }
+    /**
+     * Lấy tất cả booking ĐANG HIỆU LỰC cho một khách sạn trong một phạm vi ngày.
+     */
+    public function getBookingsForHotelByDateRange(int $hotelId, string $startDate, string $endDate): array
+    {
+        $sql = "SELECT 
+                    b.id,
+                    b.room_id, 
+                    b.check_in_date, 
+                    b.check_out_date,
+                    b.status
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                WHERE r.hotel_id = :hotelId
+                  AND b.status IN (:status_pending, :status_confirmed, :status_checked_in)
+                  AND b.check_in_date < :endDate
+                  AND b.check_out_date > :startDate";
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->bindValue(':startDate', $startDate);
+            $stmt->bindValue(':endDate', $endDate);
+            $stmt->bindValue(':status_pending', BOOKING_STATUS_PENDING);
+            $stmt->bindValue(':status_confirmed', BOOKING_STATUS_CONFIRMED);
+            $stmt->bindValue(':status_checked_in', BOOKING_STATUS_CHECKED_IN);
+
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getBookingsForHotelByDateRange error: " . $e->getMessage());
+            return [];
+        }
+    }
+    /**
+     * Đếm số lượng booking theo Từng Loại Phòng và Từng Ngày
+     * @param int $hotelId
+     * @param string $startDate (Y-m-d)
+     * @param string $endDate (Y-m-d)
+     * @return array (Mảng các object, VD: [{date: '2025-10-30', room_type: 'Phòng Deluxe', booked_count: 3}])
+     */
+    public function getBookingCountsPerTypeAndDay(int $hotelId, string $startDate, string $endDate): array
+    {
+        $sql = "SELECT 
+                    b.check_in_date, 
+                    b.check_out_date,
+                    r.room_type,
+                    b.status,
+                    COUNT(b.id) as count_per_day_slot 
+                    -- Đếm số lượng booking CHỒNG CHÉO cho mỗi loại phòng
+                FROM booking b
+                JOIN room r ON b.room_id = r.id
+                WHERE r.hotel_id = :hotelId
+                  AND b.status IN (:status_pending, :status_confirmed, :status_checked_in)
+                  AND b.check_in_date < :endDate
+                  AND b.check_out_date > :startDate
+                GROUP BY r.room_type, b.check_in_date, b.check_out_date, b.status"; // Group by tất cả để lấy các slot
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':hotelId', $hotelId, PDO::PARAM_INT);
+            $stmt->bindValue(':startDate', $startDate);
+            $stmt->bindValue(':endDate', $endDate);
+            $stmt->bindValue(':status_pending', BOOKING_STATUS_PENDING);
+            $stmt->bindValue(':status_confirmed', BOOKING_STATUS_CONFIRMED);
+            $stmt->bindValue(':status_checked_in', BOOKING_STATUS_CHECKED_IN);
+
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            error_log("getBookingCountsPerTypeAndDay error: " . $e->getMessage());
+            return [];
+        }
+    }
 }
